@@ -137,10 +137,22 @@
   }
 
   function setupDownload(){
-    const btn = document.getElementById('btn-download');
     const status = document.getElementById('download-status');
-    if(!btn) return;
-    btn.addEventListener('click', async () => {
+    const btns = [document.getElementById('btn-download'), document.getElementById('btn-download-panel')].filter(Boolean);
+    if(!btns.length) return;
+    const staticHref = new URL('./install-package.json', location.href).href;
+
+    function triggerDownload(blob, name){
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = name; a.rel = 'noopener';
+      a.style.display = 'none';
+      document.body.appendChild(a); a.click();
+      setTimeout(()=>{ try{ URL.revokeObjectURL(url); }catch{} a.remove(); }, 2500);
+    }
+
+    async function doDownload(e){
+      if(e){ e.preventDefault(); e.stopPropagation(); }
       try {
         if(status) status.textContent = 'Preparing install/download payload…';
         const client = detectClientEnv();
@@ -154,13 +166,17 @@
           install: { pwa: true, service_worker: './sw.js', api_env: '/api/env' }
         };
         const blob = new Blob([JSON.stringify(payload, null, 2)], {type:'application/json'});
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'gta6-leonida-install-package.json';
-        document.body.appendChild(a); a.click(); a.remove();
-        setTimeout(()=>URL.revokeObjectURL(a.href), 2000);
+        triggerDownload(blob, 'gta6-leonida-install-package.json');
         if(status) status.textContent = 'Download started (install package JSON). For full device install use “Install to Device” (PWA).';
-      } catch(e){ if(status) status.textContent = 'Download failed: ' + e.message; }
+      } catch(err){
+        try { window.location.href = staticHref; } catch {}
+        if(status) status.textContent = 'Opened install package download. If blocked, use the direct download link.';
+      }
+    }
+
+    btns.forEach(btn => {
+      if(btn.tagName === 'A'){ btn.href = './install-package.json'; btn.setAttribute('download','gta6-leonida-install-package.json'); btn.target = '_blank'; }
+      btn.addEventListener('click', doDownload);
     });
   }
 

@@ -54,7 +54,7 @@
         <div class="install-copy"><strong>Install GTA VI Pageout</strong><span>Auto-adapts to your device · saves environment via General API</span></div>
         <div class="install-actions">
           <button id="btn-install" class="btn primary small" disabled>Install to Device</button>
-          <button id="btn-download" class="btn small">Download Install Script</button>
+          <a id="btn-download" class="btn small" href="./install-package.json" download="gta6-leonida-install-package.json">Download Install Script</a>
           <span id="install-status" class="install-status">Checking install readiness…</span>
         </div>
       </div>
@@ -202,7 +202,7 @@
             <p>Progressive Web App install with service worker caching for fast, offline-capable loading.</p>
             <div class="install-buttons">
               <button id="btn-install-panel" class="btn primary" onclick="document.getElementById('btn-install').click()">Install to Device</button>
-              <button id="btn-download-panel" class="btn" onclick="document.getElementById('btn-download').click()">Download Install Script</button>
+              <a id="btn-download-panel" class="btn" href="./install-package.json" download="gta6-leonida-install-package.json">Download Install Script</a>
             </div>
             <div id="download-status" class="install-status">Install script/package ready (JSON payload + PWA install).</div>
             <ul class="install-notes">

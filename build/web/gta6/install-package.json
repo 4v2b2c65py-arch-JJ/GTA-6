@@ -1,0 +1,62 @@
+{
+  "app": "GTA VI Leonida \u2014 Spatial Avy Pageout",
+  "type": "install-script-package",
+  "generated_at": "2026-11-13T06:54:20Z",
+  "source": "in-session-machine",
+  "pageout": "https://gta-6-spatial-avy.vercel.app/gta6/",
+  "download": {
+    "file": "gta6-leonida-install-package.json"
+  },
+  "install": {
+    "pwa": true,
+    "service_worker": "./sw.js",
+    "manifest": "./manifest.webmanifest",
+    "api_env": "/api/env",
+    "instructions": [
+      "Open the pageout URL in your browser.",
+      "Use 'Install to Device' (PWA) or browser menu Add to Home Screen / Install App.",
+      "Environment and data paths are auto-detected, filled, and saved via /api/env (with local fallback).",
+      "This package contains captured environment/data-path defaults for auto-adaptation."
+    ]
+  },
+  "environment": {
+    "platform": "Darwin",
+    "platform_release": "25.6.0",
+    "machine": "x86_64",
+    "python": "3.14.7",
+    "paths": {
+      "root": "/Users/jjmarte/Desktop/spatial avy",
+      "build_web": "build/web",
+      "build_web_gta6": "build/web/gta6",
+      "data_env": "data/env",
+      "api_env": "/api/env",
+      "environment_json": "build/web/environment.json",
+      "environment_data": "data/env/environment.json"
+    },
+    "deploy": {
+      "provider": "vercel",
+      "outputDirectory": "build/web",
+      "production_url": "https://gta-6-spatial-avy.vercel.app",
+      "portal_url": "https://vercel.com/jjonthelaptop-5497s-projects/gta-6-spatial-avy",
+      "pageout_path": "/gta6/"
+    }
+  },
+  "paths": {
+    "root": "/Users/jjmarte/Desktop/spatial avy",
+    "build_web": "build/web",
+    "build_web_gta6": "build/web/gta6",
+    "data_env": "data/env",
+    "api_env": "/api/env",
+    "environment_json": "build/web/environment.json",
+    "environment_data": "data/env/environment.json"
+  },
+  "deploy": {
+    "provider": "vercel",
+    "outputDirectory": "build/web",
+    "production_url": "https://gta-6-spatial-avy.vercel.app",
+    "portal_url": "https://vercel.com/jjonthelaptop-5497s-projects/gta-6-spatial-avy",
+    "pageout_path": "/gta6/"
+  },
+  "auto_adapt": true,
+  "blanks_filled": true
+}

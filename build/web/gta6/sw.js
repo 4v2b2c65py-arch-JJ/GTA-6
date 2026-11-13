@@ -1,6 +1,6 @@
-const CACHE = 'gta6-leonida-v1';
+const CACHE = 'gta6-leonida-v2';
 const CORE = [
-  './', './index.html', './app.js', './style.css', './manifest.webmanifest',
+  './', './index.html', './app.js', './style.css', './manifest.webmanifest', './sw.js', './install.js', './install-package.json',
   './assets/hero.png', './assets/loading_screen.png', './assets/logo.png', './assets/keyart.jpg', './assets/manifest.json',
   '../environment.json'
 ];
