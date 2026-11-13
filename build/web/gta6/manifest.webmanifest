@@ -1,0 +1,16 @@
+{
+  "name": "Grand Theft Auto VI — State of Leonida | Spatial Avy",
+  "short_name": "GTA VI Leonida",
+  "description": "GTA VI pageout with loading, ads loaders, install-to-device, auto-adapt UI and general environment API.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0612",
+  "theme_color": "#ff008c",
+  "icons": [
+    { "src": "../assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "../assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "./assets/logo.png", "sizes": "256x256", "type": "image/png", "purpose": "any" }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "spatial-avy.env.v1",
+  "api": {
+    "name": "env",
+    "endpoint": "/api/env"
+  },
+  "generated_at": "2026-11-13T06:45:07Z",
+  "source": "in-session-machine",
+  "environment": {
+    "platform": "Darwin",
+    "platform_release": "25.6.0",
+    "machine": "x86_64",
+    "python": "3.14.7",
+    "paths": {
+      "root": "/Users/jjmarte/Desktop/spatial avy",
+      "build_web": "build/web",
+      "build_web_gta6": "build/web/gta6",
+      "data_env": "data/env",
+      "api_env": "/api/env",
+      "environment_json": "build/web/environment.json",
+      "environment_data": "data/env/environment.json"
+    },
+    "deploy": {
+      "provider": "vercel",
+      "outputDirectory": "build/web",
+      "production_url": "https://gta-6-spatial-avy.vercel.app",
+      "portal_url": "https://vercel.com/jjonthelaptop-5497s-projects/gta-6-spatial-avy",
+      "pageout_path": "/gta6/"
+    }
+  },
+  "state": {
+    "saved": true,
+    "store": "general_api"
+  },
+  "blanks_filled": true
+}
