@@ -2,6 +2,14 @@
 
 Structured workspace aligned to the home-world model: terrain, mind, soul, border systems, and narrative.
 
+## Live Deployment
+
+- **Production (aliased):** https://gta-6-spatial-avy.vercel.app
+- **GTA 6 Pageout:** https://gta-6-spatial-avy.vercel.app/gta6/
+- **Deployment (requested):** https://gta-6-spatial-ax0p85zpk-jjonthelaptop-5497s-projects.vercel.app
+- **Vercel Portal:** https://vercel.com/jjonthelaptop-5497s-projects/gta-6-spatial-avy
+- **GitHub:** https://github.com/4v2b2c65py-arch-JJ/GTA-6
+
 ## Structure
 
 - `home_world/` — core world domains
