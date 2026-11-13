@@ -1,0 +1,39 @@
+{
+  "id": "spec_graph",
+  "type": "spec_graph",
+  "version": "1.0.0",
+  "description": "Spec graph transferred/accounted to device models for in-game insertion and activation.",
+  "nodes": [
+    { "id": "model.SCOUT-CAM-M1", "kind": "device_model", "label": "SCOUT-CAM-M1" },
+    { "id": "model.RELAY-CAM-M1", "kind": "device_model", "label": "RELAY-CAM-M1" },
+    { "id": "model.VTX-SPEC-M2", "kind": "device_model", "label": "VTX-SPEC-M2" },
+    { "id": "model.HUD-LATTICE-M1", "kind": "device_model", "label": "HUD-LATTICE-M1" },
+    { "id": "spec.poly_rig_fidelity", "kind": "spec", "ref": "assets/outfits/direct_12_stud/poly_rig_fidelity.json" },
+    { "id": "spec.vcp_stream", "kind": "spec", "ref": "docs/GAME_REQUIREMENTS.md#vcp" },
+    { "id": "spec.grid_store", "kind": "spec", "ref": "systems/grid_store/qbit_zone_pocket_map.json" },
+    { "id": "spec.stream_profile", "kind": "spec", "ref": "docs/GAME_REQUIREMENTS.md#stream-source-profiling" },
+    { "id": "spec.directive_bind", "kind": "spec", "ref": "docs/GAME_REQUIREMENTS.md#layout-directives" },
+    { "id": "spec.mnemonic_lace", "kind": "spec", "ref": "home_world/gates_nodes/door_node_map.json" },
+    { "id": "spec.mind_overlay", "kind": "spec", "ref": "home_world/mind_core/mind_aspect_map.json" }
+  ],
+  "edges": [
+    { "from": "model.SCOUT-CAM-M1", "to": "spec.poly_rig_fidelity", "relation": "implements", "account": "fit_mount" },
+    { "from": "model.SCOUT-CAM-M1", "to": "spec.vcp_stream", "relation": "implements", "account": "capture_channel" },
+    { "from": "model.SCOUT-CAM-M1", "to": "spec.grid_store", "relation": "implements", "account": "sample_write" },
+    { "from": "model.RELAY-CAM-M1", "to": "spec.vcp_stream", "relation": "implements", "account": "relay_channel" },
+    { "from": "model.RELAY-CAM-M1", "to": "spec.stream_profile", "relation": "implements", "account": "profile_emit" },
+    { "from": "model.RELAY-CAM-M1", "to": "spec.directive_bind", "relation": "implements", "account": "bind_source" },
+    { "from": "model.VTX-SPEC-M2", "to": "spec.vcp_stream", "relation": "implements", "account": "tx_channel" },
+    { "from": "model.VTX-SPEC-M2", "to": "spec.grid_store", "relation": "implements", "account": "zone_stream" },
+    { "from": "model.VTX-SPEC-M2", "to": "spec.mnemonic_lace", "relation": "implements", "account": "lace_tag" },
+    { "from": "model.HUD-LATTICE-M1", "to": "spec.directive_bind", "relation": "implements", "account": "render_binding" },
+    { "from": "model.HUD-LATTICE-M1", "to": "spec.mind_overlay", "relation": "implements", "account": "lattice_overlay" },
+    { "from": "model.HUD-LATTICE-M1", "to": "spec.stream_profile", "relation": "implements", "account": "telemetry_read" }
+  ],
+  "accounting": {
+    "transferred_to": "device_model",
+    "unit": "spec_capability",
+    "totals": { "models": 4, "specs": 7, "edges": 12 },
+    "policy": "spec edges must be satisfied/accounted per model before activation in game FPV"
+  }
+}

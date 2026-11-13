@@ -1,0 +1,62 @@
+{
+  "id": "stonks_pip_chart",
+  "type": "chart_spec",
+  "renderer": "chartjs_v4",
+  "title": "Stonks Data — PIP (Price + Volume)",
+  "description": "PIP view: price line (primary) with volume inset bars (secondary axis)",
+  "spec": {
+    "type": "bar",
+    "data": {
+      "labels": ["T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10", "T11", "T12"],
+      "datasets": [
+        {
+          "type": "bar",
+          "label": "Volume (PIP inset)",
+          "data": [120, 180, 140, 220, 260, 190, 310, 280, 350, 300, 420, 390],
+          "yAxisID": "yVol",
+          "backgroundColor": "rgba(148, 163, 184, 0.35)",
+          "borderColor": "rgba(148, 163, 184, 0.6)",
+          "borderWidth": 1,
+          "order": 2
+        },
+        {
+          "type": "line",
+          "label": "Price",
+          "data": [100, 104, 102, 108, 112, 109, 116, 121, 119, 125, 131, 129],
+          "yAxisID": "yPrice",
+          "borderColor": "rgb(52, 211, 153)",
+          "backgroundColor": "rgba(52, 211, 153, 0.15)",
+          "tension": 0.3,
+          "fill": true,
+          "pointRadius": 3,
+          "pointBackgroundColor": "rgb(52, 211, 153)",
+          "order": 1
+        }
+      ]
+    },
+    "options": {
+      "responsive": true,
+      "interaction": { "mode": "index", "intersect": false },
+      "plugins": {
+        "legend": { "display": true, "position": "top" },
+        "title": { "display": false }
+      },
+      "scales": {
+        "yPrice": {
+          "type": "linear",
+          "position": "left",
+          "title": { "display": true, "text": "Price" },
+          "grid": { "color": "rgba(148,163,184,0.15)" }
+        },
+        "yVol": {
+          "type": "linear",
+          "position": "right",
+          "title": { "display": true, "text": "Volume (PIP)" },
+          "grid": { "drawOnChartArea": false },
+          "ticks": { "callback": null }
+        },
+        "x": { "grid": { "display": false } }
+      }
+    }
+  }
+}

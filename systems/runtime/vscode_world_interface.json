@@ -1,0 +1,36 @@
+{
+  "id": "vscode_world_interface",
+  "type": "ui_interface_port",
+  "version": "1.0.0",
+  "status": "ported",
+  "source": "vscode",
+  "interface": {
+    "workbench": {
+      "layout": "activity_bar_left_editor_center_panel_bottom_status_bar",
+      "theme": "Default Dark Modern",
+      "components": ["activity_bar", "side_bar", "editor_groups", "panel", "status_bar", "command_palette", "quick_open", "settings_ui"]
+    },
+    "editor": {
+      "features": ["tabs", "split_view", "intellisense", "syntax_highlighting", "minimap", "breadcrumbs", "diff_editor", "multi_cursor"]
+    },
+    "terminal": {
+      "integrated": true,
+      "shells": ["/bin/zsh", "bash"],
+      "profiles": ["default", "python_venv"]
+    },
+    "explorer": { "enabled": true, "workspace_root": "/Users/jjmarte/Desktop/spatial avy" },
+    "scm": { "enabled": true, "providers": ["git"] },
+    "extensions_host": { "enabled": true, "ports": ["kilo_code"] }
+  },
+  "integration": {
+    "kilo_code": "systems/runtime/kilo_code.json",
+    "python": "systems/runtime/python_access.json",
+    "model_weights": "systems/local_ai/model_weights_port.json",
+    "runtime": "systems/runtime/game_world_runtime.json"
+  },
+  "render": {
+    "mode": "in_game_ui_surface",
+    "target": "world_compute_devices",
+    "ui_asset_ref": "assets/ui/vscode/index.html"
+  }
+}

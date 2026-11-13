@@ -1,0 +1,206 @@
+{
+  "id": "icons_manifest",
+  "generated_at": "2026-11-13T05:51:05Z",
+  "icons": [
+    {
+      "id": "icon-kilo",
+      "name": "kilo",
+      "category": "components",
+      "file": "assets/images/icons/components/kilo.svg",
+      "format": "svg"
+    },
+    {
+      "id": "icon-ollama",
+      "name": "ollama",
+      "category": "components",
+      "file": "assets/images/icons/components/ollama.png",
+      "format": "png"
+    },
+    {
+      "id": "icon-python",
+      "name": "python",
+      "category": "components",
+      "file": "assets/images/icons/components/python.svg",
+      "format": "svg"
+    },
+    {
+      "id": "icon-vscode",
+      "name": "vscode",
+      "category": "components",
+      "file": "assets/images/icons/components/vscode.svg",
+      "format": "svg"
+    },
+    {
+      "id": "icon-gta5_logo",
+      "name": "gta5_logo",
+      "category": "games",
+      "file": "assets/images/icons/games/gta5_logo.svg",
+      "format": "svg"
+    },
+    {
+      "id": "icon-gta6_logo",
+      "name": "gta6_logo",
+      "category": "games",
+      "file": "assets/images/icons/games/gta6/gta6_logo.png",
+      "format": "png"
+    },
+    {
+      "id": "icon-rdr2_logo",
+      "name": "rdr2_logo",
+      "category": "games",
+      "file": "assets/images/icons/games/rdr2_logo.png",
+      "format": "png"
+    },
+    {
+      "id": "icon-epic",
+      "name": "epic",
+      "category": "launchers",
+      "file": "assets/images/icons/launchers/epic.svg",
+      "format": "svg"
+    },
+    {
+      "id": "icon-gta_online",
+      "name": "gta_online",
+      "category": "launchers",
+      "file": "assets/images/icons/launchers/gta_online.png",
+      "format": "png"
+    },
+    {
+      "id": "icon-rockstar_games",
+      "name": "rockstar_games",
+      "category": "launchers",
+      "file": "assets/images/icons/launchers/rockstar_games.svg",
+      "format": "svg"
+    },
+    {
+      "id": "icon-rockstar_launcher",
+      "name": "rockstar_launcher",
+      "category": "launchers",
+      "file": "assets/images/icons/launchers/rockstar_launcher.png",
+      "format": "png"
+    },
+    {
+      "id": "icon-steam",
+      "name": "steam",
+      "category": "launchers",
+      "file": "assets/images/icons/launchers/steam.svg",
+      "format": "svg"
+    }
+  ],
+  "component_mappings": [
+    {
+      "id": "exe-game-launch",
+      "name": "Game Launch",
+      "type": "executable",
+      "path": "build/game/launch.py",
+      "icon": "assets/images/icons/executables/game_launch.svg",
+      "fallback_icon": "assets/images/icons/components/python.svg"
+    },
+    {
+      "id": "exe-audio-install",
+      "name": "Audio Install",
+      "type": "executable",
+      "path": "systems/audio/install_audio.py",
+      "icon": "assets/images/icons/executables/audio_install.svg",
+      "fallback_icon": "assets/images/icons/components/python.svg"
+    },
+    {
+      "id": "exe-dlc-install",
+      "name": "DLC Install",
+      "type": "executable",
+      "path": "systems/launchers/rockstar/dlc/install_dlc.py",
+      "icon": "assets/images/icons/executables/dlc_install.svg",
+      "fallback_icon": "assets/images/icons/components/python.svg"
+    },
+    {
+      "id": "exe-steam-ru-fix",
+      "name": "Steam RU Fix Pipeline",
+      "type": "executable",
+      "path": "systems/launchers/steam/russian_fix_pipeline.py",
+      "icon": "assets/images/icons/executables/steam_fix.svg",
+      "fallback_icon": "assets/images/icons/launchers/steam.svg"
+    },
+    {
+      "id": "exe-images-install",
+      "name": "Images/Icons Install",
+      "type": "executable",
+      "path": "systems/build/install_images.py",
+      "icon": "assets/images/icons/executables/images_install.svg",
+      "fallback_icon": "assets/images/icons/components/python.svg"
+    },
+    {
+      "id": "comp-python",
+      "name": "Python Runtime",
+      "type": "component",
+      "path": ".venv/bin/python",
+      "icon": "assets/images/icons/components/python.svg"
+    },
+    {
+      "id": "comp-vscode",
+      "name": "VS Code UI",
+      "type": "component",
+      "path": "systems/runtime/vscode_world_interface.json",
+      "icon": "assets/images/icons/components/vscode.svg"
+    },
+    {
+      "id": "comp-kilo",
+      "name": "Kilo Code",
+      "type": "component",
+      "path": "systems/runtime/kilo_code.json",
+      "icon": "assets/images/icons/components/kilo.svg"
+    },
+    {
+      "id": "comp-ollama",
+      "name": "Ollama Local AI",
+      "type": "component",
+      "path": "systems/local_ai/connection.json",
+      "icon": "assets/images/icons/components/ollama.png"
+    },
+    {
+      "id": "comp-rockstar",
+      "name": "Rockstar Launcher",
+      "type": "launcher",
+      "path": "systems/launchers/rockstar/launcher.json",
+      "icon": "assets/images/icons/launchers/rockstar_launcher.png"
+    },
+    {
+      "id": "comp-steam",
+      "name": "Steam",
+      "type": "launcher",
+      "path": "systems/launchers/steam/steam_integration.json",
+      "icon": "assets/images/icons/launchers/steam.svg"
+    },
+    {
+      "id": "comp-epic",
+      "name": "Epic Games",
+      "type": "launcher",
+      "path": "systems/launchers/epic/epic_integration.json",
+      "icon": "assets/images/icons/launchers/epic.svg"
+    },
+    {
+      "id": "game-gta5",
+      "name": "Grand Theft Auto V",
+      "type": "game",
+      "path": "systems/launchers/rockstar/library/library.json#gta5",
+      "icon": "assets/images/icons/games/gta5_logo.svg"
+    },
+    {
+      "id": "game-rdr2",
+      "name": "Red Dead Redemption 2",
+      "type": "game",
+      "path": "systems/launchers/rockstar/library/library.json#rdr2",
+      "icon": "assets/images/icons/games/rdr2_logo.png"
+    },
+    {
+      "id": "game-gtao",
+      "name": "GTA Online",
+      "type": "game",
+      "path": "systems/launchers/rockstar/library/library.json#gta5",
+      "icon": "assets/images/icons/launchers/gta_online.png"
+    }
+  ],
+  "summary": {
+    "total_icons": 12,
+    "total_mappings": 15
+  }
+}

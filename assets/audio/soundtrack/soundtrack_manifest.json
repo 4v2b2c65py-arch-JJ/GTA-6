@@ -1,0 +1,51 @@
+{
+  "id": "soundtrack_manifest",
+  "generated_at": "2026-11-13T05:16:37Z",
+  "tracks": [
+    {
+      "track_id": "ost-001-entry-bodium",
+      "title": "Entry Bodium",
+      "file": "assets/audio/soundtrack/ost-001-entry-bodium.ogg",
+      "zone": "Z0",
+      "beat": "BEAT_0",
+      "present": false,
+      "status": "installed_placeholder"
+    },
+    {
+      "track_id": "ost-002-surface-tension",
+      "title": "Surface Tension",
+      "file": "assets/audio/soundtrack/ost-002-surface-tension.ogg",
+      "zone": "Z1",
+      "beat": "BEAT_1",
+      "present": false,
+      "status": "installed_placeholder"
+    },
+    {
+      "track_id": "ost-003-mind-core",
+      "title": "Mind Core Resonance",
+      "file": "assets/audio/soundtrack/ost-003-mind-core.ogg",
+      "zone": "M0",
+      "beat": "BEAT_2",
+      "present": false,
+      "status": "installed_placeholder"
+    },
+    {
+      "track_id": "ost-004-soul-sanctum",
+      "title": "Soul Sanctum",
+      "file": "assets/audio/soundtrack/ost-004-soul-sanctum.ogg",
+      "zone": "S0",
+      "beat": "BEAT_3",
+      "present": false,
+      "status": "installed_placeholder"
+    },
+    {
+      "track_id": "ost-005-border-protocol",
+      "title": "SATS REA-REM Protocol",
+      "file": "assets/audio/soundtrack/ost-005-border-protocol.ogg",
+      "zone": "Z4",
+      "beat": "BEAT_4",
+      "present": false,
+      "status": "installed_placeholder"
+    }
+  ]
+}

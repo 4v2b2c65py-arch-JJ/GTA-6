@@ -1,0 +1,15 @@
+{
+  "id": "install_manifest_gta5",
+  "game_id": "gta5",
+  "title": "Grand Theft Auto V",
+  "source": "rockstar_launcher",
+  "install_dir": "systems/launchers/rockstar/library/games/gta5",
+  "executable_ref": "GTA5.exe",
+  "installed": false,
+  "state": "not_installed",
+  "version": null,
+  "size_gb_estimate": 120,
+  "cloud_save": true,
+  "handoff": "rockstar_launcher",
+  "actions": ["install", "update", "verify_integrity", "uninstall", "start"]
+}

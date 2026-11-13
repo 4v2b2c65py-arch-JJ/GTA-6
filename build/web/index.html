@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Spatial Avy — Web Game Client & Player</title>
+  <meta name="description" content="Spatial Avy web-based game client and player. Bodium/Mind/Soul, AI-integrated runtime."/>
+  <link rel="icon" href="./favicon.ico" sizes="any"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/icon-32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/icon-16.png"/>
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png"/>
+  <link rel="manifest" href="./manifest.webmanifest"/>
+  <meta property="og:title" content="Spatial Avy — Web Game Client & Player"/>
+  <meta property="og:image" content="./assets/insignia/og_image.png"/>
+  <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="./assets/icons/icon-64.png" alt="Spatial Avy" onerror="this.style.display='none'"/>
+      <div>
+        <div class="title">Spatial Avy</div>
+        <div class="subtitle">Web Game Client &amp; Player · Bodium / Mind / Soul · AI Runtime</div>
+      </div>
+    </div>
+    <nav class="tabs">
+      <button data-tab="hub" class="active">Character Hub</button>
+      <button data-tab="player">Player</button>
+      <button data-tab="world">World</button>
+      <button data-tab="audio">Audio/Voice</button>
+      <button data-tab="dlc">DLC</button>
+      <button data-tab="transport">Vehicles & Transport</button>
+      <button data-tab="geo">Geo Data</button>
+      <button data-tab="assets">Images & Icons</button>
+      <button data-tab="story">Story/Novel</button>
+      <a href="./gta6/index.html" style="margin-left:8px;padding:6px 10px;border-radius:8px;border:1px solid #ff008c;color:#fff;text-decoration:none;background:#2a1030;font-size:12px">GTA VI Pageout</a>
+    </nav>
+  </header>
+  <main>
+    <section id="tab-hub" class="tab active">
+      <h2>Pre-Launch Character Hub Deck</h2>
+      <div id="deck-cards" class="grid"></div>
+      <div class="panel">
+        <h3>Loadout</h3>
+        <pre id="loadout"></pre>
+      </div>
+    </section>
+    <section id="tab-player" class="tab">
+      <h2>Player / Runtime</h2>
+      <div class="panel"><h3>Game World Runtime</h3><pre id="runtime"></pre></div>
+      <div class="panel"><h3>Launch/Build State</h3><pre id="build"></pre></div>
+    </section>
+    <section id="tab-world" class="tab">
+      <h2>World & Timeline</h2>
+      <div class="panel"><h3>World Index</h3><pre id="world"></pre></div>
+      <div class="panel"><h3>Timeline Pockets</h3><pre id="timeline"></pre></div>
+    </section>
+    <section id="tab-audio" class="tab">
+      <h2>Audio, SFX/VFX, Physics, Voice & Music</h2>
+      <div class="panel"><h3>Audio Install State</h3><pre id="audio-state"></pre></div>
+      <div class="panel"><h3>Music State (Spotify Peers + Installed Sorting Algo)</h3><pre id="music-state"></pre></div>
+      <div class="panel"><h3>Spotify Track Peers</h3><pre id="spotify-peers"></pre></div>
+      <div class="panel"><h3>Sorted Playlist (in-game algo)</h3><pre id="music-playlist"></pre><div id="playlist-cards" class="grid"></div></div>
+      <div class="panel"><h3>EQ (Bass & Bands) — Original Sound Quality</h3>
+        <div class="eq-controls">
+          <label>Preset: <select id="eq-preset"></select></label>
+          <span id="eq-quality" class="pill"></span>
+        </div>
+        <div id="eq-bands" class="eq-bands"></div>
+        <pre id="eq-data"></pre>
+      </div>
+      <div class="panel"><h3>Soundboard</h3><div id="soundboard" class="soundboard"></div><pre id="soundboard-data"></pre></div>
+      <div class="panel"><h3>Frequency / Speaker Output (auto-saved, full library)</h3><div id="freq-bars" class="eq-bands"></div><pre id="frequency-state"></pre></div>
+      <div class="panel"><h3>Soundtrack</h3><pre id="soundtrack"></pre></div>
+      <div class="panel"><h3>Voice / Vocals</h3><pre id="vocals"></pre></div>
+    </section>
+    <section id="tab-dlc" class="tab">
+      <h2>DLC Catalog & Installed Features</h2>
+      <div class="panel"><h3>DLC Manifest</h3><pre id="dlc"></pre></div>
+    </section>
+    <section id="tab-transport" class="tab">
+      <h2>Vehicles & Transportation</h2>
+      <div class="panel"><h3>Injection State</h3><pre id="transport-injection"></pre></div>
+      <div class="panel"><h3>Vehicle Registry</h3><pre id="vehicles"></pre><div id="vehicle-cards" class="grid"></div></div>
+      <div class="panel"><h3>Transportation Modes & Routes</h3><pre id="transportation"></pre></div>
+    </section>
+    <section id="tab-geo" class="tab">
+      <h2>Geo Data (Injected)</h2>
+      <div class="panel"><h3>Geo Injection</h3><pre id="geo"></pre></div>
+      <div class="panel"><h3>Regions & Hubs</h3><div id="geo-cards" class="grid"></div></div>
+    </section>
+    <section id="tab-assets" class="tab">
+      <h2>In-Game Images & Component/Executable Icons</h2>
+      <div class="panel"><h3>Images Manifest</h3><pre id="images"></pre><div id="image-gallery" class="gallery"></div></div>
+      <div class="panel"><h3>Icons Manifest</h3><pre id="icons"></pre><div id="icon-gallery" class="gallery"></div></div>
+      <div class="panel"><h3>Identity</h3><pre id="identity"></pre></div>
+    </section>
+    <section id="tab-story" class="tab">
+      <h2>Story / Novel & AI Integration</h2>
+      <div class="panel"><h3>Identity & Motifs</h3><pre id="story-identity"></pre></div>
+      <div class="panel"><h3>Narrative Refs</h3><ul id="narrative-refs"></ul></div>
+    </section>
+  </main>
+  <footer>Spatial Avy · Executable Web Client &amp; Player · Z-Q-C-T · N10-N0 · AI: Kilo/Ollama</footer>
+  <script src="./app.js"></script>
+</body>
+</html>

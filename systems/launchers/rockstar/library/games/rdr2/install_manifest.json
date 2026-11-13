@@ -1,0 +1,15 @@
+{
+  "id": "install_manifest_rdr2",
+  "game_id": "rdr2",
+  "title": "Red Dead Redemption 2",
+  "source": "rockstar_launcher",
+  "install_dir": "systems/launchers/rockstar/library/games/rdr2",
+  "executable_ref": "RDR2.exe",
+  "installed": false,
+  "state": "not_installed",
+  "version": null,
+  "size_gb_estimate": 150,
+  "cloud_save": true,
+  "handoff": "rockstar_launcher",
+  "actions": ["install", "update", "verify_integrity", "uninstall", "start"]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "component-cef",
+  "name": "Chromium Embedded Framework",
+  "type": "install_component",
+  "required": true,
+  "status": "installed",
+  "version": "modeled",
+  "description": "Embedded browser/runtime UI framework used by the launcher.",
+  "installed_at": "2026-11-13T05:08:49Z",
+  "path": "systems/launchers/rockstar/install/components/cef.json"
+}

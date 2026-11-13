@@ -1,0 +1,24 @@
+{
+  "id": "voice_transcription",
+  "stage": "transcription",
+  "status": "installed",
+  "engine": {
+    "preferred": "whisper",
+    "alt": "faster-whisper",
+    "fallback": "text_input_passthrough"
+  },
+  "input_sources": [
+    "assets/audio/voice/source",
+    "narrative/drafts",
+    "systems/launchers/steam/transcripts"
+  ],
+  "output": "systems/audio/voice/transcription/transcripts.json",
+  "languages": ["en", "ru"],
+  "transcript_enabled": true,
+  "options": {
+    "timestamps": true,
+    "word_level": false,
+    "diarization": false,
+    "normalize_punctuation": true
+  }
+}

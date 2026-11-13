@@ -1,0 +1,279 @@
+{
+  "id": "information_gap_report",
+  "type": "gap_accounting_report",
+  "version": "1.0.0",
+  "generated_at": "2026-11-13T05:06:37Z",
+  "inputs": {
+    "barcode_hashes": "systems/launchers/rockstar/map_loader/barcode_hashes/regional_barcode_hashes.json",
+    "sources": "systems/launchers/rockstar/map_loader/sources/camera_sources.json",
+    "region_expansion": "systems/launchers/rockstar/map_loader/region_expansion.json"
+  },
+  "gaps": [
+    {
+      "region_id": "RW-LEO-MIA-001",
+      "barcode": "BC-RW-LEO-MIA-001-6B3567D8-9913119A-91446F35",
+      "hash_sha256": "6b3567d89913119a91446f3513acd4e23a07212b50eb41b1b973abfbe127adbc",
+      "required_source_categories": [
+        "flock_cam",
+        "street_imagery_api",
+        "traffic_camera_api"
+      ],
+      "present_source_categories": [],
+      "missing_source_categories": [
+        "flock_cam",
+        "street_imagery_api",
+        "traffic_camera_api"
+      ],
+      "asset_gaps": [
+        {
+          "asset": "road_graph",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "landmarks",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "waterways",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "urban_blocks",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        }
+      ],
+      "asset_gap_count": 4,
+      "coverage_pct": 0.0,
+      "gap_severity": "high",
+      "accounted": true
+    },
+    {
+      "region_id": "RW-LEO-MIA-BEACH-002",
+      "barcode": "BC-RW-LEO-MIA-BEACH-002-F010EDA9-B705E96F-D8D8DACA",
+      "hash_sha256": "f010eda9b705e96fd8d8dacaca87c9af1a76a1039fa3c28da1dcce17efc7ec5e",
+      "required_source_categories": [
+        "public_cctv_feed",
+        "street_imagery_api",
+        "traffic_camera_api"
+      ],
+      "present_source_categories": [],
+      "missing_source_categories": [
+        "public_cctv_feed",
+        "street_imagery_api",
+        "traffic_camera_api"
+      ],
+      "asset_gaps": [
+        {
+          "asset": "coastline",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "arterials",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "poi_density",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "pedestrian_flow_model",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        }
+      ],
+      "asset_gap_count": 4,
+      "coverage_pct": 0.0,
+      "gap_severity": "high",
+      "accounted": true
+    },
+    {
+      "region_id": "RW-LEO-KEYS-003",
+      "barcode": "BC-RW-LEO-KEYS-003-3CDDE130-9A5B3466-5BC1737F",
+      "hash_sha256": "3cdde1309a5b34665bc1737f20f04a21eec06a33606d98f85cca0c06ec5397d0",
+      "required_source_categories": [
+        "mapping_api",
+        "traffic_camera_api"
+      ],
+      "present_source_categories": [],
+      "missing_source_categories": [
+        "mapping_api",
+        "traffic_camera_api"
+      ],
+      "asset_gaps": [
+        {
+          "asset": "bridges",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "coastal_routes",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "elevation_profile",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        }
+      ],
+      "asset_gap_count": 3,
+      "coverage_pct": 0.0,
+      "gap_severity": "high",
+      "accounted": true
+    },
+    {
+      "region_id": "RW-US-ATL-010",
+      "barcode": "BC-RW-US-ATL-010-A298E843-EEB1F501-AE7D64B0",
+      "hash_sha256": "a298e843eeb1f501ae7d64b035483ba2d341a5e33b820b5dc7e524a4082334b5",
+      "required_source_categories": [
+        "flock_cam",
+        "traffic_camera_api"
+      ],
+      "present_source_categories": [],
+      "missing_source_categories": [
+        "flock_cam",
+        "traffic_camera_api"
+      ],
+      "asset_gaps": [
+        {
+          "asset": "road_graph",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "interchanges",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "landmarks",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        }
+      ],
+      "asset_gap_count": 3,
+      "coverage_pct": 0.0,
+      "gap_severity": "high",
+      "accounted": true
+    },
+    {
+      "region_id": "RW-US-LAX-011",
+      "barcode": "BC-RW-US-LAX-011-B80C40A7-EEFDAC1C-25B02F85",
+      "hash_sha256": "b80c40a7eefdac1c25b02f85c8e028baf704cf83a08da70720debd223beb9f59",
+      "required_source_categories": [
+        "mapping_api",
+        "street_imagery_api",
+        "traffic_camera_api"
+      ],
+      "present_source_categories": [],
+      "missing_source_categories": [
+        "mapping_api",
+        "street_imagery_api",
+        "traffic_camera_api"
+      ],
+      "asset_gaps": [
+        {
+          "asset": "freeway_network",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "urban_blocks",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "poi_density",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        }
+      ],
+      "asset_gap_count": 3,
+      "coverage_pct": 0.0,
+      "gap_severity": "high",
+      "accounted": true
+    },
+    {
+      "region_id": "RW-US-NYC-012",
+      "barcode": "BC-RW-US-NYC-012-083F6DF3-D23F42A8-CF716BED",
+      "hash_sha256": "083f6df3d23f42a8cf716bed248a438bc873c16ebb1b15581f5643c25658a9bb",
+      "required_source_categories": [
+        "public_cctv_feed",
+        "street_imagery_api",
+        "traffic_camera_api"
+      ],
+      "present_source_categories": [],
+      "missing_source_categories": [
+        "public_cctv_feed",
+        "street_imagery_api",
+        "traffic_camera_api"
+      ],
+      "asset_gaps": [
+        {
+          "asset": "street_grid",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "bridges_tunnels",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "landmarks",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        }
+      ],
+      "asset_gap_count": 3,
+      "coverage_pct": 0.0,
+      "gap_severity": "high",
+      "accounted": true
+    },
+    {
+      "region_id": "RW-GLB-LON-020",
+      "barcode": "BC-RW-GLB-LON-020-AEB2A572-AD0D916A-7CB13E20",
+      "hash_sha256": "aeb2a572ad0d916a7cb13e20026aaf96fde040105f415cdeda80757c58ec9820",
+      "required_source_categories": [
+        "public_cctv_feed",
+        "street_imagery_api"
+      ],
+      "present_source_categories": [],
+      "missing_source_categories": [
+        "public_cctv_feed",
+        "street_imagery_api"
+      ],
+      "asset_gaps": [
+        {
+          "asset": "road_graph",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        },
+        {
+          "asset": "landmarks",
+          "status": "gap_pending_ingest",
+          "reason": "awaiting_enabled_source_data_flow"
+        }
+      ],
+      "asset_gap_count": 2,
+      "coverage_pct": 0.0,
+      "gap_severity": "high",
+      "accounted": true
+    }
+  ],
+  "summary": {
+    "total_regions_accounted": 7,
+    "high_gap": 7,
+    "medium_gap": 0,
+    "low_gap": 0,
+    "all_accounted": true,
+    "note": "Gaps primarily due to external camera/API sources configured but not enabled (authorized credentials/endpoints required). Data flow installed to backfill when sources are enabled."
+  }
+}

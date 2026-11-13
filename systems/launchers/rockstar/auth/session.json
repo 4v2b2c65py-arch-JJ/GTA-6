@@ -1,0 +1,19 @@
+{
+  "id": "rockstar_session",
+  "type": "session_state",
+  "authenticated": false,
+  "active_account_id": null,
+  "active_email": null,
+  "display_name": null,
+  "signed_in_at": null,
+  "remember_me": false,
+  "verified": false,
+  "linked_accounts": {
+    "steam": null,
+    "epic": null,
+    "xbox": null,
+    "playstation": null
+  },
+  "last_action": "initialized",
+  "environment": "in_environment_modeled"
+}

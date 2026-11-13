@@ -1,0 +1,106 @@
+{
+  "id": "soundtrack_install",
+  "type": "soundtrack",
+  "version": "1.0.0",
+  "status": "installed",
+  "description": "Game soundtrack installation for spatial avy; tracks mapped to timeline pockets/beats and world zones.",
+  "library_path": "assets/audio/soundtrack",
+  "format": {
+    "preferred": [
+      "ogg",
+      "wav",
+      "flac",
+      "mp3"
+    ],
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "bit_depth": 24
+  },
+  "tracks": [
+    {
+      "track_id": "ost-001-entry-bodium",
+      "title": "Entry Bodium",
+      "zone": "Z0",
+      "beat": "BEAT_0",
+      "mood": [
+        "ambient",
+        "threshold"
+      ],
+      "file": "assets/audio/soundtrack/ost-001-entry-bodium.ogg",
+      "loop": true,
+      "gain_db": -6.0,
+      "installed": false,
+      "install_state": "placeholder_manifested"
+    },
+    {
+      "track_id": "ost-002-surface-tension",
+      "title": "Surface Tension",
+      "zone": "Z1",
+      "beat": "BEAT_1",
+      "mood": [
+        "tense",
+        "pulse"
+      ],
+      "file": "assets/audio/soundtrack/ost-002-surface-tension.ogg",
+      "loop": true,
+      "gain_db": -6.0,
+      "installed": false,
+      "install_state": "placeholder_manifested"
+    },
+    {
+      "track_id": "ost-003-mind-core",
+      "title": "Mind Core Resonance",
+      "zone": "M0",
+      "beat": "BEAT_2",
+      "mood": [
+        "cognitive",
+        "shimmer"
+      ],
+      "file": "assets/audio/soundtrack/ost-003-mind-core.ogg",
+      "loop": true,
+      "gain_db": -7.0,
+      "installed": false,
+      "install_state": "placeholder_manifested"
+    },
+    {
+      "track_id": "ost-004-soul-sanctum",
+      "title": "Soul Sanctum",
+      "zone": "S0",
+      "beat": "BEAT_3",
+      "mood": [
+        "solemn",
+        "wide"
+      ],
+      "file": "assets/audio/soundtrack/ost-004-soul-sanctum.ogg",
+      "loop": true,
+      "gain_db": -7.0,
+      "installed": false,
+      "install_state": "placeholder_manifested"
+    },
+    {
+      "track_id": "ost-005-border-protocol",
+      "title": "SATS REA-REM Protocol",
+      "zone": "Z4",
+      "beat": "BEAT_4",
+      "mood": [
+        "signal",
+        "alert"
+      ],
+      "file": "assets/audio/soundtrack/ost-005-border-protocol.ogg",
+      "loop": false,
+      "gain_db": -5.0,
+      "installed": false,
+      "install_state": "placeholder_manifested"
+    }
+  ],
+  "playback": {
+    "engine": "in_game",
+    "crossfade_ms": 1200,
+    "ducking": {
+      "enabled": true,
+      "voice_priority_db": -8.0
+    },
+    "timeline_sync": true
+  },
+  "installed_at": "2026-11-13T05:16:37Z"
+}

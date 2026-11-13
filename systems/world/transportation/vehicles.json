@@ -1,0 +1,33 @@
+{
+  "id": "vehicle_registry",
+  "type": "vehicles",
+  "version": "1.0.0",
+  "status": "injected",
+  "generated_at": "2026-11-13T05:36:00Z",
+  "vehicles": [
+    {"vehicle_id":"veh-vapid-caracara-armored","name":"Vapid Caracara (Armored)","class":"off_road","source":"gtao-kortz-center-heist","dlc":"1.73","base_game":"gta5","seats":4,"tags":["armored","mlj_compatible"], "spawn_regions":["RW-LEO-MIA-001","RW-US-LAX-011"]},
+    {"vehicle_id":"veh-grotti-cartuccia-gt","name":"Grotti Cartuccia GT","class":"super","source":"gtao-kortz-center-heist","dlc":"1.73","base_game":"gta5","seats":2,"tags":["mlj_compatible"], "spawn_regions":["RW-LEO-MIA-BEACH-002","RW-US-LAX-011"]},
+    {"vehicle_id":"veh-benefactor-laufer","name":"Benefactor Läufer","class":"sports","source":"gtao-kortz-center-heist","dlc":"1.73","base_game":"gta5","seats":2,"tags":["mlj_compatible"], "spawn_regions":["RW-LEO-MIA-001"]},
+    {"vehicle_id":"veh-benefactor-lrc-gt","name":"Benefactor LRC GT","class":"super","source":"gtao-kortz-center-heist","dlc":"1.73","base_game":"gta5","seats":2,"tags":["mlj_compatible"], "spawn_regions":["RW-US-LAX-011","RW-US-NYC-012"]},
+    {"vehicle_id":"veh-albany-merula","name":"Albany Merula","class":"sedan","source":"gtao-kortz-center-heist","dlc":"1.73","base_game":"gta5","seats":4,"tags":["mlj_compatible"], "spawn_regions":["RW-LEO-MIA-001","RW-US-ATL-010"]},
+    {"vehicle_id":"veh-grotti-veleno-gt","name":"Grotti Veleno GT","class":"super","source":"gtao-kortz-center-heist","dlc":"1.73","base_game":"gta5","seats":2,"tags":["hsw","mlj_compatible"], "spawn_regions":["RW-LEO-MIA-BEACH-002"]},
+    {"vehicle_id":"veh-pegassi-ignus-pursuit","name":"Pegassi Ignus Pursuit","class":"emergency","source":"gtao-kortz-center-heist","dlc":"1.73","base_game":"gta5","seats":2,"tags":["pursuit","mlj_compatible"], "spawn_regions":["RW-LEO-MIA-001","RW-US-ATL-010"]},
+
+    {"vehicle_id":"veh-pfister-x-treme","name":"Pfister X-treme","class":"super","source":"gtao-safehouse-hills","dlc":"1.72","base_game":"gta5","seats":2,"tags":["luxury"], "spawn_regions":["RW-LEO-MIA-BEACH-002","RW-US-LAX-011"]},
+    {"vehicle_id":"veh-ubermacht-sentinel-xs4","name":"Übermacht Sentinel XS4","class":"sedan","source":"gtao-safehouse-hills","dlc":"1.72","base_game":"gta5","seats":4,"tags":["luxury"], "spawn_regions":["RW-LEO-MIA-001"]},
+    {"vehicle_id":"veh-grotti-gt750","name":"Grotti GT750","class":"sports_classic","source":"gtao-safehouse-hills","dlc":"1.72","base_game":"gta5","seats":2,"tags":["classic"], "spawn_regions":["RW-US-NYC-012","RW-LEO-KEYS-003"]},
+    {"vehicle_id":"veh-vapid-fmj-mkv","name":"Vapid FMJ MK V","class":"super","source":"gtao-safehouse-hills","dlc":"1.72","base_game":"gta5","seats":2,"tags":["hsw"], "spawn_regions":["RW-US-LAX-011"]},
+    {"vehicle_id":"veh-progen-luiva","name":"Progen Luiva","class":"super","source":"gtao-safehouse-hills","dlc":"1.72","base_game":"gta5","seats":2,"tags":["luxury"], "spawn_regions":["RW-LEO-MIA-BEACH-002"]},
+
+    {"vehicle_id":"veh-karin-everon-rs","name":"Karin Everon RS","class":"suv","source":"gtao-money-fronts","dlc":"1.71","base_game":"gta5","seats":4,"tags":["offroad_capable"], "spawn_regions":["RW-LEO-KEYS-003","RW-LEO-MIA-001"]},
+    {"vehicle_id":"veh-karin-woodlander","name":"Karin Woodlander","class":"suv","source":"gtao-money-fronts","dlc":"1.71","base_game":"gta5","seats":4,"tags":["hsw"], "spawn_regions":["RW-US-ATL-010"]},
+    {"vehicle_id":"veh-declasse-walton-l35","name":"Declasse Walton L35 (Stock)","class":"off_road","source":"gtao-money-fronts","dlc":"1.71","base_game":"gta5","seats":2,"tags":["utility"], "spawn_regions":["RW-LEO-KEYS-003"]},
+    {"vehicle_id":"veh-declasse-drift-walton-l35","name":"Declasse Drift Walton L35","class":"off_road","source":"gtao-money-fronts","dlc":"1.71","base_game":"gta5","seats":2,"tags":["drift"], "spawn_regions":["RW-US-LAX-011"]},
+    {"vehicle_id":"veh-grotti-lscm-cheetah-classic","name":"Grotti LSCM Cheetah Classic","class":"sports_classic","source":"gtao-money-fronts","dlc":"1.71","base_game":"gta5","seats":2,"tags":["tuner"], "spawn_regions":["RW-LEO-MIA-BEACH-002"]},
+    {"vehicle_id":"veh-western-police-bike","name":"Western Police Bike","class":"motorcycle","source":"gtao-money-fronts","dlc":"1.71","base_game":"gta5","seats":2,"tags":["law_enforcement","dispatch"], "spawn_regions":["RW-LEO-MIA-001","RW-US-NYC-012"]},
+
+    {"vehicle_id":"veh-rdr2-arthur-horse","name":"Tennessee Walker (Story Mount)","class":"mount","source":"rdr2-base","dlc":"base","base_game":"rdr2","seats":1,"tags":["horse","mount"], "spawn_regions":["region-frontier-woods","region-bayou"]},
+    {"vehicle_id":"veh-rdr2-wagon-bounty","name":"Bounty Wagon","class":"wagon","source":"rdo-strange-tales-west","dlc":"rdo","base_game":"rdr2","seats":4,"tags":["wagon","bounty"], "spawn_regions":["region-desert-town"]},
+    {"vehicle_id":"veh-rdr2-stagecoach","name":"Frontier Stagecoach","class":"coach","source":"sp-mexico-frontier-inspired","dlc":"inspired","base_game":"rdr2","seats":6,"tags":["transport","route"], "spawn_regions":["region-border-frontier-new","RW-LEO-KEYS-003"]}
+  ]
+}

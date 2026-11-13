@@ -1,0 +1,43 @@
+{
+  "id": "gta_portal_game_assets",
+  "type": "file_entries",
+  "base_path": "assets/game_assets/gta_portal",
+  "file_count": 5,
+  "files": [
+    {
+      "path": "assets/game_assets/gta_portal/data/inventory_snapshot.json",
+      "name": "inventory_snapshot.json",
+      "category": "data",
+      "size_bytes": 2475,
+      "sha256": "b5943a1ace1992eb5892e64c774cd16f40caffba5ec09fab54f792aa4a81e078"
+    },
+    {
+      "path": "assets/game_assets/gta_portal/data/spottings.json",
+      "name": "spottings.json",
+      "category": "data",
+      "size_bytes": 4149,
+      "sha256": "f9f6419de696d165dd41f940d368c1aaa467dfe2067c7ef77fb0d194039ec83a"
+    },
+    {
+      "path": "assets/game_assets/gta_portal/fetcher/normalized_spottings.json",
+      "name": "normalized_spottings.json",
+      "category": "fetcher",
+      "size_bytes": 6806,
+      "sha256": "904e742fe3239f00a74b22116ff49117568918fa399f218b74252095955adc11"
+    },
+    {
+      "path": "assets/game_assets/gta_portal/reports/gap_report.json",
+      "name": "gap_report.json",
+      "category": "reports",
+      "size_bytes": 9214,
+      "sha256": "2dd1425bb6f50aec42e08a700c35ad0b93b5e2a5b0408a4dcdeaf9ebd0c869c4"
+    },
+    {
+      "path": "assets/game_assets/gta_portal/reports/gap_report.md",
+      "name": "gap_report.md",
+      "category": "reports",
+      "size_bytes": 2212,
+      "sha256": "d1425bd62b25dbdca0a05bd140ce68868ef0965f84e2324216b53b421ad71222"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "id": "music_eq_presets",
+  "type": "eq_presets",
+  "version": "1.0.0",
+  "status": "installed",
+  "target": "speaker",
+  "original_sound_quality": {
+    "enabled": true,
+    "mode": "passthrough_reference",
+    "description": "Emit at original/source sound quality with no destructive processing; EQ is applied as non-destructive output shaping and can be bypassed.",
+    "bypass_on_flat": true
+  },
+  "bands": [
+    {
+      "id": "sub_bass",
+      "label": "Sub Bass",
+      "hz": [
+        20,
+        60
+      ],
+      "default_gain_db": 0
+    },
+    {
+      "id": "bass",
+      "label": "Bass",
+      "hz": [
+        60,
+        250
+      ],
+      "default_gain_db": 0
+    },
+    {
+      "id": "low_mid",
+      "label": "Low Mid",
+      "hz": [
+        250,
+        500
+      ],
+      "default_gain_db": 0
+    },
+    {
+      "id": "mid",
+      "label": "Mid",
+      "hz": [
+        500,
+        2000
+      ],
+      "default_gain_db": 0
+    },
+    {
+      "id": "high_mid",
+      "label": "High Mid",
+      "hz": [
+        2000,
+        4000
+      ],
+      "default_gain_db": 0
+    },
+    {
+      "id": "presence",
+      "label": "Presence",
+      "hz": [
+        4000,
+        6000
+      ],
+      "default_gain_db": 0
+    },
+    {
+      "id": "brilliance",
+      "label": "Brilliance",
+      "hz": [
+        6000,
+        20000
+      ],
+      "default_gain_db": 0
+    }
+  ],
+  "presets": [
+    {
+      "id": "flat_original",
+      "name": "Flat (Original Quality)",
+      "description": "Unity gain; preserves original sound quality.",
+      "gains": {
+        "sub_bass": 0,
+        "bass": 0,
+        "low_mid": 0,
+        "mid": 0,
+        "high_mid": 0,
+        "presence": 0,
+        "brilliance": 0
+      }
+    },
+    {
+      "id": "bass_boost",
+      "name": "Bass Boost",
+      "description": "Enhanced sub/bass for speaker impact.",
+      "gains": {
+        "sub_bass": 4.5,
+        "bass": 3.5,
+        "low_mid": 0.5,
+        "mid": 0,
+        "high_mid": 0,
+        "presence": 0,
+        "brilliance": 0
+      }
+    },
+    {
+      "id": "deep_bass",
+      "name": "Deep Bass",
+      "description": "Stronger low-end emphasis.",
+      "gains": {
+        "sub_bass": 6,
+        "bass": 4,
+        "low_mid": 1,
+        "mid": 0,
+        "high_mid": -0.5,
+        "presence": 0,
+        "brilliance": 0
+      }
+    },
+    {
+      "id": "vocal_clarity",
+      "name": "Vocal Clarity",
+      "description": "Lift mids/presence for dialogue and vocals.",
+      "gains": {
+        "sub_bass": -1,
+        "bass": 0,
+        "low_mid": 1,
+        "mid": 2.5,
+        "high_mid": 2,
+        "presence": 2,
+        "brilliance": 0.5
+      }
+    },
+    {
+      "id": "bright",
+      "name": "Bright",
+      "description": "More presence and brilliance.",
+      "gains": {
+        "sub_bass": 0,
+        "bass": 0,
+        "low_mid": 0,
+        "mid": 0.5,
+        "high_mid": 2,
+        "presence": 3,
+        "brilliance": 3
+      }
+    },
+    {
+      "id": "warm",
+      "name": "Warm",
+      "description": "Full lows and smooth highs.",
+      "gains": {
+        "sub_bass": 2,
+        "bass": 2.5,
+        "low_mid": 1.5,
+        "mid": 0,
+        "high_mid": -0.5,
+        "presence": -1,
+        "brilliance": -1
+      }
+    },
+    {
+      "id": "club",
+      "name": "Club / Drive",
+      "description": "Punchy bass and crisp highs for synth/drive tracks.",
+      "gains": {
+        "sub_bass": 4,
+        "bass": 3,
+        "low_mid": 0,
+        "mid": 0,
+        "high_mid": 1.5,
+        "presence": 2,
+        "brilliance": 2
+      }
+    },
+    {
+      "id": "cinematic",
+      "name": "Cinematic",
+      "description": "Wide dynamic feel for ambient/soul/beat scenes.",
+      "gains": {
+        "sub_bass": 2,
+        "bass": 1.5,
+        "low_mid": 0.5,
+        "mid": 0.5,
+        "high_mid": 1,
+        "presence": 1.5,
+        "brilliance": 1.5
+      }
+    }
+  ],
+  "active_preset": "flat_original",
+  "master": {
+    "gain_db": 0,
+    "limiter": true,
+    "headroom_db": -1.0
+  },
+  "installed_at": "2026-11-13T06:03:55Z"
+}

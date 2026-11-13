@@ -1,0 +1,78 @@
+{
+  "id": "voice_pipeline",
+  "type": "voice_pipeline",
+  "version": "1.0.0",
+  "status": "installed",
+  "description": "Voice pipeline: model transcription -> VLM voice digestion -> vocal track synthesis/installation for in-game voicing.",
+  "stages": [
+    {
+      "stage": "transcription",
+      "id": "voice-transcription",
+      "ref": "systems/audio/voice/transcription/transcription.json",
+      "input": [
+        "audio",
+        "dialogue",
+        "narrative_text"
+      ],
+      "output": "systems/audio/voice/transcription/transcripts.json"
+    },
+    {
+      "stage": "vlm_voice_digestion",
+      "id": "voice-vlm-digestion",
+      "ref": "systems/audio/voice/vlm_digestion/vlm_digestion.json",
+      "input": "systems/audio/voice/transcription/transcripts.json",
+      "output": "systems/audio/voice/vlm_digestion/digested_voice.json"
+    },
+    {
+      "stage": "vocal_tracks",
+      "id": "voice-vocal-tracks",
+      "ref": "systems/audio/voice/vocal_tracks/vocal_tracks.json",
+      "input": "systems/audio/voice/vlm_digestion/digested_voice.json",
+      "output": "assets/audio/voice/vocals/vocals_index.json"
+    }
+  ],
+  "models": {
+    "local_orchestrator": {
+      "provider": "ollama",
+      "base_url": "http://localhost:11434",
+      "model": "llama3.2:latest",
+      "role": "text_orchestration_and_semantic_digestion"
+    },
+    "transcription_engine": {
+      "type": "asr",
+      "preferred": [
+        "whisper",
+        "faster-whisper"
+      ],
+      "fallback": "text_input_passthrough",
+      "lang": [
+        "en",
+        "ru"
+      ]
+    },
+    "vlm_voice": {
+      "type": "vlm_audio_multimodal",
+      "role": "voice_digestion_prosody_and_timbre_analysis",
+      "fallback": "llm_semantic_prosody_estimation"
+    },
+    "tts_vocal": {
+      "type": "tts",
+      "preferred": [
+        "coqui-tts",
+        "piper",
+        "system-tts"
+      ],
+      "fallback": "placeholder_vocal_manifest",
+      "lang": [
+        "en",
+        "ru"
+      ]
+    }
+  },
+  "in_game_install": {
+    "enabled": true,
+    "target": "assets/audio/voice",
+    "manifest": "assets/audio/voice/vocals/vocals_index.json"
+  },
+  "installed_at": "2026-11-13T05:16:37Z"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "game_world_model_weights_port",
+  "type": "model_weights_port",
+  "version": "1.0.0",
+  "status": "ported",
+  "runtime": {
+    "provider": "ollama",
+    "base_url": "http://localhost:11434",
+    "openai_compatible_base_url": "http://localhost:11434/v1",
+    "connection_ref": "systems/local_ai/connection.json"
+  },
+  "models": [
+    {
+      "model_id": "mw-llama3.2-latest",
+      "name": "llama3.2:latest",
+      "family": "llama",
+      "format": "gguf",
+      "quantization": "Q4_K_M",
+      "parameter_size": "3.2B",
+      "context_length": 131072,
+      "embedding_length": 3072,
+      "size_bytes": 2019393189,
+      "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+      "capabilities": ["completion", "tools", "chat"],
+      "port_target": "game_world_runtime",
+      "access": {
+        "mode": "in_game",
+        "endpoint": "http://localhost:11434/v1",
+        "default": true
+      },
+      "bindings": ["systems/runtime/kilo_code.json", "systems/world_items/compute_devices.json"]
+    }
+  ],
+  "port": {
+    "source": "local_host_ollama",
+    "destination": "spatial_avy_home/game_world_runtime",
+    "mounted": true,
+    "usable_in_world": true
+  }
+}

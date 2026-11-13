@@ -1,0 +1,29 @@
+{
+  "track_id": "ost-005-border-protocol",
+  "title": "SATS REA-REM Protocol",
+  "artist": "Spatial Avy OST",
+  "source": "soundtrack",
+  "zone": "Z4",
+  "beat": "BEAT_4",
+  "mood": [
+    "signal",
+    "alert"
+  ],
+  "file": "assets/audio/soundtrack/ost-005-border-protocol.ogg",
+  "frequency": {
+    "bands": {
+      "sub_bass": 0.4047,
+      "bass": 0.6075,
+      "low_mid": 0.6714,
+      "mid": 0.6559,
+      "high_mid": 0.7747,
+      "presence": 0.775,
+      "brilliance": 0.5601
+    },
+    "peak_dbfs": -11.07,
+    "rms_dbfs": -20.06,
+    "source": "derived_profile"
+  },
+  "captured_at": "2026-11-13T06:03:55Z",
+  "output": "speaker"
+}

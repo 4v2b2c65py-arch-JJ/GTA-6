@@ -1,0 +1,39 @@
+# Sensitive / local
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.crt
+*secret*
+*credential*
+*token*
+
+# Virtual environment & caches
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Logs and runtime outputs
+logs/
+*.log
+
+# Build artifacts (large/duplicated/generated)
+build/package/
+build/web/data/
+build/game/build.json
+
+# Node/Electron (future)
+node_modules/
+dist/
+out/
+
+# Vercel
+.vercel/

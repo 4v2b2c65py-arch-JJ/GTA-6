@@ -1,0 +1,55 @@
+{
+  "id": "steam_russian_fix_transcripts",
+  "generated_at": "2026-11-13T05:16:37Z",
+  "lang_enabled": true,
+  "records": [
+    {
+      "transcript_id": "tr-guide-steam-fix-ru",
+      "guide_id": "guide-steam-fix-ru",
+      "source_id": "steam_fix_ru_script",
+      "url": "https://greasyfork.org/en/scripts/515187-steam-fix-ru",
+      "lang": "ru",
+      "enabled": true,
+      "hash": "9c0a2bc146bc3dd0",
+      "text": "Steam Fix RU: убирает параметр l=russian из URL для CSS и JS на store.steampowered.com. Скрипт проверяет link/script ресурсы, удаляет l=russian и обновляет URL; работает при загрузке и через MutationObserver.",
+      "ts": "2026-11-13T05:16:37Z"
+    },
+    {
+      "transcript_id": "tr-guide-zoneofgames",
+      "guide_id": "guide-zoneofgames",
+      "source_id": "zoneofgames",
+      "url": "https://www.zoneofgames.ru",
+      "lang": "ru",
+      "enabled": true,
+      "hash": "46fbbb6ea6448602",
+      "text": "Zone of Games: каталог русификаторов и гайдов. Рекомендуется проверять совместимость с версией игры, делать резервные копии и устанавливать по инструкции (автоустановка/копирование файлов).",
+      "ts": "2026-11-13T05:16:37Z"
+    },
+    {
+      "transcript_id": "tr-guide-playground-ru",
+      "guide_id": "guide-playground-ru",
+      "source_id": "playground",
+      "url": "https://www.playground.ru/file/rus",
+      "lang": "ru",
+      "enabled": true,
+      "hash": "b51c0e0f0d09d4d7",
+      "text": "PlayGround: русификаторы и переводы для игр. Выбор версии под игру, установка по инструкции, проверка после обновлений.",
+      "ts": "2026-11-13T05:16:37Z"
+    },
+    {
+      "transcript_id": "tr-guide-steam-language",
+      "guide_id": "guide-steam-language",
+      "source_id": "steam_support_localization",
+      "url": "https://partner.steamgames.com/doc/store/localization?language=russian",
+      "lang": "ru",
+      "enabled": true,
+      "hash": "720102e200849072",
+      "text": "Локализация Steam: язык игры задаётся в свойствах игры или в настройках самой игры; после смены могут загружаться языковые файлы. Интерфейс, субтитры и озвучка поддерживаются отдельно; проверяйте наличие перевода на странице магазина.",
+      "ts": "2026-11-13T05:16:37Z"
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "enabled": 4
+  }
+}

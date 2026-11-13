@@ -1,0 +1,142 @@
+{
+  "id": "compute_devices",
+  "type": "world_item_registry",
+  "version": "1.0.0",
+  "description": "In-game world compute items with ported VSCode UI, Kilo Code, model weights, Python, physics/algorithms access.",
+  "runtime_ref": "systems/runtime/game_world_runtime.json",
+  "items": [
+    {
+      "item_id": "item-computer-desktop-01",
+      "name": "Bodium Desktop Workstation",
+      "form_factor": "computer",
+      "category": "desktop_computer",
+      "location": { "zone": "Z0-core-plate", "node": "N10", "placement": "ops_desk" },
+      "status": "active",
+      "usable": true,
+      "ports": { "ui": 9301, "terminal": 9302, "python": 9303, "api": 9304 },
+      "uri": "http://0.0.0.0:9301/devices/item-computer-desktop-01",
+      "interfaces": {
+        "vscode_ui": { "ref": "systems/runtime/vscode_world_interface.json", "asset": "assets/ui/vscode/index.html", "enabled": true },
+        "terminal": { "enabled": true, "python": ".venv/bin/python" }
+      },
+      "runtime": {
+        "kilo_code": { "enabled": true, "mode": "full", "ref": "systems/runtime/kilo_code.json" },
+        "model_weights": { "enabled": true, "model": "llama3.2:latest", "ref": "systems/local_ai/model_weights_port.json" },
+        "python_access": { "enabled": true, "ref": "systems/runtime/python_access.json" },
+        "physics_algorithms": { "enabled": true, "ref": "systems/runtime/physics_algorithms.json" }
+      }
+    },
+    {
+      "item_id": "item-laptop-01",
+      "name": "Field Laptop",
+      "form_factor": "laptop",
+      "category": "laptop",
+      "location": { "zone": "Z2-traction-run", "node": "N6", "placement": "mobile_kit" },
+      "status": "active",
+      "usable": true,
+      "ports": { "ui": 9311, "terminal": 9312, "python": 9313, "api": 9314 },
+      "uri": "http://0.0.0.0:9311/devices/item-laptop-01",
+      "interfaces": {
+        "vscode_ui": { "ref": "systems/runtime/vscode_world_interface.json", "asset": "assets/ui/vscode/index.html", "enabled": true },
+        "terminal": { "enabled": true, "python": ".venv/bin/python" }
+      },
+      "runtime": {
+        "kilo_code": { "enabled": true, "mode": "full", "ref": "systems/runtime/kilo_code.json" },
+        "model_weights": { "enabled": true, "model": "llama3.2:latest", "ref": "systems/local_ai/model_weights_port.json" },
+        "python_access": { "enabled": true, "ref": "systems/runtime/python_access.json" },
+        "physics_algorithms": { "enabled": true, "ref": "systems/runtime/physics_algorithms.json" }
+      }
+    },
+    {
+      "item_id": "item-intel-device-01",
+      "name": "Mind-Core Intelligent Terminal",
+      "form_factor": "intelligent_device",
+      "category": "intelligent_terminal",
+      "location": { "zone": "Z1-fault-belt", "node": "N8", "placement": "analysis_node" },
+      "status": "active",
+      "usable": true,
+      "ports": { "ui": 9321, "terminal": 9322, "python": 9323, "api": 9324 },
+      "uri": "http://0.0.0.0:9321/devices/item-intel-device-01",
+      "interfaces": {
+        "vscode_ui": { "ref": "systems/runtime/vscode_world_interface.json", "asset": "assets/ui/vscode/index.html", "enabled": true },
+        "terminal": { "enabled": true, "python": ".venv/bin/python" }
+      },
+      "runtime": {
+        "kilo_code": { "enabled": true, "mode": "full", "ref": "systems/runtime/kilo_code.json" },
+        "model_weights": { "enabled": true, "model": "llama3.2:latest", "ref": "systems/local_ai/model_weights_port.json" },
+        "python_access": { "enabled": true, "ref": "systems/runtime/python_access.json" },
+        "physics_algorithms": { "enabled": true, "ref": "systems/runtime/physics_algorithms.json" }
+      }
+    },
+    {
+      "item_id": "item-phone-01",
+      "name": "Comms Phone",
+      "form_factor": "phone",
+      "category": "smartphone",
+      "location": { "zone": "Z0-core-plate", "node": "N-ALIEN", "placement": "handheld" },
+      "status": "active",
+      "usable": true,
+      "ports": { "ui": 9331, "terminal": 9332, "python": 9333, "api": 9334 },
+      "uri": "http://0.0.0.0:9331/devices/item-phone-01",
+      "interfaces": {
+        "vscode_ui": { "ref": "systems/runtime/vscode_world_interface.json", "asset": "assets/ui/vscode/index.html", "enabled": true, "mode": "compact" },
+        "terminal": { "enabled": true, "python": ".venv/bin/python" }
+      },
+      "runtime": {
+        "kilo_code": { "enabled": true, "mode": "full", "ref": "systems/runtime/kilo_code.json" },
+        "model_weights": { "enabled": true, "model": "llama3.2:latest", "ref": "systems/local_ai/model_weights_port.json" },
+        "python_access": { "enabled": true, "ref": "systems/runtime/python_access.json" },
+        "physics_algorithms": { "enabled": true, "ref": "systems/runtime/physics_algorithms.json" }
+      }
+    },
+    {
+      "item_id": "item-tablet-01",
+      "name": "Slate Tablet",
+      "form_factor": "tablet",
+      "category": "tablet",
+      "location": { "zone": "Z3-cant-plates", "node": "N4", "placement": "field_slate" },
+      "status": "active",
+      "usable": true,
+      "ports": { "ui": 9341, "terminal": 9342, "python": 9343, "api": 9344 },
+      "uri": "http://0.0.0.0:9341/devices/item-tablet-01",
+      "interfaces": {
+        "vscode_ui": { "ref": "systems/runtime/vscode_world_interface.json", "asset": "assets/ui/vscode/index.html", "enabled": true, "mode": "touch" },
+        "terminal": { "enabled": true, "python": ".venv/bin/python" }
+      },
+      "runtime": {
+        "kilo_code": { "enabled": true, "mode": "full", "ref": "systems/runtime/kilo_code.json" },
+        "model_weights": { "enabled": true, "model": "llama3.2:latest", "ref": "systems/local_ai/model_weights_port.json" },
+        "python_access": { "enabled": true, "ref": "systems/runtime/python_access.json" },
+        "physics_algorithms": { "enabled": true, "ref": "systems/runtime/physics_algorithms.json" }
+      }
+    },
+    {
+      "item_id": "item-wearable-01",
+      "name": "Wrist Compute Band",
+      "form_factor": "wearable",
+      "category": "smart_wearable",
+      "location": { "zone": "Z4-crest-reveal", "node": "N2", "placement": "worn" },
+      "status": "active",
+      "usable": true,
+      "ports": { "ui": 9351, "terminal": 9352, "python": 9353, "api": 9354 },
+      "uri": "http://0.0.0.0:9351/devices/item-wearable-01",
+      "interfaces": {
+        "vscode_ui": { "ref": "systems/runtime/vscode_world_interface.json", "asset": "assets/ui/vscode/index.html", "enabled": true, "mode": "micro" },
+        "terminal": { "enabled": true, "python": ".venv/bin/python" }
+      },
+      "runtime": {
+        "kilo_code": { "enabled": true, "mode": "full", "ref": "systems/runtime/kilo_code.json" },
+        "model_weights": { "enabled": true, "model": "llama3.2:latest", "ref": "systems/local_ai/model_weights_port.json" },
+        "python_access": { "enabled": true, "ref": "systems/runtime/python_access.json" },
+        "physics_algorithms": { "enabled": true, "ref": "systems/runtime/physics_algorithms.json" }
+      }
+    }
+  ],
+  "summary": {
+    "total_items": 6,
+    "active": 6,
+    "usable": 6,
+    "form_factors": ["computer", "laptop", "intelligent_device", "phone", "tablet", "wearable"],
+    "full_stack_enabled": true
+  }
+}

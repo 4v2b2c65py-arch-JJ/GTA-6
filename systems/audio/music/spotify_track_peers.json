@@ -1,0 +1,29 @@
+{
+  "id": "spotify_track_peers",
+  "type": "music_track_peers",
+  "provider": "spotify",
+  "version": "1.0.0",
+  "status": "loaded",
+  "description": "Spotify track peers graph and metadata loaded for in-game music system (peer relations used by installed sorting algo).",
+  "peers": [
+    { "peer_id": "peer-bodium-ambient", "name": "Bodium Ambient Peers", "moods": ["ambient","threshold"], "zones": ["Z0"], "beats": ["BEAT_0"] },
+    { "peer_id": "peer-tension-pulse", "name": "Tension Pulse Peers", "moods": ["tense","pulse"], "zones": ["Z1"], "beats": ["BEAT_1"] },
+    { "peer_id": "peer-mind-shimmer", "name": "Mind Shimmer Peers", "moods": ["cognitive","shimmer"], "zones": ["M0"], "beats": ["BEAT_2"] },
+    { "peer_id": "peer-soul-wide", "name": "Soul Wide Peers", "moods": ["solemn","wide"], "zones": ["S0"], "beats": ["BEAT_3"] },
+    { "peer_id": "peer-sats-signal", "name": "SATS/REA-REM Signal Peers", "moods": ["signal","alert"], "zones": ["Z4"], "beats": ["BEAT_4"] },
+    { "peer_id": "peer-vice-neon", "name": "Vice Neon Peers", "moods": ["synth","night","drive"], "zones": ["Z2","Z3"], "beats": ["BEAT_3","BEAT_4"] },
+    { "peer_id": "peer-frontier", "name": "Frontier Peers", "moods": ["frontier","folk","wide"], "zones": ["Z3","Z5"], "beats": ["BEAT_2","BEAT_5"] }
+  ],
+  "tracks": [
+    { "track_id": "sp-001", "spotify_id": "peer:sp-001", "title": "Bodium Threshold", "artist": "Spatial Avy Ensemble", "album": "Home World OST", "duration_ms": 214000, "mood": ["ambient","threshold"], "zone": "Z0", "beat": "BEAT_0", "energy": 0.32, "popularity": 58, "peers": ["peer-bodium-ambient","ost-001-entry-bodium"], "source": "spotify_peer" },
+    { "track_id": "sp-002", "spotify_id": "peer:sp-002", "title": "Faultline Pulse", "artist": "Spatial Avy Ensemble", "album": "Home World OST", "duration_ms": 198000, "mood": ["tense","pulse"], "zone": "Z1", "beat": "BEAT_1", "energy": 0.71, "popularity": 61, "peers": ["peer-tension-pulse","ost-002-surface-tension"], "source": "spotify_peer" },
+    { "track_id": "sp-003", "spotify_id": "peer:sp-003", "title": "Lattice Index", "artist": "Mind Core Unit", "album": "Aspects", "duration_ms": 231000, "mood": ["cognitive","shimmer"], "zone": "M0", "beat": "BEAT_2", "energy": 0.54, "popularity": 55, "peers": ["peer-mind-shimmer","ost-003-mind-core"], "source": "spotify_peer" },
+    { "track_id": "sp-004", "spotify_id": "peer:sp-004", "title": "Ember Vow", "artist": "Soul Sanctum Choir", "album": "Aspects", "duration_ms": 245000, "mood": ["solemn","wide"], "zone": "S0", "beat": "BEAT_3", "energy": 0.47, "popularity": 57, "peers": ["peer-soul-wide","ost-004-soul-sanctum"], "source": "spotify_peer" },
+    { "track_id": "sp-005", "spotify_id": "peer:sp-005", "title": "REA-REM Divert", "artist": "Border Protocol", "album": "Signals", "duration_ms": 203000, "mood": ["signal","alert"], "zone": "Z4", "beat": "BEAT_4", "energy": 0.76, "popularity": 60, "peers": ["peer-sats-signal","ost-005-border-protocol"], "source": "spotify_peer" },
+    { "track_id": "sp-006", "spotify_id": "peer:sp-006", "title": "Neon Causeway", "artist": "Vice Circuit", "album": "Leonida Nights", "duration_ms": 226000, "mood": ["synth","night","drive"], "zone": "Z2", "beat": "BEAT_3", "energy": 0.82, "popularity": 72, "peers": ["peer-vice-neon"], "source": "spotify_peer" },
+    { "track_id": "sp-007", "spotify_id": "peer:sp-007", "title": "Sunset Motorway", "artist": "Vice Circuit", "album": "Leonida Nights", "duration_ms": 219000, "mood": ["synth","drive"], "zone": "Z3", "beat": "BEAT_4", "energy": 0.79, "popularity": 70, "peers": ["peer-vice-neon","peer-tension-pulse"], "source": "spotify_peer" },
+    { "track_id": "sp-008", "spotify_id": "peer:sp-008", "title": "Keys at Dusk", "artist": "Coastal Relay", "album": "Leonida Nights", "duration_ms": 208000, "mood": ["ambient","night"], "zone": "Z3", "beat": "BEAT_2", "energy": 0.44, "popularity": 63, "peers": ["peer-frontier","peer-bodium-ambient"], "source": "spotify_peer" },
+    { "track_id": "sp-009", "spotify_id": "peer:sp-009", "title": "Dust & Chrome", "artist": "Frontier Line", "album": "Routes", "duration_ms": 201000, "mood": ["frontier","drive"], "zone": "Z5", "beat": "BEAT_5", "energy": 0.66, "popularity": 59, "peers": ["peer-frontier"], "source": "spotify_peer" },
+    { "track_id": "sp-010", "spotify_id": "peer:sp-010", "title": "Campfire Relay", "artist": "Frontier Line", "album": "Routes", "duration_ms": 237000, "mood": ["folk","wide"], "zone": "Z3", "beat": "BEAT_2", "energy": 0.38, "popularity": 56, "peers": ["peer-frontier","peer-soul-wide"], "source": "spotify_peer" }
+  ]
+}

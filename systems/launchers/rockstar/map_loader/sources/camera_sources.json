@@ -1,0 +1,143 @@
+{
+  "id": "camera_sources",
+  "type": "external_camera_source_registry",
+  "version": "1.0.0",
+  "loader_ref": "systems/launchers/rockstar/map_loader/map_loader.json",
+  "compliance": {
+    "authorized_use_only": true,
+    "require_credentials_for_restricted_sources": true,
+    "privacy_controls": ["pii_redaction", "plate_blur_or_hash", "face_blur", "retention_limits", "audit_log"],
+    "notes": "Flock camera data and restricted feeds require authorized customer/law-enforcement/community agreements and approved API access. Configure credentials out-of-band; do not store secrets in repo."
+  },
+  "sources": [
+    {
+      "source_id": "flock_cam_authorized",
+      "name": "Flock Camera Data (Authorized Feed)",
+      "provider": "flock_safety_or_authorized_partner",
+      "category": "flock_cam",
+      "status": "configured",
+      "access": {
+        "mode": "authorized_api",
+        "auth_type": "token_or_oauth",
+        "endpoint": "${FLOCK_CAM_API_ENDPOINT}",
+        "credentials_env": ["FLOCK_CAM_API_KEY", "FLOCK_CAM_CLIENT_ID", "FLOCK_CAM_CLIENT_SECRET"],
+        "enabled": false
+      },
+      "data_types": ["vehicle_detections", "camera_metadata", "timestamped_events", "location_geo", "image_or_clip_refs"],
+      "ingest": {
+        "protocols": ["https_rest", "webhook", "batch_export"],
+        "formats": ["json", "csv"],
+        "poll_interval_sec": 30
+      },
+      "mapping_use": ["traffic_flow_modeling", "point_of_interest_activity", "road_segment_observation", "real_world_location_anchoring"],
+      "geo_fields": ["latitude", "longitude", "camera_id", "bearing", "timestamp"],
+      "redaction": { "plates": "hash_or_redact", "faces": "blur", "retain_raw": false }
+    },
+    {
+      "source_id": "traffic_camera_apis",
+      "name": "Traffic / DOT Camera APIs",
+      "provider": "state_dot_and_municipal_feeds",
+      "category": "traffic_camera_api",
+      "status": "configured",
+      "access": {
+        "mode": "public_or_keyed_api",
+        "auth_type": "api_key_optional",
+        "endpoint": "${TRAFFIC_CAM_API_ENDPOINT}",
+        "credentials_env": ["TRAFFIC_CAM_API_KEY"],
+        "enabled": false
+      },
+      "data_types": ["camera_snapshots", "stream_urls", "camera_locations", "traffic_status"],
+      "ingest": {
+        "protocols": ["https_rest", "mjpeg", "hls"],
+        "formats": ["json", "jpeg", "m3u8"],
+        "poll_interval_sec": 60
+      },
+      "mapping_use": ["road_condition_context", "intersection_modeling", "traffic_density", "real_world_visual_reference"],
+      "geo_fields": ["latitude", "longitude", "camera_id", "roadway", "timestamp"],
+      "redaction": { "plates": "blur", "faces": "blur", "retain_raw": false }
+    },
+    {
+      "source_id": "street_imagery_apis",
+      "name": "Street-Level Imagery APIs",
+      "provider": "mapping_imagery_providers",
+      "category": "street_imagery_api",
+      "status": "configured",
+      "access": {
+        "mode": "api_key",
+        "auth_type": "api_key",
+        "endpoint": "${STREET_IMAGERY_API_ENDPOINT}",
+        "credentials_env": ["STREET_IMAGERY_API_KEY"],
+        "enabled": false
+      },
+      "data_types": ["street_panoramas", "imagery_frames", "capture_metadata", "depth_or_mesh_hints"],
+      "ingest": {
+        "protocols": ["https_rest"],
+        "formats": ["json", "jpeg"],
+        "poll_interval_sec": 0
+      },
+      "mapping_use": ["facade_modeling", "landmark_geometry", "streetscape_context", "real_world_location_modeling"],
+      "geo_fields": ["latitude", "longitude", "heading", "captured_at"],
+      "redaction": { "plates": "blur", "faces": "blur", "retain_raw": false }
+    },
+    {
+      "source_id": "public_cctv_feeds",
+      "name": "Public / Municipal CCTV Feeds",
+      "provider": "municipal_open_data",
+      "category": "public_cctv_feed",
+      "status": "configured",
+      "access": {
+        "mode": "public_feed_or_permit",
+        "auth_type": "none_or_token",
+        "endpoint": "${PUBLIC_CCTV_FEED_ENDPOINT}",
+        "credentials_env": ["PUBLIC_CCTV_TOKEN"],
+        "enabled": false
+      },
+      "data_types": ["video_streams", "snapshots", "camera_catalog"],
+      "ingest": {
+        "protocols": ["https_rest", "rtsp_proxy", "hls"],
+        "formats": ["json", "jpeg", "m3u8"],
+        "poll_interval_sec": 120
+      },
+      "mapping_use": ["public_space_activity", "visual_reference", "event_context"],
+      "geo_fields": ["latitude", "longitude", "camera_id", "timestamp"],
+      "redaction": { "plates": "blur", "faces": "blur", "retain_raw": false }
+    },
+    {
+      "source_id": "mapping_geospatial_apis",
+      "name": "Mapping / Geospatial APIs",
+      "provider": "mapping_platforms",
+      "category": "mapping_api",
+      "status": "configured",
+      "access": {
+        "mode": "api_key",
+        "auth_type": "api_key",
+        "endpoint": "${MAPPING_API_ENDPOINT}",
+        "credentials_env": ["MAPPING_API_KEY"],
+        "enabled": false
+      },
+      "data_types": ["tiles", "vector_features", "elevation", "poi", "road_graph"],
+      "ingest": {
+        "protocols": ["https_rest", "tile_fetch"],
+        "formats": ["json", "geojson", "mvt", "png"],
+        "poll_interval_sec": 0
+      },
+      "mapping_use": ["base_map_geometry", "elevation_model", "poi_alignment", "region_bounds"],
+      "geo_fields": ["bbox", "coordinates", "feature_id"],
+      "redaction": { "plates": "n/a", "faces": "n/a", "retain_raw": true }
+    }
+  ],
+  "normalization": {
+    "output_schema": {
+      "event_id": "string",
+      "source_id": "string",
+      "category": "string",
+      "timestamp": "iso8601",
+      "location": { "lat": "number", "lon": "number", "alt_m": "number|null" },
+      "camera": { "camera_id": "string|null", "bearing_deg": "number|null" },
+      "observations": "array",
+      "media_refs": "array",
+      "region_hints": "array"
+    },
+    "region_join_key": ["geohash", "region_id", "zone_ref"]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "component-steam-client-api",
+  "name": "Steam Client API",
+  "type": "install_component",
+  "required": true,
+  "status": "installed",
+  "version": "modeled",
+  "description": "Steam integration API component for detecting/launching Steam-linked Rockstar titles.",
+  "installed_at": "2026-11-13T05:08:49Z",
+  "path": "systems/launchers/rockstar/install/components/steam_client_api.json"
+}

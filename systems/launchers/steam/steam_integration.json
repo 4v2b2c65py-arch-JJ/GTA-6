@@ -1,0 +1,22 @@
+{
+  "id": "steam_integration",
+  "type": "launcher_integration",
+  "provider": "steam",
+  "status": "detected",
+  "environment": {
+    "host_os": "darwin",
+    "steam_app_detected": true,
+    "steam_app_path": "/Applications/Steam.app"
+  },
+  "account_linking": {
+    "rockstar_account_required_for_most_titles": true,
+    "rule": "one_rockstar_account_per_steam_account",
+    "handoff": "steam_launch_then_rockstar_launcher_auth_activation"
+  },
+  "installments": {
+    "flow": ["purchase_in_steam", "install_via_steam", "first_launch_installs_or_invokes_rgl", "sign_in_link_rockstar_account", "play"],
+    "notes": "Steam manages download/install; Rockstar titles typically require Rockstar Games Launcher for activation/sign-in."
+  },
+  "features": ["library_sync", "play_on_steam", "overlay_coexistence", "cloud_saves_title_dependent"],
+  "related_ref": "systems/launchers/related/installments.json"
+}

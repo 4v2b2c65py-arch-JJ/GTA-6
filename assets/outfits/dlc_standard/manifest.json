@@ -1,0 +1,21 @@
+{
+  "id": "dlc_standard",
+  "name": "Standard Outfit DLC",
+  "type": "dlc_pack",
+  "version": "1.0.0",
+  "status": "available",
+  "attachment_spec": "assets/outfits/direct_12_stud/spec.json",
+  "contents": {
+    "customizer_sets": [
+      "assets/outfits/dlc_standard/customizers.json"
+    ],
+    "outfit_presets": [
+      "assets/outfits/dlc_standard/presets.json"
+    ]
+  },
+  "compatibility": {
+    "stud_system": "direct_12_stud",
+    "stud_count": 12,
+    "targets": ["player", "avatar", "character"]
+  }
+}

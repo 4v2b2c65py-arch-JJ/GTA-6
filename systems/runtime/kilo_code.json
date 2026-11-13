@@ -1,0 +1,35 @@
+{
+  "id": "kilo_code_integration",
+  "type": "coding_agent_integration",
+  "version": "1.0.0",
+  "status": "enabled",
+  "mode": "full",
+  "agent": {
+    "name": "Kilo Code",
+    "capabilities": ["code_generation", "code_edit", "refactor", "debug", "explain", "terminal_tasks", "file_ops", "tool_use", "automated_workflows"],
+    "automation": {
+      "auto_fix": true,
+      "auto_complete": true,
+      "auto_test_suggest": true,
+      "physics_script_assist": true,
+      "algorithm_script_assist": true
+    }
+  },
+  "model_binding": {
+    "weights_ref": "systems/local_ai/model_weights_port.json",
+    "default_model": "llama3.2:latest",
+    "endpoint": "http://localhost:11434/v1",
+    "provider": "ollama_openai_compatible"
+  },
+  "ui_binding": {
+    "vscode_interface": "systems/runtime/vscode_world_interface.json",
+    "surfaces": ["editor_inline", "chat_panel", "terminal", "command_palette"]
+  },
+  "runtime_access": {
+    "python": "systems/runtime/python_access.json",
+    "physics": "systems/runtime/physics_algorithms.json",
+    "workspace_root": "/Users/jjmarte/Desktop/spatial avy"
+  },
+  "world_devices_ref": "systems/world_items/compute_devices.json",
+  "usable_in_world": true
+}

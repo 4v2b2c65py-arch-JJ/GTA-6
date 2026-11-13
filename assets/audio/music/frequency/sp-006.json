@@ -1,0 +1,30 @@
+{
+  "track_id": "sp-006",
+  "title": "Neon Causeway",
+  "artist": "Vice Circuit",
+  "source": "spotify_peer",
+  "zone": "Z2",
+  "beat": "BEAT_3",
+  "mood": [
+    "synth",
+    "night",
+    "drive"
+  ],
+  "file": null,
+  "frequency": {
+    "bands": {
+      "sub_bass": 0.6806,
+      "bass": 0.919,
+      "low_mid": 0.6986,
+      "mid": 0.6933,
+      "high_mid": 0.6723,
+      "presence": 0.7249,
+      "brilliance": 0.4675
+    },
+    "peak_dbfs": -9.22,
+    "rms_dbfs": -18.56,
+    "source": "derived_profile"
+  },
+  "captured_at": "2026-11-13T06:03:55Z",
+  "output": "speaker"
+}

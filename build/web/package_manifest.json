@@ -1,0 +1,37 @@
+{
+  "id": "spatial_avy_web_package",
+  "type": "web_client_player_package",
+  "version": "1.0.0",
+  "packaged_at": "2026-11-13T06:27:56Z",
+  "executable": "build/web/serve.py",
+  "client_entry": "build/web/index.html",
+  "codebase_snapshot": "build/web/data",
+  "archive": "build/package/spatial-avy-web-client-player.tar.gz",
+  "archive_sha256": "7fea54f4c8ae830cd0acd5878eccea2914cce034cf8cd2843cf4b28b93985cd8",
+  "snapshot_stats": {
+    "files": 475,
+    "bytes": 37543531
+  },
+  "identity": {
+    "manifest": "assets/identity/identity_manifest.json",
+    "favicon": "build/web/favicon.ico",
+    "icons": "build/web/assets/icons",
+    "insignia": "build/web/assets/insignia"
+  },
+  "story_novel_data": {
+    "world": "spatial_avy_home",
+    "motifs": [
+      "Bodium terrain",
+      "Mind aspect",
+      "Soul aspect",
+      "SATS/REA-REM border protocol"
+    ],
+    "mnemonic_lace": "Z<zone>-Q<pocket>-C<cell>-T<tick>",
+    "door_node_string": "N10-N9-N8-N7-N6-N5-N4-N3-N2-N1-N0"
+  },
+  "ai_integrated_data": {
+    "local_ai": "ollama llama3.2:latest @ http://localhost:11434",
+    "runtime": "systems/runtime/game_world_runtime.json",
+    "voice_pipeline": "systems/audio/voice/voice_pipeline.json"
+  }
+}

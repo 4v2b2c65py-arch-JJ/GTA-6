@@ -1,0 +1,617 @@
+{
+  "id": "regional_barcode_hashes",
+  "type": "barcode_hash_manifest",
+  "version": "1.0.0",
+  "generated_at": "2026-11-13T05:06:37Z",
+  "source": "systems/launchers/rockstar/map_loader/region_expansion.json",
+  "network": {
+    "provider_id": "game_satellite_network_provider",
+    "gateway_node": "N-ALIEN",
+    "devices": [
+      "dev-fpv-cam-001",
+      "dev-fpv-vtx-001",
+      "dev-fpv-hud-001",
+      "dev-fpv-cam-002"
+    ],
+    "channels": [
+      "CH-CAM-01",
+      "CH-VTX-01",
+      "CH-HUD-01",
+      "CH-CAM-02"
+    ]
+  },
+  "hash_alg": "sha256",
+  "regions": [
+    {
+      "region_id": "RW-LEO-MIA-001",
+      "set_id": "exp-leonida-core",
+      "name": "Miami-Dade Metro",
+      "real_world_ref": "Miami, Florida, USA",
+      "center": {
+        "lat": 25.7617,
+        "lon": -80.1918
+      },
+      "bounds": {
+        "north": 25.979,
+        "south": 25.133,
+        "east": -80.12,
+        "west": -80.873
+      },
+      "lod": "macro",
+      "assets_expected": [
+        "road_graph",
+        "landmarks",
+        "waterways",
+        "urban_blocks"
+      ],
+      "source_tags": [
+        "flock_authorized",
+        "dot_traffic",
+        "street_level"
+      ],
+      "barcode": "BC-RW-LEO-MIA-001-6B3567D8-9913119A-91446F35",
+      "hash_sha256": "6b3567d89913119a91446f3513acd4e23a07212b50eb41b1b973abfbe127adbc",
+      "hash_alg": "sha256",
+      "downloaded": true,
+      "download_source": "satcom_network_pass",
+      "network": {
+        "provider_id": "game_satellite_network_provider",
+        "gateway_node": "N-ALIEN",
+        "pass_count": 4,
+        "passes": [
+          {
+            "hop": 1,
+            "device_id": "dev-fpv-cam-001",
+            "label": "FPV Main Scout Cam Webpointer",
+            "satellite": "SAT-01",
+            "channel": "CH-CAM-01",
+            "uri": "http://0.0.0.0:9101/devices/dev-fpv-cam-001",
+            "port": 9101,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 2,
+            "device_id": "dev-fpv-vtx-001",
+            "label": "FPV Main VTX Encode Webpointer",
+            "satellite": "SAT-02",
+            "channel": "CH-VTX-01",
+            "uri": "http://0.0.0.0:9102/devices/dev-fpv-vtx-001",
+            "port": 9102,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 3,
+            "device_id": "dev-fpv-hud-001",
+            "label": "FPV Main HUD Overlay Webpointer",
+            "satellite": "SAT-01",
+            "channel": "CH-HUD-01",
+            "uri": "http://0.0.0.0:9103/devices/dev-fpv-hud-001",
+            "port": 9103,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 4,
+            "device_id": "dev-fpv-cam-002",
+            "label": "FPV Relay Cam Webpointer",
+            "satellite": "SAT-03",
+            "channel": "CH-CAM-02",
+            "uri": "http://0.0.0.0:9104/devices/dev-fpv-cam-002",
+            "port": 9104,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          }
+        ]
+      },
+      "ts": "2026-11-13T05:06:37Z"
+    },
+    {
+      "region_id": "RW-LEO-MIA-BEACH-002",
+      "set_id": "exp-leonida-core",
+      "name": "Miami Beach / Coastal Strip",
+      "real_world_ref": "Miami Beach, Florida, USA",
+      "center": {
+        "lat": 25.7907,
+        "lon": -80.13
+      },
+      "bounds": {
+        "north": 25.872,
+        "south": 25.764,
+        "east": -80.12,
+        "west": -80.155
+      },
+      "lod": "meso",
+      "assets_expected": [
+        "coastline",
+        "arterials",
+        "poi_density",
+        "pedestrian_flow_model"
+      ],
+      "source_tags": [
+        "traffic",
+        "public_feeds",
+        "street_level"
+      ],
+      "barcode": "BC-RW-LEO-MIA-BEACH-002-F010EDA9-B705E96F-D8D8DACA",
+      "hash_sha256": "f010eda9b705e96fd8d8dacaca87c9af1a76a1039fa3c28da1dcce17efc7ec5e",
+      "hash_alg": "sha256",
+      "downloaded": true,
+      "download_source": "satcom_network_pass",
+      "network": {
+        "provider_id": "game_satellite_network_provider",
+        "gateway_node": "N-ALIEN",
+        "pass_count": 4,
+        "passes": [
+          {
+            "hop": 1,
+            "device_id": "dev-fpv-cam-001",
+            "label": "FPV Main Scout Cam Webpointer",
+            "satellite": "SAT-01",
+            "channel": "CH-CAM-01",
+            "uri": "http://0.0.0.0:9101/devices/dev-fpv-cam-001",
+            "port": 9101,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 2,
+            "device_id": "dev-fpv-vtx-001",
+            "label": "FPV Main VTX Encode Webpointer",
+            "satellite": "SAT-02",
+            "channel": "CH-VTX-01",
+            "uri": "http://0.0.0.0:9102/devices/dev-fpv-vtx-001",
+            "port": 9102,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 3,
+            "device_id": "dev-fpv-hud-001",
+            "label": "FPV Main HUD Overlay Webpointer",
+            "satellite": "SAT-01",
+            "channel": "CH-HUD-01",
+            "uri": "http://0.0.0.0:9103/devices/dev-fpv-hud-001",
+            "port": 9103,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 4,
+            "device_id": "dev-fpv-cam-002",
+            "label": "FPV Relay Cam Webpointer",
+            "satellite": "SAT-03",
+            "channel": "CH-CAM-02",
+            "uri": "http://0.0.0.0:9104/devices/dev-fpv-cam-002",
+            "port": 9104,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          }
+        ]
+      },
+      "ts": "2026-11-13T05:06:37Z"
+    },
+    {
+      "region_id": "RW-LEO-KEYS-003",
+      "set_id": "exp-leonida-core",
+      "name": "Keys Causeway Corridor",
+      "real_world_ref": "Florida Keys approach corridors, USA",
+      "center": {
+        "lat": 24.925,
+        "lon": -80.95
+      },
+      "bounds": {
+        "north": 25.4,
+        "south": 24.55,
+        "east": -80.1,
+        "west": -81.8
+      },
+      "lod": "macro",
+      "assets_expected": [
+        "bridges",
+        "coastal_routes",
+        "elevation_profile"
+      ],
+      "source_tags": [
+        "dot_traffic",
+        "mapping_api"
+      ],
+      "barcode": "BC-RW-LEO-KEYS-003-3CDDE130-9A5B3466-5BC1737F",
+      "hash_sha256": "3cdde1309a5b34665bc1737f20f04a21eec06a33606d98f85cca0c06ec5397d0",
+      "hash_alg": "sha256",
+      "downloaded": true,
+      "download_source": "satcom_network_pass",
+      "network": {
+        "provider_id": "game_satellite_network_provider",
+        "gateway_node": "N-ALIEN",
+        "pass_count": 4,
+        "passes": [
+          {
+            "hop": 1,
+            "device_id": "dev-fpv-cam-001",
+            "label": "FPV Main Scout Cam Webpointer",
+            "satellite": "SAT-01",
+            "channel": "CH-CAM-01",
+            "uri": "http://0.0.0.0:9101/devices/dev-fpv-cam-001",
+            "port": 9101,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 2,
+            "device_id": "dev-fpv-vtx-001",
+            "label": "FPV Main VTX Encode Webpointer",
+            "satellite": "SAT-02",
+            "channel": "CH-VTX-01",
+            "uri": "http://0.0.0.0:9102/devices/dev-fpv-vtx-001",
+            "port": 9102,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 3,
+            "device_id": "dev-fpv-hud-001",
+            "label": "FPV Main HUD Overlay Webpointer",
+            "satellite": "SAT-01",
+            "channel": "CH-HUD-01",
+            "uri": "http://0.0.0.0:9103/devices/dev-fpv-hud-001",
+            "port": 9103,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 4,
+            "device_id": "dev-fpv-cam-002",
+            "label": "FPV Relay Cam Webpointer",
+            "satellite": "SAT-03",
+            "channel": "CH-CAM-02",
+            "uri": "http://0.0.0.0:9104/devices/dev-fpv-cam-002",
+            "port": 9104,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          }
+        ]
+      },
+      "ts": "2026-11-13T05:06:37Z"
+    },
+    {
+      "region_id": "RW-US-ATL-010",
+      "set_id": "exp-us-metro",
+      "name": "Atlanta Metro",
+      "real_world_ref": "Atlanta, Georgia, USA",
+      "center": {
+        "lat": 33.749,
+        "lon": -84.388
+      },
+      "bounds": {
+        "north": 34.0,
+        "south": 33.6,
+        "east": -84.1,
+        "west": -84.65
+      },
+      "lod": "macro",
+      "assets_expected": [
+        "road_graph",
+        "interchanges",
+        "landmarks"
+      ],
+      "source_tags": [
+        "flock_authorized",
+        "dot_traffic"
+      ],
+      "barcode": "BC-RW-US-ATL-010-A298E843-EEB1F501-AE7D64B0",
+      "hash_sha256": "a298e843eeb1f501ae7d64b035483ba2d341a5e33b820b5dc7e524a4082334b5",
+      "hash_alg": "sha256",
+      "downloaded": true,
+      "download_source": "satcom_network_pass",
+      "network": {
+        "provider_id": "game_satellite_network_provider",
+        "gateway_node": "N-ALIEN",
+        "pass_count": 4,
+        "passes": [
+          {
+            "hop": 1,
+            "device_id": "dev-fpv-cam-001",
+            "label": "FPV Main Scout Cam Webpointer",
+            "satellite": "SAT-01",
+            "channel": "CH-CAM-01",
+            "uri": "http://0.0.0.0:9101/devices/dev-fpv-cam-001",
+            "port": 9101,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 2,
+            "device_id": "dev-fpv-vtx-001",
+            "label": "FPV Main VTX Encode Webpointer",
+            "satellite": "SAT-02",
+            "channel": "CH-VTX-01",
+            "uri": "http://0.0.0.0:9102/devices/dev-fpv-vtx-001",
+            "port": 9102,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 3,
+            "device_id": "dev-fpv-hud-001",
+            "label": "FPV Main HUD Overlay Webpointer",
+            "satellite": "SAT-01",
+            "channel": "CH-HUD-01",
+            "uri": "http://0.0.0.0:9103/devices/dev-fpv-hud-001",
+            "port": 9103,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 4,
+            "device_id": "dev-fpv-cam-002",
+            "label": "FPV Relay Cam Webpointer",
+            "satellite": "SAT-03",
+            "channel": "CH-CAM-02",
+            "uri": "http://0.0.0.0:9104/devices/dev-fpv-cam-002",
+            "port": 9104,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          }
+        ]
+      },
+      "ts": "2026-11-13T05:06:37Z"
+    },
+    {
+      "region_id": "RW-US-LAX-011",
+      "set_id": "exp-us-metro",
+      "name": "Los Angeles Basin Sample",
+      "real_world_ref": "Los Angeles, California, USA",
+      "center": {
+        "lat": 34.0522,
+        "lon": -118.2437
+      },
+      "bounds": {
+        "north": 34.337,
+        "south": 33.703,
+        "east": -118.155,
+        "west": -118.668
+      },
+      "lod": "macro",
+      "assets_expected": [
+        "freeway_network",
+        "urban_blocks",
+        "poi_density"
+      ],
+      "source_tags": [
+        "traffic",
+        "street_level",
+        "mapping_api"
+      ],
+      "barcode": "BC-RW-US-LAX-011-B80C40A7-EEFDAC1C-25B02F85",
+      "hash_sha256": "b80c40a7eefdac1c25b02f85c8e028baf704cf83a08da70720debd223beb9f59",
+      "hash_alg": "sha256",
+      "downloaded": true,
+      "download_source": "satcom_network_pass",
+      "network": {
+        "provider_id": "game_satellite_network_provider",
+        "gateway_node": "N-ALIEN",
+        "pass_count": 4,
+        "passes": [
+          {
+            "hop": 1,
+            "device_id": "dev-fpv-cam-001",
+            "label": "FPV Main Scout Cam Webpointer",
+            "satellite": "SAT-01",
+            "channel": "CH-CAM-01",
+            "uri": "http://0.0.0.0:9101/devices/dev-fpv-cam-001",
+            "port": 9101,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 2,
+            "device_id": "dev-fpv-vtx-001",
+            "label": "FPV Main VTX Encode Webpointer",
+            "satellite": "SAT-02",
+            "channel": "CH-VTX-01",
+            "uri": "http://0.0.0.0:9102/devices/dev-fpv-vtx-001",
+            "port": 9102,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 3,
+            "device_id": "dev-fpv-hud-001",
+            "label": "FPV Main HUD Overlay Webpointer",
+            "satellite": "SAT-01",
+            "channel": "CH-HUD-01",
+            "uri": "http://0.0.0.0:9103/devices/dev-fpv-hud-001",
+            "port": 9103,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 4,
+            "device_id": "dev-fpv-cam-002",
+            "label": "FPV Relay Cam Webpointer",
+            "satellite": "SAT-03",
+            "channel": "CH-CAM-02",
+            "uri": "http://0.0.0.0:9104/devices/dev-fpv-cam-002",
+            "port": 9104,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          }
+        ]
+      },
+      "ts": "2026-11-13T05:06:37Z"
+    },
+    {
+      "region_id": "RW-US-NYC-012",
+      "set_id": "exp-us-metro",
+      "name": "New York City Core Sample",
+      "real_world_ref": "New York, New York, USA",
+      "center": {
+        "lat": 40.7128,
+        "lon": -74.006
+      },
+      "bounds": {
+        "north": 40.917,
+        "south": 40.477,
+        "east": -73.7,
+        "west": -74.259
+      },
+      "lod": "macro",
+      "assets_expected": [
+        "street_grid",
+        "bridges_tunnels",
+        "landmarks"
+      ],
+      "source_tags": [
+        "public_feeds",
+        "traffic",
+        "street_level"
+      ],
+      "barcode": "BC-RW-US-NYC-012-083F6DF3-D23F42A8-CF716BED",
+      "hash_sha256": "083f6df3d23f42a8cf716bed248a438bc873c16ebb1b15581f5643c25658a9bb",
+      "hash_alg": "sha256",
+      "downloaded": true,
+      "download_source": "satcom_network_pass",
+      "network": {
+        "provider_id": "game_satellite_network_provider",
+        "gateway_node": "N-ALIEN",
+        "pass_count": 4,
+        "passes": [
+          {
+            "hop": 1,
+            "device_id": "dev-fpv-cam-001",
+            "label": "FPV Main Scout Cam Webpointer",
+            "satellite": "SAT-01",
+            "channel": "CH-CAM-01",
+            "uri": "http://0.0.0.0:9101/devices/dev-fpv-cam-001",
+            "port": 9101,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 2,
+            "device_id": "dev-fpv-vtx-001",
+            "label": "FPV Main VTX Encode Webpointer",
+            "satellite": "SAT-02",
+            "channel": "CH-VTX-01",
+            "uri": "http://0.0.0.0:9102/devices/dev-fpv-vtx-001",
+            "port": 9102,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 3,
+            "device_id": "dev-fpv-hud-001",
+            "label": "FPV Main HUD Overlay Webpointer",
+            "satellite": "SAT-01",
+            "channel": "CH-HUD-01",
+            "uri": "http://0.0.0.0:9103/devices/dev-fpv-hud-001",
+            "port": 9103,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 4,
+            "device_id": "dev-fpv-cam-002",
+            "label": "FPV Relay Cam Webpointer",
+            "satellite": "SAT-03",
+            "channel": "CH-CAM-02",
+            "uri": "http://0.0.0.0:9104/devices/dev-fpv-cam-002",
+            "port": 9104,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          }
+        ]
+      },
+      "ts": "2026-11-13T05:06:37Z"
+    },
+    {
+      "region_id": "RW-GLB-LON-020",
+      "set_id": "exp-global-seeds",
+      "name": "London Core Seed",
+      "real_world_ref": "London, UK",
+      "center": {
+        "lat": 51.5074,
+        "lon": -0.1278
+      },
+      "bounds": {
+        "north": 51.672,
+        "south": 51.286,
+        "east": 0.334,
+        "west": -0.51
+      },
+      "lod": "macro",
+      "assets_expected": [
+        "road_graph",
+        "landmarks"
+      ],
+      "source_tags": [
+        "public_feeds",
+        "street_level"
+      ],
+      "barcode": "BC-RW-GLB-LON-020-AEB2A572-AD0D916A-7CB13E20",
+      "hash_sha256": "aeb2a572ad0d916a7cb13e20026aaf96fde040105f415cdeda80757c58ec9820",
+      "hash_alg": "sha256",
+      "downloaded": true,
+      "download_source": "satcom_network_pass",
+      "network": {
+        "provider_id": "game_satellite_network_provider",
+        "gateway_node": "N-ALIEN",
+        "pass_count": 4,
+        "passes": [
+          {
+            "hop": 1,
+            "device_id": "dev-fpv-cam-001",
+            "label": "FPV Main Scout Cam Webpointer",
+            "satellite": "SAT-01",
+            "channel": "CH-CAM-01",
+            "uri": "http://0.0.0.0:9101/devices/dev-fpv-cam-001",
+            "port": 9101,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 2,
+            "device_id": "dev-fpv-vtx-001",
+            "label": "FPV Main VTX Encode Webpointer",
+            "satellite": "SAT-02",
+            "channel": "CH-VTX-01",
+            "uri": "http://0.0.0.0:9102/devices/dev-fpv-vtx-001",
+            "port": 9102,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 3,
+            "device_id": "dev-fpv-hud-001",
+            "label": "FPV Main HUD Overlay Webpointer",
+            "satellite": "SAT-01",
+            "channel": "CH-HUD-01",
+            "uri": "http://0.0.0.0:9103/devices/dev-fpv-hud-001",
+            "port": 9103,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          },
+          {
+            "hop": 4,
+            "device_id": "dev-fpv-cam-002",
+            "label": "FPV Relay Cam Webpointer",
+            "satellite": "SAT-03",
+            "channel": "CH-CAM-02",
+            "uri": "http://0.0.0.0:9104/devices/dev-fpv-cam-002",
+            "port": 9104,
+            "status": "received",
+            "ts": "2026-11-13T05:06:37Z"
+          }
+        ]
+      },
+      "ts": "2026-11-13T05:06:37Z"
+    }
+  ],
+  "summary": {
+    "total_regions": 7,
+    "downloaded": 7,
+    "total_network_pass_events": 28
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "bodium_terrain",
+  "type": "terrain_map",
+  "description": "Pallid, mineral load-bearing terrain veined with slow metallic light; ridged like cooled breath. Sensory/setting layer that frames beats without resolving them.",
+  "bounds": { "width": 100, "depth": 100, "height": 30, "unit": "u" },
+  "origin": { "x": 0, "y": 0, "z": 0 },
+  "regions": [
+    {
+      "id": "Z0-core-plate",
+      "name": "Core Plate",
+      "elevation": 0.0,
+      "material": "bodium_mineral",
+      "properties": { "load_bearing": true, "resonance": "low", "vein_light": "dim_silver" },
+      "state": "stable",
+      "narrative_anchor": "BEAT_0"
+    },
+    {
+      "id": "Z1-fault-belt",
+      "name": "Fault Belt",
+      "elevation": 0.2,
+      "material": "bodium_mineral_fractured",
+      "properties": { "load_bearing": true, "resonance": "rising", "vein_light": "brightening", "fracture_risk": 0.6 },
+      "state": "active",
+      "narrative_anchor": "BEAT_1"
+    },
+    {
+      "id": "Z2-traction-run",
+      "name": "Traction Run",
+      "elevation": 0.4,
+      "material": "bodium_mineral_ridged",
+      "properties": { "load_bearing": true, "traction": 0.85, "vein_light": "edge_glow" },
+      "state": "negotiable",
+      "narrative_anchor": "BEAT_2"
+    },
+    {
+      "id": "Z3-cant-plates",
+      "name": "Cant Plates",
+      "elevation": 1.2,
+      "material": "bodium_mineral_shifting",
+      "properties": { "load_bearing": true, "instability": 0.7, "heave": true, "vein_light": "stressed" },
+      "state": "pressured",
+      "narrative_anchor": "BEAT_3"
+    },
+    {
+      "id": "Z4-crest-reveal",
+      "name": "Crest Reveal",
+      "elevation": 2.0,
+      "material": "bodium_mineral",
+      "properties": { "load_bearing": true, "visibility": "full_catch", "vein_light": "focused" },
+      "state": "resolving",
+      "narrative_anchor": "BEAT_4"
+    },
+    {
+      "id": "Z5-settled-path",
+      "name": "Settled Path",
+      "elevation": 1.0,
+      "material": "bodium_mineral",
+      "properties": { "load_bearing": true, "resonance": "aftertone", "vein_light": "held_glow" },
+      "state": "altered_legible",
+      "narrative_anchor": "BEAT_5"
+    }
+  ],
+  "lighting": {
+    "directional": { "enabled": true, "intensity": 1.1, "color": "#dfe8f5", "direction": { "x": -0.4, "y": -1.0, "z": -0.3 } },
+    "ambient": { "enabled": true, "intensity": 0.35, "color": "#8fa3b8" }
+  }
+}

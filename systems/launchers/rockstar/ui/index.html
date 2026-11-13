@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rockstar Games Launcher — Spatial Avy</title>
+  <style>
+    :root{--bg:#0b0b0d;--panel:#141418;--panel2:#1b1b21;--line:#2a2a33;--text:#f2f2f4;--muted:#a0a0ad;--gold:#fcaf17;--gold2:#d89200;--ok:#35c759;--warn:#ff9f0a;--bad:#ff453a;--blue:#4da3ff}
+    *{box-sizing:border-box} body{margin:0;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#09090b,#121216);color:var(--text)}
+    .app{min-height:100vh;display:grid;grid-template-columns:260px 1fr}
+    .side{background:#0f0f13;border-right:1px solid var(--line);padding:18px;display:flex;flex-direction:column;gap:14px}
+    .brand{font-weight:800;letter-spacing:.04em;font-size:18px}.brand span{color:var(--gold)}
+    .env{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--panel)}
+    .nav button{width:100%;text-align:left;background:transparent;color:var(--text);border:1px solid transparent;padding:10px 12px;border-radius:8px;cursor:pointer;margin-bottom:6px}
+    .nav button.active,.nav button:hover{background:var(--panel2);border-color:var(--line)}
+    .nav button:disabled{opacity:.45;cursor:not-allowed}
+    .main{padding:22px 26px}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+    .pill{font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+    .pill.ok{color:var(--ok);border-color:#1f5a35;background:#0f2218}
+    .pill.warn{color:var(--warn);border-color:#5a431f;background:#221a0f}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+    h1{margin:0;font-size:22px} h2{margin:0 0 10px;font-size:16px} h3{margin:14px 0 8px;font-size:14px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    label{display:block;font-size:12px;color:var(--muted);margin:8px 0 4px}
+    input,select{width:100%;background:#0e0e12;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:10px}
+    .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .btn{background:var(--gold);color:#111;border:none;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
+    .btn:hover{background:var(--gold2)} .btn.sec{background:#23232b;color:var(--text);border:1px solid var(--line)} .btn.sm{padding:6px 10px;font-size:12px}
+    .muted{color:var(--muted)} .small{font-size:12px}
+    .hidden{display:none}
+    .game{border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--panel2);display:flex;flex-direction:column;gap:8px}
+    .game .title{font-weight:700;font-size:15px}
+    .tag{display:inline-block;font-size:11px;padding:2px 8px;border:1px solid var(--line);border-radius:999px;color:var(--muted);margin-right:4px}
+    .tag.ok{color:var(--ok);border-color:#1f5a35}.tag.bad{color:var(--bad);border-color:#5a2522}.tag.warn{color:var(--warn);border-color:#5a431f}.tag.blue{color:var(--blue);border-color:#20466f}
+    .progress{height:8px;background:#0e0e12;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+    .bar{height:100%;background:linear-gradient(90deg,var(--gold),#ffd46a);width:0%}
+    .log{background:#0c0c10;border:1px solid var(--line);border-radius:8px;padding:10px;font-family:ui-monospace,Menlo,monospace;font-size:12px;max-height:180px;overflow:auto;white-space:pre-wrap}
+    table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top} th{color:var(--muted);font-weight:600}
+    .notice{border-left:3px solid var(--warn);padding:8px 10px;background:#1a1710;border-radius:6px;margin:8px 0;font-size:13px}
+    a{color:var(--gold)}
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand">ROCKSTAR <span>LAUNCHER</span></div>
+    <div class="env">
+      <div><b>Environment:</b> macOS (darwin)</div>
+      <div><b>Mode:</b> in-environment modeled</div>
+      <div><b>Native RGL:</b> Windows-only (not installed)</div>
+      <div><b>Steam:</b> detected (/Applications/Steam.app)</div>
+      <div><b>CrossOver:</b> not installed</div>
+    </div>
+    <div class="nav">
+      <button id="nav-login" class="active" onclick="showView('login')">Sign In</button>
+      <button id="nav-signup" onclick="showView('signup')">Sign Up</button>
+      <button id="nav-library" onclick="showView('library')" disabled>Library</button>
+      <button id="nav-store" onclick="showView('store')" disabled>Store / Catalog</button>
+      <button id="nav-installs" onclick="showView('installs')" disabled>Installs & Integrations</button>
+      <button id="nav-gta6" onclick="showView('gta6')" disabled>GTA 6 Details</button>
+      <button id="nav-settings" onclick="showView('settings')" disabled>Account & Settings</button>
+    </div>
+    <div class="small muted">Workspace: /Users/jjmarte/Desktop/spatial avy<br>Refs: systems/launchers/rockstar/*<br>Docs: docs/launchers, docs/research</div>
+  </aside>
+  <main class="main">
+    <div class="top">
+      <h1 id="viewTitle">Sign In</h1>
+      <div class="row">
+        <span id="authPill" class="pill warn">signed out</span>
+        <span id="sessionPill" class="pill">session: none</span>
+      </div>
+    </div>
+
+    <section id="view-login" class="view">
+      <div class="card" style="max-width:520px">
+        <h2>Sign in to Rockstar Games</h2>
+        <p class="muted small">Modeled in-environment flow (local session). External Rockstar account services require network/native launcher in supported environment.</p>
+        <label>Email</label><input id="login-email" type="email" placeholder="email@example.com" />
+        <label>Password</label><input id="login-password" type="password" placeholder="••••••••" />
+        <label>2-Step Code (optional)</label><input id="login-2fa" type="text" placeholder="000000" />
+        <div class="row" style="margin:10px 0"><input id="login-remember" type="checkbox" style="width:auto"><label for="login-remember" style="margin:0">Remember me</label></div>
+        <div class="row"><button class="btn" onclick="doLogin()">Sign In</button><button class="btn sec" onclick="showView('signup')">Create Account</button></div>
+        <div id="login-msg" class="small muted" style="margin-top:10px"></div>
+      </div>
+    </section>
+
+    <section id="view-signup" class="view hidden">
+      <div class="card" style="max-width:620px">
+        <h2>Create Rockstar Games Account</h2>
+        <div class="grid">
+          <div><label>Display Name</label><input id="su-name" placeholder="Display name" /></div>
+          <div><label>Country</label><input id="su-country" placeholder="Country" /></div>
+          <div><label>Email</label><input id="su-email" type="email" placeholder="email@example.com" /></div>
+          <div><label>Date of Birth</label><input id="su-dob" type="date" /></div>
+          <div><label>Password</label><input id="su-pass" type="password" placeholder="Min 8 chars" /></div>
+          <div><label>Confirm Password</label><input id="su-pass2" type="password" placeholder="Confirm password" /></div>
+        </div>
+        <div class="row" style="margin:10px 0"><input id="su-terms" type="checkbox" style="width:auto"><label for="su-terms" style="margin:0">I accept terms and confirm email verification is required</label></div>
+        <div class="row"><button class="btn" onclick="doSignup()">Create Account & Sign In</button><button class="btn sec" onclick="showView('login')">Back to Sign In</button></div>
+        <div id="signup-msg" class="small muted" style="margin-top:10px"></div>
+      </div>
+    </section>
+
+    <section id="view-library" class="view hidden">
+      <div class="card">
+        <div class="row" style="justify-content:space-between"><h2>Library</h2><div class="row"><button class="btn sec sm" onclick="scanInstalls()">Scan Installs</button><button class="btn sec sm" onclick="renderLibrary()">Refresh</button></div></div>
+        <p class="muted small">Install, verify, and start games. Steam/Epic titles show handoff flow (requires linked account + provider launcher).</p>
+        <div id="libraryGrid" class="grid"></div>
+      </div>
+      <div class="card">
+        <h2>Activity / Game Start Log</h2>
+        <div id="activityLog" class="log"></div>
+      </div>
+    </section>
+
+    <section id="view-store" class="view hidden">
+      <div class="card">
+        <h2>Store / Catalog (Modeled)</h2>
+        <p class="muted small">Redeem codes, acquire titles, and track catalog state. GTA VI listed per official announcements (PC not announced).</p>
+        <div class="row"><input id="redeem-code" placeholder="Redeem activation code (e.g. XXXX-XXXX-XXXX)" style="max-width:360px"><button class="btn sec" onclick="redeemCode()">Redeem</button></div>
+        <div id="redeem-msg" class="small muted" style="margin-top:8px"></div>
+      </div>
+      <div id="catalogGrid" class="grid"></div>
+    </section>
+
+    <section id="view-installs" class="view hidden">
+      <div class="card">
+        <h2>Steam / Epic / Related Installments</h2>
+        <table>
+          <tr><th>Provider</th><th>Status</th><th>Handoff / Flow</th><th>Notes</th></tr>
+          <tr><td><b>Steam</b></td><td><span class="tag ok">detected</span> /Applications/Steam.app</td><td>Purchase+install in Steam → launch → RGL auth/activation → Play on Steam</td><td>1 Rockstar account per Steam account; Steam manages install/updates.</td></tr>
+          <tr><td><b>Epic Games Store</b></td><td><span class="tag warn">configured</span> app not detected</td><td>Install Epic → purchase/install → launch → RGL sign-in/link → Play</td><td>1 Rockstar account per Epic account.</td></tr>
+          <tr><td><b>Rockstar Launcher (direct)</b></td><td><span class="tag ok">active</span> modeled</td><td>Sign in → acquire/redeem → install → verify → Start Game</td><td>Windows-native binary not installed on macOS; in-environment flow available.</td></tr>
+          <tr><td><b>Xbox app / Retail</b></td><td><span class="tag">modeled</span></td><td>Xbox app handoff (Windows) / retail code redeem in RGL</td><td>Completeness for related installments.</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h2>Environment</h2>
+        <ul class="muted" style="margin:0;padding-left:18px">
+          <li>Host: macOS (darwin), workspace `/Users/jjmarte/Desktop/spatial avy`</li>
+          <li>Rockstar Games Launcher: Windows-only (no native macOS); native binary not installed. CrossOver/Wine not detected.</li>
+          <li>Launcher requirements ref (Windows): Win10 64-bit, Q6600/Phenom 9850, 2GB RAM, DX11 GPU, 1GB disk, internet for auth/activation.</li>
+          <li>Docs: <span class="tag">docs/launchers/ROCKSTAR_LAUNCHER_ENVIRONMENT.md</span> <span class="tag">docs/research/GTA6_REQUIREMENTS_AND_DETAILS.md</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="view-gta6" class="view hidden">
+      <div class="card">
+        <h2>Grand Theft Auto VI — Requirements & Details</h2>
+        <div class="notice"><b>PC status:</b> Not announced by Rockstar/Take-Two. No official PC version, release date, or PC system requirements published as of 2026-11-13. Console-only details below.</div>
+        <div class="grid">
+          <div class="game"><div class="title">Release & Platforms</div>
+            <div><span class="tag ok">Console: Nov 19, 2026</span></div>
+            <div class="small muted">PS5, PS5 Pro (enhanced), Xbox Series X|S. Not on PS4. Xbox One/Series via Xbox Cloud Gaming (launch). PC: <b>not announced</b>.</div></div>
+          <div class="game"><div class="title">Editions & Pricing</div>
+            <div class="small muted">Standard: <b>$79.99</b> (UK ~£69.99). Ultimate: <b>$99.99</b> (UK ~£89.99). Pre-orders from Jun 25, 2026. Bonuses: Vintage Vice City Pack; digital pre-orders include 1 month GTA+ (per announcement).</div></div>
+          <div class="game"><div class="title">Pre-load & Storage</div>
+            <div class="small muted">Digital pre-load: Nov 12, 2026 (timing varies). Physical: download code in box (from Nov 12). PS5 guidance: clear ~<b>212 GB</b> (plan 200+ GB).</div></div>
+          <div class="game"><div class="title">PC System Requirements (Official)</div>
+            <div><span class="tag bad">None published</span></div>
+            <div class="small muted">No min/recommended specs, no OS/CPU/GPU/RAM/storage/VRAM, no PC storefront confirmed. Third-party tables are estimates/rumors only.</div></div>
+        </div>
+        <h3>Details</h3>
+        <table>
+          <tr><th>Item</th><th>Info</th></tr>
+          <tr><td>Setting</td><td>State of Leonida (Vice City), modern day</td></tr>
+          <tr><td>Protagonists</td><td>Jason and Lucia</td></tr>
+          <tr><td>Mode</td><td>Single-player announced</td></tr>
+          <tr><td>PS5 features</td><td>PS5 Pro Enhanced, DualSense haptics/adaptive triggers, Tempest 3D audio, fast SSD loading, Remote Play</td></tr>
+          <tr><td>Rumors (unconfirmed)</td><td>Some reports suggested early 2027 PC window (anonymous sources); Rockstar unconfirmed. Treat as rumor.</td></tr>
+        </table>
+        <p class="small muted">Sources: Rockstar/Take-Two announcements, PlayStation Store/Support, Xbox Wire, reporting (Polygon/PC Gamer/Screen Rant etc.). Full research: <code>docs/research/GTA6_REQUIREMENTS_AND_DETAILS.md</code></p>
+      </div>
+    </section>
+
+    <section id="view-settings" class="view hidden">
+      <div class="card">
+        <h2>Account & Settings</h2>
+        <div id="accountInfo" class="muted"></div>
+        <h3>Linked Accounts (modeled)</h3>
+        <div class="row" style="margin-bottom:8px">
+          <button class="btn sec sm" onclick="linkAccount('steam')">Link Steam</button>
+          <button class="btn sec sm" onclick="linkAccount('epic')">Link Epic</button>
+          <button class="btn sec sm" onclick="linkAccount('xbox')">Link Xbox</button>
+          <button class="btn sec sm" onclick="linkAccount('playstation')">Link PlayStation</button>
+        </div>
+        <h3>Actions</h3>
+        <div class="row"><button class="btn sec" onclick="verifyIntegrityAll()">Verify Integrity (modeled)</button><button class="btn sec" onclick="doLogout()">Sign Out</button></div>
+        <div id="settings-msg" class="small muted" style="margin-top:10px"></div>
+      </div>
+    </section>
+
+  </main>
+</div>
+<script>
+const DEFAULT_LIBRARY = [
+  {id:'gta5', title:'Grand Theft Auto V', provider:'rockstar', source:'Rockstar', owned:false, installed:false, progress:0, state:'not_installed', size:'120 GB', cloud:true, start:'Play', note:'Direct RGL install/launch'},
+  {id:'gta5-steam', title:'Grand Theft Auto V (Steam)', provider:'steam', source:'Steam', owned:false, installed:false, progress:0, state:'not_installed', size:'120 GB', cloud:true, start:'Play on Steam', note:'Handoff: Steam → RGL auth/link required'},
+  {id:'rdr2', title:'Red Dead Redemption 2', provider:'rockstar', source:'Rockstar', owned:false, installed:false, progress:0, state:'not_installed', size:'150 GB', cloud:true, start:'Play', note:'Direct RGL install/launch'},
+  {id:'gta6', title:'Grand Theft Auto VI', provider:'rockstar', source:'Rockstar', owned:false, installed:false, progress:0, state:'unavailable', size:'~212 GB (console guidance)', cloud:false, start:'Unavailable', note:'PC version/specs not announced (console release Nov 19, 2026). See GTA 6 Details.'}
+];
+let state = { session:null, accounts:[], library:JSON.parse(JSON.stringify(DEFAULT_LIBRARY)), logs:[], ops:{} };
+function loadState(){ try{const s=localStorage.getItem('rgl_state_v1'); if(s){const p=JSON.parse(s); state={...state,...p}; if(!state.library||!state.library.length) state.library=JSON.parse(JSON.stringify(DEFAULT_LIBRARY)); state.library = DEFAULT_LIBRARY.map(d=>({ ...d, ...(state.library.find(x=>x.id===d.id)||{}) })); } }catch(e){} }
+function saveState(){ try{localStorage.setItem('rgl_state_v1', JSON.stringify(state));}catch(e){} }
+function log(msg){ const ts=new Date().toISOString(); state.logs.unshift(`[${ts}] ${msg}`); state.logs=state.logs.slice(0,80); saveState(); const el=document.getElementById('activityLog'); if(el) el.textContent=state.logs.join('\n'); }
+function setAuthUI(){ const authed=!!state.session; document.getElementById('authPill').textContent=authed?'signed in':'signed out'; document.getElementById('authPill').className='pill '+(authed?'ok':'warn'); document.getElementById('sessionPill').textContent=authed?('session: '+state.session.displayName):'session: none'; ['nav-library','nav-store','nav-installs','nav-gta6','nav-settings'].forEach(id=>document.getElementById(id).disabled=!authed); if(!authed && !['login','signup'].includes(currentView)) showView('login'); if(authed){ document.getElementById('accountInfo').innerHTML = `<p><b>Account:</b> ${state.session.displayName} (${state.session.email})</p><p><b>Account ID:</b> ${state.session.accountId}</p><p><b>Verified:</b> ${state.session.verified?'yes':'pending'}</p><p><b>Linked:</b> Steam=${state.session.linked.steam||'none'}, Epic=${state.session.linked.epic||'none'}, Xbox=${state.session.linked.xbox||'none'}, PlayStation=${state.session.linked.playstation||'none'}</p><p><b>Environment:</b> in-environment modeled session (local). Native Rockstar services require supported Windows launcher/network.</p>`; }
+}
+let currentView='login';
+function showView(v){ if(!state.session && !['login','signup'].includes(v)) v='login'; currentView=v; document.querySelectorAll('.view').forEach(e=>e.classList.add('hidden')); const el=document.getElementById('view-'+v); if(el) el.classList.remove('hidden'); document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active')); const nb=document.getElementById('nav-'+v); if(nb) nb.classList.add('active'); const titles={login:'Sign In',signup:'Sign Up',library:'Library',store:'Store / Catalog',installs:'Installs & Integrations',gta6:'GTA 6 Details',settings:'Account & Settings'}; document.getElementById('viewTitle').textContent=titles[v]||v; if(v==='library') renderLibrary(); if(v==='store') renderCatalog(); if(v==='settings') setAuthUI(); }
+function validEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)}
+function doSignup(){ const name=document.getElementById('su-name').value.trim(); const email=document.getElementById('su-email').value.trim().toLowerCase(); const dob=document.getElementById('su-dob').value; const country=document.getElementById('su-country').value.trim(); const p1=document.getElementById('su-pass').value; const p2=document.getElementById('su-pass2').value; const terms=document.getElementById('su-terms').checked; const msg=document.getElementById('signup-msg');
+  if(!name||!email||!p1){msg.textContent='Display name, email, and password are required.'; return;} if(!validEmail(email)){msg.textContent='Enter a valid email.'; return;} if(p1.length<8){msg.textContent='Password must be at least 8 characters.'; return;} if(p1!==p2){msg.textContent='Passwords do not match.'; return;} if(!terms){msg.textContent='You must accept terms to continue.'; return;}
+  if(state.accounts.find(a=>a.email===email)){msg.textContent='Account already exists. Please sign in.'; return;}
+  const acct={accountId:'acct-'+Math.random().toString(36).slice(2,10), email, displayName:name, dob:dob||null, country:country||null, verified:false, createdAt:new Date().toISOString()}; state.accounts.push(acct);
+  state.session={accountId:acct.accountId,email:acct.email,displayName:acct.displayName,verified:false,signedInAt:new Date().toISOString(),rememberMe:true,linked:{steam:null,epic:null,xbox:null,playstation:null}}; saveState(); log(`Signup + sign-in: ${acct.displayName} (${acct.email}) - verification pending`); msg.textContent='Account created. Signed in (email verification pending in modeled flow).'; setAuthUI(); showView('library'); }
+function doLogin(){ const email=document.getElementById('login-email').value.trim().toLowerCase(); const pass=document.getElementById('login-password').value; const remember=document.getElementById('login-remember').checked; const msg=document.getElementById('login-msg');
+  if(!validEmail(email)||!pass){msg.textContent='Enter a valid email and password.'; return;}
+  let acct=state.accounts.find(a=>a.email===email);
+  if(!acct){ acct={accountId:'acct-'+Math.random().toString(36).slice(2,10), email, displayName:email.split('@')[0], verified:true, createdAt:new Date().toISOString()}; state.accounts.push(acct); log(`Auto-provisioned local account for sign-in: ${email}`); }
+  state.session={accountId:acct.accountId,email:acct.email,displayName:acct.displayName,verified:!!acct.verified,signedInAt:new Date().toISOString(),rememberMe:remember,linked:state.session?.linked||{steam:null,epic:null,xbox:null,playstation:null}}; saveState(); log(`Sign-in successful: ${acct.displayName}`); msg.textContent='Signed in.'; setAuthUI(); showView('library'); }
+function doLogout(){ if(state.session) log(`Signed out: ${state.session.displayName}`); state.session=null; saveState(); setAuthUI(); showView('login'); }
+function gameById(id){ return state.library.find(g=>g.id===id); }
+function renderLibrary(){ const grid=document.getElementById('libraryGrid'); grid.innerHTML='';
+  state.library.forEach(g=>{ const canInstall=!['unavailable'].includes(g.state); const canStart=g.installed && g.state==='installed' && g.id!=='gta6';
+    const statusTag = g.state==='installed'?'<span class="tag ok">installed</span>':(g.state==='unavailable'?'<span class="tag bad">unavailable (PC)</span>':(g.state==='installing'?'<span class="tag warn">installing</span>':'<span class="tag">not installed</span>'));
+    const ownTag = g.owned?'<span class="tag ok">owned</span>':'<span class="tag">not owned</span>';
+    const d=document.createElement('div'); d.className='game';
+    d.innerHTML=`<div class="title">${g.title}</div><div>${ownTag}${statusTag}<span class="tag blue">${g.source}</span><span class="tag">${g.size}</span></div><div class="small muted">${g.note||''}</div>
+      ${g.state==='installing'?`<div class="progress"><div class="bar" style="width:${g.progress||0}%"></div></div><div class="small muted">Installing... ${g.progress||0}%</div>`:''}
+      <div class="row"><button class="btn sm" ${canInstall?'':'disabled'} onclick="installGame('${g.id}')">${g.installed?'Reinstall':'Install'}</button><button class="btn sm sec" ${canStart?'':'disabled'} onclick="startGame('${g.id}')">${g.start||'Play'}</button><button class="btn sm sec" ${g.installed?'':'disabled'} onclick="verifyGame('${g.id}')">Verify</button><button class="btn sm sec" onclick="toggleOwn('${g.id}')">${g.owned?'Mark Unowned':'Acquire'}</button></div>`;
+    grid.appendChild(d);
+  }); saveState(); const el=document.getElementById('activityLog'); if(el) el.textContent=state.logs.join('\n'); }
+function renderCatalog(){ const grid=document.getElementById('catalogGrid'); grid.innerHTML=''; state.library.forEach(g=>{ const d=document.createElement('div'); d.className='game'; d.innerHTML=`<div class="title">${g.title}</div><div class="small muted">Provider: ${g.source} | State: ${g.state}</div><div>${g.owned?'<span class="tag ok">owned</span>':'<span class="tag">not owned</span>'} ${g.installed?'<span class="tag ok">installed</span>':''}</div><div class="row"><button class="btn sm sec" onclick="toggleOwn('${g.id}')">${g.owned?'Remove':'Acquire / Add'}</button>${g.id==='gta6'?'<button class="btn sm sec" onclick="showView(\'gta6\')">View Details</button>':''}</div>`; grid.appendChild(d); }); }
+function toggleOwn(id){ const g=gameById(id); if(!g) return; g.owned=!g.owned; log(`${g.owned?'Acquired':'Removed'}: ${g.title}`); saveState(); renderLibrary(); }
+function installGame(id){ const g=gameById(id); if(!g || g.state==='unavailable'){ log(`Install blocked: ${g?g.title:id} unavailable in this environment`); renderLibrary(); return; }
+  if(!g.owned) { g.owned=true; log(`Auto-acquired for install: ${g.title}`); }
+  g.state='installing'; g.progress=0; g.installed=false; renderLibrary(); log(`Install started: ${g.title} (${g.source}${g.provider==='steam'?' handoff':' direct'})`);
+  const iv=setInterval(()=>{ g.progress=Math.min(100,(g.progress||0)+Math.floor(8+Math.random()*18)); if(g.progress>=100){ clearInterval(iv); g.progress=100; g.state='installed'; g.installed=true; log(`Install complete: ${g.title} -> ready`); saveState(); renderLibrary(); } else { renderLibrary(); } }, 350);
+}
+function startGame(id){ const g=gameById(id); if(!g) return; if(!g.installed || g.state!=='installed'){ log(`Start blocked: ${g.title} not installed/ready`); return; }
+  if(g.provider==='steam'){ log(`Game start: ${g.title} -> handoff Play on Steam (Steam.app detected) -> Rockstar auth/activation required`); }
+  else if(g.provider==='epic'){ log(`Game start: ${g.title} -> handoff Play on Epic -> Rockstar auth/link required`); }
+  else { log(`Game start: ${g.title} -> launcher ready check -> launching -> running (modeled)`); }
+  setTimeout(()=>log(`Running: ${g.title} (session: ${state.session?state.session.displayName:'n/a'})`), 500);
+  saveState(); renderLibrary(); }
+function verifyGame(id){ const g=gameById(id); if(!g||!g.installed) return; log(`Verify integrity: ${g.title} -> OK (modeled)`); }
+function verifyIntegrityAll(){ state.library.filter(g=>g.installed).forEach(g=>log(`Verify integrity: ${g.title} -> OK`)); document.getElementById('settings-msg').textContent='Integrity verification completed (modeled).'; }
+function scanInstalls(){ log('Scan for installed titles: checked Steam/Epic/RGL install locations (modeled; Steam.app detected)'); document.getElementById('settings-msg').textContent='Scan complete.'; }
+function redeemCode(){ const code=document.getElementById('redeem-code').value.trim(); const msg=document.getElementById('redeem-msg'); if(!code){msg.textContent='Enter a code to redeem.'; return;} log(`Redeem code submitted: ${code.replace(/.(?=.{4})/g,'*')} (modeled)`); msg.textContent='Code redemption processed (modeled). Eligible title added to library when valid.'; document.getElementById('redeem-code').value=''; }
+function linkAccount(p){ if(!state.session) return; state.session.linked[p]= (p==='steam'&&true)?'linked (Steam.app detected)':(p+'-linked'); saveState(); setAuthUI(); log(`Linked account: ${p} -> ${state.session.linked[p]}`); document.getElementById('settings-msg').textContent=`${p} account link updated (modeled).`; }
+loadState(); setAuthUI(); showView(state.session?'library':'login'); renderLibrary(); log('Rockstar Games Launcher UI ready (in-environment modeled).');
+</script>
+</body>
+</html>

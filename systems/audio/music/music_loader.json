@@ -1,0 +1,41 @@
+{
+  "id": "music_loader",
+  "type": "music_loader",
+  "version": "1.1.0",
+  "status": "active",
+  "sources": {
+    "soundtrack": "systems/audio/soundtrack/soundtrack.json",
+    "spotify_track_peers": "systems/audio/music/spotify_track_peers.json"
+  },
+  "sorting": {
+    "installed_algo": "systems/audio/music/sorting_algo.py",
+    "algo_id": "spatial_peer_sort_v1",
+    "entrypoint": "sort_tracks",
+    "default_context": {
+      "zones": ["Z0","Z1","Z2","Z3","Z4","M0","S0"],
+      "beats": ["BEAT_0","BEAT_1","BEAT_2","BEAT_3","BEAT_4","BEAT_5"],
+      "moods": ["ambient","tense","cognitive","solemn","signal","synth","frontier"]
+    }
+  },
+  "eq": {
+    "presets": "systems/audio/music/eq_presets.json",
+    "active_preset": "flat_original",
+    "bands": ["sub_bass","bass","low_mid","mid","high_mid","presence","brilliance"],
+    "original_sound_quality": true
+  },
+  "soundboard": "systems/audio/music/soundboard.json",
+  "frequency_emission": {
+    "emitter": "systems/audio/music/frequency_emitter.py",
+    "state": "systems/audio/music/frequency_state.json",
+    "speaker_levels": "systems/audio/music/speaker_output_levels.json",
+    "output": "speaker",
+    "auto_save": true,
+    "capture_full_library": true
+  },
+  "outputs": {
+    "playlist_sorted": "systems/audio/music/playlist_sorted.json",
+    "music_state": "systems/audio/music/music_state.json",
+    "asset_manifest": "assets/audio/music/music_manifest.json"
+  },
+  "installer": "systems/audio/music/install_music.py"
+}

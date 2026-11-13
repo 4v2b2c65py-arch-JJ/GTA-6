@@ -1,0 +1,80 @@
+{
+  "id": "compute_device_webpointers",
+  "type": "compute_device_registry",
+  "version": "1.0.0",
+  "runtime_ref": "systems/runtime/game_world_runtime.json",
+  "world_items_ref": "systems/world_items/compute_devices.json",
+  "devices": [
+    {
+      "item_id": "item-computer-desktop-01",
+      "label": "Bodium Desktop Workstation",
+      "form_factor": "computer",
+      "uri": "http://0.0.0.0:9301/devices/item-computer-desktop-01",
+      "host": "0.0.0.0",
+      "port": 9301,
+      "ports": { "ui": 9301, "terminal": 9302, "python": 9303, "api": 9304 },
+      "status": "active",
+      "usable": true
+    },
+    {
+      "item_id": "item-laptop-01",
+      "label": "Field Laptop",
+      "form_factor": "laptop",
+      "uri": "http://0.0.0.0:9311/devices/item-laptop-01",
+      "host": "0.0.0.0",
+      "port": 9311,
+      "ports": { "ui": 9311, "terminal": 9312, "python": 9313, "api": 9314 },
+      "status": "active",
+      "usable": true
+    },
+    {
+      "item_id": "item-intel-device-01",
+      "label": "Mind-Core Intelligent Terminal",
+      "form_factor": "intelligent_device",
+      "uri": "http://0.0.0.0:9321/devices/item-intel-device-01",
+      "host": "0.0.0.0",
+      "port": 9321,
+      "ports": { "ui": 9321, "terminal": 9322, "python": 9323, "api": 9324 },
+      "status": "active",
+      "usable": true
+    },
+    {
+      "item_id": "item-phone-01",
+      "label": "Comms Phone",
+      "form_factor": "phone",
+      "uri": "http://0.0.0.0:9331/devices/item-phone-01",
+      "host": "0.0.0.0",
+      "port": 9331,
+      "ports": { "ui": 9331, "terminal": 9332, "python": 9333, "api": 9334 },
+      "status": "active",
+      "usable": true
+    },
+    {
+      "item_id": "item-tablet-01",
+      "label": "Slate Tablet",
+      "form_factor": "tablet",
+      "uri": "http://0.0.0.0:9341/devices/item-tablet-01",
+      "host": "0.0.0.0",
+      "port": 9341,
+      "ports": { "ui": 9341, "terminal": 9342, "python": 9343, "api": 9344 },
+      "status": "active",
+      "usable": true
+    },
+    {
+      "item_id": "item-wearable-01",
+      "label": "Wrist Compute Band",
+      "form_factor": "wearable",
+      "uri": "http://0.0.0.0:9351/devices/item-wearable-01",
+      "host": "0.0.0.0",
+      "port": 9351,
+      "ports": { "ui": 9351, "terminal": 9352, "python": 9353, "api": 9354 },
+      "status": "active",
+      "usable": true
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "active": 6,
+    "usable": 6
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "rockstar_install_components",
+  "type": "install_manifest",
+  "version": "1.0.0",
+  "status": "installed",
+  "installer": {
+    "name": "Rockstar Games Launcher Installer",
+    "mode": "in_environment_modeled",
+    "source": "https://socialclub.rockstargames.com/rockstar-games-launcher",
+    "language_selected": "en-US",
+    "eula_accepted": true,
+    "install_location": "systems/launchers/rockstar/install",
+    "admin_required": true
+  },
+  "required_components": [
+    { "id": "rgl-core", "name": "Rockstar Games Launcher", "version": "1.1.0-modeled", "required": true, "installed": true, "path": "systems/launchers/rockstar/launcher.json" },
+    { "id": "rgl-framework", "name": "Rockstar Games Framework", "version": "modeled", "required": true, "installed": true, "path": "systems/launchers/rockstar/install/components/framework.json" },
+    { "id": "windows-ucrt", "name": "Windows Universal CRT", "version": "modeled", "required": true, "installed": true, "path": "systems/launchers/rockstar/install/components/windows_ucrt.json", "platform_note": "Windows runtime dependency; modeled for environment completeness" },
+    { "id": "rgl-auth", "name": "Rockstar Games Authentication Software", "version": "modeled", "required": true, "installed": true, "path": "systems/launchers/rockstar/install/components/auth_software.json" },
+    { "id": "cef", "name": "Chromium Embedded Framework", "version": "modeled", "required": true, "installed": true, "path": "systems/launchers/rockstar/install/components/cef.json" },
+    { "id": "msvc-redist", "name": "Microsoft Visual C++ 2015-2019 Redistributable (x86/x64)", "version": "modeled", "required": true, "installed": true, "path": "systems/launchers/rockstar/install/components/msvc_redist.json", "platform_note": "Windows runtime dependency; modeled for environment completeness" },
+    { "id": "steam-client-api", "name": "Steam Client API", "version": "modeled", "required": true, "installed": true, "path": "systems/launchers/rockstar/install/components/steam_client_api.json" }
+  ],
+  "summary": {
+    "total": 7,
+    "installed": 7,
+    "missing": 0,
+    "complete": true
+  },
+  "completed_steps": [
+    "download_installer",
+    "run_as_admin",
+    "select_language",
+    "accept_eula",
+    "choose_install_location",
+    "install_required_components",
+    "launch_first_run",
+    "ready_for_sign_in"
+  ]
+}

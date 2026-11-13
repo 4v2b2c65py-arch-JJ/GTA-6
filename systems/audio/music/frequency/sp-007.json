@@ -1,0 +1,29 @@
+{
+  "track_id": "sp-007",
+  "title": "Sunset Motorway",
+  "artist": "Vice Circuit",
+  "source": "spotify_peer",
+  "zone": "Z3",
+  "beat": "BEAT_4",
+  "mood": [
+    "synth",
+    "drive"
+  ],
+  "file": null,
+  "frequency": {
+    "bands": {
+      "sub_bass": 0.6387,
+      "bass": 0.9055,
+      "low_mid": 0.7696,
+      "mid": 0.7492,
+      "high_mid": 0.8336,
+      "presence": 0.6658,
+      "brilliance": 0.5032
+    },
+    "peak_dbfs": -7.95,
+    "rms_dbfs": -17.3,
+    "source": "derived_profile"
+  },
+  "captured_at": "2026-11-13T06:03:55Z",
+  "output": "speaker"
+}

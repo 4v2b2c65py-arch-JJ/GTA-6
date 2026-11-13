@@ -1,0 +1,21 @@
+{
+  "id": "epic_integration",
+  "type": "launcher_integration",
+  "provider": "epic_games_store",
+  "status": "configured",
+  "environment": {
+    "host_os": "darwin",
+    "epic_app_detected": false
+  },
+  "account_linking": {
+    "rockstar_account_required": true,
+    "rule": "one_rockstar_account_per_epic_account",
+    "handoff": "epic_launch_then_rockstar_launcher_auth_activation"
+  },
+  "installments": {
+    "flow": ["install_epic_launcher", "purchase_in_epic", "install_via_epic", "launch_invokes_rgl", "sign_in_link_rockstar_account", "play"],
+    "notes": "Epic manages download/install; Rockstar Games Launcher required for sign-in/link/play."
+  },
+  "features": ["play_on_epic", "account_linking", "library_detection_model"],
+  "related_ref": "systems/launchers/related/installments.json"
+}

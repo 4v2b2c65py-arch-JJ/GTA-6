@@ -1,0 +1,19 @@
+{
+  "id": "rockstar_launcher_state",
+  "type": "runtime_state",
+  "version": "1.1.0",
+  "launcher": "rockstar_games_launcher",
+  "status": "ready",
+  "install": { "complete": true, "components_manifest": "systems/launchers/rockstar/install/install_components.json" },
+  "ui": { "screen": "login", "last_screen": null },
+  "auth": { "authenticated": false, "active_account_id": null },
+  "active_operation": null,
+  "running_game": null,
+  "last_game_started": null,
+  "queue": [],
+  "history": [
+    { "ts": "2026-11-13T04:53:22Z", "event": "launcher_initialized", "detail": "In-environment Rockstar launcher components ready (login/signup/library/install/start modeled)" },
+    { "ts": "2026-11-13T05:08:49Z", "event": "install_completed", "detail": "Required install components installed (RGL, Framework, UCRT, Auth, CEF, MSVC, Steam Client API), game dirs/manifests, settings, cloud saves" }
+  ],
+  "logs_ref": "logs/launchers/rockstar.log"
+}

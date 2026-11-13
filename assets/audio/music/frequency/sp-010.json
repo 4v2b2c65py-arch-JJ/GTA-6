@@ -1,0 +1,29 @@
+{
+  "track_id": "sp-010",
+  "title": "Campfire Relay",
+  "artist": "Frontier Line",
+  "source": "spotify_peer",
+  "zone": "Z3",
+  "beat": "BEAT_2",
+  "mood": [
+    "folk",
+    "wide"
+  ],
+  "file": null,
+  "frequency": {
+    "bands": {
+      "sub_bass": 0.4346,
+      "bass": 0.6028,
+      "low_mid": 0.5764,
+      "mid": 0.7177,
+      "high_mid": 0.721,
+      "presence": 0.6438,
+      "brilliance": 0.4963
+    },
+    "peak_dbfs": -14.53,
+    "rms_dbfs": -28.24,
+    "source": "derived_profile"
+  },
+  "captured_at": "2026-11-13T06:03:55Z",
+  "output": "speaker"
+}

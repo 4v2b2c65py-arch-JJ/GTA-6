@@ -1,0 +1,40 @@
+{
+  "id": "digested_voice",
+  "generated_at": "2026-11-13T05:16:37Z",
+  "orchestrator_model": "llama3.2:latest",
+  "mode": "semantic_voice_digestion",
+  "records": [
+    {
+      "digest_id": "dg-tr-src-36beffbbab",
+      "transcript_id": "tr-src-36beffbbab",
+      "speaker": "narrator",
+      "lang": "en",
+      "emotion": "neutral",
+      "intensity": 0.5,
+      "pace_wpm": 140,
+      "pitch_profile": "mid",
+      "timbre_tags": [
+        "clear",
+        "in_game"
+      ],
+      "beat_sync": null,
+      "source": "narrative/drafts/cinematic-entry-bodium.md"
+    },
+    {
+      "digest_id": "dg-tr-src-68f6f06e96",
+      "transcript_id": "tr-src-68f6f06e96",
+      "speaker": "narrator",
+      "lang": "ru",
+      "emotion": "neutral",
+      "intensity": 0.5,
+      "pace_wpm": 140,
+      "pitch_profile": "mid",
+      "timbre_tags": [
+        "clear",
+        "in_game"
+      ],
+      "beat_sync": null,
+      "source": "systems/launchers/steam/transcripts/transcripts_index.json"
+    }
+  ]
+}

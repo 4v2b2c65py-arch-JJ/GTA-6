@@ -1,0 +1,104 @@
+{
+  "id": "dlc_standard_customizers",
+  "type": "customizer_set",
+  "dlc": "dlc_standard",
+  "spec_ref": "assets/outfits/direct_12_stud/spec.json",
+  "customizers": [
+    {
+      "id": "cz_headgear_visor",
+      "name": "Standard Visor",
+      "slot_types": ["headgear", "visor"],
+      "compatible_studs": ["S01", "S02", "S03"],
+      "rarity": "standard",
+      "direct_12_stud": true
+    },
+    {
+      "id": "cz_headgear_crest",
+      "name": "Crest Mount",
+      "slot_types": ["headgear", "crest"],
+      "compatible_studs": ["S02"],
+      "rarity": "standard",
+      "direct_12_stud": true
+    },
+    {
+      "id": "cz_shoulder_pauldron_l",
+      "name": "Pauldron L",
+      "slot_types": ["pauldron", "emblem"],
+      "compatible_studs": ["S04"],
+      "rarity": "standard",
+      "direct_12_stud": true
+    },
+    {
+      "id": "cz_shoulder_pauldron_r",
+      "name": "Pauldron R",
+      "slot_types": ["pauldron", "emblem"],
+      "compatible_studs": ["S05"],
+      "rarity": "standard",
+      "direct_12_stud": true
+    },
+    {
+      "id": "cz_chest_sigil",
+      "name": "Chest Sigil",
+      "slot_types": ["chestplate", "sigil"],
+      "compatible_studs": ["S06", "S07"],
+      "rarity": "standard",
+      "direct_12_stud": true
+    },
+    {
+      "id": "cz_core_module",
+      "name": "Core Module",
+      "slot_types": ["core", "harness"],
+      "compatible_studs": ["S07"],
+      "rarity": "standard",
+      "direct_12_stud": true
+    },
+    {
+      "id": "cz_back_pack",
+      "name": "Back Pack",
+      "slot_types": ["pack", "module"],
+      "compatible_studs": ["S08"],
+      "rarity": "standard",
+      "direct_12_stud": true
+    },
+    {
+      "id": "cz_back_cape",
+      "name": "Cape Anchor",
+      "slot_types": ["cape", "cape_anchor"],
+      "compatible_studs": ["S04", "S05", "S08"],
+      "rarity": "standard",
+      "direct_12_stud": true
+    },
+    {
+      "id": "cz_arm_gauntlet_l",
+      "name": "Gauntlet L",
+      "slot_types": ["gauntlet", "tool", "band"],
+      "compatible_studs": ["S09"],
+      "rarity": "standard",
+      "direct_12_stud": true
+    },
+    {
+      "id": "cz_arm_gauntlet_r",
+      "name": "Gauntlet R",
+      "slot_types": ["gauntlet", "tool", "band"],
+      "compatible_studs": ["S10"],
+      "rarity": "standard",
+      "direct_12_stud": true
+    },
+    {
+      "id": "cz_leg_greave_l",
+      "name": "Greave L",
+      "slot_types": ["greave", "holster", "anklet"],
+      "compatible_studs": ["S11"],
+      "rarity": "standard",
+      "direct_12_stud": true
+    },
+    {
+      "id": "cz_leg_greave_r",
+      "name": "Greave R",
+      "slot_types": ["greave", "holster", "anklet"],
+      "compatible_studs": ["S12"],
+      "rarity": "standard",
+      "direct_12_stud": true
+    }
+  ]
+}

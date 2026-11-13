@@ -1,0 +1,29 @@
+{
+  "track_id": "sp-005",
+  "title": "REA-REM Divert",
+  "artist": "Border Protocol",
+  "source": "spotify_peer",
+  "zone": "Z4",
+  "beat": "BEAT_4",
+  "mood": [
+    "signal",
+    "alert"
+  ],
+  "file": null,
+  "frequency": {
+    "bands": {
+      "sub_bass": 0.4461,
+      "bass": 0.72,
+      "low_mid": 0.6396,
+      "mid": 0.7526,
+      "high_mid": 0.8246,
+      "presence": 0.892,
+      "brilliance": 0.6593
+    },
+    "peak_dbfs": -8.89,
+    "rms_dbfs": -19.99,
+    "source": "derived_profile"
+  },
+  "captured_at": "2026-11-13T06:03:55Z",
+  "output": "speaker"
+}

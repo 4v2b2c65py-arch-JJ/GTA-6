@@ -1,0 +1,254 @@
+{
+  "id": "data_flow_state",
+  "type": "installed_data_flow",
+  "version": "1.0.0",
+  "generated_at": "2026-11-13T05:06:37Z",
+  "status": "installed",
+  "loader_ref": "systems/launchers/rockstar/map_loader/map_loader.json",
+  "barcode_hashes_ref": "systems/launchers/rockstar/map_loader/barcode_hashes/regional_barcode_hashes.json",
+  "gap_report_ref": "systems/launchers/rockstar/map_loader/data_flow/information_gap_report.json",
+  "network_pass_ref": "systems/launchers/rockstar/map_loader/barcode_hashes/network_pass_log.json",
+  "flows": [
+    {
+      "region_id": "RW-LEO-MIA-001",
+      "barcode": "BC-RW-LEO-MIA-001-6B3567D8-9913119A-91446F35",
+      "state": "installed",
+      "ingest_ready": true,
+      "fill_strategy": "backfill_when_sources_enabled",
+      "missing_source_categories": [
+        "flock_cam",
+        "street_imagery_api",
+        "traffic_camera_api"
+      ],
+      "routes": [
+        {
+          "from": "network.barcode_hashes",
+          "to": "region.registry",
+          "mode": "downloaded"
+        },
+        {
+          "from": "region.registry",
+          "to": "gap.accounting",
+          "mode": "computed"
+        },
+        {
+          "from": "sources.camera_apis",
+          "to": "location_model_fuse",
+          "mode": "pending_enablement"
+        },
+        {
+          "from": "location_model_fuse",
+          "to": "map_stream_mount",
+          "mode": "staged"
+        }
+      ]
+    },
+    {
+      "region_id": "RW-LEO-MIA-BEACH-002",
+      "barcode": "BC-RW-LEO-MIA-BEACH-002-F010EDA9-B705E96F-D8D8DACA",
+      "state": "installed",
+      "ingest_ready": true,
+      "fill_strategy": "backfill_when_sources_enabled",
+      "missing_source_categories": [
+        "public_cctv_feed",
+        "street_imagery_api",
+        "traffic_camera_api"
+      ],
+      "routes": [
+        {
+          "from": "network.barcode_hashes",
+          "to": "region.registry",
+          "mode": "downloaded"
+        },
+        {
+          "from": "region.registry",
+          "to": "gap.accounting",
+          "mode": "computed"
+        },
+        {
+          "from": "sources.camera_apis",
+          "to": "location_model_fuse",
+          "mode": "pending_enablement"
+        },
+        {
+          "from": "location_model_fuse",
+          "to": "map_stream_mount",
+          "mode": "staged"
+        }
+      ]
+    },
+    {
+      "region_id": "RW-LEO-KEYS-003",
+      "barcode": "BC-RW-LEO-KEYS-003-3CDDE130-9A5B3466-5BC1737F",
+      "state": "installed",
+      "ingest_ready": true,
+      "fill_strategy": "backfill_when_sources_enabled",
+      "missing_source_categories": [
+        "mapping_api",
+        "traffic_camera_api"
+      ],
+      "routes": [
+        {
+          "from": "network.barcode_hashes",
+          "to": "region.registry",
+          "mode": "downloaded"
+        },
+        {
+          "from": "region.registry",
+          "to": "gap.accounting",
+          "mode": "computed"
+        },
+        {
+          "from": "sources.camera_apis",
+          "to": "location_model_fuse",
+          "mode": "pending_enablement"
+        },
+        {
+          "from": "location_model_fuse",
+          "to": "map_stream_mount",
+          "mode": "staged"
+        }
+      ]
+    },
+    {
+      "region_id": "RW-US-ATL-010",
+      "barcode": "BC-RW-US-ATL-010-A298E843-EEB1F501-AE7D64B0",
+      "state": "installed",
+      "ingest_ready": true,
+      "fill_strategy": "backfill_when_sources_enabled",
+      "missing_source_categories": [
+        "flock_cam",
+        "traffic_camera_api"
+      ],
+      "routes": [
+        {
+          "from": "network.barcode_hashes",
+          "to": "region.registry",
+          "mode": "downloaded"
+        },
+        {
+          "from": "region.registry",
+          "to": "gap.accounting",
+          "mode": "computed"
+        },
+        {
+          "from": "sources.camera_apis",
+          "to": "location_model_fuse",
+          "mode": "pending_enablement"
+        },
+        {
+          "from": "location_model_fuse",
+          "to": "map_stream_mount",
+          "mode": "staged"
+        }
+      ]
+    },
+    {
+      "region_id": "RW-US-LAX-011",
+      "barcode": "BC-RW-US-LAX-011-B80C40A7-EEFDAC1C-25B02F85",
+      "state": "installed",
+      "ingest_ready": true,
+      "fill_strategy": "backfill_when_sources_enabled",
+      "missing_source_categories": [
+        "mapping_api",
+        "street_imagery_api",
+        "traffic_camera_api"
+      ],
+      "routes": [
+        {
+          "from": "network.barcode_hashes",
+          "to": "region.registry",
+          "mode": "downloaded"
+        },
+        {
+          "from": "region.registry",
+          "to": "gap.accounting",
+          "mode": "computed"
+        },
+        {
+          "from": "sources.camera_apis",
+          "to": "location_model_fuse",
+          "mode": "pending_enablement"
+        },
+        {
+          "from": "location_model_fuse",
+          "to": "map_stream_mount",
+          "mode": "staged"
+        }
+      ]
+    },
+    {
+      "region_id": "RW-US-NYC-012",
+      "barcode": "BC-RW-US-NYC-012-083F6DF3-D23F42A8-CF716BED",
+      "state": "installed",
+      "ingest_ready": true,
+      "fill_strategy": "backfill_when_sources_enabled",
+      "missing_source_categories": [
+        "public_cctv_feed",
+        "street_imagery_api",
+        "traffic_camera_api"
+      ],
+      "routes": [
+        {
+          "from": "network.barcode_hashes",
+          "to": "region.registry",
+          "mode": "downloaded"
+        },
+        {
+          "from": "region.registry",
+          "to": "gap.accounting",
+          "mode": "computed"
+        },
+        {
+          "from": "sources.camera_apis",
+          "to": "location_model_fuse",
+          "mode": "pending_enablement"
+        },
+        {
+          "from": "location_model_fuse",
+          "to": "map_stream_mount",
+          "mode": "staged"
+        }
+      ]
+    },
+    {
+      "region_id": "RW-GLB-LON-020",
+      "barcode": "BC-RW-GLB-LON-020-AEB2A572-AD0D916A-7CB13E20",
+      "state": "installed",
+      "ingest_ready": true,
+      "fill_strategy": "backfill_when_sources_enabled",
+      "missing_source_categories": [
+        "public_cctv_feed",
+        "street_imagery_api"
+      ],
+      "routes": [
+        {
+          "from": "network.barcode_hashes",
+          "to": "region.registry",
+          "mode": "downloaded"
+        },
+        {
+          "from": "region.registry",
+          "to": "gap.accounting",
+          "mode": "computed"
+        },
+        {
+          "from": "sources.camera_apis",
+          "to": "location_model_fuse",
+          "mode": "pending_enablement"
+        },
+        {
+          "from": "location_model_fuse",
+          "to": "map_stream_mount",
+          "mode": "staged"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "regions": 7,
+    "flows_installed": 7,
+    "ingest_ready": 7,
+    "gaps_accounted": true
+  }
+}

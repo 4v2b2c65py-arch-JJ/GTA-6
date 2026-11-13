@@ -1,0 +1,27 @@
+{
+  "id": "alien_node",
+  "type": "gate_node_extension",
+  "node_id": "N-ALIEN",
+  "label": "alien_node",
+  "classification": "external",
+  "state": "online",
+  "links": ["N10"],
+  "zone_ref": "Z0-core-plate",
+  "door_node_string": "N10-N9-N8-N7-N6-N5-N4-N3-N2-N1-N0",
+  "webclient": {
+    "id": "www_webclient",
+    "type": "www",
+    "entry": "systems/stream_pipeline/www_webclient/index.html",
+    "config": "systems/stream_pipeline/www_webclient/client_config.json",
+    "bind": {
+      "host": "0.0.0.0",
+      "port": 8080,
+      "path": "/"
+    }
+  },
+  "capabilities": ["vcp_connect", "stream_profile_read", "layout_directive_receive", "grid_store_query"],
+  "addressing": {
+    "lace_integration": "N-ALIEN composes with Z<zone>-Q<pocket>-C<cell>-T<tick> for deterministic lookup",
+    "lace_key_prefix": "N-ALIEN"
+  }
+}

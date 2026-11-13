@@ -1,0 +1,12 @@
+{
+  "id": "rockstar_accounts",
+  "type": "account_store",
+  "version": "1.0.0",
+  "storage": "local_workspace_model",
+  "notes": "Local modeled account records for in-environment launcher flow; do not store plaintext secrets in production.",
+  "accounts": [],
+  "summary": {
+    "total_accounts": 0,
+    "verified_accounts": 0
+  }
+}

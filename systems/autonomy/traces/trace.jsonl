@@ -1,0 +1,15 @@
+{"ts":"2026-11-13T04:43:13Z","trace_id":null,"cycle_id":"cycle-b383f65c","event":"bot_cycle_portal","portal_id":"leviathan-portal-01","necessary":false,"http_status":null,"action_result":"pending"}
+{"ts":"2026-11-13T04:43:13Z","trace_id":null,"cycle_id":"cycle-b383f65c","event":"bot_cycle_portal","portal_id":"leviathan-portal-02","necessary":false,"http_status":null,"action_result":"pending"}
+{"ts":"2026-11-13T04:43:13Z","trace_id":null,"cycle_id":"cycle-b383f65c","event":"bot_cycle_summary","ready":0,"pending":2,"all_ready":false,"next_state":"continue_fix_loop"}
+{"ts":"2026-11-13T04:43:13Z","trace_id":"trace-a43ee2fc","event":"portal_probe","portal_id":"leviathan-portal-01","url":"https://leviathan-bs95il3a8-jjonthelaptop-5497s-projects.vercel.app/","http_status":200,"reachable":true,"necessary":true,"reason":"ok","elapsed_ms":918}
+{"ts":"2026-11-13T04:43:13Z","trace_id":"trace-a43ee2fc","event":"portal_probe","portal_id":"leviathan-portal-02","url":"https://leviathan-8mo788paq-jjonthelaptop-5497s-projects.vercel.app/","http_status":200,"reachable":true,"necessary":true,"reason":"ok","elapsed_ms":663}
+{"ts":"2026-11-13T04:43:13Z","trace_id":"trace-a43ee2fc","event":"trace_summary","total":2,"ready":2,"pending":0,"all_ready":true}
+{"ts":"2026-11-13T04:43:45Z","trace_id":"trace-a43ee2fc","cycle_id":"cycle-6c9f8827","event":"bot_cycle_portal","portal_id":"leviathan-portal-01","necessary":true,"http_status":200,"action_result":"ready"}
+{"ts":"2026-11-13T04:43:45Z","trace_id":"trace-a43ee2fc","cycle_id":"cycle-6c9f8827","event":"bot_cycle_portal","portal_id":"leviathan-portal-02","necessary":true,"http_status":200,"action_result":"ready"}
+{"ts":"2026-11-13T04:43:45Z","trace_id":"trace-a43ee2fc","cycle_id":"cycle-6c9f8827","event":"bot_cycle_summary","ready":2,"pending":0,"all_ready":true,"next_state":"distribute_and_monitor"}
+{"ts":"2026-11-13T04:44:08Z","trace_id":"trace-a43ee2fc","cycle_id":"cycle-d3bd69e8","event":"bot_cycle_portal","portal_id":"leviathan-portal-01","necessary":true,"http_status":200,"action_result":"ready"}
+{"ts":"2026-11-13T04:44:08Z","trace_id":"trace-a43ee2fc","cycle_id":"cycle-d3bd69e8","event":"bot_cycle_portal","portal_id":"leviathan-portal-02","necessary":true,"http_status":200,"action_result":"ready"}
+{"ts":"2026-11-13T04:44:08Z","trace_id":"trace-a43ee2fc","cycle_id":"cycle-d3bd69e8","event":"bot_cycle_summary","ready":2,"pending":0,"all_ready":true,"next_state":"distribute_and_monitor"}
+{"ts":"2026-11-13T04:44:09Z","trace_id":"trace-16a48bf4","event":"portal_probe","portal_id":"leviathan-portal-01","url":"https://leviathan-bs95il3a8-jjonthelaptop-5497s-projects.vercel.app/","http_status":200,"reachable":true,"necessary":true,"reason":"ok","elapsed_ms":853}
+{"ts":"2026-11-13T04:44:09Z","trace_id":"trace-16a48bf4","event":"portal_probe","portal_id":"leviathan-portal-02","url":"https://leviathan-8mo788paq-jjonthelaptop-5497s-projects.vercel.app/","http_status":200,"reachable":true,"necessary":true,"reason":"ok","elapsed_ms":755}
+{"ts":"2026-11-13T04:44:09Z","trace_id":"trace-16a48bf4","event":"trace_summary","total":2,"ready":2,"pending":0,"all_ready":true}

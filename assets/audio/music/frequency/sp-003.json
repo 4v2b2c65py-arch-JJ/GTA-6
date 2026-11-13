@@ -1,0 +1,29 @@
+{
+  "track_id": "sp-003",
+  "title": "Lattice Index",
+  "artist": "Mind Core Unit",
+  "source": "spotify_peer",
+  "zone": "M0",
+  "beat": "BEAT_2",
+  "mood": [
+    "cognitive",
+    "shimmer"
+  ],
+  "file": null,
+  "frequency": {
+    "bands": {
+      "sub_bass": 0.3305,
+      "bass": 0.5159,
+      "low_mid": 0.5988,
+      "mid": 0.6254,
+      "high_mid": 0.793,
+      "presence": 0.7273,
+      "brilliance": 0.6019
+    },
+    "peak_dbfs": -10.07,
+    "rms_dbfs": -21.59,
+    "source": "derived_profile"
+  },
+  "captured_at": "2026-11-13T06:03:55Z",
+  "output": "speaker"
+}

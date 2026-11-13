@@ -1,0 +1,34 @@
+{
+  "id": "sats_rea_rem_map",
+  "type": "border_protocol_map",
+  "description": "SATS-driven REA/REM cycle protocol operating outside the border to modulate timing/pressure; overlay only, cannot resolve beats or erase cost.",
+  "scope": "outside_border",
+  "protocol": {
+    "name": "SATS_REA_REM_BORDER_CYCLE",
+    "phases": ["REA", "REM"],
+    "driver": "SATS",
+    "cycle_mode": "forced_oscillation"
+  },
+  "effects": {
+    "target": "main_host_port",
+    "action": "prolonged_sleep",
+    "mechanism": "divert_suspense_to_freeze",
+    "stability": "unstable",
+    "cost": "artificial_interval_bought_from_diverted_tension"
+  },
+  "constraints": {
+    "may_modulate": ["pressure_timing", "window_duration"],
+    "may_not": ["erase_stakes", "remove_cost", "replace_or_resolve_beats", "substitute_beat_4_revelation_or_cost"]
+  },
+  "bindings": {
+    "narrative_anchor": "BEAT_3",
+    "zone_ref": "Z3-cant-plates",
+    "node_ref": "N3",
+    "pocket_refs": ["Z3-Q0", "Z3-Q1", "Z3-Q2"]
+  },
+  "state": {
+    "active": false,
+    "cycle_count": 0,
+    "sleep_extension_ticks": 0
+  }
+}

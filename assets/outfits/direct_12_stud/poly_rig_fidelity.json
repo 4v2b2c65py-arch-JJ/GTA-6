@@ -1,0 +1,51 @@
+{
+  "id": "poly_rig_fidelity_direct_12_stud",
+  "type": "poly_rig_spec",
+  "spec_ref": "assets/outfits/direct_12_stud/spec.json",
+  "loadout_ref": "narrative/characters/default_loadout.json",
+  "rig": {
+    "mode": "real_fit",
+    "topology": "quad_dominant",
+    "target_poly_budget": { "base_body": 24000, "outfit_layer": 12000, "total": 36000 },
+    "deformation": {
+      "skinning": "linear_blend",
+      "max_influences_per_vertex": 4,
+      "normalize_weights": true
+    }
+  },
+  "fidelity": {
+    "target": "real_fit",
+    "global_score_min": 0.95,
+    "metrics": {
+      "skin_weight_accuracy": { "target": 0.98, "weight": 0.35 },
+      "surface_conformity_mm": { "target_max": 1.5, "weight": 0.25 },
+      "stretch_ratio_limit": { "target_max": 1.08, "weight": 0.15 },
+      "compression_ratio_limit": { "target_min": 0.92, "weight": 0.10 },
+      "stud_anchor_stability": { "target": 0.99, "weight": 0.15 }
+    }
+  },
+  "regions": [
+    { "stud": "S01", "region": "head_left", "bone": "head_L", "poly_ring": "cranium_L_lat", "fit_fidelity": 0.97, "offset_mm": { "x": 0.5, "y": 0.2, "z": 0.0 }, "collision_layer": "head" },
+    { "stud": "S02", "region": "head_center", "bone": "head_C", "poly_ring": "cranium_top", "fit_fidelity": 0.98, "offset_mm": { "x": 0.0, "y": 0.3, "z": 0.0 }, "collision_layer": "head" },
+    { "stud": "S03", "region": "head_right", "bone": "head_R", "poly_ring": "cranium_R_lat", "fit_fidelity": 0.97, "offset_mm": { "x": -0.5, "y": 0.2, "z": 0.0 }, "collision_layer": "head" },
+    { "stud": "S04", "region": "shoulder_left", "bone": "clavicle_L", "poly_ring": "deltoid_L", "fit_fidelity": 0.96, "offset_mm": { "x": 0.8, "y": 0.0, "z": 0.2 }, "collision_layer": "upper_torso" },
+    { "stud": "S05", "region": "shoulder_right", "bone": "clavicle_R", "poly_ring": "deltoid_R", "fit_fidelity": 0.96, "offset_mm": { "x": -0.8, "y": 0.0, "z": 0.2 }, "collision_layer": "upper_torso" },
+    { "stud": "S06", "region": "chest_upper", "bone": "spine_upper", "poly_ring": "pectoralis_upper", "fit_fidelity": 0.98, "offset_mm": { "x": 0.0, "y": 0.0, "z": 0.6 }, "collision_layer": "torso" },
+    { "stud": "S07", "region": "chest_core", "bone": "spine_mid", "poly_ring": "sternum_core", "fit_fidelity": 0.99, "offset_mm": { "x": 0.0, "y": 0.0, "z": 0.8 }, "collision_layer": "torso" },
+    { "stud": "S08", "region": "back", "bone": "spine_back", "poly_ring": "scapula_span", "fit_fidelity": 0.97, "offset_mm": { "x": 0.0, "y": 0.0, "z": -0.7 }, "collision_layer": "torso" },
+    { "stud": "S09", "region": "arm_left", "bone": "forearm_L", "poly_ring": "brachial_L", "fit_fidelity": 0.95, "offset_mm": { "x": 0.6, "y": -0.2, "z": 0.0 }, "collision_layer": "arm" },
+    { "stud": "S10", "region": "arm_right", "bone": "forearm_R", "poly_ring": "brachial_R", "fit_fidelity": 0.95, "offset_mm": { "x": -0.6, "y": -0.2, "z": 0.0 }, "collision_layer": "arm" },
+    { "stud": "S11", "region": "leg_left", "bone": "calf_L", "poly_ring": "tibial_L", "fit_fidelity": 0.95, "offset_mm": { "x": 0.3, "y": -0.4, "z": 0.1 }, "collision_layer": "leg" },
+    { "stud": "S12", "region": "leg_right", "bone": "calf_R", "poly_ring": "tibial_R", "fit_fidelity": 0.95, "offset_mm": { "x": -0.3, "y": -0.4, "z": 0.1 }, "collision_layer": "leg" }
+  ],
+  "pip_chart": {
+    "enabled": true,
+    "ref": "systems/stream_pipeline/stonks_pip_chart.json",
+    "purpose": "fit_fidelity_vs_stonks_data_overlay"
+  },
+  "status": {
+    "rigged": true,
+    "global_fit_fidelity": 0.966,
+    "passes_target": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "provider": "ollama",
+  "status": "detected",
+  "base_url": "http://localhost:11434",
+  "openai_compatible_base_url": "http://localhost:11434/v1",
+  "default_model": "llama3.2:latest",
+  "available_models": [
+    {
+      "name": "llama3.2:latest",
+      "family": "llama",
+      "parameter_size": "3.2B",
+      "quantization": "Q4_K_M",
+      "context_length": 131072,
+      "capabilities": ["completion", "tools"]
+    }
+  ],
+  "notes": "Ollama serve detected on localhost:11434. Use OpenAI-compatible base for clients expecting /v1 endpoints."
+}

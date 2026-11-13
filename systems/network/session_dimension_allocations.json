@@ -1,0 +1,137 @@
+{
+  "id": "session_dimension_allocations",
+  "type": "allocation_map",
+  "version": "1.0.0",
+  "description": "Dimension and depth-layer assignments per computing player or offline session with saved weblink size budgets.",
+  "sensor_ref": "systems/camera/depth_sensor_layers.json",
+  "grid_ref": "systems/grid_store/qbit_zone_pocket_map.json",
+  "generated_at": "2026-11-13T04:37:31Z",
+  "sessions": [
+    {
+      "session_id": "SB-RD-001",
+      "session_type": "computing_player",
+      "mode": "online",
+      "status": "active",
+      "client_ref": "narrative/storyboard/session.json",
+      "assigned_spatial_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "assigned_spatial_dimensions": {
+        "x": 16,
+        "y": 9,
+        "z": 4
+      },
+      "assigned_spatial_dimension_units": 576,
+      "assigned_depth_layers": [
+        "DP-0",
+        "DP-1",
+        "DP-2",
+        "DP-3",
+        "DP-4",
+        "DP-5"
+      ],
+      "assigned_layer_count": 6,
+      "dimension_load": {
+        "spatial_units": 576,
+        "depth_layers": 6,
+        "total_layer_dimensions": 9
+      },
+      "weblink_size": {
+        "envelope_bytes": 8192,
+        "layers_payload_bytes": 1778688,
+        "spatial_payload_bytes": 27648,
+        "raw_bytes": 1814528,
+        "compression_factor_estimate": 0.42,
+        "estimated_transfer_bytes": 762101,
+        "saved": true
+      },
+      "allocation_policy": "full_load_single_session"
+    },
+    {
+      "session_id": "OFFLINE-LOCAL-01",
+      "session_type": "offline_session",
+      "mode": "offline",
+      "status": "standby",
+      "client_ref": null,
+      "assigned_spatial_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "assigned_spatial_dimensions": {
+        "x": 16,
+        "y": 9,
+        "z": 2
+      },
+      "assigned_spatial_dimension_units": 288,
+      "assigned_depth_layers": [
+        "DP-0",
+        "DP-1",
+        "DP-2"
+      ],
+      "assigned_layer_count": 3,
+      "dimension_load": {
+        "spatial_units": 288,
+        "depth_layers": 3,
+        "total_layer_dimensions": 6
+      },
+      "weblink_size": {
+        "envelope_bytes": 8192,
+        "layers_payload_bytes": 1511424,
+        "spatial_payload_bytes": 13824,
+        "raw_bytes": 1533440,
+        "compression_factor_estimate": 0.42,
+        "estimated_transfer_bytes": 644044,
+        "saved": true
+      },
+      "allocation_policy": "reduced_layers_for_offline_cache"
+    },
+    {
+      "session_id": "PLAYER-COMPUTE-02",
+      "session_type": "computing_player",
+      "mode": "online",
+      "status": "ready",
+      "client_ref": null,
+      "assigned_spatial_axes": [
+        "x",
+        "y"
+      ],
+      "assigned_spatial_dimensions": {
+        "x": 8,
+        "y": 5,
+        "z": 0
+      },
+      "assigned_spatial_dimension_units": 40,
+      "assigned_depth_layers": [
+        "DP-0",
+        "DP-1",
+        "DP-2",
+        "DP-3"
+      ],
+      "assigned_layer_count": 4,
+      "dimension_load": {
+        "spatial_units": 40,
+        "depth_layers": 4,
+        "total_layer_dimensions": 6
+      },
+      "weblink_size": {
+        "envelope_bytes": 8192,
+        "layers_payload_bytes": 1658880,
+        "spatial_payload_bytes": 1920,
+        "raw_bytes": 1668992,
+        "compression_factor_estimate": 0.42,
+        "estimated_transfer_bytes": 700976,
+        "saved": true
+      },
+      "allocation_policy": "shared_compute_partition"
+    }
+  ],
+  "summary": {
+    "total_sessions": 3,
+    "computing_players": 2,
+    "offline_sessions": 1,
+    "saved_weblink_profiles": 3
+  }
+}

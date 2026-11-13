@@ -1,0 +1,63 @@
+{
+  "id": "world_timeline_model_rule",
+  "type": "model_rule",
+  "version": "1.0.0",
+  "status": "active",
+  "description": "Model rule for world timeline that creates/routes pockets for data and file labels across past, present, and future routes, supporting base-tag rebranding/editing.",
+  "model_binding": {
+    "model_weights_ref": "systems/local_ai/model_weights_port.json",
+    "default_model": "llama3.2:latest",
+    "runtime_ref": "systems/runtime/game_world_runtime.json"
+  },
+  "timeline": {
+    "routes": [
+      { "route": "past", "direction": "retrospective", "priority": 30, "mutable": "append_annotate", "description": "Historical records, provenance, and archived states." },
+      { "route": "present", "direction": "active", "priority": 100, "mutable": "read_write", "description": "Current operational state and live labels." },
+      { "route": "future", "direction": "projective", "priority": 60, "mutable": "plan_revise", "description": "Projected, staged, or planned states and intents." }
+    ],
+    "default_route": "present",
+    "resolution_policy": "explicit_route > temporal_signal > model_inference > default_route"
+  },
+  "pockets": {
+    "store_ref": "systems/grid_store/timeline_pockets.json",
+    "mnemonic_integration": {
+      "grid_pattern": "Z<zone>-Q<pocket>-C<cell>-T<tick>",
+      "timeline_pattern": "R<route>-B<base_tag>-D<data_label>-F<file_label>-T<tick>",
+      "composed_key": "R<route>|B<base_tag>|Z<zone>-Q<pocket>-C<cell>-T<tick>"
+    },
+    "create_on": ["label_emit", "file_emit", "route_transition", "rebrand", "edit"],
+    "pocket_types": {
+      "data_label": {
+        "required_fields": ["label_id", "base_tag", "route", "value", "created_at"],
+        "optional_fields": ["schema", "source", "zone_ref", "confidence", "supersedes"]
+      },
+      "file_label": {
+        "required_fields": ["label_id", "base_tag", "route", "path", "created_at"],
+        "optional_fields": ["mime", "hash", "size_bytes", "source", "zone_ref", "supersedes"]
+      }
+    }
+  },
+  "base_tag_policy": {
+    "editable": true,
+    "rebrandable": true,
+    "fields": ["base_tag", "aliases", "namespace", "display_name"],
+    "operations": {
+      "edit": { "allowed_routes": ["present", "future"], "requires_reason": false, "preserve_history": true },
+      "rebrand": { "allowed_routes": ["present", "future"], "requires_reason": true, "preserve_history": true, "propagate_to_pockets": "forward_and_alias" },
+      "retrospective_rebrand": { "allowed_routes": ["past"], "mode": "alias_annotation_only", "preserve_history": true }
+    },
+    "versioning": {
+      "enabled": true,
+      "strategy": "immutable_history_log",
+      "id_format": "BT-<slug>-v<rev>",
+      "lineage": "linked_prev"
+    }
+  },
+  "alignment_rules": [
+    { "id": "route_lock", "rule": "Every data/file label pocket must declare route in [past,present,future]." },
+    { "id": "base_tag_resolve", "rule": "Resolve labels through current base_tag and alias lineage before read/write." },
+    { "id": "transition_preserve", "rule": "Route transitions copy forward with lineage links; do not delete source pocket." },
+    { "id": "rebrand_propagate", "rule": "On rebrand, update active pointers and emit alias mapping; past pockets gain annotation, not mutation." },
+    { "id": "deterministic_key", "rule": "Pocket addressing uses composed timeline+grid mnemonic keys for deterministic lookup." }
+  ]
+}

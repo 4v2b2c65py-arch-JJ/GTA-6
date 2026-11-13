@@ -1,0 +1,12 @@
+{
+  "id": "component-msvc-redist",
+  "name": "Microsoft Visual C++ 2015-2019 Redistributable (x86/x64)",
+  "type": "install_component",
+  "required": true,
+  "status": "installed",
+  "version": "modeled",
+  "description": "Visual C++ runtime libraries required by launcher components.",
+  "platform_note": "Windows runtime; modeled for in-environment completeness on macOS.",
+  "installed_at": "2026-11-13T05:08:49Z",
+  "path": "systems/launchers/rockstar/install/components/msvc_redist.json"
+}

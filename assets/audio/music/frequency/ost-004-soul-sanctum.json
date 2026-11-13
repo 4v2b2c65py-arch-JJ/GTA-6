@@ -1,0 +1,29 @@
+{
+  "track_id": "ost-004-soul-sanctum",
+  "title": "Soul Sanctum",
+  "artist": "Spatial Avy OST",
+  "source": "soundtrack",
+  "zone": "S0",
+  "beat": "BEAT_3",
+  "mood": [
+    "solemn",
+    "wide"
+  ],
+  "file": "assets/audio/soundtrack/ost-004-soul-sanctum.ogg",
+  "frequency": {
+    "bands": {
+      "sub_bass": 0.6082,
+      "bass": 0.775,
+      "low_mid": 0.7608,
+      "mid": 0.7165,
+      "high_mid": 0.6711,
+      "presence": 0.579,
+      "brilliance": 0.486
+    },
+    "peak_dbfs": -12.43,
+    "rms_dbfs": -26.25,
+    "source": "derived_profile"
+  },
+  "captured_at": "2026-11-13T06:03:55Z",
+  "output": "speaker"
+}

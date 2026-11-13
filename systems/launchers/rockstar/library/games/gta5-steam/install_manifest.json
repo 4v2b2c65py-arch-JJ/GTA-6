@@ -1,0 +1,16 @@
+{
+  "id": "install_manifest_gta5_steam",
+  "game_id": "gta5-steam",
+  "title": "Grand Theft Auto V (Steam)",
+  "source": "steam",
+  "install_dir": "systems/launchers/rockstar/library/games/gta5-steam",
+  "executable_ref": null,
+  "installed": false,
+  "state": "not_installed",
+  "version": null,
+  "size_gb_estimate": 120,
+  "cloud_save": true,
+  "handoff": "steam_then_rockstar",
+  "requires": ["/Applications/Steam.app", "rockstar_account_link"],
+  "actions": ["install_via_steam", "link_account", "play_on_steam", "verify_integrity"]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "character_hub",
+  "type": "character_hub",
+  "version": "1.0.0",
+  "status": "active",
+  "description": "Character hub deck presented before game launch; loads character, loadout, DLC/outfit, audio/voice and world bindings.",
+  "deck_ref": "systems/character_hub/deck/deck.json",
+  "ui_ref": "assets/ui/character_hub/index.html",
+  "loadout_ref": "narrative/characters/default_loadout.json",
+  "launch_gate": "pre_launch",
+  "integrations": {
+    "runtime": "systems/runtime/game_world_runtime.json",
+    "dlc_catalog": "systems/launchers/rockstar/dlc/dlc_catalog.json",
+    "audio": "systems/audio/audio_system.json",
+    "world_index": "home_world/home_world_index.json",
+    "launcher_hub": "systems/launchers/launcher_hub.json"
+  }
+}

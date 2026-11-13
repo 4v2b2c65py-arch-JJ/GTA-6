@@ -1,0 +1,145 @@
+{
+  "id": "game_world_runtime",
+  "type": "world_runtime",
+  "version": "1.3.0",
+  "status": "active",
+  "world": "spatial_avy_home",
+  "components": {
+    "model_weights": { "ref": "systems/local_ai/model_weights_port.json", "status": "ported", "default_model": "llama3.2:latest" },
+    "vscode_ui": { "ref": "systems/runtime/vscode_world_interface.json", "asset": "assets/ui/vscode/index.html", "status": "ported" },
+    "kilo_code": { "ref": "systems/runtime/kilo_code.json", "status": "enabled", "mode": "full" },
+    "python": { "ref": "systems/runtime/python_access.json", "status": "enabled", "executable": ".venv/bin/python" },
+    "physics_algorithms": { "ref": "systems/runtime/physics_algorithms.json", "status": "enabled" },
+    "launcher_hub": { "ref": "systems/launchers/launcher_hub.json", "status": "active" },
+    "rockstar_launcher": { "ref": "systems/launchers/rockstar/launcher.json", "ui": "systems/launchers/rockstar/ui/index.html", "status": "active" },
+    "rockstar_map_loader": { "ref": "systems/launchers/rockstar/map_loader/map_loader.json", "status": "active", "mode": "region_expansion" },
+    "map_data_flow": { "ref": "systems/launchers/rockstar/map_loader/data_flow/data_flow_state.json", "status": "installed" },
+    "audio_system": {
+      "ref": "systems/audio/audio_system.json",
+      "status": "installed",
+      "soundtrack": "systems/audio/soundtrack/soundtrack.json",
+      "music_loader": "systems/audio/music/music_loader.json",
+      "spotify_track_peers": "systems/audio/music/spotify_track_peers.json",
+      "music_sorting_algo": "systems/audio/music/sorting_algo.py",
+      "music_playlist": "systems/audio/music/playlist_sorted.json",
+      "music_state": "systems/audio/music/music_state.json",
+      "eq_presets": "systems/audio/music/eq_presets.json",
+      "soundboard": "systems/audio/music/soundboard.json",
+      "frequency_state": "systems/audio/music/frequency_state.json",
+      "speaker_output_levels": "systems/audio/music/speaker_output_levels.json",
+      "sfx_vfx": "systems/audio/sfx_vfx/sound_vfx.json",
+      "physics_audio": "systems/audio/physics/physics_audio.json",
+      "voice_pipeline": "systems/audio/voice/voice_pipeline.json",
+      "install_state": "systems/audio/install_state.json"
+    },
+    "steam_russian_fix": {
+      "ref": "systems/launchers/steam/russian_fix.json",
+      "pipeline": "systems/launchers/steam/russian_fix_pipeline.py",
+      "status": "active",
+      "lang": "ru",
+      "transcript_enabled": true,
+      "game_data": "assets/game_assets/steam_fixes/steam_fix_game_data.json"
+    },
+    "world_web_loader": {
+      "ref": "systems/world_builds/web_loader/web_loader.json",
+      "status": "active",
+      "load_websites": true,
+      "load_in_game_fixes": true
+    },
+    "character_hub": {
+      "ref": "systems/character_hub/character_hub.json",
+      "deck": "systems/character_hub/deck/deck.json",
+      "ui": "assets/ui/character_hub/index.html",
+      "status": "active",
+      "stage": "pre_launch"
+    },
+    "build": {
+      "manifest": "systems/build/build_manifest.json",
+      "entry": "build/game/launch.py",
+      "state": "build/game/build.json",
+      "status": "built"
+    },
+    "images_icons": {
+      "images_manifest": "assets/images/images_manifest.json",
+      "icons_manifest": "assets/images/icons_manifest.json",
+      "status": "installed"
+    },
+    "identity": {
+      "manifest": "assets/identity/identity_manifest.json",
+      "favicon": "build/web/favicon.ico",
+      "status": "generated",
+      "theme": "story_novel_ai_integrated"
+    },
+    "web_client_player": {
+      "entry": "build/web/index.html",
+      "server": "build/web/serve.py",
+      "manifest": "build/web/package_manifest.json",
+      "archive": "build/package/spatial-avy-web-client-player.tar.gz",
+      "status": "packaged"
+    },
+    "transportation": {
+      "vehicles": "systems/world/transportation/vehicles.json",
+      "registry": "systems/world/transportation/transportation.json",
+      "injection_state": "systems/world/transportation/injection_state.json",
+      "status": "injected"
+    },
+    "geo_data": {
+      "geo_injection": "systems/world/geo/geo_injection.json",
+      "game_data": "assets/game_assets/transportation/transport_geo_game_data.json",
+      "status": "injected"
+    }
+  },
+  "capabilities": [
+    "model_inference_in_world",
+    "vscode_ui_in_world",
+    "kilo_code_full_automation",
+    "python_access_in_world",
+    "automated_physics",
+    "automated_algorithms",
+    "compute_device_runtime",
+    "multi_form_factor_support",
+    "launcher_auth_login_signup",
+    "game_library_install_start",
+    "steam_epic_installment_handoff",
+    "gta6_catalog_tracking",
+    "map_region_expansion",
+    "real_world_location_modeling",
+    "camera_api_ingest_pipeline",
+    "regional_barcode_hash_distribution",
+    "map_data_flow_gap_accounting",
+    "steam_russian_fix_guides",
+    "language_transcript_pipeline",
+    "python_game_data_flow",
+    "world_web_loader_websites",
+    "in_game_web_fixes_direct_load",
+    "in_game_soundtrack",
+    "sound_vfx",
+    "physics_based_audio_interpretation",
+    "voice_transcription",
+    "vlm_voice_digestion",
+    "vocal_tracks_installation",
+    "character_hub_pre_launch_deck",
+    "in_game_image_installation",
+    "component_executable_icons",
+    "game_build_launch",
+    "vehicle_registry_injection",
+    "transportation_modes_routes",
+    "geo_region_hub_injection",
+    "web_executable_transport_geo_payload",
+    "spotify_track_peers_loaded",
+    "music_sorting_algo_installed",
+    "in_game_music_playlist_sorted",
+    "music_eq_presets_installed",
+    "music_soundboard_installed",
+    "audio_frequency_emission_speaker",
+    "audio_frequency_state_auto_save",
+    "original_sound_quality_output"
+  ],
+  "device_targets_ref": "systems/world_items/compute_devices.json",
+  "network": {
+    "sat_coms": "systems/network/sat_coms_forum_manager.json",
+    "device_webpointers": "systems/devices/device_webpointers.json",
+    "compute_webpointers": "systems/devices/compute/compute_device_webpointers.json"
+  },
+  "usable": true
+}

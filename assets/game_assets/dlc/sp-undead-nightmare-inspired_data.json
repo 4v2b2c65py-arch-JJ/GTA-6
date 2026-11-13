@@ -1,0 +1,75 @@
+{
+  "pack_id": "sp-undead-nightmare-inspired",
+  "title": "Undead Nightmare Inspired (SP/World Event Pack)",
+  "base_game": "rdr2",
+  "kind": "inspired_expansion",
+  "status": "installed",
+  "installed_at": "2026-11-13T05:20:50Z",
+  "features": [
+    {
+      "id": "plague_zones",
+      "type": "world_event",
+      "desc": "Infection zones with escalating danger and containment objectives."
+    },
+    {
+      "id": "undead_hordes",
+      "type": "combat",
+      "desc": "Horde waves with behavior variants and weak points."
+    },
+    {
+      "id": "cure_crafting",
+      "type": "crafting",
+      "desc": "Collect samples/ingredients to craft cures and safe-zone tools."
+    },
+    {
+      "id": "mythic_creatures",
+      "type": "hunts",
+      "desc": "Mythic/supernatural creature hunts with unique loot hooks."
+    },
+    {
+      "id": "survival_rules",
+      "type": "systems",
+      "desc": "Ammo scarcity, safe havens, night intensification modifiers."
+    },
+    {
+      "id": "timeline_event_hooks",
+      "type": "integration",
+      "desc": "Hooks into world timeline pockets and border protocols."
+    }
+  ],
+  "feature_ids": [
+    "plague_zones",
+    "undead_hordes",
+    "cure_crafting",
+    "mythic_creatures",
+    "survival_rules",
+    "timeline_event_hooks"
+  ],
+  "build_hooks": {
+    "map_loader_regions": [
+      "region-desert-town",
+      "region-bayou"
+    ],
+    "timeline_beats": [
+      "BEAT_4",
+      "BEAT_5"
+    ],
+    "grid_store": "systems/grid_store/timeline_pockets.json",
+    "audio": {
+      "soundtrack_mood": [
+        "horror",
+        "survival"
+      ],
+      "sfx": [
+        "horde",
+        "heartbeat",
+        "relic"
+      ],
+      "voice": [
+        "survivor_calls"
+      ]
+    },
+    "python_data_flow": "assets/game_assets/dlc/sp_undead_nightmare_inspired_data.json"
+  },
+  "hash": "2b00faa786af3c19"
+}

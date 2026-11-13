@@ -1,0 +1,332 @@
+{
+  "id": "gta_portal_gap_report",
+  "generated_at": "2026-11-13T04:26:17Z",
+  "referencer": "systems/gta_portal/referencer.json",
+  "inputs": {
+    "inventory": "systems/gta_portal/inventory_snapshot.json",
+    "normalized_spottings": "systems/gta_portal/fetcher/normalized_spottings.json"
+  },
+  "source_summary": [
+    {
+      "source_id": "community_spottings_local",
+      "status": "ok",
+      "kind": "local_json",
+      "ingested": 18,
+      "raw_seen": 18
+    },
+    {
+      "source_id": "gta_portal_community_feed",
+      "status": "skipped",
+      "reason": "disabled"
+    },
+    {
+      "source_id": "social_spotter_bot_feed",
+      "status": "skipped",
+      "reason": "disabled"
+    }
+  ],
+  "summary": {
+    "total_spotted": 18,
+    "total_missing": 18,
+    "total_matched": 0,
+    "by_category": {
+      "image": {
+        "inventory": 1,
+        "spotted": 3,
+        "missing": 3,
+        "matched": 0
+      },
+      "video": {
+        "inventory": 0,
+        "spotted": 3,
+        "missing": 3,
+        "matched": 0
+      },
+      "polygons": {
+        "inventory": 1,
+        "spotted": 4,
+        "missing": 4,
+        "matched": 0
+      },
+      "items": {
+        "inventory": 16,
+        "spotted": 4,
+        "missing": 4,
+        "matched": 0
+      },
+      "characters": {
+        "inventory": 1,
+        "spotted": 4,
+        "missing": 4,
+        "matched": 0
+      }
+    }
+  },
+  "categories": {
+    "image": {
+      "inventory_count": 1,
+      "spotted_count": 3,
+      "missing_count": 3,
+      "present_count": 0,
+      "missing": [
+        {
+          "spot_id": "SP-IMG-001",
+          "name": "Neon alley billboard texture",
+          "category": "image",
+          "confidence": 0.92,
+          "refs": [
+            "portal/tex/neon_alley"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "High-res storefront/billboard texture seen in portal captures",
+          "status": "missing"
+        },
+        {
+          "spot_id": "SP-IMG-002",
+          "name": "Rain-soaked asphalt normal map",
+          "category": "image",
+          "confidence": 0.88,
+          "refs": [
+            "portal/tex/wet_asphalt_n"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Wet road surface normals missing",
+          "status": "missing"
+        },
+        {
+          "spot_id": "SP-IMG-003",
+          "name": "Subway tile wall atlas",
+          "category": "image",
+          "confidence": 0.81,
+          "refs": [
+            "portal/tex/subway_tiles"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Interior tile atlas spotted",
+          "status": "missing"
+        }
+      ],
+      "present": []
+    },
+    "video": {
+      "inventory_count": 0,
+      "spotted_count": 3,
+      "missing_count": 3,
+      "present_count": 0,
+      "missing": [
+        {
+          "spot_id": "SP-VID-001",
+          "name": "Traffic intersection ambient loop",
+          "category": "video",
+          "confidence": 0.86,
+          "refs": [
+            "portal/vid/traffic_loop"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Background traffic video loop for screens/billboards",
+          "status": "missing"
+        },
+        {
+          "spot_id": "SP-VID-002",
+          "name": "Police scanner/news ticker clip",
+          "category": "video",
+          "confidence": 0.79,
+          "refs": [
+            "portal/vid/news_ticker"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "In-world display footage",
+          "status": "missing"
+        },
+        {
+          "spot_id": "SP-VID-003",
+          "name": "FPV drone flythrough reference",
+          "category": "video",
+          "confidence": 0.84,
+          "refs": [
+            "portal/vid/fpv_flythrough"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Reference for FPV camera paths/scenery motion",
+          "status": "missing"
+        }
+      ],
+      "present": []
+    },
+    "polygons": {
+      "inventory_count": 1,
+      "spotted_count": 4,
+      "missing_count": 4,
+      "present_count": 0,
+      "missing": [
+        {
+          "spot_id": "SP-POLY-001",
+          "name": "Lowrider sedan body mesh",
+          "category": "polygons",
+          "confidence": 0.93,
+          "refs": [
+            "portal/mesh/lowrider_sedan"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Vehicle body with LODs",
+          "poly_budget": 45000,
+          "status": "missing"
+        },
+        {
+          "spot_id": "SP-POLY-002",
+          "name": "Motorcycle sport bike mesh",
+          "category": "polygons",
+          "confidence": 0.9,
+          "refs": [
+            "portal/mesh/sport_bike"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Rideable bike model",
+          "poly_budget": 32000,
+          "status": "missing"
+        },
+        {
+          "spot_id": "SP-POLY-003",
+          "name": "Street prop set (hydrant, bench, signs)",
+          "category": "polygons",
+          "confidence": 0.87,
+          "refs": [
+            "portal/mesh/street_props_a"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Common street dressing props",
+          "poly_budget": 12000,
+          "status": "missing"
+        },
+        {
+          "spot_id": "SP-POLY-004",
+          "name": "Apartment interior kit mesh",
+          "category": "polygons",
+          "confidence": 0.82,
+          "refs": [
+            "portal/mesh/apt_interior_kit"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Modular interior architecture pieces",
+          "poly_budget": 38000,
+          "status": "missing"
+        }
+      ],
+      "present": []
+    },
+    "items": {
+      "inventory_count": 16,
+      "spotted_count": 4,
+      "missing_count": 4,
+      "present_count": 0,
+      "missing": [
+        {
+          "spot_id": "SP-ITEM-001",
+          "name": "Smartphone prop",
+          "category": "items",
+          "confidence": 0.91,
+          "refs": [
+            "portal/item/smartphone"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Handheld/useable prop item",
+          "status": "missing"
+        },
+        {
+          "spot_id": "SP-ITEM-002",
+          "name": "Duffel bag loot item",
+          "category": "items",
+          "confidence": 0.85,
+          "refs": [
+            "portal/item/duffel_bag"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Carryable loot container",
+          "status": "missing"
+        },
+        {
+          "spot_id": "SP-ITEM-003",
+          "name": "Body armor vest",
+          "category": "items",
+          "confidence": 0.89,
+          "refs": [
+            "portal/item/armor_vest"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Equippable protection item",
+          "status": "missing"
+        },
+        {
+          "spot_id": "SP-ITEM-004",
+          "name": "Soda can consumable",
+          "category": "items",
+          "confidence": 0.8,
+          "refs": [
+            "portal/item/soda_can"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Consumable prop",
+          "status": "missing"
+        }
+      ],
+      "present": []
+    },
+    "characters": {
+      "inventory_count": 1,
+      "spotted_count": 4,
+      "missing_count": 4,
+      "present_count": 0,
+      "missing": [
+        {
+          "spot_id": "SP-CHAR-001",
+          "name": "Downtown pedestrian male A",
+          "category": "characters",
+          "confidence": 0.9,
+          "refs": [
+            "portal/char/ped_male_a"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Ambient NPC pedestrian",
+          "status": "missing"
+        },
+        {
+          "spot_id": "SP-CHAR-002",
+          "name": "Downtown pedestrian female A",
+          "category": "characters",
+          "confidence": 0.88,
+          "refs": [
+            "portal/char/ped_female_a"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Ambient NPC pedestrian",
+          "status": "missing"
+        },
+        {
+          "spot_id": "SP-CHAR-003",
+          "name": "Street vendor NPC",
+          "category": "characters",
+          "confidence": 0.83,
+          "refs": [
+            "portal/char/vendor_npc"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Interactive vendor character",
+          "status": "missing"
+        },
+        {
+          "spot_id": "SP-CHAR-004",
+          "name": "Patrol officer NPC",
+          "category": "characters",
+          "confidence": 0.86,
+          "refs": [
+            "portal/char/patrol_officer"
+          ],
+          "origin_source": "community_spottings_local",
+          "notes": "Patrol/authority character",
+          "status": "missing"
+        }
+      ],
+      "present": []
+    }
+  }
+}

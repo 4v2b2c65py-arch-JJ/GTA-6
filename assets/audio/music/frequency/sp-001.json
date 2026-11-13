@@ -1,0 +1,29 @@
+{
+  "track_id": "sp-001",
+  "title": "Bodium Threshold",
+  "artist": "Spatial Avy Ensemble",
+  "source": "spotify_peer",
+  "zone": "Z0",
+  "beat": "BEAT_0",
+  "mood": [
+    "ambient",
+    "threshold"
+  ],
+  "file": null,
+  "frequency": {
+    "bands": {
+      "sub_bass": 0.6656,
+      "bass": 0.694,
+      "low_mid": 0.6347,
+      "mid": 0.5587,
+      "high_mid": 0.4245,
+      "presence": 0.3936,
+      "brilliance": 0.2625
+    },
+    "peak_dbfs": -14.92,
+    "rms_dbfs": -23.38,
+    "source": "derived_profile"
+  },
+  "captured_at": "2026-11-13T06:03:55Z",
+  "output": "speaker"
+}

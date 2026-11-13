@@ -1,0 +1,45 @@
+{
+  "id": "portal_trace_status",
+  "trace_id": "trace-16a48bf4",
+  "generated_at": "2026-11-13T04:44:09Z",
+  "source": "systems/network/portals/vercel_portals.json",
+  "portals": [
+    {
+      "portal_id": "leviathan-portal-01",
+      "name": "Leviathan Portal 01",
+      "url": "https://leviathan-bs95il3a8-jjonthelaptop-5497s-projects.vercel.app/",
+      "access_state": "ready",
+      "download_status": "ready_to_distribute",
+      "probe": {
+        "reachable": true,
+        "http_status": 200,
+        "elapsed_ms": 853,
+        "necessary": true,
+        "reason": "ok"
+      },
+      "ready": true
+    },
+    {
+      "portal_id": "leviathan-portal-02",
+      "name": "Leviathan Portal 02",
+      "url": "https://leviathan-8mo788paq-jjonthelaptop-5497s-projects.vercel.app/",
+      "access_state": "ready",
+      "download_status": "ready_to_distribute",
+      "probe": {
+        "reachable": true,
+        "http_status": 200,
+        "elapsed_ms": 755,
+        "necessary": true,
+        "reason": "ok"
+      },
+      "ready": true
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "ready": 2,
+    "pending": 0,
+    "all_ready": true,
+    "next_action": "distribute_downloads"
+  }
+}

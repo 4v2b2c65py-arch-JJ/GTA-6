@@ -1,0 +1,882 @@
+{
+  "id": "images_manifest",
+  "generated_at": "2026-11-13T05:51:05Z",
+  "workspace_images_found": 174,
+  "installed": [
+    {
+      "source": "assets/identity/icons/apple-touch-icon.png",
+      "installed_to": "assets/images/in_game/common/apple-touch-icon.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/icons/favicon.ico",
+      "installed_to": "assets/images/in_game/common/favicon.ico",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/icons/icon-128.png",
+      "installed_to": "assets/images/in_game/common/icon-128.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/icons/icon-16.png",
+      "installed_to": "assets/images/in_game/common/icon-16.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/icons/icon-192.png",
+      "installed_to": "assets/images/in_game/common/icon-192.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/icons/icon-256.jpg",
+      "installed_to": "assets/images/in_game/common/icon-256.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/icons/icon-256.png",
+      "installed_to": "assets/images/in_game/common/icon-256.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/icons/icon-32.png",
+      "installed_to": "assets/images/in_game/common/icon-32.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/icons/icon-512.jpg",
+      "installed_to": "assets/images/in_game/common/icon-512.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/icons/icon-512.png",
+      "installed_to": "assets/images/in_game/common/icon-512.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/icons/icon-64.png",
+      "installed_to": "assets/images/in_game/common/icon-64.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/icons/spatial_avy.ico",
+      "installed_to": "assets/images/in_game/common/spatial_avy.ico",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/icons/spatial_avy_emblem.jpg",
+      "installed_to": "assets/images/in_game/common/spatial_avy_emblem.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/icons/spatial_avy_emblem.png",
+      "installed_to": "assets/images/in_game/common/spatial_avy_emblem.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/insignia/insignia_ai_runtime.jpg",
+      "installed_to": "assets/images/in_game/common/insignia_ai_runtime.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/insignia/insignia_ai_runtime.png",
+      "installed_to": "assets/images/in_game/common/insignia_ai_runtime.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/insignia/insignia_bodium_mind_soul.jpg",
+      "installed_to": "assets/images/in_game/common/insignia_bodium_mind_soul.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/insignia/insignia_bodium_mind_soul.png",
+      "installed_to": "assets/images/in_game/common/insignia_bodium_mind_soul.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/insignia/og_image.jpg",
+      "installed_to": "assets/images/in_game/common/og_image.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/insignia/og_image.png",
+      "installed_to": "assets/images/in_game/common/og_image.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/insignia/spatial_avy_identity_cover.jpg",
+      "installed_to": "assets/images/in_game/common/spatial_avy_identity_cover.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/identity/insignia/spatial_avy_identity_cover.png",
+      "installed_to": "assets/images/in_game/common/spatial_avy_identity_cover.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/icons/components/kilo.svg",
+      "installed_to": "assets/images/in_game/common/kilo.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/icons/components/ollama.png",
+      "installed_to": "assets/images/in_game/common/ollama.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/icons/components/python.svg",
+      "installed_to": "assets/images/in_game/common/python.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/icons/components/vscode.svg",
+      "installed_to": "assets/images/in_game/common/vscode.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/icons/games/gta5_logo.svg",
+      "installed_to": "assets/images/in_game/gta5/gta5_logo.svg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/icons/games/gta6/gta6_logo.png",
+      "installed_to": "assets/images/in_game/gta5/gta6_logo.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/icons/games/rdr2_logo.png",
+      "installed_to": "assets/images/in_game/rdr2/rdr2_logo.png",
+      "bucket": "rdr2"
+    },
+    {
+      "source": "assets/images/icons/launchers/epic.svg",
+      "installed_to": "assets/images/in_game/common/epic.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/icons/launchers/gta_online.png",
+      "installed_to": "assets/images/in_game/gta5/gta_online.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/icons/launchers/rockstar_games.svg",
+      "installed_to": "assets/images/in_game/common/rockstar_games.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/icons/launchers/rockstar_launcher.png",
+      "installed_to": "assets/images/in_game/common/rockstar_launcher.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/icons/launchers/steam.svg",
+      "installed_to": "assets/images/in_game/common/steam.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/in_game/common/epic.svg",
+      "installed_to": "assets/images/in_game/common/epic.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/in_game/common/kilo.svg",
+      "installed_to": "assets/images/in_game/common/kilo.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/in_game/common/ollama.png",
+      "installed_to": "assets/images/in_game/common/ollama.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/in_game/common/python.svg",
+      "installed_to": "assets/images/in_game/common/python.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/in_game/common/rockstar_games.svg",
+      "installed_to": "assets/images/in_game/common/rockstar_games.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/in_game/common/rockstar_launcher.png",
+      "installed_to": "assets/images/in_game/common/rockstar_launcher.png",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/in_game/common/steam.svg",
+      "installed_to": "assets/images/in_game/common/steam.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/in_game/common/vscode.svg",
+      "installed_to": "assets/images/in_game/common/vscode.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "assets/images/in_game/gta5/gta5_art_1.jpg",
+      "installed_to": "assets/images/in_game/gta5/gta5_art_1.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta5/gta5_logo.svg",
+      "installed_to": "assets/images/in_game/gta5/gta5_logo.svg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta5/gta_online.png",
+      "installed_to": "assets/images/in_game/gta5/gta_online.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/artwork/gta6_hero.jpg",
+      "installed_to": "assets/images/in_game/gta5/gta6_hero.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/artwork/gta6_hero.png",
+      "installed_to": "assets/images/in_game/gta5/gta6_hero.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/artwork/gta6_keyart.jpg",
+      "installed_to": "assets/images/in_game/gta5/gta6_keyart.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/artwork/keyart.jpg",
+      "installed_to": "assets/images/in_game/gta5/keyart.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/boobie.jpg",
+      "installed_to": "assets/images/in_game/gta5/boobie.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/boobie.png",
+      "installed_to": "assets/images/in_game/gta5/boobie.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/brian.jpg",
+      "installed_to": "assets/images/in_game/gta5/brian.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/brian.png",
+      "installed_to": "assets/images/in_game/gta5/brian.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/cal.jpg",
+      "installed_to": "assets/images/in_game/gta5/cal.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/cal.png",
+      "installed_to": "assets/images/in_game/gta5/cal.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/drequan.jpg",
+      "installed_to": "assets/images/in_game/gta5/drequan.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/drequan.png",
+      "installed_to": "assets/images/in_game/gta5/drequan.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/jason.jpg",
+      "installed_to": "assets/images/in_game/gta5/jason.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/jason.png",
+      "installed_to": "assets/images/in_game/gta5/jason.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/jason_lucia.jpg",
+      "installed_to": "assets/images/in_game/gta5/jason_lucia.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/jason_lucia.png",
+      "installed_to": "assets/images/in_game/gta5/jason_lucia.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/lucia.jpg",
+      "installed_to": "assets/images/in_game/gta5/lucia.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/lucia.png",
+      "installed_to": "assets/images/in_game/gta5/lucia.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/raul.jpg",
+      "installed_to": "assets/images/in_game/gta5/raul.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/raul.png",
+      "installed_to": "assets/images/in_game/gta5/raul.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/realdimez.jpg",
+      "installed_to": "assets/images/in_game/gta5/realdimez.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/characters/realdimez.png",
+      "installed_to": "assets/images/in_game/gta5/realdimez.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/editions/standard.jpg",
+      "installed_to": "assets/images/in_game/gta5/standard.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/editions/standard.png",
+      "installed_to": "assets/images/in_game/gta5/standard.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/editions/ultimate.jpg",
+      "installed_to": "assets/images/in_game/gta5/ultimate.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/editions/ultimate.png",
+      "installed_to": "assets/images/in_game/gta5/ultimate.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/editions/vintage_vc.jpg",
+      "installed_to": "assets/images/in_game/gta5/vintage_vc.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/editions/vintage_vc.png",
+      "installed_to": "assets/images/in_game/gta5/vintage_vc.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/locations/ambrosia.jpg",
+      "installed_to": "assets/images/in_game/gta5/ambrosia.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/locations/ambrosia.png",
+      "installed_to": "assets/images/in_game/gta5/ambrosia.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/locations/grassrivers.jpg",
+      "installed_to": "assets/images/in_game/gta5/grassrivers.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/locations/grassrivers.png",
+      "installed_to": "assets/images/in_game/gta5/grassrivers.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/locations/leonida_keys.jpg",
+      "installed_to": "assets/images/in_game/gta5/leonida_keys.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/locations/leonida_keys.png",
+      "installed_to": "assets/images/in_game/gta5/leonida_keys.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/locations/mount_kalaga.jpg",
+      "installed_to": "assets/images/in_game/gta5/mount_kalaga.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/locations/mount_kalaga.png",
+      "installed_to": "assets/images/in_game/gta5/mount_kalaga.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/locations/port_gellhorn.jpg",
+      "installed_to": "assets/images/in_game/gta5/port_gellhorn.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/locations/port_gellhorn.png",
+      "installed_to": "assets/images/in_game/gta5/port_gellhorn.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/locations/vice_city.jpg",
+      "installed_to": "assets/images/in_game/gta5/vice_city.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/gta6/locations/vice_city.png",
+      "installed_to": "assets/images/in_game/gta5/vice_city.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "assets/images/in_game/rdr2/rdr2_art_1.jpg",
+      "installed_to": "assets/images/in_game/rdr2/rdr2_art_1.jpg",
+      "bucket": "rdr2"
+    },
+    {
+      "source": "assets/images/in_game/rdr2/rdr2_logo.png",
+      "installed_to": "assets/images/in_game/rdr2/rdr2_logo.png",
+      "bucket": "rdr2"
+    },
+    {
+      "source": "build/web/assets/favicon.ico",
+      "installed_to": "assets/images/in_game/common/favicon.ico",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/assets/icons/apple-touch-icon.png",
+      "installed_to": "assets/images/in_game/common/apple-touch-icon.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/assets/icons/icon-16.png",
+      "installed_to": "assets/images/in_game/common/icon-16.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/assets/icons/icon-192.png",
+      "installed_to": "assets/images/in_game/common/icon-192.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/assets/icons/icon-32.png",
+      "installed_to": "assets/images/in_game/common/icon-32.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/assets/icons/icon-512.png",
+      "installed_to": "assets/images/in_game/common/icon-512.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/assets/icons/icon-64.png",
+      "installed_to": "assets/images/in_game/common/icon-64.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/assets/insignia/og_image.jpg",
+      "installed_to": "assets/images/in_game/common/og_image.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/assets/insignia/og_image.png",
+      "installed_to": "assets/images/in_game/common/og_image.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/icons/apple-touch-icon.png",
+      "installed_to": "assets/images/in_game/common/apple-touch-icon.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/icons/favicon.ico",
+      "installed_to": "assets/images/in_game/common/favicon.ico",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/icons/icon-128.png",
+      "installed_to": "assets/images/in_game/common/icon-128.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/icons/icon-16.png",
+      "installed_to": "assets/images/in_game/common/icon-16.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/icons/icon-192.png",
+      "installed_to": "assets/images/in_game/common/icon-192.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/icons/icon-256.jpg",
+      "installed_to": "assets/images/in_game/common/icon-256.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/icons/icon-256.png",
+      "installed_to": "assets/images/in_game/common/icon-256.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/icons/icon-32.png",
+      "installed_to": "assets/images/in_game/common/icon-32.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/icons/icon-512.jpg",
+      "installed_to": "assets/images/in_game/common/icon-512.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/icons/icon-512.png",
+      "installed_to": "assets/images/in_game/common/icon-512.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/icons/icon-64.png",
+      "installed_to": "assets/images/in_game/common/icon-64.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/icons/spatial_avy.ico",
+      "installed_to": "assets/images/in_game/common/spatial_avy.ico",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/icons/spatial_avy_emblem.jpg",
+      "installed_to": "assets/images/in_game/common/spatial_avy_emblem.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/icons/spatial_avy_emblem.png",
+      "installed_to": "assets/images/in_game/common/spatial_avy_emblem.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/insignia/insignia_ai_runtime.jpg",
+      "installed_to": "assets/images/in_game/common/insignia_ai_runtime.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/insignia/insignia_ai_runtime.png",
+      "installed_to": "assets/images/in_game/common/insignia_ai_runtime.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/insignia/insignia_bodium_mind_soul.jpg",
+      "installed_to": "assets/images/in_game/common/insignia_bodium_mind_soul.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/insignia/insignia_bodium_mind_soul.png",
+      "installed_to": "assets/images/in_game/common/insignia_bodium_mind_soul.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/insignia/og_image.jpg",
+      "installed_to": "assets/images/in_game/common/og_image.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/insignia/og_image.png",
+      "installed_to": "assets/images/in_game/common/og_image.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/insignia/spatial_avy_identity_cover.jpg",
+      "installed_to": "assets/images/in_game/common/spatial_avy_identity_cover.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/identity/insignia/spatial_avy_identity_cover.png",
+      "installed_to": "assets/images/in_game/common/spatial_avy_identity_cover.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/icons/components/kilo.svg",
+      "installed_to": "assets/images/in_game/common/kilo.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/icons/components/ollama.png",
+      "installed_to": "assets/images/in_game/common/ollama.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/icons/components/python.svg",
+      "installed_to": "assets/images/in_game/common/python.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/icons/components/vscode.svg",
+      "installed_to": "assets/images/in_game/common/vscode.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/icons/games/gta5_logo.svg",
+      "installed_to": "assets/images/in_game/gta5/gta5_logo.svg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/data/assets/images/icons/games/rdr2_logo.png",
+      "installed_to": "assets/images/in_game/rdr2/rdr2_logo.png",
+      "bucket": "rdr2"
+    },
+    {
+      "source": "build/web/data/assets/images/icons/launchers/epic.svg",
+      "installed_to": "assets/images/in_game/common/epic.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/icons/launchers/gta_online.png",
+      "installed_to": "assets/images/in_game/gta5/gta_online.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/data/assets/images/icons/launchers/rockstar_games.svg",
+      "installed_to": "assets/images/in_game/common/rockstar_games.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/icons/launchers/rockstar_launcher.png",
+      "installed_to": "assets/images/in_game/common/rockstar_launcher.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/icons/launchers/steam.svg",
+      "installed_to": "assets/images/in_game/common/steam.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/in_game/common/epic.svg",
+      "installed_to": "assets/images/in_game/common/epic.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/in_game/common/kilo.svg",
+      "installed_to": "assets/images/in_game/common/kilo.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/in_game/common/ollama.png",
+      "installed_to": "assets/images/in_game/common/ollama.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/in_game/common/python.svg",
+      "installed_to": "assets/images/in_game/common/python.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/in_game/common/rockstar_games.svg",
+      "installed_to": "assets/images/in_game/common/rockstar_games.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/in_game/common/rockstar_launcher.png",
+      "installed_to": "assets/images/in_game/common/rockstar_launcher.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/in_game/common/steam.svg",
+      "installed_to": "assets/images/in_game/common/steam.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/in_game/common/vscode.svg",
+      "installed_to": "assets/images/in_game/common/vscode.svg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/assets/images/in_game/gta5/gta5_art_1.jpg",
+      "installed_to": "assets/images/in_game/gta5/gta5_art_1.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/data/assets/images/in_game/gta5/gta5_logo.svg",
+      "installed_to": "assets/images/in_game/gta5/gta5_logo.svg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/data/assets/images/in_game/gta5/gta_online.png",
+      "installed_to": "assets/images/in_game/gta5/gta_online.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/data/assets/images/in_game/rdr2/rdr2_art_1.jpg",
+      "installed_to": "assets/images/in_game/rdr2/rdr2_art_1.jpg",
+      "bucket": "rdr2"
+    },
+    {
+      "source": "build/web/data/assets/images/in_game/rdr2/rdr2_logo.png",
+      "installed_to": "assets/images/in_game/rdr2/rdr2_logo.png",
+      "bucket": "rdr2"
+    },
+    {
+      "source": "build/web/data/build/web/assets/favicon.ico",
+      "installed_to": "assets/images/in_game/common/favicon.ico",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/build/web/assets/icons/apple-touch-icon.png",
+      "installed_to": "assets/images/in_game/common/apple-touch-icon.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/build/web/assets/icons/icon-16.png",
+      "installed_to": "assets/images/in_game/common/icon-16.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/build/web/assets/icons/icon-192.png",
+      "installed_to": "assets/images/in_game/common/icon-192.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/build/web/assets/icons/icon-32.png",
+      "installed_to": "assets/images/in_game/common/icon-32.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/build/web/assets/icons/icon-512.png",
+      "installed_to": "assets/images/in_game/common/icon-512.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/build/web/assets/icons/icon-64.png",
+      "installed_to": "assets/images/in_game/common/icon-64.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/build/web/assets/insignia/og_image.jpg",
+      "installed_to": "assets/images/in_game/common/og_image.jpg",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/build/web/assets/insignia/og_image.png",
+      "installed_to": "assets/images/in_game/common/og_image.png",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/data/build/web/favicon.ico",
+      "installed_to": "assets/images/in_game/common/favicon.ico",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/favicon.ico",
+      "installed_to": "assets/images/in_game/common/favicon.ico",
+      "bucket": "common"
+    },
+    {
+      "source": "build/web/gta6/assets/characters/boobie.png",
+      "installed_to": "assets/images/in_game/gta5/boobie.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/characters/brian.png",
+      "installed_to": "assets/images/in_game/gta5/brian.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/characters/cal.png",
+      "installed_to": "assets/images/in_game/gta5/cal.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/characters/drequan.png",
+      "installed_to": "assets/images/in_game/gta5/drequan.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/characters/jason.png",
+      "installed_to": "assets/images/in_game/gta5/jason.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/characters/jason_lucia.png",
+      "installed_to": "assets/images/in_game/gta5/jason_lucia.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/characters/lucia.png",
+      "installed_to": "assets/images/in_game/gta5/lucia.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/characters/raul.png",
+      "installed_to": "assets/images/in_game/gta5/raul.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/characters/realdimez.png",
+      "installed_to": "assets/images/in_game/gta5/realdimez.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/editions/standard.png",
+      "installed_to": "assets/images/in_game/gta5/standard.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/editions/ultimate.png",
+      "installed_to": "assets/images/in_game/gta5/ultimate.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/editions/vintage_vc.png",
+      "installed_to": "assets/images/in_game/gta5/vintage_vc.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/hero.png",
+      "installed_to": "assets/images/in_game/gta5/hero.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/keyart.jpg",
+      "installed_to": "assets/images/in_game/gta5/keyart.jpg",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/locations/ambrosia.png",
+      "installed_to": "assets/images/in_game/gta5/ambrosia.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/locations/grassrivers.png",
+      "installed_to": "assets/images/in_game/gta5/grassrivers.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/locations/leonida_keys.png",
+      "installed_to": "assets/images/in_game/gta5/leonida_keys.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/locations/mount_kalaga.png",
+      "installed_to": "assets/images/in_game/gta5/mount_kalaga.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/locations/port_gellhorn.png",
+      "installed_to": "assets/images/in_game/gta5/port_gellhorn.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/locations/vice_city.png",
+      "installed_to": "assets/images/in_game/gta5/vice_city.png",
+      "bucket": "gta5"
+    },
+    {
+      "source": "build/web/gta6/assets/logo.png",
+      "installed_to": "assets/images/in_game/gta5/logo.png",
+      "bucket": "gta5"
+    }
+  ],
+  "in_game_buckets": {
+    "gta5": "assets/images/in_game/gta5",
+    "rdr2": "assets/images/in_game/rdr2",
+    "common": "assets/images/in_game/common"
+  }
+}

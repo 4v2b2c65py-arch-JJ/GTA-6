@@ -1,0 +1,22 @@
+{
+  "pack_id": "rdo-strange-tales-west",
+  "title": "Red Dead Online: Strange Tales of the West Vol. 1",
+  "base_game": "rdr2",
+  "status": "buildable",
+  "features": [
+    {"id": "telegram_missions", "type": "missions", "desc": "Theodore Levin telegram missions launched from camp lockbox/post office."},
+    {"id": "undead_plague_armadillo", "type": "mission", "desc": "Strange Tales of the Plague: retrieve infected corpses while fighting undead and cultists in Armadillo."},
+    {"id": "automatons_braithwaite", "type": "mission", "desc": "Strange Tales of Modern Science: investigate and destroy rogue automatons near Braithwaite Manor."},
+    {"id": "swamp_creature_lagras", "type": "mission", "desc": "Strange Tales of the Bayou: hunt swamp creature in Lagras amid hostile swamp-folk ambushes."},
+    {"id": "wilderness_survival_tall_trees", "type": "mission", "desc": "Strange Tales of the Wilderness: track missing scientist in Tall Trees with survival/crafting pressure."},
+    {"id": "theodore_levin_anthology", "type": "narrative", "desc": "Anthology framing device and collectible lore entries."},
+    {"id": "role_xp_rewards", "type": "progression", "desc": "Gold/RDO$/XP multipliers hooks and role progression rewards."}
+  ],
+  "build_hooks": {
+    "map_loader_regions": ["region-bayou", "region-frontier-woods", "region-desert-town"],
+    "timeline_beats": ["BEAT_3", "BEAT_4", "BEAT_5"],
+    "audio": {"soundtrack_mood": ["eerie", "supernatural"], "sfx": ["undead_groan", "automaton_clank", "swamp_creature", "telegram_sting"]},
+    "physics_audio": {"resonance_presets": ["metal_automaton", "swamp_water", "hollow_undead"]},
+    "python_data_flow": "assets/game_assets/dlc/rdo_strange_tales_west_data.json"
+  }
+}

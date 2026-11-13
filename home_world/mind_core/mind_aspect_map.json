@@ -1,0 +1,28 @@
+{
+  "id": "mind_aspect_map",
+  "type": "aspect_map",
+  "aspect": "mind",
+  "description": "Perception/analysis overlay: a clear instrument that indexes, maps, and clarifies options without replacing choice or consequence.",
+  "core": {
+    "mode": "lattice_index",
+    "functions": ["perceive", "index", "measure", "map_options", "tighten_under_pressure"],
+    "output_style": "non_narrative_structured"
+  },
+  "states": [
+    { "id": "M0-idle", "label": "standby", "intensity": 0.2, "narrative_anchor": "BEAT_0" },
+    { "id": "M1-snap_lattice", "label": "threat_index", "intensity": 0.9, "signals": ["fault_line", "velocity", "origin_unseen", "window_closing"], "narrative_anchor": "BEAT_1" },
+    { "id": "M2-path_map", "label": "option_mapping", "intensity": 0.7, "narrative_anchor": "BEAT_2" },
+    { "id": "M3-tighten", "label": "pressure_analysis", "intensity": 0.95, "narrative_anchor": "BEAT_3" },
+    { "id": "M4-register", "label": "true_shape_registration", "intensity": 0.85, "narrative_anchor": "BEAT_4" },
+    { "id": "M5-readiness", "label": "receded_readiness", "intensity": 0.4, "narrative_anchor": "BEAT_5" }
+  ],
+  "bindings": {
+    "terrain_refs": ["Z1-fault-belt", "Z2-traction-run", "Z3-cant-plates", "Z4-crest-reveal"],
+    "protocol_refs": ["sats_rea_rem"],
+    "lace_key_namespace": "M"
+  },
+  "constraints": {
+    "may": ["clarify_options", "index_signals", "register_shape"],
+    "may_not": ["replace_choice", "bypass_cost", "resolve_beats"]
+  }
+}

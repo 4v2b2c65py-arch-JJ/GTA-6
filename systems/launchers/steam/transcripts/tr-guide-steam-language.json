@@ -1,0 +1,11 @@
+{
+  "transcript_id": "tr-guide-steam-language",
+  "guide_id": "guide-steam-language",
+  "source_id": "steam_support_localization",
+  "url": "https://partner.steamgames.com/doc/store/localization?language=russian",
+  "lang": "ru",
+  "enabled": true,
+  "hash": "720102e200849072",
+  "text": "Локализация Steam: язык игры задаётся в свойствах игры или в настройках самой игры; после смены могут загружаться языковые файлы. Интерфейс, субтитры и озвучка поддерживаются отдельно; проверяйте наличие перевода на странице магазина.",
+  "ts": "2026-11-13T05:16:37Z"
+}

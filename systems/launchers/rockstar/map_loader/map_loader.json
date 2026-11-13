@@ -1,0 +1,58 @@
+{
+  "id": "rockstar_map_loader",
+  "type": "map_loader",
+  "version": "1.0.0",
+  "status": "active",
+  "launcher_ref": "systems/launchers/rockstar/launcher.json",
+  "mode": "region_expansion",
+  "scope": {
+    "base": "game_world_default",
+    "expanded": true,
+    "broader_mapping_scope": true,
+    "target": "real_world_location_modeling",
+    "load_strategy": "streamed_partition_load",
+    "max_concurrent_regions": 12,
+    "lod": ["macro", "meso", "micro"]
+  },
+  "components": {
+    "region_expansion": "systems/launchers/rockstar/map_loader/region_expansion.json",
+    "camera_sources": "systems/launchers/rockstar/map_loader/sources/camera_sources.json",
+    "barcode_hashes": "systems/launchers/rockstar/map_loader/barcode_hashes/regional_barcode_hashes.json",
+    "network_pass_log": "systems/launchers/rockstar/map_loader/barcode_hashes/network_pass_log.json",
+    "data_flow_state": "systems/launchers/rockstar/map_loader/data_flow/data_flow_state.json",
+    "information_gap_report": "systems/launchers/rockstar/map_loader/data_flow/information_gap_report.json",
+    "barcode_downloader": "systems/launchers/rockstar/map_loader/barcode_hashes/download_barcodes.py",
+    "cache_dir": "systems/launchers/rockstar/map_loader/cache",
+    "logs_dir": "logs/launchers/map_loader"
+  },
+  "pipeline": {
+    "stages": [
+      "source_ingest",
+      "camera_event_normalize",
+      "geo_temporal_align",
+      "location_model_fuse",
+      "region_partition_build",
+      "lod_index",
+      "map_stream_mount"
+    ],
+    "realtime": true,
+    "batch_backfill": true
+  },
+  "integration": {
+    "terrain_ref": "home_world/bodium_terrain/bodium_terrain_map.json",
+    "camera_viewpoints_ref": "systems/camera/camera_viewpoints.json",
+    "depth_partitions_ref": "home_world/bodium_terrain/render/map_partitions_by_depth.json",
+    "timeline_rule_ref": "systems/runtime/world_timeline_model_rule.json",
+    "grid_store_ref": "systems/grid_store/qbit_zone_pocket_map.json",
+    "geo_injection_ref": "systems/world/geo/geo_injection.json",
+    "transportation_ref": "systems/world/transportation/transportation.json",
+    "vehicles_ref": "systems/world/transportation/vehicles.json"
+  },
+  "compliance": {
+    "authorized_sources_only": true,
+    "privacy_filter": true,
+    "pii_redaction": true,
+    "retention_policy": "configurable_per_source",
+    "note": "External camera data (e.g. Flock/community/traffic APIs) must be ingested only via authorized access, contracts, and applicable law/policy."
+  }
+}

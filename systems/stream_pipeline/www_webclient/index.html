@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spatial Avy — WWW Webclient (Alien Node)</title>
+  <style>
+    :root { --bg: #060c1a; --panel: #0f172a; --line: #243047; --text: #e5eefc; --muted: #8fa3b8; --accent: #60a5fa; --ok: #34d399; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    header { padding: 12px 16px; border-bottom: 1px solid var(--line); display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .badge { font-size: 12px; padding: 2px 8px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+    .badge.online { color: var(--ok); border-color: #1f6f52; }
+    main { display: grid; grid-template-columns: 320px 1fr; gap: 12px; padding: 12px; }
+    .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
+    h1 { font-size: 16px; margin: 0; }
+    h2 { font-size: 13px; margin: 0 0 8px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+    .kv { font-size: 13px; line-height: 1.6; }
+    .kv b { color: var(--muted); font-weight: 500; }
+    #grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
+    .tile { border: 1px solid var(--line); border-radius: 6px; padding: 8px; font-size: 12px; min-height: 72px; }
+    .tile .id { color: var(--accent); font-weight: 600; }
+    button { background: #132036; color: var(--text); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; cursor: pointer; }
+    button:hover { border-color: var(--accent); }
+    pre { margin: 0; font-size: 12px; color: var(--muted); white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WWW Webclient — Alien Node (N-ALIEN)</h1>
+    <span id="nodeState" class="badge online">online</span>
+    <span class="badge">board: rd</span>
+    <span class="badge">session: SB-RD-001</span>
+  </header>
+  <main>
+    <section class="panel">
+      <h2>Node / Client</h2>
+      <div class="kv" id="clientInfo"></div>
+      <h2 style="margin-top:12px">Actions</h2>
+      <div style="display:flex; gap:8px; flex-wrap:wrap">
+        <button id="loadConfig">Load Config</button>
+        <button id="renderGrid">Render Grid</button>
+      </div>
+      <h2 style="margin-top:12px">Status</h2>
+      <pre id="status">idle</pre>
+    </section>
+    <section class="panel">
+      <h2>Directive / Zone Grid</h2>
+      <div id="grid"></div>
+    </section>
+  </main>
+  <script>
+    const statusEl = document.getElementById('status');
+    const infoEl = document.getElementById('clientInfo');
+    const gridEl = document.getElementById('grid');
+    const fallback = {
+      client_id: 'www_webclient_alien', node: 'N-ALIEN', mode: 'online',
+      endpoints: { vcp: '/vcp', stream_profiles: '/vcp/streams/profiles', layout_directives: '/vcp/layout/directives', grid_store: '/vcp/grid' }
+    };
+    const zones = ['Z0-core-plate','Z1-fault-belt','Z2-traction-run','Z3-cant-plates','Z4-crest-reveal','Z5-settled-path'];
+
+    function renderInfo(cfg) {
+      infoEl.innerHTML = `<div><b>Node:</b> ${cfg.node}</div><div><b>Client:</b> ${cfg.client_id}</div><div><b>Mode:</b> ${cfg.mode}</div><div><b>VCP:</b> ${cfg.endpoints.vcp}</div>`;
+    }
+    async function loadConfig() {
+      try {
+        const res = await fetch('./client_config.json');
+        const cfg = res.ok ? await res.json() : fallback;
+        renderInfo(cfg);
+        statusEl.textContent = 'config loaded';
+        return cfg;
+      } catch (e) { renderInfo(fallback); statusEl.textContent = 'using fallback config'; return fallback; }
+    }
+    function renderGrid() {
+      gridEl.innerHTML = zones.map((z,i) => `<div class="tile"><div class="id">${z}</div><div>panel P${i}</div><div>node: N-ALIEN</div><div>lace: Z${i}-Q0-C000-T0</div></div>`).join('');
+      statusEl.textContent = 'grid rendered (zones Z0-Z5, node N-ALIEN)';
+    }
+    document.getElementById('loadConfig').onclick = loadConfig;
+    document.getElementById('renderGrid').onclick = renderGrid;
+    renderInfo(fallback);
+  </script>
+</body>
+</html>

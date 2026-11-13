@@ -1,0 +1,31 @@
+{
+  "id": "audio_system",
+  "type": "audio_runtime",
+  "version": "1.1.0",
+  "status": "active",
+  "description": "In-game audio system: soundtrack, music (Spotify track peers + installed sorting algo), sound VFX, physics-based audio interpretation, and voice pipeline (model transcription -> VLM voice digestion -> vocal tracks).",
+  "components": {
+    "soundtrack": "systems/audio/soundtrack/soundtrack.json",
+    "music_loader": "systems/audio/music/music_loader.json",
+    "spotify_track_peers": "systems/audio/music/spotify_track_peers.json",
+    "sorting_algo": "systems/audio/music/sorting_algo.py",
+    "music_playlist": "systems/audio/music/playlist_sorted.json",
+    "eq_presets": "systems/audio/music/eq_presets.json",
+    "soundboard": "systems/audio/music/soundboard.json",
+    "frequency_emitter": "systems/audio/music/frequency_emitter.py",
+    "frequency_state": "systems/audio/music/frequency_state.json",
+    "speaker_output_levels": "systems/audio/music/speaker_output_levels.json",
+    "music_installer": "systems/audio/music/install_music.py",
+    "sfx_vfx": "systems/audio/sfx_vfx/sound_vfx.json",
+    "physics_audio": "systems/audio/physics/physics_audio.json",
+    "voice_pipeline": "systems/audio/voice/voice_pipeline.json",
+    "installer": "systems/audio/install_audio.py"
+  },
+  "assets_root": "assets/audio",
+  "install_log": "logs/audio/install.log",
+  "runtime_integration": {
+    "game_world_runtime": "systems/runtime/game_world_runtime.json",
+    "world_timeline": "systems/grid_store/timeline_pockets.json",
+    "load_in_game": true
+  }
+}

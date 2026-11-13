@@ -1,0 +1,83 @@
+{
+  "id": "physics_audio",
+  "type": "physics_audio_interpretation",
+  "version": "1.0.0",
+  "status": "installed",
+  "description": "Physics-based audio interpretation: derives sound parameters from physics runtime (collision, velocity, material, force) for in-game synthesis and SFX modulation.",
+  "physics_ref": "systems/runtime/physics_algorithms.json",
+  "mode": "interpretive_synthesis",
+  "parameters": {
+    "collision": {
+      "inputs": [
+        "impact_velocity",
+        "mass",
+        "material_hardness"
+      ],
+      "outputs": [
+        "amplitude",
+        "pitch_hz",
+        "decay_ms",
+        "brightness"
+      ],
+      "mapping": "impact_energy_to_amplitude"
+    },
+    "motion": {
+      "inputs": [
+        "velocity",
+        "acceleration",
+        "surface_friction"
+      ],
+      "outputs": [
+        "doppler_shift",
+        "whoosh_gain",
+        "grain_density"
+      ],
+      "mapping": "kinematics_to_motion_audio"
+    },
+    "resonance": {
+      "inputs": [
+        "body_volume",
+        "material",
+        "constraint_tension"
+      ],
+      "outputs": [
+        "fundamental_hz",
+        "harmonics",
+        "reverb_tail_ms"
+      ],
+      "mapping": "modal_resonance"
+    },
+    "environment": {
+      "inputs": [
+        "zone",
+        "occlusion",
+        "medium_density"
+      ],
+      "outputs": [
+        "lowpass_hz",
+        "reverb_mix",
+        "air_absorption"
+      ],
+      "mapping": "zone_acoustics"
+    }
+  },
+  "synthesis": {
+    "enabled": true,
+    "engines": [
+      "procedural",
+      "sample_modulation"
+    ],
+    "sample_rate_hz": 48000,
+    "buffer_frames": 512
+  },
+  "runtime_binding": {
+    "update_rate_hz": 60,
+    "source": "systems/runtime/physics_algorithms.json",
+    "apply_to": [
+      "sfx_vfx",
+      "soundtrack_ducking"
+    ]
+  },
+  "installed_at": "2026-11-13T05:16:37Z",
+  "install_state": "configured"
+}

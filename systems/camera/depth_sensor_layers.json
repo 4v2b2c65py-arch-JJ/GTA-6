@@ -1,0 +1,47 @@
+{
+  "id": "depth_sensor_layers",
+  "type": "sensor_config",
+  "version": "1.0.0",
+  "description": "Depth sensor for map layers in dimensions; provides per-layer/dimension metrics used to budget and save weblink size per computing player or offline session.",
+  "sensor": {
+    "sensor_id": "depth-sensor-main",
+    "mode": "pixel_depth_layer_scan",
+    "space": "view_space_linear",
+    "enabled": true,
+    "source_refs": {
+      "depth_partitions": "home_world/bodium_terrain/render/map_partitions_by_depth.json",
+      "grid_store": "systems/grid_store/qbit_zone_pocket_map.json",
+      "camera_viewpoints": "systems/camera/camera_viewpoints.json"
+    }
+  },
+  "dimensions": {
+    "spatial_axes": [
+      { "axis": "x", "size": 16, "unit": "tile", "role": "width" },
+      { "axis": "y", "size": 9, "unit": "tile", "role": "height" },
+      { "axis": "z", "size": 4, "unit": "tile", "role": "depth_stack" }
+    ],
+    "layer_axis": {
+      "id": "depth_layer",
+      "source": "DP_layers",
+      "count": 6,
+      "layers": ["DP-0", "DP-1", "DP-2", "DP-3", "DP-4", "DP-5"]
+    },
+    "total_dimension_units": 3456,
+    "total_layer_dimensions": 9
+  },
+  "layer_metrics": [
+    { "layer_id": "DP-0", "name": "foreground", "depth_range": [0.0, 0.12], "sample_resolution": { "w": 512, "h": 288 }, "bytes_per_sample": 4, "channels": ["depth", "zone_id"], "base_payload_bytes": 589824, "priority": 100 },
+    { "layer_id": "DP-1", "name": "near", "depth_range": [0.12, 0.28], "sample_resolution": { "w": 512, "h": 288 }, "bytes_per_sample": 4, "channels": ["depth", "zone_id"], "base_payload_bytes": 589824, "priority": 90 },
+    { "layer_id": "DP-2", "name": "mid_near", "depth_range": [0.28, 0.45], "sample_resolution": { "w": 384, "h": 216 }, "bytes_per_sample": 4, "channels": ["depth", "zone_id"], "base_payload_bytes": 331776, "priority": 80 },
+    { "layer_id": "DP-3", "name": "mid_far", "depth_range": [0.45, 0.65], "sample_resolution": { "w": 256, "h": 144 }, "bytes_per_sample": 4, "channels": ["depth", "zone_id"], "base_payload_bytes": 147456, "priority": 70 },
+    { "layer_id": "DP-4", "name": "far", "depth_range": [0.65, 0.85], "sample_resolution": { "w": 192, "h": 108 }, "bytes_per_sample": 4, "channels": ["depth", "zone_id"], "base_payload_bytes": 82944, "priority": 60 },
+    { "layer_id": "DP-5", "name": "background", "depth_range": [0.85, 1.0], "sample_resolution": { "w": 128, "h": 72 }, "bytes_per_sample": 4, "channels": ["depth", "zone_id"], "base_payload_bytes": 36864, "priority": 50 }
+  ],
+  "weblink_budget_model": {
+    "formula": "weblink_size_bytes = envelope_bytes + sum(layer.base_payload_bytes for assigned layers) + (assigned_spatial_dimension_units * bytes_per_dimension_unit)",
+    "envelope_bytes": 8192,
+    "bytes_per_dimension_unit": 48,
+    "compression_factor_estimate": 0.42,
+    "notes": "Saved per session/player to cap payload by assigned dimensions and depth layers."
+  }
+}

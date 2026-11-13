@@ -1,0 +1,33 @@
+{
+  "id": "inventory_snapshot",
+  "generated_for": "spatial_avy_home",
+  "scope": "known_assets_and_entities",
+  "image": [
+    { "id": "img-avatar-slot", "name": "Avatar image slot", "source": "assets/avatars/" }
+  ],
+  "video": [],
+  "polygons": [
+    { "id": "poly-rig-direct12", "name": "Direct 12-stud real-fit poly rig", "source": "assets/outfits/direct_12_stud/poly_rig_fidelity.json", "poly_budget": 36000 }
+  ],
+  "items": [
+    { "id": "item-cz-headgear-visor", "name": "Standard Visor", "source": "assets/outfits/dlc_standard/customizers.json" },
+    { "id": "item-cz-headgear-crest", "name": "Crest Mount", "source": "assets/outfits/dlc_standard/customizers.json" },
+    { "id": "item-cz-shoulder-pauldron-l", "name": "Pauldron L", "source": "assets/outfits/dlc_standard/customizers.json" },
+    { "id": "item-cz-shoulder-pauldron-r", "name": "Pauldron R", "source": "assets/outfits/dlc_standard/customizers.json" },
+    { "id": "item-cz-chest-sigil", "name": "Chest Sigil", "source": "assets/outfits/dlc_standard/customizers.json" },
+    { "id": "item-cz-core-module", "name": "Core Module", "source": "assets/outfits/dlc_standard/customizers.json" },
+    { "id": "item-cz-back-pack", "name": "Back Pack", "source": "assets/outfits/dlc_standard/customizers.json" },
+    { "id": "item-cz-back-cape", "name": "Cape Anchor", "source": "assets/outfits/dlc_standard/customizers.json" },
+    { "id": "item-cz-arm-gauntlet-l", "name": "Gauntlet L", "source": "assets/outfits/dlc_standard/customizers.json" },
+    { "id": "item-cz-arm-gauntlet-r", "name": "Gauntlet R", "source": "assets/outfits/dlc_standard/customizers.json" },
+    { "id": "item-cz-leg-greave-l", "name": "Greave L", "source": "assets/outfits/dlc_standard/customizers.json" },
+    { "id": "item-cz-leg-greave-r", "name": "Greave R", "source": "assets/outfits/dlc_standard/customizers.json" },
+    { "id": "item-dev-fpv-cam-001", "name": "Bodium FPV Scout Cam", "source": "systems/devices/device_library.json" },
+    { "id": "item-dev-fpv-cam-002", "name": "Border FPV Relay Cam", "source": "systems/devices/device_library.json" },
+    { "id": "item-dev-fpv-vtx-001", "name": "Spectral VTX Unit", "source": "systems/devices/device_library.json" },
+    { "id": "item-dev-fpv-hud-001", "name": "Mind-Lattice HUD", "source": "systems/devices/device_library.json" }
+  ],
+  "characters": [
+    { "id": "char-protagonist", "name": "Protagonist", "source": "narrative/characters/default_loadout.json" }
+  ]
+}

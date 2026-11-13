@@ -1,0 +1,46 @@
+{
+  "id": "geo_injection",
+  "type": "geo_data_injection",
+  "version": "1.0.0",
+  "status": "injected",
+  "coordinate_system": "wgs84",
+  "projection": "web_mercator_epsg3857",
+  "sources": {
+    "region_expansion": "systems/launchers/rockstar/map_loader/region_expansion.json",
+    "map_loader": "systems/launchers/rockstar/map_loader/map_loader.json",
+    "data_flow_state": "systems/launchers/rockstar/map_loader/data_flow/data_flow_state.json"
+  },
+  "regions": [
+    {"region_id":"RW-LEO-MIA-001","name":"Miami-Dade Metro","real_world_ref":"Miami, Florida, USA","center":{"lat":25.7617,"lon":-80.1918},"bounds":{"north":25.979,"south":25.133,"east":-80.12,"west":-80.873},"lod":"macro","assets":["road_graph","landmarks","waterways","urban_blocks"],"transport_hubs":["hub-mia-downtown","hub-mia-port"]},
+    {"region_id":"RW-LEO-MIA-BEACH-002","name":"Miami Beach / Coastal Strip","real_world_ref":"Miami Beach, Florida, USA","center":{"lat":25.7907,"lon":-80.13},"bounds":{"north":25.872,"south":25.764,"east":-80.12,"west":-80.155},"lod":"meso","assets":["coastline","arterials","poi_density"],"transport_hubs":["hub-miabeach-marina"]},
+    {"region_id":"RW-LEO-KEYS-003","name":"Keys Causeway Corridor","real_world_ref":"Florida Keys approach corridors, USA","center":{"lat":24.925,"lon":-80.95},"bounds":{"north":25.4,"south":24.55,"east":-80.1,"west":-81.8},"lod":"macro","assets":["bridges","coastal_routes","elevation_profile"],"transport_hubs":["hub-keys-causeway"]},
+    {"region_id":"RW-US-ATL-010","name":"Atlanta Metro","real_world_ref":"Atlanta, Georgia, USA","center":{"lat":33.749,"lon":-84.388},"bounds":{"north":34,"south":33.6,"east":-84.1,"west":-84.65},"lod":"macro","assets":["road_graph","interchanges","landmarks"],"transport_hubs":["hub-atl-interchange"]},
+    {"region_id":"RW-US-LAX-011","name":"Los Angeles Basin Sample","real_world_ref":"Los Angeles, California, USA","center":{"lat":34.0522,"lon":-118.2437},"bounds":{"north":34.337,"south":33.703,"east":-118.155,"west":-118.668},"lod":"macro","assets":["freeway_network","urban_blocks","poi_density"],"transport_hubs":["hub-lax-basin","hub-lax-port"]},
+    {"region_id":"RW-US-NYC-012","name":"New York City Core Sample","real_world_ref":"New York, New York, USA","center":{"lat":40.7128,"lon":-74.006},"bounds":{"north":40.917,"south":40.477,"east":-73.7,"west":-74.259},"lod":"macro","assets":["street_grid","bridges_tunnels","landmarks"],"transport_hubs":["hub-nyc-core"]},
+    {"region_id":"region-bayou","name":"Bayou Frontier (World)","real_world_ref":"modeled","center":{"lat":29.95,"lon":-90.07},"bounds":null,"lod":"meso","assets":["swamp_routes","waterways"],"transport_hubs":["hub-bayou-dock"]},
+    {"region_id":"region-frontier-woods","name":"Frontier Woods (World)","real_world_ref":"modeled","center":{"lat":36.12,"lon":-95.99},"bounds":null,"lod":"meso","assets":["trails","forest_roads"],"transport_hubs":["hub-frontier-camp"]},
+    {"region_id":"region-desert-town","name":"Desert Town (World)","real_world_ref":"modeled","center":{"lat":34.5,"lon":-112.0},"bounds":null,"lod":"meso","assets":["desert_routes","rail_spur"],"transport_hubs":["hub-desert-station"]},
+    {"region_id":"region-border-frontier-new","name":"Border Frontier (Expansion)","real_world_ref":"Nuevo Paraiso inspired","center":{"lat":27.5,"lon":-99.5},"bounds":null,"lod":"macro","assets":["border_crossing","settlements","routes"],"transport_hubs":["hub-border-crossing"]}
+  ],
+  "transport_hubs": [
+    {"hub_id":"hub-mia-downtown","region_id":"RW-LEO-MIA-001","type":"road_transit","lat":25.774,"lon":-80.193,"services":["road","rail","service"]},
+    {"hub_id":"hub-mia-port","region_id":"RW-LEO-MIA-001","type":"port","lat":25.778,"lon":-80.178,"services":["water","road"]},
+    {"hub_id":"hub-miabeach-marina","region_id":"RW-LEO-MIA-BEACH-002","type":"marina","lat":25.79,"lon":-80.14,"services":["water","road"]},
+    {"hub_id":"hub-keys-causeway","region_id":"RW-LEO-KEYS-003","type":"causeway","lat":25.1,"lon":-80.44,"services":["road"]},
+    {"hub_id":"hub-atl-interchange","region_id":"RW-US-ATL-010","type":"interchange","lat":33.75,"lon":-84.39,"services":["road","air"]},
+    {"hub_id":"hub-lax-basin","region_id":"RW-US-LAX-011","type":"freeway_hub","lat":34.05,"lon":-118.25,"services":["road","air"]},
+    {"hub_id":"hub-lax-port","region_id":"RW-US-LAX-011","type":"port","lat":33.74,"lon":-118.27,"services":["water","road"]},
+    {"hub_id":"hub-nyc-core","region_id":"RW-US-NYC-012","type":"transit_hub","lat":40.71,"lon":-74.01,"services":["road","rail","water"]},
+    {"hub_id":"hub-bayou-dock","region_id":"region-bayou","type":"dock","lat":29.95,"lon":-90.07,"services":["water","mount"]},
+    {"hub_id":"hub-frontier-camp","region_id":"region-frontier-woods","type":"camp","lat":36.12,"lon":-95.99,"services":["mount","road"]},
+    {"hub_id":"hub-desert-station","region_id":"region-desert-town","type":"station","lat":34.5,"lon":-112.0,"services":["rail","mount","road"]},
+    {"hub_id":"hub-border-crossing","region_id":"region-border-frontier-new","type":"border","lat":27.5,"lon":-99.5,"services":["road","mount"]}
+  ],
+  "routes": [
+    {"route_id":"rt-mia-coastal","mode":"road","regions":["RW-LEO-MIA-001","RW-LEO-MIA-BEACH-002","RW-LEO-KEYS-003"],"hubs":["hub-mia-downtown","hub-miabeach-marina","hub-keys-causeway"]},
+    {"route_id":"rt-mia-metro","mode":"rail","regions":["RW-LEO-MIA-001","RW-LEO-MIA-BEACH-002"],"hubs":["hub-mia-downtown"]},
+    {"route_id":"rt-us-air-corridor","mode":"air","regions":["RW-US-ATL-010","RW-US-LAX-011","RW-US-NYC-012"],"hubs":["hub-atl-interchange","hub-lax-basin","hub-nyc-core"]},
+    {"route_id":"rt-frontier-trail","mode":"mount","regions":["region-frontier-woods","region-desert-town","region-border-frontier-new"],"hubs":["hub-frontier-camp","hub-desert-station","hub-border-crossing"]},
+    {"route_id":"rt-bayou-water","mode":"water","regions":["region-bayou"],"hubs":["hub-bayou-dock"]}
+  ]
+}

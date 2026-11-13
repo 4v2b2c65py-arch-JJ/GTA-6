@@ -1,0 +1,22 @@
+{
+  "id": "gta_portal_referencer",
+  "name": "GTA Portal Referencer",
+  "version": "1.0.0",
+  "description": "References GTA/community portal spottings to identify missing game assets via fetcher ingestion and bot gap analysis.",
+  "components": {
+    "fetcher": {
+      "script": "systems/gta_portal/fetcher/fetcher.py",
+      "config": "systems/gta_portal/fetcher/sources.json",
+      "output": "systems/gta_portal/fetcher/normalized_spottings.json"
+    },
+    "bot": {
+      "script": "systems/gta_portal/bot/gap_bot.py",
+      "inventory": "systems/gta_portal/inventory_snapshot.json",
+      "input": "systems/gta_portal/fetcher/normalized_spottings.json",
+      "output_json": "systems/gta_portal/reports/gap_report.json",
+      "output_md": "systems/gta_portal/reports/gap_report.md"
+    }
+  },
+  "spotting_categories": ["image", "video", "polygons", "items", "characters"],
+  "status": "configured"
+}

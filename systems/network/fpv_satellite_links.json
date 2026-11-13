@@ -1,0 +1,68 @@
+{
+  "id": "fpv_satellite_links",
+  "type": "network_link_map",
+  "provider_ref": "systems/network/satellite_network.json",
+  "provider_id": "game_satellite_network_provider",
+  "network_status": "connected",
+  "links": [
+    {
+      "device_id": "dev-fpv-cam-001",
+      "fpv_id": "fpv-main",
+      "model": "SCOUT-CAM-M1",
+      "role": "primary_capture",
+      "satellite": "SAT-01",
+      "channel": "CH-CAM-01",
+      "uplink": "active",
+      "downlink": "active",
+      "signal_strength_dbm": -62,
+      "latency_ms": 41,
+      "stream_bound": true
+    },
+    {
+      "device_id": "dev-fpv-vtx-001",
+      "fpv_id": "fpv-main",
+      "model": "VTX-SPEC-M2",
+      "role": "transmit_encode",
+      "satellite": "SAT-02",
+      "channel": "CH-VTX-01",
+      "uplink": "active",
+      "downlink": "active",
+      "signal_strength_dbm": -58,
+      "latency_ms": 39,
+      "stream_bound": true
+    },
+    {
+      "device_id": "dev-fpv-hud-001",
+      "fpv_id": "fpv-main",
+      "model": "HUD-LATTICE-M1",
+      "role": "hud_overlay",
+      "satellite": "SAT-01",
+      "channel": "CH-HUD-01",
+      "uplink": "active",
+      "downlink": "active",
+      "signal_strength_dbm": -64,
+      "latency_ms": 44,
+      "stream_bound": true
+    },
+    {
+      "device_id": "dev-fpv-cam-002",
+      "fpv_id": "fpv-relay",
+      "model": "RELAY-CAM-M1",
+      "role": "relay_capture",
+      "satellite": "SAT-03",
+      "channel": "CH-CAM-02",
+      "uplink": "active",
+      "downlink": "active",
+      "signal_strength_dbm": -60,
+      "latency_ms": 43,
+      "stream_bound": true
+    }
+  ],
+  "summary": {
+    "total_devices": 4,
+    "connected": 4,
+    "active_uplinks": 4,
+    "active_downlinks": 4,
+    "provider_online": true
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "id": "device_webpointers",
+  "type": "device_loader_registry",
+  "version": "1.0.0",
+  "description": "Completed device loaders mapped to webpointers for all sat-com connected devices.",
+  "manager_ref": "systems/network/sat_coms_forum_manager.json",
+  "provider_ref": "systems/network/satellite_network.json",
+  "links_ref": "systems/network/fpv_satellite_links.json",
+  "portal_registry_ref": "systems/network/portals/vercel_portals.json",
+  "loaders": [
+    {
+      "loader_id": "loader.fpv_cam_scout",
+      "device_id": "dev-fpv-cam-001",
+      "label": "FPV Main Scout Cam Webpointer",
+      "webpointer": {
+        "uri": "http://0.0.0.0:9101/devices/dev-fpv-cam-001",
+        "host": "0.0.0.0",
+        "port": 9101,
+        "path": "/devices/dev-fpv-cam-001",
+        "scheme": "http"
+      },
+      "sat_coms": {
+        "provider_id": "game_satellite_network_provider",
+        "satellite": "SAT-01",
+        "channel": "CH-CAM-01",
+        "uplink": "active",
+        "downlink": "active",
+        "connected": true
+      },
+      "status": "loaded",
+      "portal_downloads": [
+        {
+          "portal_id": "leviathan-portal-01",
+          "url": "https://leviathan-bs95il3a8-jjonthelaptop-5497s-projects.vercel.app/",
+          "uri": "http://0.0.0.0:9201/portals/leviathan-portal-01/download/dev-fpv-cam-001",
+          "port": 9201,
+          "status": "pending_auth"
+        },
+        {
+          "portal_id": "leviathan-portal-02",
+          "url": "https://leviathan-8mo788paq-jjonthelaptop-5497s-projects.vercel.app/",
+          "uri": "http://0.0.0.0:9202/portals/leviathan-portal-02/download/dev-fpv-cam-001",
+          "port": 9202,
+          "status": "pending_auth"
+        }
+      ]
+    },
+    {
+      "loader_id": "loader.fpv_vtx_spectral",
+      "device_id": "dev-fpv-vtx-001",
+      "label": "FPV Main VTX Encode Webpointer",
+      "webpointer": {
+        "uri": "http://0.0.0.0:9102/devices/dev-fpv-vtx-001",
+        "host": "0.0.0.0",
+        "port": 9102,
+        "path": "/devices/dev-fpv-vtx-001",
+        "scheme": "http"
+      },
+      "sat_coms": {
+        "provider_id": "game_satellite_network_provider",
+        "satellite": "SAT-02",
+        "channel": "CH-VTX-01",
+        "uplink": "active",
+        "downlink": "active",
+        "connected": true
+      },
+      "status": "loaded",
+      "portal_downloads": [
+        {
+          "portal_id": "leviathan-portal-01",
+          "url": "https://leviathan-bs95il3a8-jjonthelaptop-5497s-projects.vercel.app/",
+          "uri": "http://0.0.0.0:9201/portals/leviathan-portal-01/download/dev-fpv-vtx-001",
+          "port": 9201,
+          "status": "pending_auth"
+        },
+        {
+          "portal_id": "leviathan-portal-02",
+          "url": "https://leviathan-8mo788paq-jjonthelaptop-5497s-projects.vercel.app/",
+          "uri": "http://0.0.0.0:9202/portals/leviathan-portal-02/download/dev-fpv-vtx-001",
+          "port": 9202,
+          "status": "pending_auth"
+        }
+      ]
+    },
+    {
+      "loader_id": "loader.fpv_hud_lattice",
+      "device_id": "dev-fpv-hud-001",
+      "label": "FPV Main HUD Overlay Webpointer",
+      "webpointer": {
+        "uri": "http://0.0.0.0:9103/devices/dev-fpv-hud-001",
+        "host": "0.0.0.0",
+        "port": 9103,
+        "path": "/devices/dev-fpv-hud-001",
+        "scheme": "http"
+      },
+      "sat_coms": {
+        "provider_id": "game_satellite_network_provider",
+        "satellite": "SAT-01",
+        "channel": "CH-HUD-01",
+        "uplink": "active",
+        "downlink": "active",
+        "connected": true
+      },
+      "status": "loaded",
+      "portal_downloads": [
+        {
+          "portal_id": "leviathan-portal-01",
+          "url": "https://leviathan-bs95il3a8-jjonthelaptop-5497s-projects.vercel.app/",
+          "uri": "http://0.0.0.0:9201/portals/leviathan-portal-01/download/dev-fpv-hud-001",
+          "port": 9201,
+          "status": "pending_auth"
+        },
+        {
+          "portal_id": "leviathan-portal-02",
+          "url": "https://leviathan-8mo788paq-jjonthelaptop-5497s-projects.vercel.app/",
+          "uri": "http://0.0.0.0:9202/portals/leviathan-portal-02/download/dev-fpv-hud-001",
+          "port": 9202,
+          "status": "pending_auth"
+        }
+      ]
+    },
+    {
+      "loader_id": "loader.fpv_cam_relay",
+      "device_id": "dev-fpv-cam-002",
+      "label": "FPV Relay Cam Webpointer",
+      "webpointer": {
+        "uri": "http://0.0.0.0:9104/devices/dev-fpv-cam-002",
+        "host": "0.0.0.0",
+        "port": 9104,
+        "path": "/devices/dev-fpv-cam-002",
+        "scheme": "http"
+      },
+      "sat_coms": {
+        "provider_id": "game_satellite_network_provider",
+        "satellite": "SAT-03",
+        "channel": "CH-CAM-02",
+        "uplink": "active",
+        "downlink": "active",
+        "connected": true
+      },
+      "status": "loaded",
+      "portal_downloads": [
+        {
+          "portal_id": "leviathan-portal-01",
+          "url": "https://leviathan-bs95il3a8-jjonthelaptop-5497s-projects.vercel.app/",
+          "uri": "http://0.0.0.0:9201/portals/leviathan-portal-01/download/dev-fpv-cam-002",
+          "port": 9201,
+          "status": "pending_auth"
+        },
+        {
+          "portal_id": "leviathan-portal-02",
+          "url": "https://leviathan-8mo788paq-jjonthelaptop-5497s-projects.vercel.app/",
+          "uri": "http://0.0.0.0:9202/portals/leviathan-portal-02/download/dev-fpv-cam-002",
+          "port": 9202,
+          "status": "pending_auth"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_loaders": 4,
+    "loaded": 4,
+    "connected": 4,
+    "portals_installed": 2,
+    "portal_download_ports": [
+      9201,
+      9202
+    ],
+    "portal_downloads_ported_to_devices": 8,
+    "downloads_pending_auth": 8
+  }
+}

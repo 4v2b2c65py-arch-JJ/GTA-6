@@ -1,0 +1,29 @@
+{
+  "id": "launcher_bootstrap",
+  "type": "bootstrap_config",
+  "launcher": "rockstar_games_launcher",
+  "version": "1.0.0",
+  "first_run": {
+    "completed": true,
+    "steps": [
+      { "step": "scan_for_installed_titles", "enabled": true, "completed": true },
+      { "step": "prompt_sign_in_or_create_account", "enabled": true, "completed": false },
+      { "step": "email_verification_prompt", "enabled": true, "completed": false },
+      { "step": "load_library", "enabled": true, "completed": true }
+    ]
+  },
+  "startup": {
+    "auto_update_launcher": true,
+    "auto_update_games": true,
+    "start_minimized": false,
+    "restore_last_session": true,
+    "open_ui": "systems/launchers/rockstar/ui/index.html"
+  },
+  "paths": {
+    "settings": "systems/launchers/rockstar/settings/settings.json",
+    "auth": "systems/launchers/rockstar/auth/auth.json",
+    "library": "systems/launchers/rockstar/library/library.json",
+    "state": "systems/launchers/rockstar/state/launcher_state.json",
+    "logs": "logs/launchers/rockstar.log"
+  }
+}

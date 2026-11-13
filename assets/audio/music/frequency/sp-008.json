@@ -1,0 +1,29 @@
+{
+  "track_id": "sp-008",
+  "title": "Keys at Dusk",
+  "artist": "Coastal Relay",
+  "source": "spotify_peer",
+  "zone": "Z3",
+  "beat": "BEAT_2",
+  "mood": [
+    "ambient",
+    "night"
+  ],
+  "file": null,
+  "frequency": {
+    "bands": {
+      "sub_bass": 0.714,
+      "bass": 0.748,
+      "low_mid": 0.6817,
+      "mid": 0.4818,
+      "high_mid": 0.5511,
+      "presence": 0.3739,
+      "brilliance": 0.3586
+    },
+    "peak_dbfs": -13.7,
+    "rms_dbfs": -22.89,
+    "source": "derived_profile"
+  },
+  "captured_at": "2026-11-13T06:03:55Z",
+  "output": "speaker"
+}

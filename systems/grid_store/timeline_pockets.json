@@ -1,0 +1,86 @@
+{
+  "id": "timeline_pockets",
+  "type": "timeline_pocket_store",
+  "version": "1.0.0",
+  "rule_ref": "systems/runtime/world_timeline_model_rule.json",
+  "grid_ref": "systems/grid_store/qbit_zone_pocket_map.json",
+  "base_tags": [
+    {
+      "base_tag": "spatial_avy",
+      "tag_id": "BT-spatial_avy-v1",
+      "display_name": "Spatial Avy",
+      "namespace": "world",
+      "aliases": [],
+      "status": "active",
+      "route": "present",
+      "history": [
+        { "rev": 1, "op": "init", "base_tag": "spatial_avy", "at": "2026-11-13T04:50:34Z", "by": "world_timeline_model_rule" }
+      ]
+    }
+  ],
+  "routes": {
+    "past": {
+      "pockets": [
+        {
+          "pocket_id": "TP-PAST-0001",
+          "route": "past",
+          "base_tag": "spatial_avy",
+          "mnemonic_key": "Rpast|Bspatial_avy|Z0-Q0-C000-T0",
+          "state": "archived",
+          "data_labels": [
+            { "label_id": "DL-PAST-0001", "base_tag": "spatial_avy", "route": "past", "key": "world.version", "value": "1.0.0", "created_at": "2026-11-13T04:50:34Z", "source": "home_world/home_world_index.json" }
+          ],
+          "file_labels": [
+            { "label_id": "FL-PAST-0001", "base_tag": "spatial_avy", "route": "past", "name": "cinematic-entry-bodium.md", "path": "narrative/drafts/cinematic-entry-bodium.md", "created_at": "2026-11-13T04:50:34Z" }
+          ]
+        }
+      ]
+    },
+    "present": {
+      "pockets": [
+        {
+          "pocket_id": "TP-PRESENT-0001",
+          "route": "present",
+          "base_tag": "spatial_avy",
+          "mnemonic_key": "Rpresent|Bspatial_avy|Z0-Q1-C002-T0",
+          "state": "active",
+          "data_labels": [
+            { "label_id": "DL-PRESENT-0001", "base_tag": "spatial_avy", "route": "present", "key": "runtime.status", "value": "active", "created_at": "2026-11-13T04:50:34Z", "source": "systems/runtime/game_world_runtime.json" },
+            { "label_id": "DL-PRESENT-0002", "base_tag": "spatial_avy", "route": "present", "key": "autonomy.all_ready", "value": true, "created_at": "2026-11-13T04:50:34Z", "source": "systems/network/portals/vercel_portals.json" }
+          ],
+          "file_labels": [
+            { "label_id": "FL-PRESENT-0001", "base_tag": "spatial_avy", "route": "present", "name": "home_world_index.json", "path": "home_world/home_world_index.json", "created_at": "2026-11-13T04:50:34Z" },
+            { "label_id": "FL-PRESENT-0002", "base_tag": "spatial_avy", "route": "present", "name": "compute_devices.json", "path": "systems/world_items/compute_devices.json", "created_at": "2026-11-13T04:50:34Z" }
+          ]
+        }
+      ]
+    },
+    "future": {
+      "pockets": [
+        {
+          "pocket_id": "TP-FUTURE-0001",
+          "route": "future",
+          "base_tag": "spatial_avy",
+          "mnemonic_key": "Rfuture|Bspatial_avy|Z5-Q0-C050-T0",
+          "state": "staged",
+          "data_labels": [
+            { "label_id": "DL-FUTURE-0001", "base_tag": "spatial_avy", "route": "future", "key": "portal.downloads", "value": "distribute_when_artifacts_ready", "created_at": "2026-11-13T04:50:34Z", "source": "systems/network/portals/vercel_portals.json" }
+          ],
+          "file_labels": [
+            { "label_id": "FL-FUTURE-0001", "base_tag": "spatial_avy", "route": "future", "name": "gap_report_next.md", "path": "systems/gta_portal/reports/gap_report.md", "planned_op": "refresh_on_next_spotting_cycle", "created_at": "2026-11-13T04:50:34Z" }
+          ]
+        }
+      ]
+    }
+  },
+  "operations_log": [
+    { "op": "create_pockets", "routes": ["past", "present", "future"], "at": "2026-11-13T04:50:34Z", "by": "world_timeline_model_rule" }
+  ],
+  "summary": {
+    "base_tags": 1,
+    "pockets_total": 3,
+    "data_labels_total": 4,
+    "file_labels_total": 4,
+    "routes": ["past", "present", "future"]
+  }
+}

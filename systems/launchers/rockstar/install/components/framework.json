@@ -1,0 +1,11 @@
+{
+  "id": "component-rgl-framework",
+  "name": "Rockstar Games Framework",
+  "type": "install_component",
+  "required": true,
+  "status": "installed",
+  "version": "modeled",
+  "description": "Core framework services for Rockstar Games Launcher.",
+  "installed_at": "2026-11-13T05:08:49Z",
+  "path": "systems/launchers/rockstar/install/components/framework.json"
+}

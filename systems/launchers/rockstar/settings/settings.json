@@ -1,0 +1,51 @@
+{
+  "id": "rockstar_launcher_settings",
+  "type": "settings",
+  "version": "1.0.0",
+  "launcher": "rockstar_games_launcher",
+  "general": {
+    "language": "en-US",
+    "start_on_boot": false,
+    "start_minimized": false,
+    "minimize_to_tray": true,
+    "scan_pc_for_supported_installs": true,
+    "auto_scan_on_start": true
+  },
+  "downloads": {
+    "auto_update_launcher": true,
+    "auto_update_games": true,
+    "allow_background_downloads": true,
+    "throttle_download_speed": false,
+    "download_speed_limit_mbps": null,
+    "install_location_default": "systems/launchers/rockstar/library/games"
+  },
+  "account": {
+    "remember_me_default": false,
+    "two_step_verification": "recommended",
+    "single_active_session": true,
+    "email_verification_required_for_signup": true
+  },
+  "cloud_saves": {
+    "enabled": true,
+    "supported_for_digital_titles": true,
+    "physical_media_supported": false,
+    "state_ref": "systems/launchers/rockstar/cloud_saves/cloud_saves.json"
+  },
+  "integrations": {
+    "steam": { "detected": true, "app_path": "/Applications/Steam.app", "handoff": "play_on_steam_then_rgl" },
+    "epic": { "detected": false, "handoff": "play_on_epic_then_rgl" },
+    "xbox_app": { "detected": false, "handoff": "xbox_app_then_rgl" },
+    "playstation_link": { "supported": true },
+    "xbox_link": { "supported": true }
+  },
+  "network": {
+    "required_for_signin_signup_activation": true,
+    "offline_mode_supported_titles": true
+  },
+  "paths": {
+    "auth": "systems/launchers/rockstar/auth/auth.json",
+    "library": "systems/launchers/rockstar/library/library.json",
+    "install_components": "systems/launchers/rockstar/install/install_components.json",
+    "logs": "logs/launchers/rockstar.log"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "music_manifest",
+  "generated_at": "2026-11-13T06:03:55Z",
+  "algo": {
+    "algo_id": "spatial_peer_sort_v1",
+    "name": "Spatial Peer Sort (installed)",
+    "installed": true,
+    "weights": {
+      "peer_affinity": 3.0,
+      "zone_match": 2.5,
+      "beat_match": 2.5,
+      "mood_match": 1.5,
+      "energy": 1.0,
+      "popularity": 0.5
+    },
+    "entrypoint": "systems/audio/music/sorting_algo.py:sort_tracks",
+    "description": "In-game installed sorting algo: peer-affinity + zone/beat/mood alignment + energy/popularity + stable ordering."
+  },
+  "sources": {
+    "soundtrack": "systems/audio/soundtrack/soundtrack.json",
+    "spotify_track_peers": "systems/audio/music/spotify_track_peers.json"
+  },
+  "playlist": "systems/audio/music/playlist_sorted.json",
+  "asset_playlist": "assets/audio/music/music_playlist_sorted.json",
+  "eq_presets": "systems/audio/music/eq_presets.json",
+  "soundboard": "systems/audio/music/soundboard.json",
+  "frequency_state": "systems/audio/music/frequency_state.json",
+  "speaker_levels": "systems/audio/music/speaker_output_levels.json",
+  "peers_count": 7,
+  "tracks_count": 15
+}

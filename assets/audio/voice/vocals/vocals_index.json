@@ -1,0 +1,28 @@
+{
+  "id": "vocals_index",
+  "generated_at": "2026-11-13T05:16:37Z",
+  "status": "installed",
+  "synthesis_engine": "placeholder_manifest_only",
+  "tracks": [
+    {
+      "vocal_id": "vox-001",
+      "digest_id": "dg-tr-src-36beffbbab",
+      "lang": "en",
+      "speaker": "narrator",
+      "file": "assets/audio/voice/vocals/vox-001.ogg",
+      "present": false,
+      "status": "installed_placeholder",
+      "in_game": true
+    },
+    {
+      "vocal_id": "vox-002",
+      "digest_id": "dg-tr-src-68f6f06e96",
+      "lang": "ru",
+      "speaker": "narrator",
+      "file": "assets/audio/voice/vocals/vox-002.ogg",
+      "present": false,
+      "status": "installed_placeholder",
+      "in_game": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "session_id": "SB-RD-001",
+  "mode": "online",
+  "status": "active",
+  "session_type": "computing_player",
+  "client": {
+    "state": "online",
+    "connected_at": "2026-11-13T04:11:25Z"
+  },
+  "storyboard": {
+    "board": "rd",
+    "sync": "enabled",
+    "source_refs": {
+      "home_world_index": "home_world/home_world_index.json",
+      "beat_map": "narrative/outline/entry-beat-map.md",
+      "cinematic_entry": "narrative/drafts/cinematic-entry-bodium.md"
+    }
+  },
+  "dimension_allocation_ref": "systems/network/session_dimension_allocations.json",
+  "depth_sensor_ref": "systems/camera/depth_sensor_layers.json"
+}

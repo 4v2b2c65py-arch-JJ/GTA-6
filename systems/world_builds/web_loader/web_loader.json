@@ -1,0 +1,68 @@
+{
+  "id": "world_web_loader",
+  "type": "web_loader",
+  "version": "1.0.0",
+  "status": "active",
+  "generated_at": "2026-11-13T05:16:37Z",
+  "description": "Loads websites and in-game fixes directly for world builds; fed by Steam RU fix pipeline (lang/transcript enabled).",
+  "pipeline_ref": "systems/launchers/steam/russian_fix.json",
+  "game_data_ref": "assets/game_assets/steam_fixes/steam_fix_game_data.json",
+  "load_websites": true,
+  "load_in_game_fixes": true,
+  "websites": [
+    {
+      "id": "steam_fix_ru_script",
+      "title": "Steam Fix RU — remove l=russian from store CSS/JS resources",
+      "url": "https://greasyfork.org/en/scripts/515187-steam-fix-ru",
+      "lang": "ru",
+      "transcript_enabled": true,
+      "load": "direct"
+    },
+    {
+      "id": "zoneofgames",
+      "title": "Zone of Games — русификаторы и фиксы (RU guides)",
+      "url": "https://www.zoneofgames.ru",
+      "lang": "ru",
+      "transcript_enabled": true,
+      "load": "direct"
+    },
+    {
+      "id": "playground",
+      "title": "PlayGround — русификаторы и переводы",
+      "url": "https://www.playground.ru/file/rus",
+      "lang": "ru",
+      "transcript_enabled": true,
+      "load": "direct"
+    },
+    {
+      "id": "steam_support_localization",
+      "title": "Steam language/localization flow (properties, files, in-game)",
+      "url": "https://partner.steamgames.com/doc/store/localization?language=russian",
+      "lang": "ru",
+      "transcript_enabled": true,
+      "load": "direct"
+    }
+  ],
+  "in_game_fixes": [
+    {
+      "fix_id": "fix-steam-store-l-russian",
+      "title": "Remove l=russian from Steam store asset URLs",
+      "type": "web_resource_fix",
+      "target": "store.steampowered.com",
+      "enabled": true,
+      "apply": "in_game_web_loader_or_overlay"
+    },
+    {
+      "fix_id": "fix-steam-game-language-flow",
+      "title": "Steam per-game language/transcript enable flow",
+      "type": "config_flow",
+      "target": "steam_client_game",
+      "enabled": true,
+      "apply": "launcher_integration"
+    }
+  ],
+  "summary": {
+    "websites": 4,
+    "in_game_fixes": 2
+  }
+}

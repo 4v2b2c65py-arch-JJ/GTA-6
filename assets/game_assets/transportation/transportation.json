@@ -1,0 +1,176 @@
+{
+  "id": "transportation_registry",
+  "type": "transportation",
+  "version": "1.0.0",
+  "status": "injected",
+  "modes": [
+    {
+      "mode_id": "road",
+      "label": "Road Vehicles",
+      "types": [
+        "car",
+        "motorcycle",
+        "truck",
+        "emergency",
+        "service"
+      ],
+      "registry_ref": "systems/world/transportation/vehicles.json",
+      "network": "road_graph",
+      "geo_binding": "systems/world/geo/geo_injection.json"
+    },
+    {
+      "mode_id": "rail",
+      "label": "Rail / Transit",
+      "types": [
+        "train",
+        "metro",
+        "tram"
+      ],
+      "vehicles": [
+        {
+          "id": "tr-metro-mia",
+          "name": "Metro Corridor Train",
+          "base_game": "gta5",
+          "capacity": 120,
+          "route_regions": [
+            "RW-LEO-MIA-001",
+            "RW-LEO-MIA-BEACH-002"
+          ]
+        },
+        {
+          "id": "tr-freight-keys",
+          "name": "Coastal Freight Line",
+          "base_game": "gta5",
+          "capacity": 0,
+          "route_regions": [
+            "RW-LEO-KEYS-003"
+          ]
+        }
+      ]
+    },
+    {
+      "mode_id": "air",
+      "label": "Air Transport",
+      "types": [
+        "helicopter",
+        "plane"
+      ],
+      "vehicles": [
+        {
+          "id": "air-maverick",
+          "name": "Police Maverick",
+          "base_game": "gta5",
+          "capacity": 4,
+          "route_regions": [
+            "RW-LEO-MIA-001",
+            "RW-US-LAX-011",
+            "RW-US-NYC-012"
+          ]
+        },
+        {
+          "id": "air-cargo",
+          "name": "Cargo Plane Route",
+          "base_game": "gta5",
+          "capacity": 0,
+          "route_regions": [
+            "RW-US-ATL-010",
+            "RW-US-LAX-011"
+          ]
+        }
+      ]
+    },
+    {
+      "mode_id": "water",
+      "label": "Water Transport",
+      "types": [
+        "boat",
+        "ferry"
+      ],
+      "vehicles": [
+        {
+          "id": "wt-coastal-ferry",
+          "name": "Coastal Ferry",
+          "base_game": "gta5",
+          "capacity": 40,
+          "route_regions": [
+            "RW-LEO-MIA-BEACH-002",
+            "RW-LEO-KEYS-003"
+          ]
+        },
+        {
+          "id": "wt-bayou-skiff",
+          "name": "Bayou Skiff",
+          "base_game": "rdr2",
+          "capacity": 2,
+          "route_regions": [
+            "region-bayou"
+          ]
+        }
+      ]
+    },
+    {
+      "mode_id": "mount",
+      "label": "Mounts & Animal Transport",
+      "types": [
+        "horse",
+        "wagon",
+        "coach"
+      ],
+      "vehicles": [
+        {
+          "id": "mt-frontier-horse",
+          "name": "Frontier Horse",
+          "base_game": "rdr2",
+          "capacity": 1,
+          "route_regions": [
+            "region-frontier-woods",
+            "region-desert-town",
+            "region-border-frontier-new"
+          ]
+        },
+        {
+          "id": "mt-stagecoach",
+          "name": "Stagecoach Line",
+          "base_game": "rdr2",
+          "capacity": 6,
+          "route_regions": [
+            "region-desert-town",
+            "region-border-frontier-new"
+          ]
+        }
+      ]
+    },
+    {
+      "mode_id": "service",
+      "label": "Service & Mission Transport",
+      "types": [
+        "courier",
+        "recovery",
+        "dispatch"
+      ],
+      "vehicles": [
+        {
+          "id": "sv-quickiepharm",
+          "name": "QuickiePharm Courier Van",
+          "base_game": "gta5",
+          "source": "gtao-money-fronts",
+          "capacity": 2,
+          "route_regions": [
+            "RW-LEO-MIA-001"
+          ]
+        },
+        {
+          "id": "sv-safeguard",
+          "name": "Safeguard Delivery Truck",
+          "base_game": "gta5",
+          "source": "gtao-money-fronts",
+          "capacity": 2,
+          "route_regions": [
+            "RW-US-ATL-010",
+            "RW-LEO-MIA-001"
+          ]
+        }
+      ]
+    }
+  ]
+}

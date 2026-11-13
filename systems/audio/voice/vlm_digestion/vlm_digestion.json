@@ -1,0 +1,26 @@
+{
+  "id": "vlm_voice_digestion",
+  "stage": "vlm_voice_digestion",
+  "status": "installed",
+  "description": "Digests transcripts into voice performance cues (prosody, emotion, pacing, timbre) via VLM/LLM semantic analysis for vocal track generation.",
+  "input": "systems/audio/voice/transcription/transcripts.json",
+  "output": "systems/audio/voice/vlm_digestion/digested_voice.json",
+  "processor": {
+    "orchestrator_model": "llama3.2:latest",
+    "mode": "semantic_voice_digestion",
+    "vlm_role": "analyze_voice_context_prosody_timbre",
+    "fallback": "llm_text_prosody_estimation"
+  },
+  "digestion_fields": [
+    "speaker",
+    "text",
+    "lang",
+    "emotion",
+    "intensity",
+    "pace_wpm",
+    "pitch_profile",
+    "timbre_tags",
+    "breath_pauses",
+    "beat_sync"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "pack_id": "gtao-agents-sabotage-bottom-bounties",
+  "title": "GTA Online: Agents of Sabotage & Bottom Dollar Bounties",
+  "title_update": "1.70/1.69",
+  "base_game": "gta5",
+  "status": "buildable",
+  "features": [
+    {"id": "garment_factory_ops", "type": "property", "desc": "Darnell Bros Garment Factory as operations hub."},
+    {"id": "sabotage_missions", "type": "missions", "desc": "Covert sabotage operations and contract strands."},
+    {"id": "bail_office_business", "type": "business", "desc": "Bottom Dollar Bail Enforcement bounty hunting business."},
+    {"id": "bounty_targets", "type": "activities", "desc": "Most Wanted and standard targets with capture/eliminate outcomes."},
+    {"id": "dispatch_work", "type": "freemode", "desc": "Vincent dispatch work and law-adjacent tasks."},
+    {"id": "new_vehicles", "type": "vehicles", "desc": "Law enforcement and pursuit-capable vehicles."}
+  ],
+  "build_hooks": {
+    "map_loader_regions": ["region-downtown-core", "region-industrial-ports"],
+    "timeline_beats": ["BEAT_2", "BEAT_4"],
+    "audio": {"soundtrack_mood": ["covert", "pursuit"], "sfx": ["siren", "radio_dispatch", "takedown"]},
+    "python_data_flow": "assets/game_assets/dlc/gtao_agents_bounties_data.json"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "component-auth-software",
+  "name": "Rockstar Games Authentication Software",
+  "type": "install_component",
+  "required": true,
+  "status": "installed",
+  "version": "modeled",
+  "description": "Authentication component for Rockstar Games account sign-in, signup, and activation.",
+  "installed_at": "2026-11-13T05:08:49Z",
+  "path": "systems/launchers/rockstar/install/components/auth_software.json"
+}

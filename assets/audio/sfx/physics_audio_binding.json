@@ -1,0 +1,13 @@
+{
+  "id": "physics_audio_binding",
+  "generated_at": "2026-11-13T05:16:37Z",
+  "mode": "interpretive_synthesis",
+  "physics_ref": "systems/runtime/physics_algorithms.json",
+  "parameters": [
+    "collision",
+    "motion",
+    "resonance",
+    "environment"
+  ],
+  "status": "installed"
+}

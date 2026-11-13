@@ -1,0 +1,18 @@
+{
+  "id": "install_manifest_gta6",
+  "game_id": "gta6",
+  "title": "Grand Theft Auto VI",
+  "source": "rockstar_launcher",
+  "install_dir": "systems/launchers/rockstar/library/games/gta6",
+  "executable_ref": null,
+  "installed": false,
+  "state": "unavailable_pc_not_announced",
+  "version": null,
+  "release_date_console": "2026-11-19",
+  "platforms_announced": ["PS5", "PS5 Pro", "Xbox Series X|S"],
+  "pc_status": "not_announced",
+  "pc_requirements_official": null,
+  "storage_guidance_gb": 212,
+  "research_ref": "docs/research/GTA6_REQUIREMENTS_AND_DETAILS.md",
+  "actions": ["catalog_track", "preload_when_available", "install_when_available"]
+}

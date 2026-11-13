@@ -1,0 +1,17 @@
+{
+  "id": "rockstar_cloud_saves",
+  "type": "cloud_save_state",
+  "version": "1.0.0",
+  "enabled": true,
+  "policy": {
+    "digital_titles": "supported_where_available",
+    "physical_media": "not_supported",
+    "requires_signin": true
+  },
+  "titles": [
+    { "game_id": "gta5", "cloud_save_supported": true, "last_sync": null, "status": "ready" },
+    { "game_id": "gta5-steam", "cloud_save_supported": true, "last_sync": null, "status": "ready" },
+    { "game_id": "rdr2", "cloud_save_supported": true, "last_sync": null, "status": "ready" },
+    { "game_id": "gta6", "cloud_save_supported": null, "last_sync": null, "status": "unavailable_pc_not_announced" }
+  ]
+}

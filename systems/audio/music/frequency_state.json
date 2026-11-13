@@ -1,0 +1,96 @@
+{
+  "id": "music_frequency_state",
+  "type": "frequency_state",
+  "status": "active",
+  "updated_at": "2026-11-13T06:03:55Z",
+  "output": "speaker",
+  "auto_save": true,
+  "library_tracks": 15,
+  "speaker_output": {
+    "id": "speaker_output_frequency_state",
+    "type": "frequency_emission_state",
+    "status": "emitting",
+    "captured_at": "2026-11-13T06:03:55Z",
+    "output_target": "speaker",
+    "library": "full",
+    "auto_save": true,
+    "bands_hz": {
+      "sub_bass": [
+        20,
+        60
+      ],
+      "bass": [
+        60,
+        250
+      ],
+      "low_mid": [
+        250,
+        500
+      ],
+      "mid": [
+        500,
+        2000
+      ],
+      "high_mid": [
+        2000,
+        4000
+      ],
+      "presence": [
+        4000,
+        6000
+      ],
+      "brilliance": [
+        6000,
+        20000
+      ]
+    },
+    "speaker_levels": {
+      "bands": {
+        "sub_bass": 0.7062,
+        "bass": 0.92,
+        "low_mid": 0.8357,
+        "mid": 0.8031,
+        "high_mid": 0.8399,
+        "presence": 0.7621,
+        "brilliance": 0.5827
+      },
+      "master_peak_dbfs": -7.95,
+      "master_rms_dbfs": -22.08,
+      "tracks_mixed": 15
+    },
+    "tracks_captured": 15,
+    "analyzed_audio": 0,
+    "derived_profiles": 15,
+    "track_refs": [
+      "systems/audio/music/frequency/sp-006.json",
+      "systems/audio/music/frequency/sp-007.json",
+      "systems/audio/music/frequency/sp-002.json",
+      "systems/audio/music/frequency/sp-005.json",
+      "systems/audio/music/frequency/ost-001-entry-bodium.json",
+      "systems/audio/music/frequency/sp-003.json",
+      "systems/audio/music/frequency/ost-002-surface-tension.json",
+      "systems/audio/music/frequency/sp-008.json",
+      "systems/audio/music/frequency/ost-005-border-protocol.json",
+      "systems/audio/music/frequency/ost-003-mind-core.json",
+      "systems/audio/music/frequency/sp-004.json",
+      "systems/audio/music/frequency/ost-004-soul-sanctum.json",
+      "systems/audio/music/frequency/sp-001.json",
+      "systems/audio/music/frequency/sp-010.json",
+      "systems/audio/music/frequency/sp-009.json"
+    ]
+  },
+  "summary": {
+    "tracks": 15,
+    "analyzed_audio": 0,
+    "derived_profiles": 15,
+    "bands": [
+      "sub_bass",
+      "bass",
+      "low_mid",
+      "mid",
+      "high_mid",
+      "presence",
+      "brilliance"
+    ]
+  }
+}

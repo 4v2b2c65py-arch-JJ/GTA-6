@@ -1,0 +1,89 @@
+{
+  "id": "game_fpv_devices",
+  "type": "fpv_runtime_config",
+  "version": "1.1.0",
+  "source_library": "systems/devices/device_library.json",
+  "spec_graph_ref": "systems/devices/spec_graph.json",
+  "inserted_from_library": "inactive_devices",
+  "network": {
+    "provider_ref": "systems/network/satellite_network.json",
+    "provider_id": "game_satellite_network_provider",
+    "links_ref": "systems/network/fpv_satellite_links.json",
+    "status": "connected"
+  },
+  "fpvs": [
+    {
+      "fpv_id": "fpv-main",
+      "name": "Main FPV",
+      "state": "active",
+      "network": { "status": "connected", "provider": "AetherSat Grid" },
+      "active_devices": [
+        {
+          "device_id": "dev-fpv-cam-001",
+          "model": "SCOUT-CAM-M1",
+          "status": "active",
+          "power": "on",
+          "inserted": true,
+          "turned_on": true,
+          "role": "primary_capture",
+          "mount": { "stud": "S02", "region": "head_center" },
+          "spec_accounting": "satisfied",
+          "network": { "satellite": "SAT-01", "channel": "CH-CAM-01", "link": "active" }
+        },
+        {
+          "device_id": "dev-fpv-vtx-001",
+          "model": "VTX-SPEC-M2",
+          "status": "active",
+          "power": "on",
+          "inserted": true,
+          "turned_on": true,
+          "role": "transmit_encode",
+          "mount": { "stud": "S07", "region": "chest_core" },
+          "spec_accounting": "satisfied",
+          "network": { "satellite": "SAT-02", "channel": "CH-VTX-01", "link": "active" }
+        },
+        {
+          "device_id": "dev-fpv-hud-001",
+          "model": "HUD-LATTICE-M1",
+          "status": "active",
+          "power": "on",
+          "inserted": true,
+          "turned_on": true,
+          "role": "hud_overlay",
+          "mount": { "stud": "S01", "region": "head_left" },
+          "spec_accounting": "satisfied",
+          "network": { "satellite": "SAT-01", "channel": "CH-HUD-01", "link": "active" }
+        }
+      ]
+    },
+    {
+      "fpv_id": "fpv-relay",
+      "name": "Relay FPV",
+      "state": "active",
+      "network": { "status": "connected", "provider": "AetherSat Grid" },
+      "active_devices": [
+        {
+          "device_id": "dev-fpv-cam-002",
+          "model": "RELAY-CAM-M1",
+          "status": "active",
+          "power": "on",
+          "inserted": true,
+          "turned_on": true,
+          "role": "relay_capture",
+          "mount": { "stud": "S08", "region": "back" },
+          "spec_accounting": "satisfied",
+          "network": { "satellite": "SAT-03", "channel": "CH-CAM-02", "link": "active" }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "inactive_library_devices": 4,
+    "inserted": 4,
+    "turned_on": 4,
+    "active_fpvs": 2,
+    "network_connected": 4,
+    "provider": "AetherSat Grid",
+    "provider_online": true
+  }
+}

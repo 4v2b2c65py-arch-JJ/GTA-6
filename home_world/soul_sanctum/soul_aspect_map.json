@@ -1,0 +1,28 @@
+{
+  "id": "soul_aspect_map",
+  "type": "aspect_map",
+  "aspect": "soul",
+  "description": "Motive/value overlay: a warm, stubborn current that sustains commitment and meaning without bypassing cost.",
+  "core": {
+    "mode": "continuity_current",
+    "functions": ["steady", "insist_on_path", "brace", "recognize_resolve", "carry_forward"],
+    "output_style": "vow_gravity"
+  },
+  "states": [
+    { "id": "S0-dormant", "label": "latent", "intensity": 0.3, "narrative_anchor": "BEAT_0" },
+    { "id": "S1-stir", "label": "alert_continuity", "intensity": 0.5, "narrative_anchor": "BEAT_1" },
+    { "id": "S2-vow", "label": "commitment_gravity", "intensity": 0.85, "motive": "path_worth_taking", "narrative_anchor": "BEAT_2" },
+    { "id": "S3-brace", "label": "purpose_burning", "intensity": 0.95, "narrative_anchor": "BEAT_3" },
+    { "id": "S4-answer", "label": "recognition_or_resolve", "intensity": 0.9, "narrative_anchor": "BEAT_4" },
+    { "id": "S5-ember", "label": "carried_ember", "intensity": 0.6, "narrative_anchor": "BEAT_5" }
+  ],
+  "bindings": {
+    "terrain_refs": ["Z2-traction-run", "Z3-cant-plates", "Z4-crest-reveal", "Z5-settled-path"],
+    "protocol_refs": ["sats_rea_rem"],
+    "lace_key_namespace": "S"
+  },
+  "constraints": {
+    "may": ["sustain_commitment", "brace_purpose", "carry_meaning_forward"],
+    "may_not": ["bypass_cost", "replace_choice", "resolve_beats"]
+  }
+}

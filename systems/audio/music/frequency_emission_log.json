@@ -1,0 +1,45 @@
+{
+  "id": "frequency_emission_log",
+  "events": [
+    {
+      "ts": "2026-11-13T06:01:08Z",
+      "event": "frequency_emit",
+      "tracks": 15,
+      "output": "speaker",
+      "speaker_levels": {
+        "bands": {
+          "sub_bass": 0.7062,
+          "bass": 0.92,
+          "low_mid": 0.8357,
+          "mid": 0.8031,
+          "high_mid": 0.8399,
+          "presence": 0.7621,
+          "brilliance": 0.5827
+        },
+        "master_peak_dbfs": -7.95,
+        "master_rms_dbfs": -22.08,
+        "tracks_mixed": 15
+      }
+    },
+    {
+      "ts": "2026-11-13T06:03:55Z",
+      "event": "frequency_emit",
+      "tracks": 15,
+      "output": "speaker",
+      "speaker_levels": {
+        "bands": {
+          "sub_bass": 0.7062,
+          "bass": 0.92,
+          "low_mid": 0.8357,
+          "mid": 0.8031,
+          "high_mid": 0.8399,
+          "presence": 0.7621,
+          "brilliance": 0.5827
+        },
+        "master_peak_dbfs": -7.95,
+        "master_rms_dbfs": -22.08,
+        "tracks_mixed": 15
+      }
+    }
+  ]
+}

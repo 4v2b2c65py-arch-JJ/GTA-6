@@ -1,0 +1,85 @@
+{
+  "id": "steam_russian_fix",
+  "type": "steam_fix_config",
+  "version": "1.0.0",
+  "status": "active",
+  "description": "Steam/Russian website fix and language-transcript pipeline: ingests guide data, enables lang/transcript flow, routes via Python to game data, and exposes fixes/websites for in-game world builds.",
+  "sources": [
+    {
+      "source_id": "zoneofgames",
+      "name": "Zone of Games (RU fixes/guides)",
+      "kind": "website",
+      "url": "https://www.zoneofgames.ru",
+      "category": "rus_fix_guides",
+      "lang": "ru",
+      "enabled": true,
+      "transcript_enabled": true
+    },
+    {
+      "source_id": "playground",
+      "name": "PlayGround (RU fixes/localization)",
+      "kind": "website",
+      "url": "https://www.playground.ru/file/rus",
+      "category": "rus_fix_guides",
+      "lang": "ru",
+      "enabled": true,
+      "transcript_enabled": true
+    },
+    {
+      "source_id": "steam_fix_ru_script",
+      "name": "Steam Fix RU (l=russian resource fix)",
+      "kind": "userscript_guide",
+      "url": "https://greasyfork.org/en/scripts/515187-steam-fix-ru",
+      "category": "store_resource_fix",
+      "lang": "ru",
+      "enabled": true,
+      "transcript_enabled": true,
+      "fix": {
+        "target": "store.steampowered.com",
+        "action": "remove_query_param",
+        "param": "l=russian",
+        "applies_to": ["link[rel=stylesheet]", "script[src]"]
+      }
+    },
+    {
+      "source_id": "steam_support_localization",
+      "name": "Steam localization/language docs",
+      "kind": "docs",
+      "url": "https://partner.steamgames.com/doc/store/localization?language=russian",
+      "category": "language_docs",
+      "lang": "ru",
+      "enabled": true,
+      "transcript_enabled": true
+    }
+  ],
+  "language": {
+    "enabled": true,
+    "default": "ru",
+    "supported": ["ru", "en", "uk"],
+    "steam_codes": {
+      "russian": "russian",
+      "english": "english",
+      "ukrainian": "ukrainian"
+    },
+    "transcript": {
+      "enabled": true,
+      "modes": ["extract", "normalize", "translate_bridge"],
+      "output_dir": "systems/launchers/steam/transcripts"
+    }
+  },
+  "pipeline": {
+    "script": "systems/launchers/steam/russian_fix_pipeline.py",
+    "flow": ["websearch_research", "source_fetch", "transcript_extract", "lang_normalize", "python_transform", "game_data_emit", "world_build_register"],
+    "outputs": {
+      "guides": "systems/launchers/steam/guides/guides.json",
+      "transcripts": "systems/launchers/steam/transcripts/transcripts_index.json",
+      "fixes": "systems/launchers/steam/fixes/fixes.json",
+      "game_data": "assets/game_assets/steam_fixes/steam_fix_game_data.json"
+    }
+  },
+  "world_builds": {
+    "web_loader_ref": "systems/world_builds/web_loader/web_loader.json",
+    "load_websites": true,
+    "load_in_game_fixes": true
+  }
+}

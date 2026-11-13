@@ -1,0 +1,30 @@
+{
+  "id": "python_access_runtime",
+  "type": "language_runtime_access",
+  "version": "1.0.0",
+  "status": "enabled",
+  "python": {
+    "executable": "/Users/jjmarte/Desktop/spatial avy/.venv/bin/python",
+    "version": "3.14.7",
+    "venv_path": "/Users/jjmarte/Desktop/spatial avy/.venv",
+    "activate": "source /Users/jjmarte/Desktop/spatial avy/.venv/bin/activate"
+  },
+  "access": {
+    "in_game_world": true,
+    "interactive_repl": true,
+    "script_execution": true,
+    "module_imports": true,
+    "pip": "/Users/jjmarte/Desktop/spatial avy/.venv/bin/pip"
+  },
+  "bindings": {
+    "kilo_code": "systems/runtime/kilo_code.json",
+    "physics_algorithms": "systems/runtime/physics_algorithms.json",
+    "model_weights": "systems/local_ai/model_weights_port.json",
+    "vscode_interface": "systems/runtime/vscode_world_interface.json"
+  },
+  "usable_by_devices": ["computer", "laptop", "intelligent_device", "tablet", "phone", "wearable"],
+  "sandbox": {
+    "workspace_scoped": true,
+    "root": "/Users/jjmarte/Desktop/spatial avy"
+  }
+}

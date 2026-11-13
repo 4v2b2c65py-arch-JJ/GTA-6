@@ -1,0 +1,31 @@
+{
+  "id": "gta_portal_sources",
+  "type": "fetcher_config",
+  "sources": [
+    {
+      "source_id": "community_spottings_local",
+      "kind": "local_json",
+      "enabled": true,
+      "path": "data/community_spottings/spottings.json",
+      "tags": ["gta_portal", "community", "spottings"]
+    },
+    {
+      "source_id": "gta_portal_community_feed",
+      "kind": "http_json",
+      "enabled": false,
+      "url": "https://example.invalid/gta-portal/spottings.json",
+      "note": "Placeholder endpoint for live GTA/community portal feed; enable and set real URL when available."
+    },
+    {
+      "source_id": "social_spotter_bot_feed",
+      "kind": "http_json",
+      "enabled": false,
+      "url": "https://example.invalid/bot/spottings",
+      "note": "Placeholder for connected spotting bot feed; supports same normalized schema."
+    }
+  ],
+  "normalize": {
+    "required_fields": ["spot_id", "category", "name"],
+    "categories": ["image", "video", "polygons", "items", "characters"]
+  }
+}

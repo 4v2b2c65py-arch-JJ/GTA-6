@@ -1,0 +1,72 @@
+{
+  "id": "rockstar_games_launcher",
+  "type": "launcher",
+  "name": "Rockstar Games Launcher",
+  "version": "1.3.0-modeled",
+  "status": "active",
+  "install": {
+    "status": "complete",
+    "install_manifest": "systems/launchers/rockstar/install/install_components.json",
+    "install_status": "systems/launchers/rockstar/install/install_status.json",
+    "bootstrap": "systems/launchers/rockstar/install/bootstrap.json"
+  },
+  "mode": "in_environment_modeled",
+  "environment": {
+    "host_os": "darwin",
+    "native_support": "windows_only",
+    "native_installed": false,
+    "compatibility": { "crossover_installed": false, "steam_app_detected": true },
+    "integration_note": "Launcher flow (auth/login/signup, library, install, start) implemented as workspace/game-world components; native RGL binary requires Windows or compatibility layer."
+  },
+  "requirements_reference": {
+    "os": "Windows 10 64-bit",
+    "cpu": "Intel Core 2 Quad Q6600 / AMD Phenom 9850",
+    "memory_gb": 2,
+    "gpu": "DX11 supported",
+    "storage_gb": 1,
+    "network": "required for sign-in/signup/activation",
+    "source": "Rockstar Support (launcher system requirements)"
+  },
+  "components": {
+    "auth": "systems/launchers/rockstar/auth/auth.json",
+    "session": "systems/launchers/rockstar/auth/session.json",
+    "accounts": "systems/launchers/rockstar/auth/accounts.json",
+    "library": "systems/launchers/rockstar/library/library.json",
+    "state": "systems/launchers/rockstar/state/launcher_state.json",
+    "settings": "systems/launchers/rockstar/settings/settings.json",
+    "cloud_saves": "systems/launchers/rockstar/cloud_saves/cloud_saves.json",
+    "ui": "systems/launchers/rockstar/ui/index.html",
+    "map_loader": "systems/launchers/rockstar/map_loader/map_loader.json",
+    "region_expansion": "systems/launchers/rockstar/map_loader/region_expansion.json",
+    "camera_sources": "systems/launchers/rockstar/map_loader/sources/camera_sources.json",
+    "dlc_catalog": "systems/launchers/rockstar/dlc/dlc_catalog.json",
+    "dlc_install_state": "systems/launchers/rockstar/dlc/install_state.json",
+    "dlc_assets": "assets/game_assets/dlc/dlc_install_manifest.json"
+  },
+  "features": {
+    "login": true,
+    "signup": true,
+    "account_management": true,
+    "library_management": true,
+    "install": true,
+    "update": true,
+    "game_start": true,
+    "cloud_save_model": true,
+    "redeem_code": true,
+    "verify_integrity": true,
+    "scan_installs": true,
+    "account_linking": ["steam", "epic", "xbox", "playstation"],
+    "offline_mode_model": true,
+    "map_loader": true,
+    "region_expansion": true,
+    "real_world_location_modeling": true,
+    "dlc_catalog": true,
+    "dlc_install": true,
+    "dlc_feature_build": true
+  },
+  "paths": {
+    "install_dir": "systems/launchers/rockstar",
+    "games_dir": "systems/launchers/rockstar/library/games",
+    "logs_dir": "logs/launchers"
+  }
+}

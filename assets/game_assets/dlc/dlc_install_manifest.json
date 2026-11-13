@@ -1,0 +1,90 @@
+{
+  "id": "dlc_install_manifest",
+  "generated_at": "2026-11-13T05:20:50Z",
+  "catalog_ref": "systems/launchers/rockstar/dlc/dlc_catalog.json",
+  "packs": [
+    {
+      "pack_id": "gtao-money-fronts",
+      "title": "GTA Online: Money Fronts (1.71)",
+      "base_game": "gta5",
+      "kind": "online_update",
+      "status": "installed",
+      "data_ref": "assets/game_assets/dlc/gtao-money-fronts_data.json",
+      "feature_count": 6
+    },
+    {
+      "pack_id": "gtao-safehouse-hills",
+      "title": "GTA Online: A Safehouse in the Hills (1.72)",
+      "base_game": "gta5",
+      "kind": "online_update",
+      "status": "installed",
+      "data_ref": "assets/game_assets/dlc/gtao-safehouse-hills_data.json",
+      "feature_count": 8
+    },
+    {
+      "pack_id": "gtao-kortz-center-heist",
+      "title": "GTA Online: The Kortz Center Heist (1.73)",
+      "base_game": "gta5",
+      "kind": "online_update",
+      "status": "installed",
+      "data_ref": "assets/game_assets/dlc/gtao-kortz-center-heist_data.json",
+      "feature_count": 7
+    },
+    {
+      "pack_id": "gtao-agents-sabotage-bottom-bounties",
+      "title": "GTA Online: Agents of Sabotage (1.70) + Bottom Dollar Bounties (1.69)",
+      "base_game": "gta5",
+      "kind": "online_update",
+      "status": "installed",
+      "data_ref": "assets/game_assets/dlc/gtao-agents-sabotage-bottom-bounties_data.json",
+      "feature_count": 6
+    },
+    {
+      "pack_id": "rdo-strange-tales-west",
+      "title": "Red Dead Online: Strange Tales of the West Vol. 1",
+      "base_game": "rdr2",
+      "kind": "online_update",
+      "status": "installed",
+      "data_ref": "assets/game_assets/dlc/rdo-strange-tales-west_data.json",
+      "feature_count": 7
+    },
+    {
+      "pack_id": "sp-undead-nightmare-inspired",
+      "title": "Undead Nightmare Inspired (SP/World Event Pack)",
+      "base_game": "rdr2",
+      "kind": "inspired_expansion",
+      "status": "installed",
+      "data_ref": "assets/game_assets/dlc/sp-undead-nightmare-inspired_data.json",
+      "feature_count": 6
+    },
+    {
+      "pack_id": "sp-agent-ops-inspired",
+      "title": "Agent Ops Inspired (SP Story Pack)",
+      "base_game": "gta5",
+      "kind": "inspired_expansion",
+      "status": "installed",
+      "data_ref": "assets/game_assets/dlc/sp-agent-ops-inspired_data.json",
+      "feature_count": 6
+    },
+    {
+      "pack_id": "sp-mexico-frontier-inspired",
+      "title": "Mexico Frontier Inspired (World Expansion)",
+      "base_game": "rdr2",
+      "kind": "inspired_expansion",
+      "status": "installed",
+      "data_ref": "assets/game_assets/dlc/sp-mexico-frontier-inspired_data.json",
+      "feature_count": 6
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "by_game": {
+      "gta5": 5,
+      "rdr2": 3
+    },
+    "by_kind": {
+      "online_update": 5,
+      "inspired_expansion": 3
+    }
+  }
+}

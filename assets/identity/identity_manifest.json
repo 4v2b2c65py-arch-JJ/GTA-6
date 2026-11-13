@@ -1,0 +1,63 @@
+{
+  "id": "identity_manifest",
+  "type": "executable_identity",
+  "generated_at": "2026-11-13T06:27:53Z",
+  "story_novel_data": {
+    "world": "spatial_avy_home",
+    "motifs": [
+      "Bodium terrain",
+      "Mind aspect",
+      "Soul aspect",
+      "SATS/REA-REM border protocol"
+    ],
+    "mnemonic_lace": "Z<zone>-Q<pocket>-C<cell>-T<tick>",
+    "door_node_string": "N10-N9-N8-N7-N6-N5-N4-N3-N2-N1-N0",
+    "timeline_base": "BT-spatial_avy-v1",
+    "character": "protagonist (preset_bodium_initiate)"
+  },
+  "ai_integrated_data": {
+    "runtime": "systems/runtime/game_world_runtime.json",
+    "local_ai": "llama3.2:latest @ http://localhost:11434",
+    "components": [
+      "kilo_code",
+      "ollama",
+      "voice_transcription_vlm_digestion_vocals"
+    ]
+  },
+  "assets": {
+    "emblem": "assets/identity/icons/spatial_avy_emblem.png",
+    "favicon_ico": "assets/identity/icons/favicon.ico",
+    "app_ico": "assets/identity/icons/spatial_avy.ico",
+    "cover_png": "assets/identity/insignia/spatial_avy_identity_cover.png",
+    "cover_jpg": "assets/identity/insignia/spatial_avy_identity_cover.jpg",
+    "og_image": "assets/identity/insignia/og_image.png",
+    "web_favicon": "build/web/favicon.ico",
+    "web_manifest_icons_dir": "build/web/assets/icons"
+  },
+  "generated_files": [
+    "assets/identity/icons/apple-touch-icon.png",
+    "assets/identity/icons/favicon.ico",
+    "assets/identity/icons/icon-128.png",
+    "assets/identity/icons/icon-16.png",
+    "assets/identity/icons/icon-192.png",
+    "assets/identity/icons/icon-256.jpg",
+    "assets/identity/icons/icon-256.png",
+    "assets/identity/icons/icon-32.png",
+    "assets/identity/icons/icon-512.jpg",
+    "assets/identity/icons/icon-512.png",
+    "assets/identity/icons/icon-64.png",
+    "assets/identity/icons/spatial_avy.ico",
+    "assets/identity/icons/spatial_avy_emblem.jpg",
+    "assets/identity/icons/spatial_avy_emblem.png",
+    "assets/identity/insignia/insignia_ai_runtime.jpg",
+    "assets/identity/insignia/insignia_ai_runtime.png",
+    "assets/identity/insignia/insignia_bodium_mind_soul.jpg",
+    "assets/identity/insignia/insignia_bodium_mind_soul.png",
+    "assets/identity/insignia/og_image.jpg",
+    "assets/identity/insignia/og_image.png",
+    "assets/identity/insignia/spatial_avy_identity_cover.jpg",
+    "assets/identity/insignia/spatial_avy_identity_cover.png",
+    "build/web/assets/favicon.ico",
+    "build/web/favicon.ico"
+  ]
+}

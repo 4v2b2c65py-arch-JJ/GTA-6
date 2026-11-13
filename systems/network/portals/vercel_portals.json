@@ -1,0 +1,77 @@
+{
+  "id": "vercel_portal_installs",
+  "type": "portal_install_registry",
+  "version": "1.0.0",
+  "installed_at": "2026-11-13T04:39:00Z",
+  "manager_ref": "systems/network/sat_coms_forum_manager.json",
+  "portals": [
+    {
+      "portal_id": "leviathan-portal-01",
+      "name": "Leviathan Portal 01",
+      "provider": "vercel",
+      "url": "https://leviathan-bs95il3a8-jjonthelaptop-5497s-projects.vercel.app/",
+      "access": {
+        "state": "ready",
+        "auth": "vercel_sso_required",
+        "probe_http_status": 401,
+        "note": "Deployment behind Vercel SSO/login; direct unauthenticated fetch/download not available in this environment.",
+        "last_probe": {
+          "ts": "2026-11-13T04:43:13Z",
+          "http_status": null,
+          "reason": null
+        }
+      },
+      "download": {
+        "status": "ready_to_distribute",
+        "staging_dir": "systems/devices/downloads/leviathan-portal-01",
+        "artifact": null
+      },
+      "distribution": {
+        "target": "all_satcom_devices",
+        "port": 9201,
+        "path": "/portals/leviathan-portal-01/download"
+      },
+      "installed": true
+    },
+    {
+      "portal_id": "leviathan-portal-02",
+      "name": "Leviathan Portal 02",
+      "provider": "vercel",
+      "url": "https://leviathan-8mo788paq-jjonthelaptop-5497s-projects.vercel.app/",
+      "access": {
+        "state": "ready",
+        "auth": "vercel_sso_required",
+        "probe_http_status": 401,
+        "note": "Deployment behind Vercel SSO/login; direct unauthenticated fetch/download not available in this environment.",
+        "last_probe": {
+          "ts": "2026-11-13T04:43:13Z",
+          "http_status": null,
+          "reason": null
+        }
+      },
+      "download": {
+        "status": "ready_to_distribute",
+        "staging_dir": "systems/devices/downloads/leviathan-portal-02",
+        "artifact": null
+      },
+      "distribution": {
+        "target": "all_satcom_devices",
+        "port": 9202,
+        "path": "/portals/leviathan-portal-02/download"
+      },
+      "installed": true
+    }
+  ],
+  "summary": {
+    "portals_installed": 2,
+    "downloads_staged": 2,
+    "downloads_pending_auth": 0,
+    "target_devices": 4,
+    "downloads_ready": 2,
+    "last_cycle_id": "cycle-d3bd69e8",
+    "last_cycle_at": "2026-11-13T04:44:08Z",
+    "autonomy_mode": "civilization_autonomy",
+    "run_until": "all_targets_ready_and_necessary",
+    "all_ready": true
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "id": "rockstar_dlc_catalog",
+  "type": "dlc_catalog",
+  "version": "1.0.0",
+  "status": "active",
+  "generated_from": "web_research",
+  "research_date": "2026-11-13",
+  "library_ref": "systems/launchers/rockstar/library/library.json",
+  "packs": [
+    {
+      "pack_id": "gtao-money-fronts",
+      "title": "GTA Online: Money Fronts (1.71)",
+      "base_game": "gta5",
+      "kind": "online_update",
+      "released": "2025-06-17",
+      "source": "Rockstar/GTA Wiki",
+      "status": "buildable",
+      "summary": "Money laundering businesses/fronts, Mr. Faber work, new vehicles and freemode content.",
+      "features": ["money_laundering_fronts", "mr_faber_missions", "car_wash_business", "dispatch_work", "new_vehicles", "freemode_activities"],
+      "pack_ref": "systems/launchers/rockstar/dlc/packs/gtao_money_fronts.json"
+    },
+    {
+      "pack_id": "gtao-safehouse-hills",
+      "title": "GTA Online: A Safehouse in the Hills (1.72)",
+      "base_game": "gta5",
+      "kind": "online_update",
+      "released": "2025-12-10",
+      "source": "Rockstar/GTA Wiki",
+      "status": "buildable",
+      "summary": "Prix Luxury mansions, KnoWay Out missions with Avi Schwartzman/Michael De Santa, Mission Creator, new vehicles/jobs.",
+      "features": ["prix_luxury_mansions", "ai_assistant_safehouse", "knoway_out_missions", "michael_de_santa_contact", "mission_creator", "mansion_raid", "new_vehicles", "odd_jobs"],
+      "pack_ref": "systems/launchers/rockstar/dlc/packs/gtao_safehouse_hills.json"
+    },
+    {
+      "pack_id": "gtao-kortz-center-heist",
+      "title": "GTA Online: The Kortz Center Heist (1.73)",
+      "base_game": "gta5",
+      "kind": "online_update",
+      "released": "2026-07-14",
+      "source": "Rockstar/GTA Wiki/GTABase",
+      "status": "buildable",
+      "summary": "Art heist at Kortz Center with Art Studio planning room, Mr. Faber/Raf De Angelis, solo/crew, new vehicles and Mission Creator updates.",
+      "features": ["kortz_art_heist", "art_studio_planning", "prep_missions_finale", "solo_or_crew", "art_display_mansion", "new_vehicles_mlj", "mission_creator_updates"],
+      "pack_ref": "systems/launchers/rockstar/dlc/packs/gtao_kortz_center_heist.json"
+    },
+    {
+      "pack_id": "gtao-agents-sabotage-bottom-bounties",
+      "title": "GTA Online: Agents of Sabotage (1.70) + Bottom Dollar Bounties (1.69)",
+      "base_game": "gta5",
+      "kind": "online_update",
+      "released": "2024-2025",
+      "source": "Rockstar/GTA Wiki",
+      "status": "buildable",
+      "summary": "Darnell Bros Garment Factory ops/sabotage and Bail Office bounty hunting business with targets and dispatch work.",
+      "features": ["garment_factory_ops", "sabotage_missions", "bail_office_business", "bounty_targets", "dispatch_work", "new_vehicles"],
+      "pack_ref": "systems/launchers/rockstar/dlc/packs/gtao_agents_bounties.json"
+    },
+    {
+      "pack_id": "rdo-strange-tales-west",
+      "title": "Red Dead Online: Strange Tales of the West Vol. 1",
+      "base_game": "rdr2",
+      "kind": "online_update",
+      "released": "2025-07-01",
+      "source": "Rockstar/Polygon",
+      "status": "buildable",
+      "summary": "Supernatural Telegram missions: plague/undead (Armadillo), robots (Braithwaite), swamp creature (Lagras), missing scientist (Tall Trees).",
+      "features": ["telegram_missions", "undead_plague_armadillo", "automatons_braithwaite", "swamp_creature_lagras", "wilderness_survival_tall_trees", "theodore_levin_anthology", "role_xp_rewards"],
+      "pack_ref": "systems/launchers/rockstar/dlc/packs/rdo_strange_tales_west.json"
+    },
+    {
+      "pack_id": "sp-undead-nightmare-inspired",
+      "title": "Undead Nightmare Inspired (SP/World Event Pack)",
+      "base_game": "rdr2",
+      "kind": "inspired_expansion",
+      "released": null,
+      "source": "RDR Undead Nightmare legacy + RDO Strange Tales inspiration",
+      "status": "buildable",
+      "summary": "In-world undead/supernatural survival pack inspired by Undead Nightmare and Strange Tales: plague zones, hordes, cures, mythic hunts.",
+      "features": ["plague_zones", "undead_hordes", "cure_crafting", "mythic_creatures", "survival_rules", "timeline_event_hooks"],
+      "pack_ref": "systems/launchers/rockstar/dlc/packs/sp_undead_nightmare_inspired.json"
+    },
+    {
+      "pack_id": "sp-agent-ops-inspired",
+      "title": "Agent Ops Inspired (SP Story Pack)",
+      "base_game": "gta5",
+      "kind": "inspired_expansion",
+      "released": null,
+      "source": "Cancelled GTA V 'Agent Trevor' single-player DLC (researched)",
+      "status": "buildable",
+      "summary": "Inspired by cancelled Agent Trevor concept: covert ops, dossiers, infiltration missions, gadgets and stealth/heist hybrids.",
+      "features": ["covert_ops_missions", "agent_dossiers", "infiltration_stealth", "gadgets_loadouts", "safehouse_intel", "branching_outcomes"],
+      "pack_ref": "systems/launchers/rockstar/dlc/packs/sp_agent_ops_inspired.json"
+    },
+    {
+      "pack_id": "sp-mexico-frontier-inspired",
+      "title": "Mexico Frontier Inspired (World Expansion)",
+      "base_game": "rdr2",
+      "kind": "inspired_expansion",
+      "released": null,
+      "source": "RDR1 Nuevo Paraíso legacy + fan expansion research (Nuevo Paraiso mod)",
+      "status": "buildable",
+      "summary": "Inspired by Nuevo Paraíso/Mexico frontier: cross-border region, settlements, gang territories, bounty/treasure, narrative hooks.",
+      "features": ["nuevo_paraiso_region", "border_crossing", "settlements_gang_hideouts", "bounty_treasure_hunts", "ambient_encounters", "map_loader_region_hooks"],
+      "pack_ref": "systems/launchers/rockstar/dlc/packs/sp_mexico_frontier_inspired.json"
+    }
+  ],
+  "build": {
+    "installer": "systems/launchers/rockstar/dlc/install_dlc.py",
+    "assets_out": "assets/game_assets/dlc",
+    "log": "logs/launchers/dlc/install.log"
+  },
+  "summary": {
+    "total_packs": 8,
+    "base_games": ["gta5", "rdr2"],
+    "kinds": ["online_update", "inspired_expansion"]
+  }
+}

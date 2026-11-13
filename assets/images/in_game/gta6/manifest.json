@@ -1,0 +1,40 @@
+{
+  "id": "gta6_images_manifest",
+  "generated_at": "2026-11-13T06:25:06Z",
+  "hero": "assets/images/in_game/gta6/artwork/gta6_hero.png",
+  "loading": "assets/images/in_game/gta6/ui/loading_screen.png",
+  "characters": [
+    "assets/images/in_game/gta6/characters/jason_lucia.png",
+    "assets/images/in_game/gta6/characters/jason.png",
+    "assets/images/in_game/gta6/characters/lucia.png",
+    "assets/images/in_game/gta6/characters/cal.png",
+    "assets/images/in_game/gta6/characters/boobie.png",
+    "assets/images/in_game/gta6/characters/drequan.png",
+    "assets/images/in_game/gta6/characters/realdimez.png",
+    "assets/images/in_game/gta6/characters/raul.png",
+    "assets/images/in_game/gta6/characters/brian.png"
+  ],
+  "locations": [
+    "assets/images/in_game/gta6/locations/vice_city.png",
+    "assets/images/in_game/gta6/locations/leonida_keys.png",
+    "assets/images/in_game/gta6/locations/grassrivers.png",
+    "assets/images/in_game/gta6/locations/port_gellhorn.png",
+    "assets/images/in_game/gta6/locations/ambrosia.png",
+    "assets/images/in_game/gta6/locations/mount_kalaga.png"
+  ],
+  "editions": [
+    "assets/images/in_game/gta6/editions/ultimate.png",
+    "assets/images/in_game/gta6/editions/standard.png",
+    "assets/images/in_game/gta6/editions/vintage_vc.png"
+  ],
+  "screenshots": [
+    "assets/images/in_game/gta6/screenshots/s01_vice_skyline.png",
+    "assets/images/in_game/gta6/screenshots/s02_keys_water.png",
+    "assets/images/in_game/gta6/screenshots/s03_grassrivers.png",
+    "assets/images/in_game/gta6/screenshots/s04_port_gellhorn.png",
+    "assets/images/in_game/gta6/screenshots/s05_ambrosia.png",
+    "assets/images/in_game/gta6/screenshots/s06_mount_kalaga.png",
+    "assets/images/in_game/gta6/screenshots/s07_jason_lucia.png",
+    "assets/images/in_game/gta6/screenshots/s08_heist.png"
+  ]
+}

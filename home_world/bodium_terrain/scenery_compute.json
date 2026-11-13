@@ -1,0 +1,396 @@
+{
+  "id": "scenery_compute_report",
+  "source": {
+    "terrain": "home_world/bodium_terrain/bodium_terrain_map.json",
+    "nodes": "home_world/gates_nodes/door_node_map.json",
+    "alien_node": "home_world/gates_nodes/alien_node.json",
+    "fpv": "systems/fpv/game_fpv_devices.json"
+  },
+  "lighting": {
+    "directional": {
+      "enabled": true,
+      "intensity": 1.1,
+      "color": "#dfe8f5",
+      "direction": {
+        "x": -0.4,
+        "y": -1.0,
+        "z": -0.3
+      }
+    },
+    "ambient": {
+      "enabled": true,
+      "intensity": 0.35,
+      "color": "#8fa3b8"
+    }
+  },
+  "regions": [
+    {
+      "region_id": "Z0-core-plate",
+      "region_name": "Core Plate",
+      "narrative_anchor": "BEAT_0",
+      "state": "stable",
+      "elevation": 0.0,
+      "ids": {
+        "node_ids": [
+          "N10",
+          "N9",
+          "N-ALIEN"
+        ],
+        "nodes": [
+          {
+            "node_id": "N10",
+            "label": "threshold_outer",
+            "state": "open",
+            "links": [
+              "N9"
+            ],
+            "protocol_ref": null
+          },
+          {
+            "node_id": "N9",
+            "label": "signal_gate",
+            "state": "open",
+            "links": [
+              "N10",
+              "N8"
+            ],
+            "protocol_ref": null
+          },
+          {
+            "node_id": "N-ALIEN",
+            "label": "alien_node",
+            "state": "online",
+            "links": [
+              "N10"
+            ],
+            "classification": "external",
+            "webclient": "www_webclient"
+          }
+        ]
+      },
+      "computed_scenery": {
+        "atmosphere": "calm, low resonance mineral hush",
+        "vein_light": "dim_silver",
+        "resonance": "low",
+        "indices": {
+          "complexity": 0.3,
+          "navigability": 1.0,
+          "hazard": 0.0,
+          "visibility": 0.5,
+          "luminance": 0.3
+        }
+      }
+    },
+    {
+      "region_id": "Z1-fault-belt",
+      "region_name": "Fault Belt",
+      "narrative_anchor": "BEAT_1",
+      "state": "active",
+      "elevation": 0.2,
+      "ids": {
+        "node_ids": [
+          "N8",
+          "N7"
+        ],
+        "nodes": [
+          {
+            "node_id": "N8",
+            "label": "fault_entry",
+            "state": "latched",
+            "links": [
+              "N9",
+              "N7"
+            ],
+            "protocol_ref": null
+          },
+          {
+            "node_id": "N7",
+            "label": "pressure_valve",
+            "state": "latched",
+            "links": [
+              "N8",
+              "N6"
+            ],
+            "protocol_ref": null
+          }
+        ]
+      },
+      "computed_scenery": {
+        "atmosphere": "charged fracture glare, rising tension",
+        "vein_light": "brightening",
+        "resonance": "rising",
+        "indices": {
+          "complexity": 0.47,
+          "navigability": 0.82,
+          "hazard": 0.36,
+          "visibility": 0.5,
+          "luminance": 0.65
+        }
+      }
+    },
+    {
+      "region_id": "Z2-traction-run",
+      "region_name": "Traction Run",
+      "narrative_anchor": "BEAT_2",
+      "state": "negotiable",
+      "elevation": 0.4,
+      "ids": {
+        "node_ids": [
+          "N6",
+          "N5"
+        ],
+        "nodes": [
+          {
+            "node_id": "N6",
+            "label": "traction_lock",
+            "state": "open",
+            "links": [
+              "N7",
+              "N5"
+            ],
+            "protocol_ref": null
+          },
+          {
+            "node_id": "N5",
+            "label": "commit_pass",
+            "state": "open",
+            "links": [
+              "N6",
+              "N4"
+            ],
+            "protocol_ref": null
+          }
+        ]
+      },
+      "computed_scenery": {
+        "atmosphere": "kinetic rim-light, forward momentum",
+        "vein_light": "edge_glow",
+        "resonance": "neutral",
+        "indices": {
+          "complexity": 0.4,
+          "navigability": 0.85,
+          "hazard": 0.0,
+          "visibility": 0.5,
+          "luminance": 0.55
+        }
+      }
+    },
+    {
+      "region_id": "Z3-cant-plates",
+      "region_name": "Cant Plates",
+      "narrative_anchor": "BEAT_3",
+      "state": "pressured",
+      "elevation": 1.2,
+      "ids": {
+        "node_ids": [
+          "N4",
+          "N3"
+        ],
+        "nodes": [
+          {
+            "node_id": "N4",
+            "label": "heave_crossing",
+            "state": "conditional",
+            "links": [
+              "N5",
+              "N3"
+            ],
+            "protocol_ref": null
+          },
+          {
+            "node_id": "N3",
+            "label": "border_siphon",
+            "state": "conditional",
+            "links": [
+              "N4",
+              "N2"
+            ],
+            "protocol_ref": "sats_rea_rem"
+          }
+        ]
+      },
+      "computed_scenery": {
+        "atmosphere": "strained shimmer, heaving pressure",
+        "vein_light": "stressed",
+        "resonance": "neutral",
+        "indices": {
+          "complexity": 0.775,
+          "navigability": 0.72,
+          "hazard": 0.55,
+          "visibility": 0.5,
+          "luminance": 0.6
+        }
+      }
+    },
+    {
+      "region_id": "Z4-crest-reveal",
+      "region_name": "Crest Reveal",
+      "narrative_anchor": "BEAT_4",
+      "state": "resolving",
+      "elevation": 2.0,
+      "ids": {
+        "node_ids": [
+          "N2",
+          "N1"
+        ],
+        "nodes": [
+          {
+            "node_id": "N2",
+            "label": "crest_gate",
+            "state": "sealed",
+            "links": [
+              "N3",
+              "N1"
+            ],
+            "protocol_ref": null
+          },
+          {
+            "node_id": "N1",
+            "label": "reveal_hinge",
+            "state": "sealed",
+            "links": [
+              "N2",
+              "N0"
+            ],
+            "protocol_ref": null
+          }
+        ]
+      },
+      "computed_scenery": {
+        "atmosphere": "revelatory beam, high contrast crest",
+        "vein_light": "focused",
+        "resonance": "neutral",
+        "indices": {
+          "complexity": 0.8,
+          "navigability": 1.0,
+          "hazard": 0.0,
+          "visibility": 1.0,
+          "luminance": 0.85
+        }
+      }
+    },
+    {
+      "region_id": "Z5-settled-path",
+      "region_name": "Settled Path",
+      "narrative_anchor": "BEAT_5",
+      "state": "altered_legible",
+      "elevation": 1.0,
+      "ids": {
+        "node_ids": [
+          "N0"
+        ],
+        "nodes": [
+          {
+            "node_id": "N0",
+            "label": "exit_vector",
+            "state": "pending",
+            "links": [
+              "N1"
+            ],
+            "protocol_ref": null
+          }
+        ]
+      },
+      "computed_scenery": {
+        "atmosphere": "settled aftertone, altered calm",
+        "vein_light": "held_glow",
+        "resonance": "aftertone",
+        "indices": {
+          "complexity": 0.55,
+          "navigability": 1.0,
+          "hazard": 0.0,
+          "visibility": 0.5,
+          "luminance": 0.5
+        }
+      }
+    }
+  ],
+  "fpv_devices": {
+    "summary": {
+      "inactive_library_devices": 4,
+      "inserted": 4,
+      "turned_on": 4,
+      "active_fpvs": 2
+    },
+    "devices": [
+      {
+        "fpv_id": "fpv-main",
+        "fpv_name": "Main FPV",
+        "device_id": "dev-fpv-cam-001",
+        "model": "SCOUT-CAM-M1",
+        "role": "primary_capture",
+        "status": "active",
+        "power": "on",
+        "mount": {
+          "stud": "S02",
+          "region": "head_center"
+        }
+      },
+      {
+        "fpv_id": "fpv-main",
+        "fpv_name": "Main FPV",
+        "device_id": "dev-fpv-vtx-001",
+        "model": "VTX-SPEC-M2",
+        "role": "transmit_encode",
+        "status": "active",
+        "power": "on",
+        "mount": {
+          "stud": "S07",
+          "region": "chest_core"
+        }
+      },
+      {
+        "fpv_id": "fpv-main",
+        "fpv_name": "Main FPV",
+        "device_id": "dev-fpv-hud-001",
+        "model": "HUD-LATTICE-M1",
+        "role": "hud_overlay",
+        "status": "active",
+        "power": "on",
+        "mount": {
+          "stud": "S01",
+          "region": "head_left"
+        }
+      },
+      {
+        "fpv_id": "fpv-relay",
+        "fpv_name": "Relay FPV",
+        "device_id": "dev-fpv-cam-002",
+        "model": "RELAY-CAM-M1",
+        "role": "relay_capture",
+        "status": "active",
+        "power": "on",
+        "mount": {
+          "stud": "S08",
+          "region": "back"
+        }
+      }
+    ],
+    "fpvs": [
+      {
+        "fpv_id": "fpv-main",
+        "name": "Main FPV",
+        "state": "active",
+        "device_ids": [
+          "dev-fpv-cam-001",
+          "dev-fpv-vtx-001",
+          "dev-fpv-hud-001"
+        ]
+      },
+      {
+        "fpv_id": "fpv-relay",
+        "name": "Relay FPV",
+        "state": "active",
+        "device_ids": [
+          "dev-fpv-cam-002"
+        ]
+      }
+    ]
+  },
+  "totals": {
+    "regions": 6,
+    "nodes": 12,
+    "fpv_devices": 4,
+    "active_fpvs": 2
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "qbit_zone_pocket_map",
+  "type": "grid_store_map",
+  "description": "CPU video-grid/spectrum-LiDAR layer partitioned into addressable qbit zones and localized store pockets with mnemonic lacing and proximity-hash bracing.",
+  "grid": {
+    "dimensions": { "x": 16, "y": 9, "z": 4 },
+    "cell_unit": "tile",
+    "sampling_rate_hz": 10,
+    "roi": { "enabled": true, "default_zone": "Z3-cant-plates" }
+  },
+  "mnemonic_lacing": {
+    "pattern": "Z<zone>-Q<pocket>-C<cell>-T<tick>",
+    "door_node_string": "N10-N9-N8-N7-N6-N5-N4-N3-N2-N1-N0",
+    "strands": ["spatial:row/col/depth/spectrum", "temporal:frame/segment/tick"]
+  },
+  "proximity_hash_bracing": {
+    "enabled": true,
+    "algorithm": "spatial_temporal_locality_hash",
+    "brace_radius": { "spatial": 1, "temporal_ticks": 4 },
+    "use": ["bounded_neighborhood_traversal", "cache_locality", "fast_lookup"]
+  },
+  "zones": [
+    {
+      "zone_id": "Z0-core-plate",
+      "pockets": [
+        { "pocket_id": "Q0", "qbit_index": 0, "cells": ["C000", "C001"], "state": "cached", "lace_key_example": "Z0-Q0-C000-T0" },
+        { "pocket_id": "Q1", "qbit_index": 1, "cells": ["C002", "C003"], "state": "cached", "lace_key_example": "Z0-Q1-C002-T0" }
+      ]
+    },
+    {
+      "zone_id": "Z1-fault-belt",
+      "pockets": [
+        { "pocket_id": "Q0", "qbit_index": 0, "cells": ["C010", "C011"], "state": "active", "lace_key_example": "Z1-Q0-C010-T0" },
+        { "pocket_id": "Q1", "qbit_index": 1, "cells": ["C012", "C013"], "state": "active", "lace_key_example": "Z1-Q1-C012-T0" }
+      ]
+    },
+    {
+      "zone_id": "Z3-cant-plates",
+      "pockets": [
+        { "pocket_id": "Q0", "qbit_index": 0, "cells": ["C030", "C031"], "state": "buffered", "lace_key_example": "Z3-Q0-C030-T0" },
+        { "pocket_id": "Q1", "qbit_index": 1, "cells": ["C032", "C033"], "state": "buffered", "lace_key_example": "Z3-Q1-C032-T0" },
+        { "pocket_id": "Q2", "qbit_index": 2, "cells": ["C034", "C035"], "state": "buffered", "lace_key_example": "Z3-Q2-C034-T0" }
+      ]
+    }
+  ],
+  "cross_runtime": {
+    "python_analog_trigger_memory": { "enabled": true, "role": "semantic_signal_to_braced_zone_mapping" },
+    "typescript_hash_sword_log": { "enabled": true, "role": "hash_has_hash_puzzle_chain_for_fast_decode_verify" },
+    "vcp_metadata_correlation": true
+  }
+}

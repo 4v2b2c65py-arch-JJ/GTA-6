@@ -1,0 +1,22 @@
+{
+  "pack_id": "sp-agent-ops-inspired",
+  "title": "Agent Ops Inspired (SP Story Pack)",
+  "base_game": "gta5",
+  "status": "buildable",
+  "inspired_by": ["Cancelled GTA V Agent Trevor DLC (researched)"],
+  "features": [
+    {"id": "covert_ops_missions", "type": "missions", "desc": "Undercover/agency mission chain with intel gathering and extractions."},
+    {"id": "agent_dossiers", "type": "intel", "desc": "Target dossiers, evidence boards, and clue tracking."},
+    {"id": "infiltration_stealth", "type": "gameplay", "desc": "Stealth routes, disguises, detection states and silent takedowns."},
+    {"id": "gadgets_loadouts", "type": "equipment", "desc": "Gadget and loadout selection (scanners, jammers, non-lethal options)."},
+    {"id": "safehouse_intel", "type": "property", "desc": "Intel safehouse hub integrated with launcher/world UI."},
+    {"id": "branching_outcomes", "type": "narrative", "desc": "Branching mission outcomes affecting timeline pocket state."}
+  ],
+  "build_hooks": {
+    "map_loader_regions": ["region-downtown-core", "region-hills-vinewood", "region-industrial-ports"],
+    "timeline_beats": ["BEAT_3", "BEAT_4"],
+    "grid_store": "systems/grid_store/timeline_pockets.json",
+    "audio": {"soundtrack_mood": ["spy", "stealth"], "sfx": ["scanner", "silenced", "encrypted_comms"], "voice": ["handler_briefings"]},
+    "python_data_flow": "assets/game_assets/dlc/sp_agent_ops_inspired_data.json"
+  }
+}

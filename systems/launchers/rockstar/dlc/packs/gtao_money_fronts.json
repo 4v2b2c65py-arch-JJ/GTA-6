@@ -1,0 +1,21 @@
+{
+  "pack_id": "gtao-money-fronts",
+  "title": "GTA Online: Money Fronts",
+  "title_update": "1.71",
+  "base_game": "gta5",
+  "status": "buildable",
+  "features": [
+    {"id": "money_laundering_fronts", "type": "business", "desc": "Purchasable front businesses to launder income with passive/active loops."},
+    {"id": "mr_faber_missions", "type": "missions", "desc": "Contact missions for Mr. Faber's laundering network."},
+    {"id": "car_wash_business", "type": "property", "desc": "Hands On Car Wash as operating front and mission hub."},
+    {"id": "dispatch_work", "type": "freemode", "desc": "Law-enforcement/dispatch style freemode activities."},
+    {"id": "new_vehicles", "type": "vehicles", "desc": "Update vehicle set integrated into world vehicle registry."},
+    {"id": "freemode_activities", "type": "activities", "desc": "QuickiePharm courier, Safeguard deliveries and side jobs."}
+  ],
+  "build_hooks": {
+    "map_loader_regions": ["region-downtown-core", "region-industrial-ports"],
+    "timeline_beats": ["BEAT_2", "BEAT_3"],
+    "audio": {"soundtrack_mood": ["urban", "tension"], "sfx": ["cash_count", "car_wash", "dispatch_radio"]},
+    "python_data_flow": "assets/game_assets/dlc/gtao_money_fronts_data.json"
+  }
+}

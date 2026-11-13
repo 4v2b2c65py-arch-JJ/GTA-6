@@ -1,0 +1,29 @@
+{
+  "track_id": "ost-002-surface-tension",
+  "title": "Surface Tension",
+  "artist": "Spatial Avy OST",
+  "source": "soundtrack",
+  "zone": "Z1",
+  "beat": "BEAT_1",
+  "mood": [
+    "tense",
+    "pulse"
+  ],
+  "file": "assets/audio/soundtrack/ost-002-surface-tension.ogg",
+  "frequency": {
+    "bands": {
+      "sub_bass": 0.4747,
+      "bass": 0.775,
+      "low_mid": 0.619,
+      "mid": 0.5275,
+      "high_mid": 0.4886,
+      "presence": 0.3839,
+      "brilliance": 0.3404
+    },
+    "peak_dbfs": -10.62,
+    "rms_dbfs": -18.87,
+    "source": "derived_profile"
+  },
+  "captured_at": "2026-11-13T06:03:55Z",
+  "output": "speaker"
+}

@@ -1,0 +1,25 @@
+{
+  "client_id": "www_webclient_alien",
+  "node": "N-ALIEN",
+  "mode": "online",
+  "endpoints": {
+    "local_ai": "http://localhost:11434/v1",
+    "vcp": "/vcp",
+    "stream_profiles": "/vcp/streams/profiles",
+    "layout_directives": "/vcp/layout/directives",
+    "grid_store": "/vcp/grid"
+  },
+  "sat_coms": {
+    "forum_manager": "systems/network/sat_coms_forum_manager.json",
+    "device_webpointers": "systems/devices/device_webpointers.json"
+  },
+  "depth_sensor": {
+    "config": "systems/camera/depth_sensor_layers.json",
+    "allocations": "systems/network/session_dimension_allocations.json"
+  },
+  "defaults": {
+    "board": "rd",
+    "session_ref": "narrative/storyboard/session.json",
+    "home_world_index": "home_world/home_world_index.json"
+  }
+}

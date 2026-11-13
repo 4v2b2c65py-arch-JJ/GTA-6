@@ -1,0 +1,78 @@
+{
+  "pack_id": "gtao-kortz-center-heist",
+  "title": "GTA Online: The Kortz Center Heist (1.73)",
+  "base_game": "gta5",
+  "kind": "online_update",
+  "status": "installed",
+  "installed_at": "2026-11-13T05:20:50Z",
+  "features": [
+    {
+      "id": "kortz_art_heist",
+      "type": "heist",
+      "desc": "Multi-stage art robbery at Kortz Center gallery with multiple approaches and escapes."
+    },
+    {
+      "id": "art_studio_planning",
+      "type": "property_amenity",
+      "desc": "Art Studio in mansions as heist planning room and board."
+    },
+    {
+      "id": "prep_missions_finale",
+      "type": "missions",
+      "desc": "Prep missions leading to finale; solo or crew up to 4."
+    },
+    {
+      "id": "solo_or_crew",
+      "type": "mode",
+      "desc": "Supports 1-4 players with scalable objectives."
+    },
+    {
+      "id": "art_display_mansion",
+      "type": "reward",
+      "desc": "Stolen works can be sold for profit or displayed in owned mansions."
+    },
+    {
+      "id": "new_vehicles_mlj",
+      "type": "vehicles",
+      "desc": "Update vehicles with Missile Lock-On Jammer upgrade availability."
+    },
+    {
+      "id": "mission_creator_updates",
+      "type": "tooling",
+      "desc": "Warp points, CCTV, new actors/props/interiors and stealth outfit logic."
+    }
+  ],
+  "feature_ids": [
+    "kortz_art_heist",
+    "art_studio_planning",
+    "prep_missions_finale",
+    "solo_or_crew",
+    "art_display_mansion",
+    "new_vehicles_mlj",
+    "mission_creator_updates"
+  ],
+  "build_hooks": {
+    "map_loader_regions": [
+      "region-downtown-core",
+      "region-hills-vinewood"
+    ],
+    "timeline_beats": [
+      "BEAT_4",
+      "BEAT_5"
+    ],
+    "audio": {
+      "soundtrack_mood": [
+        "heist",
+        "orchestral_tension"
+      ],
+      "sfx": [
+        "alarm",
+        "glass",
+        "vault",
+        "radio_chatter"
+      ]
+    },
+    "python_data_flow": "assets/game_assets/dlc/gtao_kortz_center_heist_data.json"
+  },
+  "hash": "e908bfeaf18b256a"
+}

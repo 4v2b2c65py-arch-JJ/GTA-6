@@ -1,0 +1,91 @@
+{
+  "id": "music_soundboard",
+  "type": "soundboard",
+  "version": "1.0.0",
+  "status": "installed",
+  "output": "speaker",
+  "emit_original_quality": true,
+  "description": "Built-in in-game soundboard for music playback cues and stings; emits at original sound quality by default.",
+  "pads": [
+    {
+      "pad_id": "sb-01",
+      "label": "Beat Drop",
+      "type": "sting",
+      "source": "sfx_vfx",
+      "ref": "sfx-grid-pulse",
+      "gain_db": 0,
+      "color": "#ff008c"
+    },
+    {
+      "pad_id": "sb-02",
+      "label": "Gate Hit",
+      "type": "sfx",
+      "source": "sfx_vfx",
+      "ref": "sfx-gate-open",
+      "gain_db": 0,
+      "color": "#00eaff"
+    },
+    {
+      "pad_id": "sb-03",
+      "label": "Hash Brace",
+      "type": "vfx_audio",
+      "source": "sfx_vfx",
+      "ref": "sfx-hash-brace",
+      "gain_db": 0,
+      "color": "#ffc83c"
+    },
+    {
+      "pad_id": "sb-04",
+      "label": "Analog Trigger",
+      "type": "vfx_audio",
+      "source": "sfx_vfx",
+      "ref": "sfx-analog-trigger",
+      "gain_db": 0,
+      "color": "#78c8ff"
+    },
+    {
+      "pad_id": "sb-05",
+      "label": "UI Confirm",
+      "type": "ui",
+      "source": "sfx_vfx",
+      "ref": "sfx-ui-confirm",
+      "gain_db": 0,
+      "color": "#50ffb4"
+    },
+    {
+      "pad_id": "sb-06",
+      "label": "Protocol Alert",
+      "type": "sting",
+      "source": "soundtrack",
+      "ref": "ost-005-border-protocol",
+      "gain_db": -1,
+      "color": "#ffaa5a"
+    },
+    {
+      "pad_id": "sb-07",
+      "label": "Ambient Rise",
+      "type": "bed",
+      "source": "soundtrack",
+      "ref": "ost-001-entry-bodium",
+      "gain_db": -2,
+      "color": "#9fb0c3"
+    },
+    {
+      "pad_id": "sb-08",
+      "label": "Neon Drive",
+      "type": "bed",
+      "source": "spotify_peers",
+      "ref": "sp-006",
+      "gain_db": -1,
+      "color": "#ff66c4"
+    }
+  ],
+  "transport": {
+    "playback": "in_game",
+    "crossfade_ms": 1200,
+    "latency_ms_target": 20,
+    "sample_rate_hz": 48000,
+    "bit_depth": 24
+  },
+  "installed_at": "2026-11-13T06:03:55Z"
+}

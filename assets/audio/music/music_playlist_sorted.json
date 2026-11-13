@@ -1,0 +1,440 @@
+{
+  "id": "music_playlist_sorted",
+  "type": "playlist",
+  "generated_at": "2026-11-13T06:03:55Z",
+  "algo": {
+    "algo_id": "spatial_peer_sort_v1",
+    "name": "Spatial Peer Sort (installed)",
+    "installed": true,
+    "weights": {
+      "peer_affinity": 3.0,
+      "zone_match": 2.5,
+      "beat_match": 2.5,
+      "mood_match": 1.5,
+      "energy": 1.0,
+      "popularity": 0.5
+    },
+    "entrypoint": "systems/audio/music/sorting_algo.py:sort_tracks",
+    "description": "In-game installed sorting algo: peer-affinity + zone/beat/mood alignment + energy/popularity + stable ordering."
+  },
+  "context": {
+    "zones": [
+      "Z0",
+      "Z1",
+      "Z2",
+      "Z3",
+      "Z4",
+      "M0",
+      "S0"
+    ],
+    "beats": [
+      "BEAT_0",
+      "BEAT_1",
+      "BEAT_2",
+      "BEAT_3",
+      "BEAT_4",
+      "BEAT_5"
+    ],
+    "moods": [
+      "ambient",
+      "tense",
+      "cognitive",
+      "solemn",
+      "signal",
+      "synth",
+      "frontier"
+    ]
+  },
+  "tracks": [
+    {
+      "track_id": "sp-006",
+      "spotify_id": "peer:sp-006",
+      "title": "Neon Causeway",
+      "artist": "Vice Circuit",
+      "album": "Leonida Nights",
+      "duration_ms": 226000,
+      "mood": [
+        "synth",
+        "night",
+        "drive"
+      ],
+      "zone": "Z2",
+      "beat": "BEAT_3",
+      "energy": 0.82,
+      "popularity": 72,
+      "peers": [
+        "peer-vice-neon"
+      ],
+      "source": "spotify_peer",
+      "_sort_score": 7.83,
+      "_sort_index": 10,
+      "sort_rank": 1,
+      "sort_algo": "spatial_peer_sort_v1"
+    },
+    {
+      "track_id": "sp-007",
+      "spotify_id": "peer:sp-007",
+      "title": "Sunset Motorway",
+      "artist": "Vice Circuit",
+      "album": "Leonida Nights",
+      "duration_ms": 219000,
+      "mood": [
+        "synth",
+        "drive"
+      ],
+      "zone": "Z3",
+      "beat": "BEAT_4",
+      "energy": 0.79,
+      "popularity": 70,
+      "peers": [
+        "peer-vice-neon",
+        "peer-tension-pulse"
+      ],
+      "source": "spotify_peer",
+      "_sort_score": 7.77,
+      "_sort_index": 11,
+      "sort_rank": 2,
+      "sort_algo": "spatial_peer_sort_v1"
+    },
+    {
+      "track_id": "sp-002",
+      "spotify_id": "peer:sp-002",
+      "title": "Faultline Pulse",
+      "artist": "Spatial Avy Ensemble",
+      "album": "Home World OST",
+      "duration_ms": 198000,
+      "mood": [
+        "tense",
+        "pulse"
+      ],
+      "zone": "Z1",
+      "beat": "BEAT_1",
+      "energy": 0.71,
+      "popularity": 61,
+      "peers": [
+        "peer-tension-pulse",
+        "ost-002-surface-tension"
+      ],
+      "source": "spotify_peer",
+      "_sort_score": 7.695,
+      "_sort_index": 6,
+      "sort_rank": 3,
+      "sort_algo": "spatial_peer_sort_v1"
+    },
+    {
+      "track_id": "sp-005",
+      "spotify_id": "peer:sp-005",
+      "title": "REA-REM Divert",
+      "artist": "Border Protocol",
+      "album": "Signals",
+      "duration_ms": 203000,
+      "mood": [
+        "signal",
+        "alert"
+      ],
+      "zone": "Z4",
+      "beat": "BEAT_4",
+      "energy": 0.76,
+      "popularity": 60,
+      "peers": [
+        "peer-sats-signal",
+        "ost-005-border-protocol"
+      ],
+      "source": "spotify_peer",
+      "_sort_score": 7.68,
+      "_sort_index": 9,
+      "sort_rank": 4,
+      "sort_algo": "spatial_peer_sort_v1"
+    },
+    {
+      "track_id": "ost-001-entry-bodium",
+      "spotify_id": null,
+      "title": "Entry Bodium",
+      "artist": "Spatial Avy OST",
+      "album": "Spatial Avy Soundtrack",
+      "duration_ms": null,
+      "mood": [
+        "ambient",
+        "threshold"
+      ],
+      "zone": "Z0",
+      "beat": "BEAT_0",
+      "energy": 0.5,
+      "popularity": 50,
+      "peers": [
+        "ost-001-entry-bodium"
+      ],
+      "source": "soundtrack",
+      "file": "assets/audio/soundtrack/ost-001-entry-bodium.ogg",
+      "installed": false,
+      "install_state": "placeholder_manifested",
+      "_sort_score": 7.45,
+      "_sort_index": 0,
+      "sort_rank": 5,
+      "sort_algo": "spatial_peer_sort_v1"
+    },
+    {
+      "track_id": "sp-003",
+      "spotify_id": "peer:sp-003",
+      "title": "Lattice Index",
+      "artist": "Mind Core Unit",
+      "album": "Aspects",
+      "duration_ms": 231000,
+      "mood": [
+        "cognitive",
+        "shimmer"
+      ],
+      "zone": "M0",
+      "beat": "BEAT_2",
+      "energy": 0.54,
+      "popularity": 55,
+      "peers": [
+        "peer-mind-shimmer",
+        "ost-003-mind-core"
+      ],
+      "source": "spotify_peer",
+      "_sort_score": 7.435,
+      "_sort_index": 7,
+      "sort_rank": 6,
+      "sort_algo": "spatial_peer_sort_v1"
+    },
+    {
+      "track_id": "ost-002-surface-tension",
+      "spotify_id": null,
+      "title": "Surface Tension",
+      "artist": "Spatial Avy OST",
+      "album": "Spatial Avy Soundtrack",
+      "duration_ms": null,
+      "mood": [
+        "tense",
+        "pulse"
+      ],
+      "zone": "Z1",
+      "beat": "BEAT_1",
+      "energy": 0.5,
+      "popularity": 50,
+      "peers": [
+        "ost-002-surface-tension"
+      ],
+      "source": "soundtrack",
+      "file": "assets/audio/soundtrack/ost-002-surface-tension.ogg",
+      "installed": false,
+      "install_state": "placeholder_manifested",
+      "_sort_score": 7.43,
+      "_sort_index": 1,
+      "sort_rank": 7,
+      "sort_algo": "spatial_peer_sort_v1"
+    },
+    {
+      "track_id": "sp-008",
+      "spotify_id": "peer:sp-008",
+      "title": "Keys at Dusk",
+      "artist": "Coastal Relay",
+      "album": "Leonida Nights",
+      "duration_ms": 208000,
+      "mood": [
+        "ambient",
+        "night"
+      ],
+      "zone": "Z3",
+      "beat": "BEAT_2",
+      "energy": 0.44,
+      "popularity": 63,
+      "peers": [
+        "peer-frontier",
+        "peer-bodium-ambient"
+      ],
+      "source": "spotify_peer",
+      "_sort_score": 7.405,
+      "_sort_index": 12,
+      "sort_rank": 8,
+      "sort_algo": "spatial_peer_sort_v1"
+    },
+    {
+      "track_id": "ost-005-border-protocol",
+      "spotify_id": null,
+      "title": "SATS REA-REM Protocol",
+      "artist": "Spatial Avy OST",
+      "album": "Spatial Avy Soundtrack",
+      "duration_ms": null,
+      "mood": [
+        "signal",
+        "alert"
+      ],
+      "zone": "Z4",
+      "beat": "BEAT_4",
+      "energy": 0.5,
+      "popularity": 50,
+      "peers": [
+        "ost-005-border-protocol"
+      ],
+      "source": "soundtrack",
+      "file": "assets/audio/soundtrack/ost-005-border-protocol.ogg",
+      "installed": false,
+      "install_state": "placeholder_manifested",
+      "_sort_score": 7.37,
+      "_sort_index": 4,
+      "sort_rank": 9,
+      "sort_algo": "spatial_peer_sort_v1"
+    },
+    {
+      "track_id": "ost-003-mind-core",
+      "spotify_id": null,
+      "title": "Mind Core Resonance",
+      "artist": "Spatial Avy OST",
+      "album": "Spatial Avy Soundtrack",
+      "duration_ms": null,
+      "mood": [
+        "cognitive",
+        "shimmer"
+      ],
+      "zone": "M0",
+      "beat": "BEAT_2",
+      "energy": 0.5,
+      "popularity": 50,
+      "peers": [
+        "ost-003-mind-core"
+      ],
+      "source": "soundtrack",
+      "file": "assets/audio/soundtrack/ost-003-mind-core.ogg",
+      "installed": false,
+      "install_state": "placeholder_manifested",
+      "_sort_score": 7.37,
+      "_sort_index": 2,
+      "sort_rank": 10,
+      "sort_algo": "spatial_peer_sort_v1"
+    },
+    {
+      "track_id": "sp-004",
+      "spotify_id": "peer:sp-004",
+      "title": "Ember Vow",
+      "artist": "Soul Sanctum Choir",
+      "album": "Aspects",
+      "duration_ms": 245000,
+      "mood": [
+        "solemn",
+        "wide"
+      ],
+      "zone": "S0",
+      "beat": "BEAT_3",
+      "energy": 0.47,
+      "popularity": 57,
+      "peers": [
+        "peer-soul-wide",
+        "ost-004-soul-sanctum"
+      ],
+      "source": "spotify_peer",
+      "_sort_score": 7.355,
+      "_sort_index": 8,
+      "sort_rank": 11,
+      "sort_algo": "spatial_peer_sort_v1"
+    },
+    {
+      "track_id": "ost-004-soul-sanctum",
+      "spotify_id": null,
+      "title": "Soul Sanctum",
+      "artist": "Spatial Avy OST",
+      "album": "Spatial Avy Soundtrack",
+      "duration_ms": null,
+      "mood": [
+        "solemn",
+        "wide"
+      ],
+      "zone": "S0",
+      "beat": "BEAT_3",
+      "energy": 0.5,
+      "popularity": 50,
+      "peers": [
+        "ost-004-soul-sanctum"
+      ],
+      "source": "soundtrack",
+      "file": "assets/audio/soundtrack/ost-004-soul-sanctum.ogg",
+      "installed": false,
+      "install_state": "placeholder_manifested",
+      "_sort_score": 7.35,
+      "_sort_index": 3,
+      "sort_rank": 12,
+      "sort_algo": "spatial_peer_sort_v1"
+    },
+    {
+      "track_id": "sp-001",
+      "spotify_id": "peer:sp-001",
+      "title": "Bodium Threshold",
+      "artist": "Spatial Avy Ensemble",
+      "album": "Home World OST",
+      "duration_ms": 214000,
+      "mood": [
+        "ambient",
+        "threshold"
+      ],
+      "zone": "Z0",
+      "beat": "BEAT_0",
+      "energy": 0.32,
+      "popularity": 58,
+      "peers": [
+        "peer-bodium-ambient",
+        "ost-001-entry-bodium"
+      ],
+      "source": "spotify_peer",
+      "_sort_score": 7.31,
+      "_sort_index": 5,
+      "sort_rank": 13,
+      "sort_algo": "spatial_peer_sort_v1"
+    },
+    {
+      "track_id": "sp-010",
+      "spotify_id": "peer:sp-010",
+      "title": "Campfire Relay",
+      "artist": "Frontier Line",
+      "album": "Routes",
+      "duration_ms": 237000,
+      "mood": [
+        "folk",
+        "wide"
+      ],
+      "zone": "Z3",
+      "beat": "BEAT_2",
+      "energy": 0.38,
+      "popularity": 56,
+      "peers": [
+        "peer-frontier",
+        "peer-soul-wide"
+      ],
+      "source": "spotify_peer",
+      "_sort_score": 5.81,
+      "_sort_index": 14,
+      "sort_rank": 14,
+      "sort_algo": "spatial_peer_sort_v1"
+    },
+    {
+      "track_id": "sp-009",
+      "spotify_id": "peer:sp-009",
+      "title": "Dust & Chrome",
+      "artist": "Frontier Line",
+      "album": "Routes",
+      "duration_ms": 201000,
+      "mood": [
+        "frontier",
+        "drive"
+      ],
+      "zone": "Z5",
+      "beat": "BEAT_5",
+      "energy": 0.66,
+      "popularity": 59,
+      "peers": [
+        "peer-frontier"
+      ],
+      "source": "spotify_peer",
+      "_sort_score": 5.055,
+      "_sort_index": 13,
+      "sort_rank": 15,
+      "sort_algo": "spatial_peer_sort_v1"
+    }
+  ],
+  "summary": {
+    "total": 15,
+    "soundtrack_tracks": 5,
+    "spotify_peer_tracks": 10,
+    "installed": true
+  }
+}

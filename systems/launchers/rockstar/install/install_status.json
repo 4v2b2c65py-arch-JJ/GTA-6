@@ -1,0 +1,21 @@
+{
+  "id": "install_status",
+  "type": "install_status",
+  "launcher": "rockstar_games_launcher",
+  "status": "complete",
+  "environment_mode": "in_environment_modeled",
+  "installed_at": "2026-11-13T05:08:49Z",
+  "install_dir": "systems/launchers/rockstar/install",
+  "games_dir": "systems/launchers/rockstar/library/games",
+  "components_manifest": "systems/launchers/rockstar/install/install_components.json",
+  "bootstrap": "systems/launchers/rockstar/install/bootstrap.json",
+  "checks": {
+    "installer_downloaded": true,
+    "eula_accepted": true,
+    "components_installed": true,
+    "launcher_ready": true,
+    "signin_available": true,
+    "signup_available": true,
+    "library_ready": true
+  }
+}

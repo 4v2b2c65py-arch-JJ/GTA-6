@@ -1,0 +1,73 @@
+{
+  "pack_id": "sp-mexico-frontier-inspired",
+  "title": "Mexico Frontier Inspired (World Expansion)",
+  "base_game": "rdr2",
+  "kind": "inspired_expansion",
+  "status": "installed",
+  "installed_at": "2026-11-13T05:20:50Z",
+  "features": [
+    {
+      "id": "nuevo_paraiso_region",
+      "type": "map_expansion",
+      "desc": "Cross-border frontier region with distinct biomes and landmarks."
+    },
+    {
+      "id": "border_crossing",
+      "type": "traversal",
+      "desc": "Border crossing routes, checkpoints, and narrative gates."
+    },
+    {
+      "id": "settlements_gang_hideouts",
+      "type": "world_content",
+      "desc": "New settlements, gang territories and hideout encounters."
+    },
+    {
+      "id": "bounty_treasure_hunts",
+      "type": "activities",
+      "desc": "Bounty contracts, treasure maps, and collectible chains."
+    },
+    {
+      "id": "ambient_encounters",
+      "type": "world_events",
+      "desc": "Dynamic roadside/ambient encounters and camps."
+    },
+    {
+      "id": "map_loader_region_hooks",
+      "type": "integration",
+      "desc": "Hooks into regional map loader/barcode hash and data flow pipeline."
+    }
+  ],
+  "feature_ids": [
+    "nuevo_paraiso_region",
+    "border_crossing",
+    "settlements_gang_hideouts",
+    "bounty_treasure_hunts",
+    "ambient_encounters",
+    "map_loader_region_hooks"
+  ],
+  "build_hooks": {
+    "map_loader_regions": [
+      "region-border-frontier-new",
+      "region-desert-expansion"
+    ],
+    "map_loader_ref": "systems/launchers/rockstar/map_loader/region_expansion.json",
+    "timeline_beats": [
+      "BEAT_2",
+      "BEAT_3",
+      "BEAT_4"
+    ],
+    "audio": {
+      "soundtrack_mood": [
+        "frontier",
+        "mariachi_ambient"
+      ],
+      "sfx": [
+        "border_gate",
+        "campfire",
+        "spurs"
+      ]
+    },
+    "python_data_flow": "assets/game_assets/dlc/sp_mexico_frontier_inspired_data.json"
+  },
+  "hash": "55c7818e268da8e2"
+}

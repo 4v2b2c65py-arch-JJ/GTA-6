@@ -1,0 +1,260 @@
+{
+  "id": "normalized_spottings",
+  "generated_at": "2026-11-13T04:26:06Z",
+  "categories": [
+    "characters",
+    "image",
+    "items",
+    "polygons",
+    "video"
+  ],
+  "totals": {
+    "all": 18,
+    "characters": 4,
+    "image": 3,
+    "items": 4,
+    "polygons": 4,
+    "video": 3
+  },
+  "sources": [
+    {
+      "source_id": "community_spottings_local",
+      "status": "ok",
+      "kind": "local_json",
+      "ingested": 18,
+      "raw_seen": 18
+    },
+    {
+      "source_id": "gta_portal_community_feed",
+      "status": "skipped",
+      "reason": "disabled"
+    },
+    {
+      "source_id": "social_spotter_bot_feed",
+      "status": "skipped",
+      "reason": "disabled"
+    }
+  ],
+  "spottings": [
+    {
+      "spot_id": "SP-IMG-001",
+      "category": "image",
+      "name": "Neon alley billboard texture",
+      "refs": [
+        "portal/tex/neon_alley"
+      ],
+      "confidence": 0.92,
+      "reporter": "community",
+      "notes": "High-res storefront/billboard texture seen in portal captures",
+      "origin_source": "community_spottings_local"
+    },
+    {
+      "spot_id": "SP-IMG-002",
+      "category": "image",
+      "name": "Rain-soaked asphalt normal map",
+      "refs": [
+        "portal/tex/wet_asphalt_n"
+      ],
+      "confidence": 0.88,
+      "reporter": "community",
+      "notes": "Wet road surface normals missing",
+      "origin_source": "community_spottings_local"
+    },
+    {
+      "spot_id": "SP-IMG-003",
+      "category": "image",
+      "name": "Subway tile wall atlas",
+      "refs": [
+        "portal/tex/subway_tiles"
+      ],
+      "confidence": 0.81,
+      "reporter": "community",
+      "notes": "Interior tile atlas spotted",
+      "origin_source": "community_spottings_local"
+    },
+    {
+      "spot_id": "SP-VID-001",
+      "category": "video",
+      "name": "Traffic intersection ambient loop",
+      "refs": [
+        "portal/vid/traffic_loop"
+      ],
+      "confidence": 0.86,
+      "reporter": "community",
+      "notes": "Background traffic video loop for screens/billboards",
+      "origin_source": "community_spottings_local"
+    },
+    {
+      "spot_id": "SP-VID-002",
+      "category": "video",
+      "name": "Police scanner/news ticker clip",
+      "refs": [
+        "portal/vid/news_ticker"
+      ],
+      "confidence": 0.79,
+      "reporter": "community",
+      "notes": "In-world display footage",
+      "origin_source": "community_spottings_local"
+    },
+    {
+      "spot_id": "SP-VID-003",
+      "category": "video",
+      "name": "FPV drone flythrough reference",
+      "refs": [
+        "portal/vid/fpv_flythrough"
+      ],
+      "confidence": 0.84,
+      "reporter": "community",
+      "notes": "Reference for FPV camera paths/scenery motion",
+      "origin_source": "community_spottings_local"
+    },
+    {
+      "spot_id": "SP-POLY-001",
+      "category": "polygons",
+      "name": "Lowrider sedan body mesh",
+      "refs": [
+        "portal/mesh/lowrider_sedan"
+      ],
+      "confidence": 0.93,
+      "reporter": "community",
+      "notes": "Vehicle body with LODs",
+      "origin_source": "community_spottings_local",
+      "poly_budget": 45000
+    },
+    {
+      "spot_id": "SP-POLY-002",
+      "category": "polygons",
+      "name": "Motorcycle sport bike mesh",
+      "refs": [
+        "portal/mesh/sport_bike"
+      ],
+      "confidence": 0.9,
+      "reporter": "community",
+      "notes": "Rideable bike model",
+      "origin_source": "community_spottings_local",
+      "poly_budget": 32000
+    },
+    {
+      "spot_id": "SP-POLY-003",
+      "category": "polygons",
+      "name": "Street prop set (hydrant, bench, signs)",
+      "refs": [
+        "portal/mesh/street_props_a"
+      ],
+      "confidence": 0.87,
+      "reporter": "community",
+      "notes": "Common street dressing props",
+      "origin_source": "community_spottings_local",
+      "poly_budget": 12000
+    },
+    {
+      "spot_id": "SP-POLY-004",
+      "category": "polygons",
+      "name": "Apartment interior kit mesh",
+      "refs": [
+        "portal/mesh/apt_interior_kit"
+      ],
+      "confidence": 0.82,
+      "reporter": "community",
+      "notes": "Modular interior architecture pieces",
+      "origin_source": "community_spottings_local",
+      "poly_budget": 38000
+    },
+    {
+      "spot_id": "SP-ITEM-001",
+      "category": "items",
+      "name": "Smartphone prop",
+      "refs": [
+        "portal/item/smartphone"
+      ],
+      "confidence": 0.91,
+      "reporter": "community",
+      "notes": "Handheld/useable prop item",
+      "origin_source": "community_spottings_local"
+    },
+    {
+      "spot_id": "SP-ITEM-002",
+      "category": "items",
+      "name": "Duffel bag loot item",
+      "refs": [
+        "portal/item/duffel_bag"
+      ],
+      "confidence": 0.85,
+      "reporter": "community",
+      "notes": "Carryable loot container",
+      "origin_source": "community_spottings_local"
+    },
+    {
+      "spot_id": "SP-ITEM-003",
+      "category": "items",
+      "name": "Body armor vest",
+      "refs": [
+        "portal/item/armor_vest"
+      ],
+      "confidence": 0.89,
+      "reporter": "community",
+      "notes": "Equippable protection item",
+      "origin_source": "community_spottings_local"
+    },
+    {
+      "spot_id": "SP-ITEM-004",
+      "category": "items",
+      "name": "Soda can consumable",
+      "refs": [
+        "portal/item/soda_can"
+      ],
+      "confidence": 0.8,
+      "reporter": "community",
+      "notes": "Consumable prop",
+      "origin_source": "community_spottings_local"
+    },
+    {
+      "spot_id": "SP-CHAR-001",
+      "category": "characters",
+      "name": "Downtown pedestrian male A",
+      "refs": [
+        "portal/char/ped_male_a"
+      ],
+      "confidence": 0.9,
+      "reporter": "community",
+      "notes": "Ambient NPC pedestrian",
+      "origin_source": "community_spottings_local"
+    },
+    {
+      "spot_id": "SP-CHAR-002",
+      "category": "characters",
+      "name": "Downtown pedestrian female A",
+      "refs": [
+        "portal/char/ped_female_a"
+      ],
+      "confidence": 0.88,
+      "reporter": "community",
+      "notes": "Ambient NPC pedestrian",
+      "origin_source": "community_spottings_local"
+    },
+    {
+      "spot_id": "SP-CHAR-003",
+      "category": "characters",
+      "name": "Street vendor NPC",
+      "refs": [
+        "portal/char/vendor_npc"
+      ],
+      "confidence": 0.83,
+      "reporter": "community",
+      "notes": "Interactive vendor character",
+      "origin_source": "community_spottings_local"
+    },
+    {
+      "spot_id": "SP-CHAR-004",
+      "category": "characters",
+      "name": "Patrol officer NPC",
+      "refs": [
+        "portal/char/patrol_officer"
+      ],
+      "confidence": 0.86,
+      "reporter": "community",
+      "notes": "Patrol/authority character",
+      "origin_source": "community_spottings_local"
+    }
+  ]
+}

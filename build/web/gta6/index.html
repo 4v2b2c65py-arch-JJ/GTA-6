@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Grand Theft Auto VI — State of Leonida | Spatial Avy</title>
+  <meta name="description" content="Grand Theft Auto VI: Jason & Lucia in the State of Leonida and Vice City. Coming November 19, 2026 to PS5, PS5 Pro, Xbox Series X|S."/>
+  <link rel="icon" href="../favicon.ico"/>
+  <meta property="og:title" content="Grand Theft Auto VI — State of Leonida"/>
+  <meta property="og:image" content="./assets/hero.png"/>
+  <link rel="stylesheet" href="./style.css"/>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <!-- Full GTA Loading Page -->
+    <div id="loading-screen" class="loading-screen" :class="{hidden: !loading, fade: fading}">
+      <div class="loading-bg" :style="bg('./assets/loading_screen.png')"></div>
+      <div class="loading-overlay"></div>
+      <div class="loading-content">
+        <img class="loading-logo-img" src="./assets/logo.png" alt="GTA VI" onerror="this.style.display='none'"/>
+        <div class="loading-kicker">ROCKSTAR GAMES PRESENTS</div>
+        <h1 class="loading-title"><span>GRAND THEFT AUTO</span><em>VI</em></h1>
+        <div class="loading-tag">STATE OF LEONIDA · VICE CITY</div>
+        <div class="loading-status-label">LOADING</div>
+        <div class="loading-date">COMING NOVEMBER 19, 2026</div>
+        <div class="loading-platforms">PlayStation 5 · PlayStation 5 Pro · Xbox Series X|S</div>
+        <div class="loading-pc">PC: Not Announced</div>
+        <div class="loading-bar-wrap"><div class="loading-bar"><div class="loading-fill" :style="{width: progress+'%'}"></div></div><div class="loading-pct">{{Math.floor(progress)}}%</div></div>
+        <div class="loading-status">{{statusText}}</div>
+        <button class="loading-enter" v-if="ready" @click="enter">ENTER LEONIDA</button>
+        <div class="loading-hint" v-else>Loading assets, characters, and world data…</div>
+      </div>
+    </div>
+
+    <nav class="topnav" v-show="!loading">
+      <div class="brand"><img src="../assets/icons/icon-64.png" onerror="this.src='./assets/logo.png'"/><span>GTA VI · Spatial Avy</span></div>
+      <div class="links">
+        <a href="#hero">Home</a><a href="#story">Story</a><a href="#characters">Characters</a>
+        <a href="#leonida">Leonida</a><a href="#editions">Editions</a><a href="#trailers">Trailers</a>
+        <a href="#gallery">Gallery</a><a href="#platforms">Platforms</a><a href="#info">Info</a>
+        <a href="../index.html" class="back">← Web Client</a>
+      </div>
+    </nav>
+
+    <main v-show="!loading">
+    <section id="hero" class="hero" :style="bg('./assets/hero.png')">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="kicker">ROCKSTAR GAMES · STATE OF LEONIDA</p>
+        <h1>Grand Theft Auto VI</h1>
+        <p class="sub">Jason and Lucia have always known the deck is stacked against them. But when an easy score goes wrong, they find themselves on the darkest side of the sunniest place in America.</p>
+        <div class="hero-meta">
+          <span class="tag">November 19, 2026</span>
+          <span class="tag">Vice City, Leonida</span>
+          <span class="tag">Jason & Lucia</span>
+        </div>
+        <div class="cta"><a class="btn primary" href="#editions">Editions & Pre-order</a><a class="btn" href="#trailers">Watch Trailers</a><a class="btn ghost" href="#leonida">Explore Leonida</a></div>
+        <div class="platforms-line">PlayStation 5 · PlayStation 5 Pro · Xbox Series X|S · Xbox Cloud Gaming · <em>PC: Not Announced</em></div>
+      </div>
+    </section>
+
+    <section id="story" class="section dark">
+      <div class="container split">
+        <div>
+          <h2>Vice City, USA.</h2>
+          <p class="story-copy">Jason and Lucia have always known the deck is stacked against them. But when an easy score goes wrong, they find themselves on the darkest side of the sunniest place in America, in the middle of a criminal conspiracy stretching across the state of Leonida — forced to rely on each other more than ever if they want to make it out alive.</p>
+          <div class="stats">
+            <div><b>Setting</b><span>State of Leonida — Vice City and beyond (modern day)</span></div>
+            <div><b>Protagonists</b><span>Jason Duval & Lucia Caminos</span></div>
+            <div><b>Release</b><span>November 19, 2026 (Console)</span></div>
+            <div><b>Mode</b><span>Single-player experience (1 player, offline)</span></div>
+            <div><b>Pre-load</b><span>November 12, 2026 (digital, local midnight)</span></div>
+            <div><b>Storage</b><span>~212 GB guidance (PS5); plan 200+ GB free</span></div>
+          </div>
+        </div>
+        <div class="card-img"><img src="./assets/characters/jason_lucia.png" alt="Jason and Lucia"/></div>
+      </div>
+    </section>
+
+    <section id="characters" class="section">
+      <div class="container">
+        <h2>Characters</h2>
+        <p class="lead">The people of Leonida — partners, hustlers, legends, and trouble in Vice City and beyond.</p>
+        <div class="grid cards">
+          <div class="char" v-for="c in characters" :key="c.id">
+            <img :src="c.img" :alt="c.name" loading="lazy"/>
+            <div class="info"><h3>{{c.name}}</h3><div class="role">{{c.role}}</div><p>{{c.desc}}</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="leonida" class="section dark">
+      <div class="container">
+        <h2>Only in Leonida</h2>
+        <p class="lead">Tour a few of the must-see destinations across the sunshine state — from the neon of Vice City to the wilds of Mount Kalaga.</p>
+        <div class="grid locs">
+          <div class="loc" v-for="l in locations" :key="l.id">
+            <img :src="l.img" :alt="l.name" loading="lazy"/>
+            <div class="info"><h3>{{l.name}}</h3><p>{{l.desc}}</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="editions" class="section">
+      <div class="container">
+        <h2>Editions & Pre-order</h2>
+        <p class="lead">Pre-orders began June 25, 2026. Available via PlayStation Store, Microsoft Store, Rockstar Games Store, and select retailers.</p>
+        <div class="grid editions">
+          <div class="edition" v-for="e in editions" :key="e.id" :class="{featured: e.featured}">
+            <img :src="e.img" :alt="e.name" loading="lazy"/>
+            <div class="info"><h3>{{e.name}}</h3><div class="price">{{e.price}}</div><ul><li v-for="it in e.items" :key="it">{{it}}</li></ul></div>
+          </div>
+        </div>
+        <div class="note">
+          <b>Pre-order bonuses:</b> All pre-orders/purchases before Nov 20, 2026 include <b>Vintage Vice City Pack</b> (’55 Vapid Stanier, exclusive vintage looks & hairstyles, vintage weapon pattern). Digital pre-orders include <b>1 free month of GTA+</b>.<br/>
+          <b>Pre-load:</b> Nov 12, 2026 (local midnight). <b>Physical:</b> download code in box (no disc), available Nov 12 for pre-loading. <b>Storage:</b> ~212 GB guidance on PS5 (plan 200+ GB free). <b>Rating:</b> ESRB pending.
+        </div>
+      </div>
+    </section>
+
+    <section id="trailers" class="section dark">
+      <div class="container">
+        <h2>Trailers & Media</h2>
+        <p class="lead">Official trailers, screenshots, artwork, and clips from Rockstar Games.</p>
+        <div class="grid trailer-cards">
+          <div class="panel trailer"><h3>Trailer 1</h3><p>Introducing Lucia and the return to Vice City, State of Leonida.</p><a class="btn small" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener">Watch on rockstargames.com/VI</a></div>
+          <div class="panel trailer"><h3>Trailer 2</h3><p>Jason and Lucia’s story, partners, and the criminal conspiracy across Leonida.</p><a class="btn small" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener">Watch on rockstargames.com/VI</a></div>
+          <div class="panel trailer"><h3>Grand Theft Auto VI: An Extended Look</h3><p>Captured entirely from in-game footage on PlayStation 5 — the biggest, most immersive evolution of the series yet.</p><a class="btn small" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener">Watch on rockstargames.com/VI</a></div>
+        </div>
+        <div class="panel" style="margin-top:16px"><h3>Radio & Music</h3><p>Preview hand-picked stations from the biggest and widest-ranging selection of in-game radio yet (official site: In-Game Radio and Music).</p></div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2>Media & Artwork Gallery</h2>
+        <p class="lead">Screenshots, artwork, and key art celebrating Vice City, Leonida, Jason & Lucia and the cast.</p>
+        <div class="gallery">
+          <img v-for="g in gallery" :key="g.src" :src="g.src" :alt="g.alt" loading="lazy" @click="lightbox=g.src"/>
+        </div>
+      </div>
+    </section>
+
+    <section id="platforms" class="section dark">
+      <div class="container">
+        <h2>Platforms & Features</h2>
+        <div class="info-grid">
+          <div class="panel"><h3>Announced Platforms</h3><ul>
+            <li><b>PlayStation 5</b> — available Nov 19, 2026</li>
+            <li><b>PlayStation 5 Pro</b> — enhanced</li>
+            <li><b>Xbox Series X|S</b> — available Nov 19, 2026</li>
+            <li><b>Xbox Cloud Gaming</b> — stream on Xbox One & Xbox Series X|S at launch</li>
+            <li><b>PC</b> — <em>Not announced</em> (no official release date/specs/storefront)</li>
+            <li><b>PS4 / Xbox One (native)</b> — not supported</li>
+          </ul></div>
+          <div class="panel"><h3>PS5 Features</h3><ul>
+            <li>Offline play, 1 player, Remote Play supported</li>
+            <li>DualSense haptic feedback & adaptive triggers</li>
+            <li>DualSense speaker & Tempest 3D AudioTech</li>
+            <li>Ultra-high speed SSD, fast loading</li>
+            <li>Enhanced for PS5 Pro</li>
+          </ul></div>
+          <div class="panel"><h3>Pre-load & Distribution</h3><ul>
+            <li><b>Digital pre-load:</b> Nov 12, 2026 (local midnight)</li>
+            <li><b>Physical:</b> Download code in box (no disc), available Nov 12</li>
+            <li><b>Storage guidance:</b> ~212 GB on PS5 (plan 200+ GB free)</li>
+            <li><b>Pre-orders:</b> Began June 25, 2026 (PlayStation Store, Microsoft Store, Rockstar Games Store, retailers)</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info" class="section">
+      <div class="container">
+        <h2>Details & Integration</h2>
+        <div class="info-grid">
+          <div class="panel"><h3>Official Details</h3><ul>
+            <li><b>Title:</b> Grand Theft Auto VI</li>
+            <li><b>Setting:</b> State of Leonida (Vice City), modern day</li>
+            <li><b>Protagonists:</b> Jason Duval & Lucia Caminos</li>
+            <li><b>Release:</b> November 19, 2026</li>
+            <li><b>Editions:</b> Standard $79.99 / Ultimate $99.99</li>
+            <li><b>Developer/Publisher:</b> Rockstar Games</li>
+            <li><b>PC status:</b> Not announced — no official PC specs</li>
+          </ul></div>
+          <div class="panel"><h3>Spatial Avy Integration</h3><ul>
+            <li>Full GTA VI loading page & pageout in executable web client/player</li>
+            <li>Vehicles/transportation & geo data injected and linked via runtime</li>
+            <li>Character hub pre-launch deck & AI runtime (Ollama/Kilo, voice/EQ/soundboard)</li>
+            <li>Assets: <code>assets/images/in_game/gta6/</code>, packaged in build archive</li>
+            <li>Tests: <code>tests/test_gta6_advertised.py</code> (advertised-feature suite)</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>Grand Theft Auto VI pageout · State of Leonida · Jason & Lucia · Nov 19, 2026 · Spatial Avy executable web client &amp; player · Not affiliated with Rockstar Games. Official info: rockstargames.com/VI</footer>
+
+    <div class="lightbox" v-if="lightbox" @click="lightbox=null"><img :src="lightbox" alt="GTA VI media"/></div>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

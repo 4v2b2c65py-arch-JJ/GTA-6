@@ -1,0 +1,45 @@
+{
+  "id": "launcher_hub",
+  "type": "game_launcher_hub",
+  "version": "1.1.0",
+  "status": "active",
+  "environment": {
+    "host_os": "darwin",
+    "workspace": "/Users/jjmarte/Desktop/spatial avy",
+    "rockstar_launcher_native": false,
+    "rockstar_launcher_mode": "in_environment_modeled",
+    "compatibility_layer": { "crossover": "not_installed", "wine": "not_detected", "note": "RGL is Windows-only; install CrossOver/VM for native Windows binary on macOS if needed" },
+    "detected_apps": { "steam_app": "/Applications/Steam.app" }
+  },
+  "launchers": {
+    "rockstar": {
+      "id": "rockstar_games_launcher",
+      "ref": "systems/launchers/rockstar/launcher.json",
+      "auth_ref": "systems/launchers/rockstar/auth/auth.json",
+      "library_ref": "systems/launchers/rockstar/library/library.json",
+      "ui_ref": "systems/launchers/rockstar/ui/index.html",
+      "dlc_catalog_ref": "systems/launchers/rockstar/dlc/dlc_catalog.json",
+      "status": "active"
+    },
+    "steam": {
+      "id": "steam",
+      "ref": "systems/launchers/steam/steam_integration.json",
+      "status": "detected"
+    },
+    "epic": {
+      "id": "epic_games_store",
+      "ref": "systems/launchers/epic/epic_integration.json",
+      "status": "configured"
+    },
+    "related": {
+      "id": "related_installments",
+      "ref": "systems/launchers/related/installments.json",
+      "status": "configured"
+    }
+  },
+  "docs": {
+    "environment": "docs/launchers/ROCKSTAR_LAUNCHER_ENVIRONMENT.md",
+    "gta6_research": "docs/research/GTA6_REQUIREMENTS_AND_DETAILS.md"
+  },
+  "capabilities": ["login", "signup", "session_auth", "library", "install", "game_start", "steam_handoff", "epic_handoff", "account_linking_model", "catalog_tracking", "dlc_catalog", "dlc_install", "dlc_feature_build"]
+}

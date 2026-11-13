@@ -1,0 +1,1455 @@
+{
+  "id": "map_partitions_by_depth",
+  "type": "render_partition_map",
+  "method": "pixel_depth_bucket",
+  "space": "view_space_linear",
+  "near_plane": 0.05,
+  "far_plane": 120,
+  "layers": [
+    {
+      "layer_id": "DP-0",
+      "name": "foreground",
+      "depth_min": 0,
+      "depth_max": 0.12,
+      "zone_bias": [
+        "Z0-core-plate"
+      ],
+      "priority": 100
+    },
+    {
+      "layer_id": "DP-1",
+      "name": "near",
+      "depth_min": 0.12,
+      "depth_max": 0.28,
+      "zone_bias": [
+        "Z1-fault-belt",
+        "Z2-traction-run"
+      ],
+      "priority": 90
+    },
+    {
+      "layer_id": "DP-2",
+      "name": "mid_near",
+      "depth_min": 0.28,
+      "depth_max": 0.45,
+      "zone_bias": [
+        "Z2-traction-run",
+        "Z3-cant-plates"
+      ],
+      "priority": 80
+    },
+    {
+      "layer_id": "DP-3",
+      "name": "mid_far",
+      "depth_min": 0.45,
+      "depth_max": 0.65,
+      "zone_bias": [
+        "Z3-cant-plates",
+        "Z4-crest-reveal"
+      ],
+      "priority": 70
+    },
+    {
+      "layer_id": "DP-4",
+      "name": "far",
+      "depth_min": 0.65,
+      "depth_max": 0.85,
+      "zone_bias": [
+        "Z4-crest-reveal",
+        "Z5-settled-path"
+      ],
+      "priority": 60
+    },
+    {
+      "layer_id": "DP-5",
+      "name": "background",
+      "depth_min": 0.85,
+      "depth_max": 1,
+      "zone_bias": [
+        "Z5-settled-path"
+      ],
+      "priority": 50
+    }
+  ],
+  "summary": {
+    "camera_count": 9,
+    "region_count": 6,
+    "visible_cameras": 6,
+    "invisible_cameras": 3,
+    "layer_region_index": {
+      "DP-0": [
+        "Z2-traction-run",
+        "Z3-cant-plates",
+        "Z4-crest-reveal"
+      ],
+      "DP-1": [
+        "Z0-core-plate",
+        "Z1-fault-belt",
+        "Z2-traction-run",
+        "Z3-cant-plates",
+        "Z4-crest-reveal",
+        "Z5-settled-path"
+      ],
+      "DP-2": [
+        "Z0-core-plate",
+        "Z1-fault-belt",
+        "Z2-traction-run",
+        "Z4-crest-reveal",
+        "Z5-settled-path"
+      ],
+      "DP-3": [
+        "Z0-core-plate"
+      ],
+      "DP-4": [],
+      "DP-5": [
+        "Z0-core-plate",
+        "Z1-fault-belt",
+        "Z2-traction-run",
+        "Z3-cant-plates",
+        "Z4-crest-reveal",
+        "Z5-settled-path"
+      ]
+    }
+  },
+  "ai_core": {
+    "enabled": true,
+    "map_core_ref": "home_world/mind_core/mind_aspect_map.json",
+    "spawn_views": {
+      "enabled": true,
+      "allow_runtime_spawn": true,
+      "max_views_per_load": 64,
+      "default_spawn_category": "invisible",
+      "spawn_targets": [
+        "map_partition",
+        "zone",
+        "poi",
+        "device_fpv",
+        "terrain_slice"
+      ]
+    },
+    "clearance": {
+      "profile": "earth_level",
+      "single_load": true,
+      "coverage": "full_map",
+      "fidelity_tier": "reality_plus_clearview",
+      "reference_baseline": "unity_level_clearview",
+      "quality_target": "above_unity_level_clearview_at_reality_parity",
+      "depth_precision": "subpixel",
+      "partition_sync": "atomic_single_load"
+    }
+  },
+  "camera_categories": {
+    "visible": {
+      "description": "Renderable cameras exposed to player/viewport outputs.",
+      "render_to_viewport": true,
+      "ai_core_feed": true
+    },
+    "invisible": {
+      "description": "Non-rendered analytic/sensor cameras feeding map AI core without viewport draw.",
+      "render_to_viewport": false,
+      "ai_core_feed": true
+    }
+  },
+  "cameras": [
+    {
+      "camera_id": "cam-overview",
+      "name": "Overview Strategic",
+      "category": "visible",
+      "visibility": "visible",
+      "spawnable": false,
+      "type": "perspective",
+      "mode": "orbit",
+      "device_binding": null,
+      "focus_zone": null,
+      "viewport": {
+        "w": 1920,
+        "h": 1080
+      },
+      "clearance_profile": null,
+      "fidelity_tier": null,
+      "region_count": 6,
+      "layers": [
+        {
+          "layer_id": "DP-1",
+          "region_ids": [
+            "Z3-cant-plates",
+            "Z4-crest-reveal",
+            "Z5-settled-path"
+          ]
+        },
+        {
+          "layer_id": "DP-2",
+          "region_ids": [
+            "Z1-fault-belt",
+            "Z2-traction-run"
+          ]
+        },
+        {
+          "layer_id": "DP-3",
+          "region_ids": [
+            "Z0-core-plate"
+          ]
+        }
+      ],
+      "assignments": [
+        {
+          "region_id": "Z4-crest-reveal",
+          "region_name": "Crest Reveal",
+          "narrative_anchor": "BEAT_4",
+          "depth_m": 16.125,
+          "depth_normalized": 0.134,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.8,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 1.0,
+            "luminance": 0.85
+          }
+        },
+        {
+          "region_id": "Z5-settled-path",
+          "region_name": "Settled Path",
+          "narrative_anchor": "BEAT_5",
+          "depth_m": 20.431,
+          "depth_normalized": 0.1699,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.55,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.5
+          }
+        },
+        {
+          "region_id": "Z3-cant-plates",
+          "region_name": "Cant Plates",
+          "narrative_anchor": "BEAT_3",
+          "depth_m": 22.745,
+          "depth_normalized": 0.1892,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.775,
+            "navigability": 0.72,
+            "hazard": 0.55,
+            "visibility": 0.5,
+            "luminance": 0.6
+          }
+        },
+        {
+          "region_id": "Z2-traction-run",
+          "region_name": "Traction Run",
+          "narrative_anchor": "BEAT_2",
+          "depth_m": 33.638,
+          "depth_normalized": 0.28,
+          "partition_layer": "DP-2",
+          "layer_name": "mid_near",
+          "priority": 80,
+          "scenery_indices": {
+            "complexity": 0.4,
+            "navigability": 0.85,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.55
+          }
+        },
+        {
+          "region_id": "Z1-fault-belt",
+          "region_name": "Fault Belt",
+          "narrative_anchor": "BEAT_1",
+          "depth_m": 45.616,
+          "depth_normalized": 0.3799,
+          "partition_layer": "DP-2",
+          "layer_name": "mid_near",
+          "priority": 80,
+          "scenery_indices": {
+            "complexity": 0.47,
+            "navigability": 0.82,
+            "hazard": 0.36,
+            "visibility": 0.5,
+            "luminance": 0.65
+          }
+        },
+        {
+          "region_id": "Z0-core-plate",
+          "region_name": "Core Plate",
+          "narrative_anchor": "BEAT_0",
+          "depth_m": 58.187,
+          "depth_normalized": 0.4847,
+          "partition_layer": "DP-3",
+          "layer_name": "mid_far",
+          "priority": 70,
+          "scenery_indices": {
+            "complexity": 0.3,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.3
+          }
+        }
+      ]
+    },
+    {
+      "camera_id": "cam-topdown",
+      "name": "Top-Down Atlas",
+      "category": "visible",
+      "visibility": "visible",
+      "spawnable": false,
+      "type": "orthographic",
+      "mode": "fixed",
+      "device_binding": null,
+      "focus_zone": null,
+      "viewport": {
+        "w": 2048,
+        "h": 2048
+      },
+      "clearance_profile": null,
+      "fidelity_tier": null,
+      "region_count": 6,
+      "layers": [
+        {
+          "layer_id": "DP-1",
+          "region_ids": [
+            "Z2-traction-run",
+            "Z3-cant-plates"
+          ]
+        },
+        {
+          "layer_id": "DP-2",
+          "region_ids": [
+            "Z0-core-plate",
+            "Z1-fault-belt",
+            "Z4-crest-reveal",
+            "Z5-settled-path"
+          ]
+        }
+      ],
+      "assignments": [
+        {
+          "region_id": "Z3-cant-plates",
+          "region_name": "Cant Plates",
+          "narrative_anchor": "BEAT_3",
+          "depth_m": 29.559,
+          "depth_normalized": 0.246,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.775,
+            "navigability": 0.72,
+            "hazard": 0.55,
+            "visibility": 0.5,
+            "luminance": 0.6
+          }
+        },
+        {
+          "region_id": "Z2-traction-run",
+          "region_name": "Traction Run",
+          "narrative_anchor": "BEAT_2",
+          "depth_m": 30.344,
+          "depth_normalized": 0.2526,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.4,
+            "navigability": 0.85,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.55
+          }
+        },
+        {
+          "region_id": "Z4-crest-reveal",
+          "region_name": "Crest Reveal",
+          "narrative_anchor": "BEAT_4",
+          "depth_m": 34.403,
+          "depth_normalized": 0.2864,
+          "partition_layer": "DP-2",
+          "layer_name": "mid_near",
+          "priority": 80,
+          "scenery_indices": {
+            "complexity": 0.8,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 1.0,
+            "luminance": 0.85
+          }
+        },
+        {
+          "region_id": "Z1-fault-belt",
+          "region_name": "Fault Belt",
+          "narrative_anchor": "BEAT_1",
+          "depth_m": 35.895,
+          "depth_normalized": 0.2988,
+          "partition_layer": "DP-2",
+          "layer_name": "mid_near",
+          "priority": 80,
+          "scenery_indices": {
+            "complexity": 0.47,
+            "navigability": 0.82,
+            "hazard": 0.36,
+            "visibility": 0.5,
+            "luminance": 0.65
+          }
+        },
+        {
+          "region_id": "Z5-settled-path",
+          "region_name": "Settled Path",
+          "narrative_anchor": "BEAT_5",
+          "depth_m": 44.175,
+          "depth_normalized": 0.3679,
+          "partition_layer": "DP-2",
+          "layer_name": "mid_near",
+          "priority": 80,
+          "scenery_indices": {
+            "complexity": 0.55,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.5
+          }
+        },
+        {
+          "region_id": "Z0-core-plate",
+          "region_name": "Core Plate",
+          "narrative_anchor": "BEAT_0",
+          "depth_m": 44.853,
+          "depth_normalized": 0.3735,
+          "partition_layer": "DP-2",
+          "layer_name": "mid_near",
+          "priority": 80,
+          "scenery_indices": {
+            "complexity": 0.3,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.3
+          }
+        }
+      ]
+    },
+    {
+      "camera_id": "cam-fpv-main",
+      "name": "FPV Main (Scout)",
+      "category": "visible",
+      "visibility": "visible",
+      "spawnable": false,
+      "type": "perspective",
+      "mode": "fpv_device",
+      "device_binding": {
+        "fpv_id": "fpv-main",
+        "device_id": "dev-fpv-cam-001",
+        "model": "SCOUT-CAM-M1"
+      },
+      "focus_zone": null,
+      "viewport": {
+        "w": 1280,
+        "h": 720
+      },
+      "clearance_profile": null,
+      "fidelity_tier": null,
+      "region_count": 6,
+      "layers": [
+        {
+          "layer_id": "DP-0",
+          "region_ids": [
+            "Z3-cant-plates",
+            "Z4-crest-reveal"
+          ]
+        },
+        {
+          "layer_id": "DP-1",
+          "region_ids": [
+            "Z1-fault-belt",
+            "Z2-traction-run",
+            "Z5-settled-path"
+          ]
+        },
+        {
+          "layer_id": "DP-2",
+          "region_ids": [
+            "Z0-core-plate"
+          ]
+        }
+      ],
+      "assignments": [
+        {
+          "region_id": "Z3-cant-plates",
+          "region_name": "Cant Plates",
+          "narrative_anchor": "BEAT_3",
+          "depth_m": 2.603,
+          "depth_normalized": 0.0213,
+          "partition_layer": "DP-0",
+          "layer_name": "foreground",
+          "priority": 100,
+          "scenery_indices": {
+            "complexity": 0.775,
+            "navigability": 0.72,
+            "hazard": 0.55,
+            "visibility": 0.5,
+            "luminance": 0.6
+          }
+        },
+        {
+          "region_id": "Z4-crest-reveal",
+          "region_name": "Crest Reveal",
+          "narrative_anchor": "BEAT_4",
+          "depth_m": 12.167,
+          "depth_normalized": 0.101,
+          "partition_layer": "DP-0",
+          "layer_name": "foreground",
+          "priority": 100,
+          "scenery_indices": {
+            "complexity": 0.8,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 1.0,
+            "luminance": 0.85
+          }
+        },
+        {
+          "region_id": "Z2-traction-run",
+          "region_name": "Traction Run",
+          "narrative_anchor": "BEAT_2",
+          "depth_m": 14.911,
+          "depth_normalized": 0.1239,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.4,
+            "navigability": 0.85,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.55
+          }
+        },
+        {
+          "region_id": "Z5-settled-path",
+          "region_name": "Settled Path",
+          "narrative_anchor": "BEAT_5",
+          "depth_m": 25.44,
+          "depth_normalized": 0.2117,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.55,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.5
+          }
+        },
+        {
+          "region_id": "Z1-fault-belt",
+          "region_name": "Fault Belt",
+          "narrative_anchor": "BEAT_1",
+          "depth_m": 28.142,
+          "depth_normalized": 0.2342,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.47,
+            "navigability": 0.82,
+            "hazard": 0.36,
+            "visibility": 0.5,
+            "luminance": 0.65
+          }
+        },
+        {
+          "region_id": "Z0-core-plate",
+          "region_name": "Core Plate",
+          "narrative_anchor": "BEAT_0",
+          "depth_m": 41.44,
+          "depth_normalized": 0.3451,
+          "partition_layer": "DP-2",
+          "layer_name": "mid_near",
+          "priority": 80,
+          "scenery_indices": {
+            "complexity": 0.3,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.3
+          }
+        }
+      ]
+    },
+    {
+      "camera_id": "cam-fpv-relay",
+      "name": "FPV Relay (Back)",
+      "category": "visible",
+      "visibility": "visible",
+      "spawnable": false,
+      "type": "perspective",
+      "mode": "fpv_device",
+      "device_binding": {
+        "fpv_id": "fpv-relay",
+        "device_id": "dev-fpv-cam-002",
+        "model": "RELAY-CAM-M1"
+      },
+      "focus_zone": null,
+      "viewport": {
+        "w": 1280,
+        "h": 720
+      },
+      "clearance_profile": null,
+      "fidelity_tier": null,
+      "region_count": 6,
+      "layers": [
+        {
+          "layer_id": "DP-0",
+          "region_ids": [
+            "Z3-cant-plates",
+            "Z4-crest-reveal"
+          ]
+        },
+        {
+          "layer_id": "DP-1",
+          "region_ids": [
+            "Z1-fault-belt",
+            "Z2-traction-run",
+            "Z5-settled-path"
+          ]
+        },
+        {
+          "layer_id": "DP-2",
+          "region_ids": [
+            "Z0-core-plate"
+          ]
+        }
+      ],
+      "assignments": [
+        {
+          "region_id": "Z3-cant-plates",
+          "region_name": "Cant Plates",
+          "narrative_anchor": "BEAT_3",
+          "depth_m": 5.447,
+          "depth_normalized": 0.045,
+          "partition_layer": "DP-0",
+          "layer_name": "foreground",
+          "priority": 100,
+          "scenery_indices": {
+            "complexity": 0.775,
+            "navigability": 0.72,
+            "hazard": 0.55,
+            "visibility": 0.5,
+            "luminance": 0.6
+          }
+        },
+        {
+          "region_id": "Z4-crest-reveal",
+          "region_name": "Crest Reveal",
+          "narrative_anchor": "BEAT_4",
+          "depth_m": 10.8,
+          "depth_normalized": 0.0896,
+          "partition_layer": "DP-0",
+          "layer_name": "foreground",
+          "priority": 100,
+          "scenery_indices": {
+            "complexity": 0.8,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 1.0,
+            "luminance": 0.85
+          }
+        },
+        {
+          "region_id": "Z2-traction-run",
+          "region_name": "Traction Run",
+          "narrative_anchor": "BEAT_2",
+          "depth_m": 17.307,
+          "depth_normalized": 0.1439,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.4,
+            "navigability": 0.85,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.55
+          }
+        },
+        {
+          "region_id": "Z5-settled-path",
+          "region_name": "Settled Path",
+          "narrative_anchor": "BEAT_5",
+          "depth_m": 23.742,
+          "depth_normalized": 0.1975,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.55,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.5
+          }
+        },
+        {
+          "region_id": "Z1-fault-belt",
+          "region_name": "Fault Belt",
+          "narrative_anchor": "BEAT_1",
+          "depth_m": 30.377,
+          "depth_normalized": 0.2528,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.47,
+            "navigability": 0.82,
+            "hazard": 0.36,
+            "visibility": 0.5,
+            "luminance": 0.65
+          }
+        },
+        {
+          "region_id": "Z0-core-plate",
+          "region_name": "Core Plate",
+          "narrative_anchor": "BEAT_0",
+          "depth_m": 43.608,
+          "depth_normalized": 0.3631,
+          "partition_layer": "DP-2",
+          "layer_name": "mid_near",
+          "priority": 80,
+          "scenery_indices": {
+            "complexity": 0.3,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.3
+          }
+        }
+      ]
+    },
+    {
+      "camera_id": "cam-cant-plates",
+      "name": "Cant Plates Pressure",
+      "category": "visible",
+      "visibility": "visible",
+      "spawnable": false,
+      "type": "perspective",
+      "mode": "cinematic_fixed",
+      "device_binding": null,
+      "focus_zone": "Z3-cant-plates",
+      "viewport": {
+        "w": 1600,
+        "h": 900
+      },
+      "clearance_profile": null,
+      "fidelity_tier": null,
+      "region_count": 6,
+      "layers": [
+        {
+          "layer_id": "DP-0",
+          "region_ids": [
+            "Z3-cant-plates"
+          ]
+        },
+        {
+          "layer_id": "DP-1",
+          "region_ids": [
+            "Z1-fault-belt",
+            "Z2-traction-run",
+            "Z4-crest-reveal",
+            "Z5-settled-path"
+          ]
+        },
+        {
+          "layer_id": "DP-2",
+          "region_ids": [
+            "Z0-core-plate"
+          ]
+        }
+      ],
+      "assignments": [
+        {
+          "region_id": "Z3-cant-plates",
+          "region_name": "Cant Plates",
+          "narrative_anchor": "BEAT_3",
+          "depth_m": 11.112,
+          "depth_normalized": 0.0922,
+          "partition_layer": "DP-0",
+          "layer_name": "foreground",
+          "priority": 100,
+          "scenery_indices": {
+            "complexity": 0.775,
+            "navigability": 0.72,
+            "hazard": 0.55,
+            "visibility": 0.5,
+            "luminance": 0.6
+          }
+        },
+        {
+          "region_id": "Z2-traction-run",
+          "region_name": "Traction Run",
+          "narrative_anchor": "BEAT_2",
+          "depth_m": 17.082,
+          "depth_normalized": 0.142,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.4,
+            "navigability": 0.85,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.55
+          }
+        },
+        {
+          "region_id": "Z4-crest-reveal",
+          "region_name": "Crest Reveal",
+          "narrative_anchor": "BEAT_4",
+          "depth_m": 17.664,
+          "depth_normalized": 0.1468,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.8,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 1.0,
+            "luminance": 0.85
+          }
+        },
+        {
+          "region_id": "Z1-fault-belt",
+          "region_name": "Fault Belt",
+          "narrative_anchor": "BEAT_1",
+          "depth_m": 28.454,
+          "depth_normalized": 0.2368,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.47,
+            "navigability": 0.82,
+            "hazard": 0.36,
+            "visibility": 0.5,
+            "luminance": 0.65
+          }
+        },
+        {
+          "region_id": "Z5-settled-path",
+          "region_name": "Settled Path",
+          "narrative_anchor": "BEAT_5",
+          "depth_m": 29.532,
+          "depth_normalized": 0.2458,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.55,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.5
+          }
+        },
+        {
+          "region_id": "Z0-core-plate",
+          "region_name": "Core Plate",
+          "narrative_anchor": "BEAT_0",
+          "depth_m": 41.026,
+          "depth_normalized": 0.3416,
+          "partition_layer": "DP-2",
+          "layer_name": "mid_near",
+          "priority": 80,
+          "scenery_indices": {
+            "complexity": 0.3,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.3
+          }
+        }
+      ]
+    },
+    {
+      "camera_id": "cam-crest-reveal",
+      "name": "Crest Reveal",
+      "category": "visible",
+      "visibility": "visible",
+      "spawnable": false,
+      "type": "perspective",
+      "mode": "cinematic_fixed",
+      "device_binding": null,
+      "focus_zone": "Z4-crest-reveal",
+      "viewport": {
+        "w": 1600,
+        "h": 900
+      },
+      "clearance_profile": null,
+      "fidelity_tier": null,
+      "region_count": 6,
+      "layers": [
+        {
+          "layer_id": "DP-0",
+          "region_ids": [
+            "Z2-traction-run"
+          ]
+        },
+        {
+          "layer_id": "DP-1",
+          "region_ids": [
+            "Z0-core-plate",
+            "Z1-fault-belt",
+            "Z3-cant-plates",
+            "Z4-crest-reveal"
+          ]
+        },
+        {
+          "layer_id": "DP-2",
+          "region_ids": [
+            "Z5-settled-path"
+          ]
+        }
+      ],
+      "assignments": [
+        {
+          "region_id": "Z2-traction-run",
+          "region_name": "Traction Run",
+          "narrative_anchor": "BEAT_2",
+          "depth_m": 9.324,
+          "depth_normalized": 0.0773,
+          "partition_layer": "DP-0",
+          "layer_name": "foreground",
+          "priority": 100,
+          "scenery_indices": {
+            "complexity": 0.4,
+            "navigability": 0.85,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.55
+          }
+        },
+        {
+          "region_id": "Z1-fault-belt",
+          "region_name": "Fault Belt",
+          "narrative_anchor": "BEAT_1",
+          "depth_m": 15.2,
+          "depth_normalized": 0.1263,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.47,
+            "navigability": 0.82,
+            "hazard": 0.36,
+            "visibility": 0.5,
+            "luminance": 0.65
+          }
+        },
+        {
+          "region_id": "Z3-cant-plates",
+          "region_name": "Cant Plates",
+          "narrative_anchor": "BEAT_3",
+          "depth_m": 17.133,
+          "depth_normalized": 0.1424,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.775,
+            "navigability": 0.72,
+            "hazard": 0.55,
+            "visibility": 0.5,
+            "luminance": 0.6
+          }
+        },
+        {
+          "region_id": "Z0-core-plate",
+          "region_name": "Core Plate",
+          "narrative_anchor": "BEAT_0",
+          "depth_m": 27.033,
+          "depth_normalized": 0.225,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.3,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.3
+          }
+        },
+        {
+          "region_id": "Z4-crest-reveal",
+          "region_name": "Crest Reveal",
+          "narrative_anchor": "BEAT_4",
+          "depth_m": 29.275,
+          "depth_normalized": 0.2436,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.8,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 1.0,
+            "luminance": 0.85
+          }
+        },
+        {
+          "region_id": "Z5-settled-path",
+          "region_name": "Settled Path",
+          "narrative_anchor": "BEAT_5",
+          "depth_m": 42.29,
+          "depth_normalized": 0.3521,
+          "partition_layer": "DP-2",
+          "layer_name": "mid_near",
+          "priority": 80,
+          "scenery_indices": {
+            "complexity": 0.55,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "camera_id": "cam-ai-earth-clearance",
+      "name": "AI Earth Clearance Scan",
+      "category": "invisible",
+      "visibility": "invisible",
+      "spawnable": true,
+      "type": "orthographic",
+      "mode": "ai_core_scan",
+      "device_binding": null,
+      "focus_zone": null,
+      "viewport": {
+        "w": 4096,
+        "h": 4096
+      },
+      "clearance_profile": "earth_level",
+      "fidelity_tier": "reality_plus_clearview",
+      "region_count": 6,
+      "layers": [
+        {
+          "layer_id": "DP-5",
+          "region_ids": [
+            "Z0-core-plate",
+            "Z1-fault-belt",
+            "Z2-traction-run",
+            "Z3-cant-plates",
+            "Z4-crest-reveal",
+            "Z5-settled-path"
+          ]
+        }
+      ],
+      "assignments": [
+        {
+          "region_id": "Z3-cant-plates",
+          "region_name": "Cant Plates",
+          "narrative_anchor": "BEAT_3",
+          "depth_m": 118.986,
+          "depth_normalized": 0.9915,
+          "partition_layer": "DP-5",
+          "layer_name": "background",
+          "priority": 50,
+          "scenery_indices": {
+            "complexity": 0.775,
+            "navigability": 0.72,
+            "hazard": 0.55,
+            "visibility": 0.5,
+            "luminance": 0.6
+          }
+        },
+        {
+          "region_id": "Z4-crest-reveal",
+          "region_name": "Crest Reveal",
+          "narrative_anchor": "BEAT_4",
+          "depth_m": 119.681,
+          "depth_normalized": 0.9973,
+          "partition_layer": "DP-5",
+          "layer_name": "background",
+          "priority": 50,
+          "scenery_indices": {
+            "complexity": 0.8,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 1.0,
+            "luminance": 0.85
+          }
+        },
+        {
+          "region_id": "Z2-traction-run",
+          "region_name": "Traction Run",
+          "narrative_anchor": "BEAT_2",
+          "depth_m": 119.786,
+          "depth_normalized": 0.9982,
+          "partition_layer": "DP-5",
+          "layer_name": "background",
+          "priority": 50,
+          "scenery_indices": {
+            "complexity": 0.4,
+            "navigability": 0.85,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.55
+          }
+        },
+        {
+          "region_id": "Z0-core-plate",
+          "region_name": "Core Plate",
+          "narrative_anchor": "BEAT_0",
+          "depth_m": 124.546,
+          "depth_normalized": 1.0,
+          "partition_layer": "DP-5",
+          "layer_name": "background",
+          "priority": 50,
+          "scenery_indices": {
+            "complexity": 0.3,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.3
+          }
+        },
+        {
+          "region_id": "Z1-fault-belt",
+          "region_name": "Fault Belt",
+          "narrative_anchor": "BEAT_1",
+          "depth_m": 121.46,
+          "depth_normalized": 1.0,
+          "partition_layer": "DP-5",
+          "layer_name": "background",
+          "priority": 50,
+          "scenery_indices": {
+            "complexity": 0.47,
+            "navigability": 0.82,
+            "hazard": 0.36,
+            "visibility": 0.5,
+            "luminance": 0.65
+          }
+        },
+        {
+          "region_id": "Z5-settled-path",
+          "region_name": "Settled Path",
+          "narrative_anchor": "BEAT_5",
+          "depth_m": 123.578,
+          "depth_normalized": 1.0,
+          "partition_layer": "DP-5",
+          "layer_name": "background",
+          "priority": 50,
+          "scenery_indices": {
+            "complexity": 0.55,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "camera_id": "cam-ai-depth-probe",
+      "name": "AI Depth Probe",
+      "category": "invisible",
+      "visibility": "invisible",
+      "spawnable": true,
+      "type": "perspective",
+      "mode": "ai_core_probe",
+      "device_binding": null,
+      "focus_zone": null,
+      "viewport": {
+        "w": 2048,
+        "h": 2048
+      },
+      "clearance_profile": null,
+      "fidelity_tier": "reality_plus_clearview",
+      "region_count": 6,
+      "layers": [
+        {
+          "layer_id": "DP-0",
+          "region_ids": [
+            "Z3-cant-plates",
+            "Z4-crest-reveal"
+          ]
+        },
+        {
+          "layer_id": "DP-1",
+          "region_ids": [
+            "Z2-traction-run",
+            "Z5-settled-path"
+          ]
+        },
+        {
+          "layer_id": "DP-2",
+          "region_ids": [
+            "Z0-core-plate",
+            "Z1-fault-belt"
+          ]
+        }
+      ],
+      "assignments": [
+        {
+          "region_id": "Z4-crest-reveal",
+          "region_name": "Crest Reveal",
+          "narrative_anchor": "BEAT_4",
+          "depth_m": 8.246,
+          "depth_normalized": 0.0683,
+          "partition_layer": "DP-0",
+          "layer_name": "foreground",
+          "priority": 100,
+          "scenery_indices": {
+            "complexity": 0.8,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 1.0,
+            "luminance": 0.85
+          }
+        },
+        {
+          "region_id": "Z3-cant-plates",
+          "region_name": "Cant Plates",
+          "narrative_anchor": "BEAT_3",
+          "depth_m": 14.349,
+          "depth_normalized": 0.1192,
+          "partition_layer": "DP-0",
+          "layer_name": "foreground",
+          "priority": 100,
+          "scenery_indices": {
+            "complexity": 0.775,
+            "navigability": 0.72,
+            "hazard": 0.55,
+            "visibility": 0.5,
+            "luminance": 0.6
+          }
+        },
+        {
+          "region_id": "Z5-settled-path",
+          "region_name": "Settled Path",
+          "narrative_anchor": "BEAT_5",
+          "depth_m": 17.78,
+          "depth_normalized": 0.1478,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.55,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.5
+          }
+        },
+        {
+          "region_id": "Z2-traction-run",
+          "region_name": "Traction Run",
+          "narrative_anchor": "BEAT_2",
+          "depth_m": 26.469,
+          "depth_normalized": 0.2202,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.4,
+            "navigability": 0.85,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.55
+          }
+        },
+        {
+          "region_id": "Z1-fault-belt",
+          "region_name": "Fault Belt",
+          "narrative_anchor": "BEAT_1",
+          "depth_m": 39.243,
+          "depth_normalized": 0.3267,
+          "partition_layer": "DP-2",
+          "layer_name": "mid_near",
+          "priority": 80,
+          "scenery_indices": {
+            "complexity": 0.47,
+            "navigability": 0.82,
+            "hazard": 0.36,
+            "visibility": 0.5,
+            "luminance": 0.65
+          }
+        },
+        {
+          "region_id": "Z0-core-plate",
+          "region_name": "Core Plate",
+          "narrative_anchor": "BEAT_0",
+          "depth_m": 52.298,
+          "depth_normalized": 0.4356,
+          "partition_layer": "DP-2",
+          "layer_name": "mid_near",
+          "priority": 80,
+          "scenery_indices": {
+            "complexity": 0.3,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.3
+          }
+        }
+      ]
+    },
+    {
+      "camera_id": "cam-ai-sector-Z3",
+      "name": "AI Sector Scan Z3",
+      "category": "invisible",
+      "visibility": "invisible",
+      "spawnable": true,
+      "type": "perspective",
+      "mode": "ai_core_sector",
+      "device_binding": null,
+      "focus_zone": "Z3-cant-plates",
+      "viewport": {
+        "w": 2048,
+        "h": 2048
+      },
+      "clearance_profile": null,
+      "fidelity_tier": "reality_plus_clearview",
+      "region_count": 6,
+      "layers": [
+        {
+          "layer_id": "DP-1",
+          "region_ids": [
+            "Z1-fault-belt",
+            "Z2-traction-run",
+            "Z3-cant-plates",
+            "Z4-crest-reveal"
+          ]
+        },
+        {
+          "layer_id": "DP-2",
+          "region_ids": [
+            "Z0-core-plate",
+            "Z5-settled-path"
+          ]
+        }
+      ],
+      "assignments": [
+        {
+          "region_id": "Z3-cant-plates",
+          "region_name": "Cant Plates",
+          "narrative_anchor": "BEAT_3",
+          "depth_m": 17.747,
+          "depth_normalized": 0.1475,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.775,
+            "navigability": 0.72,
+            "hazard": 0.55,
+            "visibility": 0.5,
+            "luminance": 0.6
+          }
+        },
+        {
+          "region_id": "Z2-traction-run",
+          "region_name": "Traction Run",
+          "narrative_anchor": "BEAT_2",
+          "depth_m": 21.041,
+          "depth_normalized": 0.175,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.4,
+            "navigability": 0.85,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.55
+          }
+        },
+        {
+          "region_id": "Z4-crest-reveal",
+          "region_name": "Crest Reveal",
+          "narrative_anchor": "BEAT_4",
+          "depth_m": 23.324,
+          "depth_normalized": 0.194,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.8,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 1.0,
+            "luminance": 0.85
+          }
+        },
+        {
+          "region_id": "Z1-fault-belt",
+          "region_name": "Fault Belt",
+          "narrative_anchor": "BEAT_1",
+          "depth_m": 30.173,
+          "depth_normalized": 0.2511,
+          "partition_layer": "DP-1",
+          "layer_name": "near",
+          "priority": 90,
+          "scenery_indices": {
+            "complexity": 0.47,
+            "navigability": 0.82,
+            "hazard": 0.36,
+            "visibility": 0.5,
+            "luminance": 0.65
+          }
+        },
+        {
+          "region_id": "Z5-settled-path",
+          "region_name": "Settled Path",
+          "narrative_anchor": "BEAT_5",
+          "depth_m": 34.256,
+          "depth_normalized": 0.2852,
+          "partition_layer": "DP-2",
+          "layer_name": "mid_near",
+          "priority": 80,
+          "scenery_indices": {
+            "complexity": 0.55,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.5
+          }
+        },
+        {
+          "region_id": "Z0-core-plate",
+          "region_name": "Core Plate",
+          "narrative_anchor": "BEAT_0",
+          "depth_m": 41.639,
+          "depth_normalized": 0.3467,
+          "partition_layer": "DP-2",
+          "layer_name": "mid_near",
+          "priority": 80,
+          "scenery_indices": {
+            "complexity": 0.3,
+            "navigability": 1.0,
+            "hazard": 0.0,
+            "visibility": 0.5,
+            "luminance": 0.3
+          }
+        }
+      ]
+    }
+  ],
+  "refs": {
+    "terrain": "home_world/bodium_terrain/bodium_terrain_map.json",
+    "scenery": "home_world/bodium_terrain/scenery_compute.json",
+    "grid_store": "systems/grid_store/qbit_zone_pocket_map.json",
+    "fpv_devices": "systems/fpv/game_fpv_devices.json",
+    "ai_core": "home_world/mind_core/mind_aspect_map.json"
+  }
+}

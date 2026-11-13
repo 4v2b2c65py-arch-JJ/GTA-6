@@ -1,0 +1,83 @@
+{
+  "pack_id": "gtao-safehouse-hills",
+  "title": "GTA Online: A Safehouse in the Hills (1.72)",
+  "base_game": "gta5",
+  "kind": "online_update",
+  "status": "installed",
+  "installed_at": "2026-11-13T05:20:50Z",
+  "features": [
+    {
+      "id": "prix_luxury_mansions",
+      "type": "property",
+      "desc": "High-end mansion safehouses with interiors, trophy cabinets, salon, kennels, 20-car garage."
+    },
+    {
+      "id": "ai_assistant_safehouse",
+      "type": "system",
+      "desc": "In-mansion AI assistant for production boosts and security; hook to local AI runtime."
+    },
+    {
+      "id": "knoway_out_missions",
+      "type": "missions",
+      "desc": "Avi Schwartzman mission strand disrupting KnoWay surveillance network."
+    },
+    {
+      "id": "michael_de_santa_contact",
+      "type": "narrative",
+      "desc": "Michael De Santa as mansion neighbor/contact in Home Sweet Home finale."
+    },
+    {
+      "id": "mission_creator",
+      "type": "tooling",
+      "desc": "Rockstar Mission Creator toolkit integration for user-authored missions."
+    },
+    {
+      "id": "mansion_raid",
+      "type": "activity",
+      "desc": "Raid/defense events tied to luxury properties."
+    },
+    {
+      "id": "new_vehicles",
+      "type": "vehicles",
+      "desc": "Update vehicle set (X-treme, Sentinel XS4, GT750, etc.)."
+    },
+    {
+      "id": "odd_jobs",
+      "type": "activities",
+      "desc": "Firefighter, Forklift Operator, Paper Route, Deadline Duet."
+    }
+  ],
+  "feature_ids": [
+    "prix_luxury_mansions",
+    "ai_assistant_safehouse",
+    "knoway_out_missions",
+    "michael_de_santa_contact",
+    "mission_creator",
+    "mansion_raid",
+    "new_vehicles",
+    "odd_jobs"
+  ],
+  "build_hooks": {
+    "map_loader_regions": [
+      "region-hills-vinewood"
+    ],
+    "timeline_beats": [
+      "BEAT_3",
+      "BEAT_4"
+    ],
+    "audio": {
+      "soundtrack_mood": [
+        "luxury",
+        "stealth"
+      ],
+      "sfx": [
+        "mansion_ambient",
+        "ai_chime",
+        "surveillance_ping"
+      ]
+    },
+    "ai_runtime_ref": "systems/runtime/game_world_runtime.json#components.model_weights",
+    "python_data_flow": "assets/game_assets/dlc/gtao_safehouse_hills_data.json"
+  },
+  "hash": "a7b2e3a23136c22c"
+}

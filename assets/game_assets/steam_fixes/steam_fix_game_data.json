@@ -1,0 +1,126 @@
+{
+  "id": "steam_fix_game_data",
+  "type": "game_data",
+  "generated_at": "2026-11-13T05:16:37Z",
+  "pipeline": "systems/launchers/steam/russian_fix_pipeline.py",
+  "lang": {
+    "enabled": true,
+    "default": "ru",
+    "supported": [
+      "ru",
+      "en",
+      "uk"
+    ],
+    "steam_codes": {
+      "russian": "russian",
+      "english": "english",
+      "ukrainian": "ukrainian"
+    },
+    "transcript": {
+      "enabled": true,
+      "modes": [
+        "extract",
+        "normalize",
+        "translate_bridge"
+      ],
+      "output_dir": "systems/launchers/steam/transcripts"
+    }
+  },
+  "guides_ref": "systems/launchers/steam/guides/guides.json",
+  "transcripts_ref": "systems/launchers/steam/transcripts/transcripts_index.json",
+  "fixes_ref": "systems/launchers/steam/fixes/fixes.json",
+  "entries": [
+    {
+      "entry_id": "gd-guide-steam-fix-ru",
+      "kind": "guide",
+      "source_id": "steam_fix_ru_script",
+      "title": "Steam Fix RU — remove l=russian from store CSS/JS resources",
+      "url": "https://greasyfork.org/en/scripts/515187-steam-fix-ru",
+      "lang": "ru",
+      "tags": [
+        "steam",
+        "store",
+        "russian",
+        "css",
+        "js",
+        "fix"
+      ],
+      "transcript_id": "tr-guide-steam-fix-ru",
+      "transcript_enabled": true,
+      "hash": "bdf0a921c9a46b22"
+    },
+    {
+      "entry_id": "gd-guide-zoneofgames",
+      "kind": "guide",
+      "source_id": "zoneofgames",
+      "title": "Zone of Games — русификаторы и фиксы (RU guides)",
+      "url": "https://www.zoneofgames.ru",
+      "lang": "ru",
+      "tags": [
+        "russian",
+        "localization",
+        "fix",
+        "guides",
+        "downloads"
+      ],
+      "transcript_id": "tr-guide-zoneofgames",
+      "transcript_enabled": true,
+      "hash": "40c92bc007f7efef"
+    },
+    {
+      "entry_id": "gd-guide-playground-ru",
+      "kind": "guide",
+      "source_id": "playground",
+      "title": "PlayGround — русификаторы и переводы",
+      "url": "https://www.playground.ru/file/rus",
+      "lang": "ru",
+      "tags": [
+        "russian",
+        "translation",
+        "mods",
+        "fix"
+      ],
+      "transcript_id": "tr-guide-playground-ru",
+      "transcript_enabled": true,
+      "hash": "0c4b8b506233bf09"
+    },
+    {
+      "entry_id": "gd-guide-steam-language",
+      "kind": "guide",
+      "source_id": "steam_support_localization",
+      "title": "Steam language/localization flow (properties, files, in-game)",
+      "url": "https://partner.steamgames.com/doc/store/localization?language=russian",
+      "lang": "ru",
+      "tags": [
+        "steam",
+        "language",
+        "localization",
+        "settings"
+      ],
+      "transcript_id": "tr-guide-steam-language",
+      "transcript_enabled": true,
+      "hash": "cc37ff1d404c2378"
+    },
+    {
+      "entry_id": "gd-fix-steam-store-l-russian",
+      "kind": "fix",
+      "source_id": "steam_fix_ru_script",
+      "title": "Remove l=russian from Steam store asset URLs",
+      "target": "store.steampowered.com",
+      "lang": "ru",
+      "hash": "fa473519a521cc90"
+    },
+    {
+      "entry_id": "gd-fix-steam-game-language-flow",
+      "kind": "fix",
+      "source_id": "steam_support_localization",
+      "title": "Steam per-game language/transcript enable flow",
+      "target": "steam_client_game",
+      "lang": "ru",
+      "hash": "ceedc6d0865baf0a"
+    }
+  ],
+  "summary": {
+    "total_entries": 6
+  }
+}

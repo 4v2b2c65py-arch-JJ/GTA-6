@@ -1,0 +1,38 @@
+{
+  "id": "physics_algorithms_runtime",
+  "type": "automation_runtime",
+  "version": "1.0.0",
+  "status": "enabled",
+  "physics": {
+    "engine": "in_game_physics_core",
+    "modes": ["realtime", "fixed_step", "deterministic_replay"],
+    "fixed_step_hz": 60,
+    "systems": [
+      { "id": "rigid_body", "enabled": true, "features": ["gravity", "mass", "inertia", "forces", "impulses"] },
+      { "id": "collision", "enabled": true, "features": ["broadphase", "narrowphase", "continuous_collision", "bounds_clamp"] },
+      { "id": "constraints_joints", "enabled": true, "features": ["hinge", "slider", "fixed", "spring_damper"] },
+      { "id": "kinematics", "enabled": true, "features": ["character_motion", "trajectory", "inverse_kinematics_hooks"] },
+      { "id": "fluids_fields", "enabled": true, "features": ["drag", "wind_fields", "area_triggers"] }
+    ],
+    "automation": { "auto_step": true, "auto_stabilize": true, "auto_resolve_penetration": true }
+  },
+  "algorithms": {
+    "enabled": true,
+    "libraries": [
+      { "id": "pathfinding", "algorithms": ["a_star", "navmesh_query", "flow_field"] },
+      { "id": "spatial", "algorithms": ["octree_partition", "bvh_query", "proximity_hash_bracing_lookup"] },
+      { "id": "depth_render", "algorithms": ["pixel_depth_bucket_partition", "layer_assignment", "subpixel_sampling"] },
+      { "id": "optimization", "algorithms": ["lod_select", "culling", "budget_allocation"] },
+      { "id": "signal_ml", "algorithms": ["feature_extract", "trigger_word_match", "inference_dispatch"] }
+    ],
+    "automation": { "auto_select": true, "auto_budget": true, "auto_schedule": true }
+  },
+  "bindings": {
+    "python": "systems/runtime/python_access.json",
+    "kilo_code": "systems/runtime/kilo_code.json",
+    "model_weights": "systems/local_ai/model_weights_port.json",
+    "depth_sensor": "systems/camera/depth_sensor_layers.json",
+    "grid_store": "systems/grid_store/qbit_zone_pocket_map.json"
+  },
+  "usable_in_world": true
+}

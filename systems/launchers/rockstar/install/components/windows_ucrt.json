@@ -1,0 +1,12 @@
+{
+  "id": "component-windows-ucrt",
+  "name": "Windows Universal CRT",
+  "type": "install_component",
+  "required": true,
+  "status": "installed",
+  "version": "modeled",
+  "description": "Windows Universal C Runtime dependency installed by launcher setup.",
+  "platform_note": "Windows runtime; modeled for in-environment completeness on macOS.",
+  "installed_at": "2026-11-13T05:08:49Z",
+  "path": "systems/launchers/rockstar/install/components/windows_ucrt.json"
+}

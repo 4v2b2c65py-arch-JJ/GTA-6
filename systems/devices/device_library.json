@@ -1,0 +1,56 @@
+{
+  "id": "device_library",
+  "type": "library",
+  "version": "1.0.0",
+  "description": "Library of game devices (including inactive inventory) with model/spec bindings for FPV insertion.",
+  "devices": [
+    {
+      "device_id": "dev-fpv-cam-001",
+      "name": "Bodium FPV Scout Cam",
+      "category": "fpv_camera",
+      "model": "SCOUT-CAM-M1",
+      "status": "inactive",
+      "power": "off",
+      "library": "inactive_devices",
+      "spec_refs": ["spec.poly_rig_fidelity", "spec.vcp_stream", "spec.grid_store"],
+      "capabilities": ["video_capture", "low_latency_stream", "grid_sample"],
+      "mount": { "stud": "S02", "region": "head_center" }
+    },
+    {
+      "device_id": "dev-fpv-cam-002",
+      "name": "Border FPV Relay Cam",
+      "category": "fpv_camera",
+      "model": "RELAY-CAM-M1",
+      "status": "inactive",
+      "power": "off",
+      "library": "inactive_devices",
+      "spec_refs": ["spec.vcp_stream", "spec.stream_profile", "spec.directive_bind"],
+      "capabilities": ["video_capture", "relay", "telemetry"],
+      "mount": { "stud": "S08", "region": "back" }
+    },
+    {
+      "device_id": "dev-fpv-vtx-001",
+      "name": "Spectral VTX Unit",
+      "category": "fpv_transmitter",
+      "model": "VTX-SPEC-M2",
+      "status": "inactive",
+      "power": "off",
+      "library": "inactive_devices",
+      "spec_refs": ["spec.vcp_stream", "spec.grid_store", "spec.mnemonic_lace"],
+      "capabilities": ["transmit", "encode", "zone_tagging"],
+      "mount": { "stud": "S07", "region": "chest_core" }
+    },
+    {
+      "device_id": "dev-fpv-hud-001",
+      "name": "Mind-Lattice HUD",
+      "category": "fpv_hud",
+      "model": "HUD-LATTICE-M1",
+      "status": "inactive",
+      "power": "off",
+      "library": "inactive_devices",
+      "spec_refs": ["spec.directive_bind", "spec.mind_overlay", "spec.stream_profile"],
+      "capabilities": ["overlay", "telemetry_display", "directive_render"],
+      "mount": { "stud": "S01", "region": "head_left" }
+    }
+  ]
+}

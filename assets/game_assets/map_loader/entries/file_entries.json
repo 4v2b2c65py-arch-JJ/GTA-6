@@ -1,0 +1,89 @@
+{
+  "id": "map_loader_game_resources",
+  "type": "game_resource_entries",
+  "base_path": "assets/game_assets/map_loader",
+  "hash_source": "systems/launchers/rockstar/map_loader/barcode_hashes/regional_barcode_hashes.json",
+  "file_count": 4,
+  "files": [
+    {
+      "path": "assets/game_assets/map_loader/barcode_hashes/regional_barcode_hashes.json",
+      "name": "regional_barcode_hashes.json",
+      "format": "json",
+      "size_bytes": 18808,
+      "sha256": "c98d1e89310846254ae0f067db4cd4bb06ae3e8cab47c164caf8b662600b6ec0",
+      "source_path": "systems/launchers/rockstar/map_loader/barcode_hashes/regional_barcode_hashes.json",
+      "hash_sourced": "identical"
+    },
+    {
+      "path": "assets/game_assets/map_loader/barcode_hashes/network_pass_log.json",
+      "name": "network_pass_log.json",
+      "format": "json",
+      "size_bytes": 15479,
+      "sha256": "550cb5bc4022ae452f5d8864b96c3e36cdfe2f932f253c535748a79bfa15029a",
+      "source_path": "systems/launchers/rockstar/map_loader/barcode_hashes/network_pass_log.json",
+      "hash_sourced": "identical"
+    },
+    {
+      "path": "assets/game_assets/map_loader/data_flow/information_gap_report.json",
+      "name": "information_gap_report.json",
+      "format": "json",
+      "size_bytes": 8478,
+      "sha256": "ae35f95378bc9f2a06eee3a4cce1b5ece45101f258c1707c38e58b3d6c5e9d08",
+      "source_path": "systems/launchers/rockstar/map_loader/data_flow/information_gap_report.json",
+      "hash_sourced": "identical"
+    },
+    {
+      "path": "assets/game_assets/map_loader/data_flow/data_flow_state.json",
+      "name": "data_flow_state.json",
+      "format": "json",
+      "size_bytes": 6871,
+      "sha256": "ed4cc1470025dfc93343d4fb844bbc388614851c18d6dcd51f1ee273d99eb311",
+      "source_path": "systems/launchers/rockstar/map_loader/data_flow/data_flow_state.json",
+      "hash_sourced": "identical"
+    }
+  ],
+  "region_hash_index": [
+    {
+      "region_id": "RW-LEO-MIA-001",
+      "barcode": "BC-RW-LEO-MIA-001-6B3567D8-9913119A-91446F35",
+      "hash_sha256": "6b3567d89913119a91446f3513acd4e23a07212b50eb41b1b973abfbe127adbc",
+      "source": "regional_barcode_hashes.json"
+    },
+    {
+      "region_id": "RW-LEO-MIA-BEACH-002",
+      "barcode": "BC-RW-LEO-MIA-BEACH-002-F010EDA9-B705E96F-D8D8DACA",
+      "hash_sha256": "f010eda9b705e96fd8d8dacaca87c9af1a76a1039fa3c28da1dcce17efc7ec5e",
+      "source": "regional_barcode_hashes.json"
+    },
+    {
+      "region_id": "RW-LEO-KEYS-003",
+      "barcode": "BC-RW-LEO-KEYS-003-3CDDE130-9A5B3466-5BC1737F",
+      "hash_sha256": "3cdde1309a5b34665bc1737f20f04a21eec06a33606d98f85cca0c06ec5397d0",
+      "source": "regional_barcode_hashes.json"
+    },
+    {
+      "region_id": "RW-US-ATL-010",
+      "barcode": "BC-RW-US-ATL-010-A298E843-EEB1F501-AE7D64B0",
+      "hash_sha256": "a298e843eeb1f501ae7d64b035483ba2d341a5e33b820b5dc7e524a4082334b5",
+      "source": "regional_barcode_hashes.json"
+    },
+    {
+      "region_id": "RW-US-LAX-011",
+      "barcode": "BC-RW-US-LAX-011-B80C40A7-EEFDAC1C-25B02F85",
+      "hash_sha256": "b80c40a7eefdac1c25b02f85c8e028baf704cf83a08da70720debd223beb9f59",
+      "source": "regional_barcode_hashes.json"
+    },
+    {
+      "region_id": "RW-US-NYC-012",
+      "barcode": "BC-RW-US-NYC-012-083F6DF3-D23F42A8-CF716BED",
+      "hash_sha256": "083f6df3d23f42a8cf716bed248a438bc873c16ebb1b15581f5643c25658a9bb",
+      "source": "regional_barcode_hashes.json"
+    },
+    {
+      "region_id": "RW-GLB-LON-020",
+      "barcode": "BC-RW-GLB-LON-020-AEB2A572-AD0D916A-7CB13E20",
+      "hash_sha256": "aeb2a572ad0d916a7cb13e20026aaf96fde040105f415cdeda80757c58ec9820",
+      "source": "regional_barcode_hashes.json"
+    }
+  ]
+}

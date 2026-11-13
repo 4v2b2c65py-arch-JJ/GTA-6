@@ -1,0 +1,115 @@
+{
+  "id": "rockstar_library",
+  "type": "game_library",
+  "version": "1.1.0",
+  "status": "active",
+  "launcher_ref": "systems/launchers/rockstar/launcher.json",
+  "install_root": "systems/launchers/rockstar/library/games",
+  "titles": [
+    {
+      "game_id": "gta5",
+      "title": "Grand Theft Auto V",
+      "provider": "rockstar",
+      "source": "rockstar_launcher",
+      "owned": false,
+      "installed": false,
+      "install_state": "not_installed",
+      "version": null,
+      "size_gb_estimate": 120,
+      "cloud_save_supported": true,
+      "launch": { "action": "play", "handoff": "rockstar_launcher", "executable_ref": "GTA5.exe" },
+      "dlc": {
+        "catalog_ref": "systems/launchers/rockstar/dlc/dlc_catalog.json",
+        "installed": [
+          "gtao-money-fronts",
+          "gtao-safehouse-hills",
+          "gtao-kortz-center-heist",
+          "gtao-agents-sabotage-bottom-bounties",
+          "sp-agent-ops-inspired"
+        ]
+      }
+    },
+    {
+      "game_id": "gta5-steam",
+      "title": "Grand Theft Auto V (Steam)",
+      "provider": "steam",
+      "source": "steam",
+      "owned": false,
+      "installed": false,
+      "install_state": "not_installed",
+      "version": null,
+      "size_gb_estimate": 120,
+      "cloud_save_supported": true,
+      "launch": { "action": "play_on_steam", "handoff": "steam_then_rockstar", "requires": ["steam", "rockstar_account_link"] },
+      "dlc": {
+        "catalog_ref": "systems/launchers/rockstar/dlc/dlc_catalog.json",
+        "installed": [
+          "gtao-money-fronts",
+          "gtao-safehouse-hills",
+          "gtao-kortz-center-heist",
+          "gtao-agents-sabotage-bottom-bounties",
+          "sp-agent-ops-inspired"
+        ]
+      }
+    },
+    {
+      "game_id": "rdr2",
+      "title": "Red Dead Redemption 2",
+      "provider": "rockstar",
+      "source": "rockstar_launcher",
+      "owned": false,
+      "installed": false,
+      "install_state": "not_installed",
+      "version": null,
+      "size_gb_estimate": 150,
+      "cloud_save_supported": true,
+      "launch": { "action": "play", "handoff": "rockstar_launcher", "executable_ref": "RDR2.exe" },
+      "dlc": {
+        "catalog_ref": "systems/launchers/rockstar/dlc/dlc_catalog.json",
+        "installed": [
+          "rdo-strange-tales-west",
+          "sp-undead-nightmare-inspired",
+          "sp-mexico-frontier-inspired"
+        ]
+      }
+    },
+    {
+      "game_id": "gta6",
+      "title": "Grand Theft Auto VI",
+      "provider": "rockstar",
+      "source": "rockstar_launcher",
+      "owned": false,
+      "installed": false,
+      "install_state": "unavailable_pc_not_announced",
+      "version": null,
+      "release_date_console": "2026-11-19",
+      "platforms_announced": ["PS5", "PS5 Pro", "Xbox Series X|S"],
+      "pc_status": "not_announced",
+      "pc_requirements": "not_published_officially",
+      "preload_console": "2026-11-12",
+      "storage_guidance_gb": 212,
+      "editions": [
+        { "name": "Standard", "price_usd": 79.99 },
+        { "name": "Ultimate", "price_usd": 99.99 }
+      ],
+      "launch": { "action": "unavailable", "handoff": null, "note": "PC version/specs not announced by Rockstar as of 2026-11-13; console release Nov 19 2026" },
+      "research_ref": "docs/research/GTA6_REQUIREMENTS_AND_DETAILS.md",
+      "dlc": { "catalog_ref": "systems/launchers/rockstar/dlc/dlc_catalog.json", "installed": [] }
+    }
+  ],
+  "operations": {
+    "install": { "enabled": true, "states": ["not_installed", "queued", "downloading", "installing", "installed", "update_available"] },
+    "uninstall": { "enabled": true },
+    "verify_integrity": { "enabled": true },
+    "scan_installs": { "enabled": true },
+    "redeem_code": { "enabled": true },
+    "dlc_install": { "enabled": true, "installer": "systems/launchers/rockstar/dlc/install_dlc.py" }
+  },
+  "summary": {
+    "total_titles": 4,
+    "owned": 0,
+    "installed": 0,
+    "available_to_install": 2,
+    "dlc_packs_installed": 8
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "track_id": "sp-002",
+  "title": "Faultline Pulse",
+  "artist": "Spatial Avy Ensemble",
+  "source": "spotify_peer",
+  "zone": "Z1",
+  "beat": "BEAT_1",
+  "mood": [
+    "tense",
+    "pulse"
+  ],
+  "file": null,
+  "frequency": {
+    "bands": {
+      "sub_bass": 0.5891,
+      "bass": 0.8695,
+      "low_mid": 0.702,
+      "mid": 0.556,
+      "high_mid": 0.5592,
+      "presence": 0.4619,
+      "brilliance": 0.3674
+    },
+    "peak_dbfs": -9.13,
+    "rms_dbfs": -22.22,
+    "source": "derived_profile"
+  },
+  "captured_at": "2026-11-13T06:03:55Z",
+  "output": "speaker"
+}

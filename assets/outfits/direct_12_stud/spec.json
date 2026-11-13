@@ -1,0 +1,32 @@
+{
+  "id": "direct_12_stud",
+  "type": "attachment_spec",
+  "description": "Direct 12-stud mount grid for outfit/customizer attachments.",
+  "stud_count": 12,
+  "layout": {
+    "grid": { "columns": 4, "rows": 3 },
+    "unit": "stud",
+    "origin": "top_left",
+    "indexing": "S01-S12"
+  },
+  "studs": [
+    { "id": "S01", "row": 1, "col": 1, "region": "head_left", "compatible": ["headgear", "visor", "aura"] },
+    { "id": "S02", "row": 1, "col": 2, "region": "head_center", "compatible": ["headgear", "crest", "aura"] },
+    { "id": "S03", "row": 1, "col": 3, "region": "head_right", "compatible": ["headgear", "visor", "aura"] },
+    { "id": "S04", "row": 1, "col": 4, "region": "shoulder_left", "compatible": ["pauldron", "cape_anchor", "emblem"] },
+    { "id": "S05", "row": 2, "col": 1, "region": "shoulder_right", "compatible": ["pauldron", "cape_anchor", "emblem"] },
+    { "id": "S06", "row": 2, "col": 2, "region": "chest_upper", "compatible": ["chestplate", "sigil", "rig"] },
+    { "id": "S07", "row": 2, "col": 3, "region": "chest_core", "compatible": ["core", "sigil", "harness"] },
+    { "id": "S08", "row": 2, "col": 4, "region": "back", "compatible": ["pack", "cape", "module"] },
+    { "id": "S09", "row": 3, "col": 1, "region": "arm_left", "compatible": ["gauntlet", "tool", "band"] },
+    { "id": "S10", "row": 3, "col": 2, "region": "arm_right", "compatible": ["gauntlet", "tool", "band"] },
+    { "id": "S11", "row": 3, "col": 3, "region": "leg_left", "compatible": ["greave", "holster", "anklet"] },
+    { "id": "S12", "row": 3, "col": 4, "region": "leg_right", "compatible": ["greave", "holster", "anklet"] }
+  ],
+  "rules": {
+    "direct_mount": true,
+    "max_attachments_per_stud": 1,
+    "allow_empty_studs": true,
+    "stacking": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "vocal_tracks_install",
+  "stage": "vocal_tracks",
+  "status": "installed",
+  "description": "Generates/installs vocal tracks from digested voice cues into in-game assets.",
+  "input": "systems/audio/voice/vlm_digestion/digested_voice.json",
+  "output_manifest": "assets/audio/voice/vocals/vocals_index.json",
+  "tracks_path": "assets/audio/voice/vocals",
+  "synthesis": {
+    "engine": "tts",
+    "preferred": ["coqui-tts", "piper", "system-tts"],
+    "fallback": "manifest_only_placeholder",
+    "format": "ogg",
+    "sample_rate_hz": 48000
+  },
+  "installation": {
+    "in_game": true,
+    "bind_to": ["narrative_beats", "timeline_pockets", "characters"],
+    "hot_reload": false
+  }
+}

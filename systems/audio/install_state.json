@@ -1,0 +1,9 @@
+{
+  "installed_at": "2026-11-13T05:16:37Z",
+  "soundtrack_tracks": 5,
+  "sfx_vfx_events": 6,
+  "physics_audio": "installed",
+  "voice_transcripts": 2,
+  "vocal_tracks": 2,
+  "log": "logs/audio/install.log"
+}

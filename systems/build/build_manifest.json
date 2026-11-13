@@ -1,0 +1,43 @@
+{
+  "id": "spatial_avy_build",
+  "type": "game_build",
+  "version": "1.1.0",
+  "status": "built",
+  "entry": "build/game/launch.py",
+  "pre_launch": {
+    "character_hub": "systems/character_hub/character_hub.json",
+    "deck": "systems/character_hub/deck/deck.json",
+    "ui": "assets/ui/character_hub/index.html"
+  },
+  "web_client_player": {
+    "entry": "build/web/index.html",
+    "executable_server": "build/web/serve.py",
+    "package_manifest": "build/web/package_manifest.json",
+    "archive": "build/package/spatial-avy-web-client-player.tar.gz",
+    "codebase_snapshot": "build/web/data",
+    "identity_manifest": "assets/identity/identity_manifest.json",
+    "status": "packaged"
+  },
+  "runtime": "systems/runtime/game_world_runtime.json",
+  "launcher_hub": "systems/launchers/launcher_hub.json",
+  "world_index": "home_world/home_world_index.json",
+  "assets": {
+    "images_manifest": "assets/images/images_manifest.json",
+    "icons_manifest": "assets/images/icons_manifest.json",
+    "identity_manifest": "assets/identity/identity_manifest.json",
+    "audio_install": "systems/audio/install_state.json",
+    "dlc_install": "systems/launchers/rockstar/dlc/install_state.json"
+  },
+  "executables": [
+    { "id": "game_launch", "path": "build/game/launch.py", "type": "python", "desc": "Main game build launcher (shows character hub deck, loads runtime)" },
+    { "id": "web_client_player", "path": "build/web/serve.py", "type": "python", "desc": "Executable web-based game client and player server" },
+    { "id": "package_web_client", "path": "scripts/package/package_web_client.py", "type": "python", "desc": "Generate identity, snapshot codebase, and package web client/player" },
+    { "id": "generate_identity", "path": "scripts/identity/generate_identity.py", "type": "python", "desc": "Generate favicon/ico/png/jpg insignia matching story novel and AI data" },
+    { "id": "audio_install", "path": "systems/audio/install_audio.py", "type": "python", "desc": "Install soundtrack/SFX/VFX/voice pipeline" },
+    { "id": "music_install", "path": "systems/audio/music/install_music.py", "type": "python", "desc": "Load Spotify track peers, install sorting algo, EQ/soundboard, and emit/auto-save frequency speaker levels" },
+    { "id": "frequency_emitter", "path": "systems/audio/music/frequency_emitter.py", "type": "python", "desc": "Emit frequency/music levels for full library exiting via speaker and auto-save state" },
+    { "id": "dlc_install", "path": "systems/launchers/rockstar/dlc/install_dlc.py", "type": "python", "desc": "Install/build DLC feature packs" },
+    { "id": "steam_ru_fix", "path": "systems/launchers/steam/russian_fix_pipeline.py", "type": "python", "desc": "Steam RU fix + transcript/lang pipeline to game data" },
+    { "id": "images_install", "path": "systems/build/install_images.py", "type": "python", "desc": "Collect/download/install in-game images and component icons" }
+  ]
+}

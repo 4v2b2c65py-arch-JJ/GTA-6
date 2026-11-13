@@ -1,0 +1,23 @@
+{
+  "id": "door_node_map",
+  "type": "gate_node_map",
+  "door_node_string": "N10-N9-N8-N7-N6-N5-N4-N3-N2-N1-N0",
+  "direction": "descending",
+  "nodes": [
+    { "id": "N10", "index": 10, "label": "threshold_outer", "state": "open", "links": ["N9"], "zone_ref": "Z0-core-plate" },
+    { "id": "N9", "index": 9, "label": "signal_gate", "state": "open", "links": ["N10", "N8"], "zone_ref": "Z0-core-plate" },
+    { "id": "N8", "index": 8, "label": "fault_entry", "state": "latched", "links": ["N9", "N7"], "zone_ref": "Z1-fault-belt" },
+    { "id": "N7", "index": 7, "label": "pressure_valve", "state": "latched", "links": ["N8", "N6"], "zone_ref": "Z1-fault-belt" },
+    { "id": "N6", "index": 6, "label": "traction_lock", "state": "open", "links": ["N7", "N5"], "zone_ref": "Z2-traction-run" },
+    { "id": "N5", "index": 5, "label": "commit_pass", "state": "open", "links": ["N6", "N4"], "zone_ref": "Z2-traction-run" },
+    { "id": "N4", "index": 4, "label": "heave_crossing", "state": "conditional", "links": ["N5", "N3"], "zone_ref": "Z3-cant-plates" },
+    { "id": "N3", "index": 3, "label": "border_siphon", "state": "conditional", "links": ["N4", "N2"], "zone_ref": "Z3-cant-plates", "protocol_ref": "sats_rea_rem" },
+    { "id": "N2", "index": 2, "label": "crest_gate", "state": "sealed", "links": ["N3", "N1"], "zone_ref": "Z4-crest-reveal" },
+    { "id": "N1", "index": 1, "label": "reveal_hinge", "state": "sealed", "links": ["N2", "N0"], "zone_ref": "Z4-crest-reveal" },
+    { "id": "N0", "index": 0, "label": "exit_vector", "state": "pending", "links": ["N1"], "zone_ref": "Z5-settled-path" }
+  ],
+  "addressing": {
+    "mnemonic_prefix": "N",
+    "lace_integration": "node id composes with Z<zone>-Q<pocket>-C<cell>-T<tick> for deterministic gate-path lookup"
+  }
+}

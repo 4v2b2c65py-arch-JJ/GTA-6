@@ -1,0 +1,21 @@
+{
+  "id": "default_loadout",
+  "character": "protagonist",
+  "dlc": "dlc_standard",
+  "attachment_spec": "assets/outfits/direct_12_stud/spec.json",
+  "active_preset": "preset_bodium_initiate",
+  "direct_12_stud_mounts": {
+    "S01": null,
+    "S02": "cz_headgear_crest",
+    "S03": null,
+    "S04": "cz_shoulder_pauldron_l",
+    "S05": "cz_shoulder_pauldron_r",
+    "S06": "cz_chest_sigil",
+    "S07": "cz_core_module",
+    "S08": "cz_back_pack",
+    "S09": "cz_arm_gauntlet_l",
+    "S10": "cz_arm_gauntlet_r",
+    "S11": "cz_leg_greave_l",
+    "S12": "cz_leg_greave_r"
+  }
+}

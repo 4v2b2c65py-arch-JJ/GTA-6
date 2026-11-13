@@ -1,0 +1,44 @@
+{
+  "id": "dlc_standard_presets",
+  "type": "outfit_presets",
+  "dlc": "dlc_standard",
+  "spec_ref": "assets/outfits/direct_12_stud/spec.json",
+  "presets": [
+    {
+      "id": "preset_bodium_initiate",
+      "name": "Bodium Initiate",
+      "direct_12_stud": true,
+      "mounts": {
+        "S01": null, "S02": "cz_headgear_crest", "S03": null,
+        "S04": "cz_shoulder_pauldron_l", "S05": "cz_shoulder_pauldron_r",
+        "S06": "cz_chest_sigil", "S07": "cz_core_module", "S08": "cz_back_pack",
+        "S09": "cz_arm_gauntlet_l", "S10": "cz_arm_gauntlet_r",
+        "S11": "cz_leg_greave_l", "S12": "cz_leg_greave_r"
+      }
+    },
+    {
+      "id": "preset_border_walker",
+      "name": "Border Walker",
+      "direct_12_stud": true,
+      "mounts": {
+        "S01": "cz_headgear_visor", "S02": null, "S03": "cz_headgear_visor",
+        "S04": "cz_back_cape", "S05": null,
+        "S06": "cz_chest_sigil", "S07": "cz_core_module", "S08": "cz_back_cape",
+        "S09": "cz_arm_gauntlet_l", "S10": null,
+        "S11": "cz_leg_greave_l", "S12": "cz_leg_greave_r"
+      }
+    },
+    {
+      "id": "preset_minimal_standard",
+      "name": "Minimal Standard",
+      "direct_12_stud": true,
+      "mounts": {
+        "S01": null, "S02": "cz_headgear_crest", "S03": null,
+        "S04": null, "S05": null,
+        "S06": null, "S07": "cz_core_module", "S08": null,
+        "S09": null, "S10": null,
+        "S11": null, "S12": null
+      }
+    }
+  ]
+}

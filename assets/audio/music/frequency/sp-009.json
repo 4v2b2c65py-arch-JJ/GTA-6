@@ -1,0 +1,29 @@
+{
+  "track_id": "sp-009",
+  "title": "Dust & Chrome",
+  "artist": "Frontier Line",
+  "source": "spotify_peer",
+  "zone": "Z5",
+  "beat": "BEAT_5",
+  "mood": [
+    "frontier",
+    "drive"
+  ],
+  "file": null,
+  "frequency": {
+    "bands": {
+      "sub_bass": 0.5886,
+      "bass": 0.847,
+      "low_mid": 0.7574,
+      "mid": 0.7058,
+      "high_mid": 0.7754,
+      "presence": 0.5736,
+      "brilliance": 0.3896
+    },
+    "peak_dbfs": -9.28,
+    "rms_dbfs": -22.21,
+    "source": "derived_profile"
+  },
+  "captured_at": "2026-11-13T06:03:55Z",
+  "output": "speaker"
+}

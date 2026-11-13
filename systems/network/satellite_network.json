@@ -1,0 +1,32 @@
+{
+  "id": "game_satellite_network_provider",
+  "name": "AetherSat Grid",
+  "type": "satellite_network_provider",
+  "version": "1.0.0",
+  "status": "online",
+  "constellation": {
+    "name": "AetherSat-HomeWorld",
+    "satellites": [
+      { "sat_id": "SAT-01", "orbit": "LEO", "band": "Ka", "status": "online", "coverage": ["Z0-core-plate", "Z1-fault-belt", "Z2-traction-run"] },
+      { "sat_id": "SAT-02", "orbit": "LEO", "band": "Ka", "status": "online", "coverage": ["Z2-traction-run", "Z3-cant-plates", "Z4-crest-reveal"] },
+      { "sat_id": "SAT-03", "orbit": "LEO", "band": "Ka", "status": "online", "coverage": ["Z4-crest-reveal", "Z5-settled-path", "Z0-core-plate"] }
+    ]
+  },
+  "uplink": {
+    "gateway": "N-ALIEN",
+    "endpoint": "sat://aethersat/homeworld/uplink",
+    "protocol": "VCP-SAT-LINK/1.0",
+    "encryption": "laced_mnemonic_session"
+  },
+  "qos": {
+    "target_latency_ms": 45,
+    "jitter_ms": 8,
+    "bandwidth_mbps": 50,
+    "fallback": "store_and_forward"
+  },
+  "bindings": {
+    "home_world_index": "home_world/home_world_index.json",
+    "spec_graph": "systems/devices/spec_graph.json",
+    "mnemonic_lace": "Z<zone>-Q<pocket>-C<cell>-T<tick>"
+  }
+}

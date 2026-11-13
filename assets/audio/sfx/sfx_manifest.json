@@ -1,0 +1,42 @@
+{
+  "id": "sfx_manifest",
+  "generated_at": "2026-11-13T05:16:37Z",
+  "events": [
+    {
+      "event_id": "sfx-gate-open",
+      "file": "assets/audio/sfx/gate_open.ogg",
+      "trigger": "gate_node_transition",
+      "status": "placeholder_manifested"
+    },
+    {
+      "event_id": "sfx-gate-close",
+      "file": "assets/audio/sfx/gate_close.ogg",
+      "trigger": "gate_node_close",
+      "status": "placeholder_manifested"
+    },
+    {
+      "event_id": "sfx-hash-brace",
+      "file": "assets/audio/vfx/hash_brace.ogg",
+      "trigger": "proximity_hash_bracing",
+      "status": "placeholder_manifested"
+    },
+    {
+      "event_id": "sfx-analog-trigger",
+      "file": "assets/audio/vfx/analog_trigger.ogg",
+      "trigger": "analog_trigger",
+      "status": "placeholder_manifested"
+    },
+    {
+      "event_id": "sfx-grid-pulse",
+      "file": "assets/audio/vfx/grid_pulse.ogg",
+      "trigger": "qbit_zone_pocket_update",
+      "status": "placeholder_manifested"
+    },
+    {
+      "event_id": "sfx-ui-confirm",
+      "file": "assets/audio/sfx/ui_confirm.ogg",
+      "trigger": "ui_action",
+      "status": "placeholder_manifested"
+    }
+  ]
+}

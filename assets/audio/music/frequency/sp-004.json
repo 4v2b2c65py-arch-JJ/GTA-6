@@ -1,0 +1,29 @@
+{
+  "track_id": "sp-004",
+  "title": "Ember Vow",
+  "artist": "Soul Sanctum Choir",
+  "source": "spotify_peer",
+  "zone": "S0",
+  "beat": "BEAT_3",
+  "mood": [
+    "solemn",
+    "wide"
+  ],
+  "file": null,
+  "frequency": {
+    "bands": {
+      "sub_bass": 0.6635,
+      "bass": 0.7615,
+      "low_mid": 0.6791,
+      "mid": 0.6708,
+      "high_mid": 0.6032,
+      "presence": 0.5356,
+      "brilliance": 0.4876
+    },
+    "peak_dbfs": -12.34,
+    "rms_dbfs": -23.67,
+    "source": "derived_profile"
+  },
+  "captured_at": "2026-11-13T06:03:55Z",
+  "output": "speaker"
+}

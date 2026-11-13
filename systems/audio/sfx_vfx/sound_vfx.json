@@ -1,0 +1,84 @@
+{
+  "id": "sound_vfx",
+  "type": "sfx_vfx",
+  "version": "1.0.0",
+  "status": "installed",
+  "description": "Sound VFX layer: event-driven effects tied to physics, UI, gates/nodes, and world interactions.",
+  "sfx_library_path": "assets/audio/sfx",
+  "vfx_audio_library_path": "assets/audio/vfx",
+  "buses": {
+    "master": {
+      "gain_db": 0.0
+    },
+    "sfx": {
+      "gain_db": -3.0
+    },
+    "vfx": {
+      "gain_db": -4.0
+    },
+    "ui": {
+      "gain_db": -8.0
+    },
+    "ambience": {
+      "gain_db": -10.0
+    }
+  },
+  "events": [
+    {
+      "event_id": "sfx-gate-open",
+      "bus": "sfx",
+      "file": "assets/audio/sfx/gate_open.ogg",
+      "trigger": "gate_node_transition",
+      "installed": false,
+      "install_state": "placeholder_manifested"
+    },
+    {
+      "event_id": "sfx-gate-close",
+      "bus": "sfx",
+      "file": "assets/audio/sfx/gate_close.ogg",
+      "trigger": "gate_node_close",
+      "installed": false,
+      "install_state": "placeholder_manifested"
+    },
+    {
+      "event_id": "sfx-hash-brace",
+      "bus": "vfx",
+      "file": "assets/audio/vfx/hash_brace.ogg",
+      "trigger": "proximity_hash_bracing",
+      "installed": false,
+      "install_state": "placeholder_manifested"
+    },
+    {
+      "event_id": "sfx-analog-trigger",
+      "bus": "vfx",
+      "file": "assets/audio/vfx/analog_trigger.ogg",
+      "trigger": "analog_trigger",
+      "installed": false,
+      "install_state": "placeholder_manifested"
+    },
+    {
+      "event_id": "sfx-grid-pulse",
+      "bus": "vfx",
+      "file": "assets/audio/vfx/grid_pulse.ogg",
+      "trigger": "qbit_zone_pocket_update",
+      "installed": false,
+      "install_state": "placeholder_manifested"
+    },
+    {
+      "event_id": "sfx-ui-confirm",
+      "bus": "ui",
+      "file": "assets/audio/sfx/ui_confirm.ogg",
+      "trigger": "ui_action",
+      "installed": false,
+      "install_state": "placeholder_manifested"
+    }
+  ],
+  "spatialization": {
+    "enabled": true,
+    "mode": "3d",
+    "distance_model": "inverse",
+    "max_distance": 120.0,
+    "rolloff": 1.0
+  },
+  "installed_at": "2026-11-13T05:16:37Z"
+}

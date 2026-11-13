@@ -1,0 +1,7 @@
+{
+  "id": "dlc_install_state",
+  "status": "installed",
+  "installed_at": "2026-11-13T05:20:50Z",
+  "total_packs": 8,
+  "manifest_ref": "assets/game_assets/dlc/dlc_install_manifest.json"
+}

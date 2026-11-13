@@ -1,0 +1,49 @@
+{
+  "id": "steam_russian_fix_fixes",
+  "generated_at": "2026-11-13T05:16:37Z",
+  "fixes": [
+    {
+      "fix_id": "fix-steam-store-l-russian",
+      "source_id": "steam_fix_ru_script",
+      "title": "Remove l=russian from Steam store asset URLs",
+      "type": "web_resource_fix",
+      "target": "store.steampowered.com",
+      "enabled": true,
+      "lang": "ru",
+      "action": {
+        "op": "remove_query_param",
+        "param": "l",
+        "value": "russian",
+        "selectors": [
+          "link[rel=stylesheet]",
+          "script[src]"
+        ]
+      },
+      "apply": "in_game_web_loader_or_overlay"
+    },
+    {
+      "fix_id": "fix-steam-game-language-flow",
+      "source_id": "steam_support_localization",
+      "title": "Steam per-game language/transcript enable flow",
+      "type": "config_flow",
+      "target": "steam_client_game",
+      "enabled": true,
+      "lang": "ru",
+      "action": {
+        "op": "set_language",
+        "path": "Properties>General>Language",
+        "fallback": "in_game_settings",
+        "post": [
+          "wait_downloads",
+          "restart",
+          "verify_files"
+        ]
+      },
+      "apply": "launcher_integration"
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "enabled": 2
+  }
+}

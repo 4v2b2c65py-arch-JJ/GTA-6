@@ -1,0 +1,511 @@
+{
+  "meta": {
+    "source": "home_world/bodium_terrain/bodium_terrain_map.json",
+    "generator": "home_world/bodium_terrain/terrain_nmap.py",
+    "door_node_string": "N10-N9-N8-N7-N6-N5-N4-N3-N2-N1-N0",
+    "lace_pattern": "Z<zone>-Q<pocket>-C<cell>-T<tick>",
+    "region_count": 6
+  },
+  "sets": {
+    "base": [
+      {
+        "code": "TERR-Z0",
+        "region_id": "Z0-core-plate",
+        "name": "Core Plate",
+        "set": "base"
+      },
+      {
+        "code": "TERR-Z1",
+        "region_id": "Z1-fault-belt",
+        "name": "Fault Belt",
+        "set": "base"
+      },
+      {
+        "code": "TERR-Z2",
+        "region_id": "Z2-traction-run",
+        "name": "Traction Run",
+        "set": "base"
+      },
+      {
+        "code": "TERR-Z3",
+        "region_id": "Z3-cant-plates",
+        "name": "Cant Plates",
+        "set": "base"
+      },
+      {
+        "code": "TERR-Z4",
+        "region_id": "Z4-crest-reveal",
+        "name": "Crest Reveal",
+        "set": "base"
+      },
+      {
+        "code": "TERR-Z5",
+        "region_id": "Z5-settled-path",
+        "name": "Settled Path",
+        "set": "base"
+      }
+    ],
+    "elevation": [
+      {
+        "code": "ELEV-Z0-000",
+        "region_id": "Z0-core-plate",
+        "elevation": 0.0,
+        "set": "elevation"
+      },
+      {
+        "code": "ELEV-Z1-002",
+        "region_id": "Z1-fault-belt",
+        "elevation": 0.2,
+        "set": "elevation"
+      },
+      {
+        "code": "ELEV-Z2-004",
+        "region_id": "Z2-traction-run",
+        "elevation": 0.4,
+        "set": "elevation"
+      },
+      {
+        "code": "ELEV-Z3-012",
+        "region_id": "Z3-cant-plates",
+        "elevation": 1.2,
+        "set": "elevation"
+      },
+      {
+        "code": "ELEV-Z4-020",
+        "region_id": "Z4-crest-reveal",
+        "elevation": 2.0,
+        "set": "elevation"
+      },
+      {
+        "code": "ELEV-Z5-010",
+        "region_id": "Z5-settled-path",
+        "elevation": 1.0,
+        "set": "elevation"
+      }
+    ],
+    "state": [
+      {
+        "code": "STATE-Z0-STABLE",
+        "region_id": "Z0-core-plate",
+        "state": "stable",
+        "properties": {
+          "load_bearing": true,
+          "resonance": "low",
+          "vein_light": "dim_silver"
+        },
+        "set": "state"
+      },
+      {
+        "code": "STATE-Z1-ACTIVE",
+        "region_id": "Z1-fault-belt",
+        "state": "active",
+        "properties": {
+          "load_bearing": true,
+          "resonance": "rising",
+          "vein_light": "brightening",
+          "fracture_risk": 0.6
+        },
+        "set": "state"
+      },
+      {
+        "code": "STATE-Z2-NEGOTIABLE",
+        "region_id": "Z2-traction-run",
+        "state": "negotiable",
+        "properties": {
+          "load_bearing": true,
+          "traction": 0.85,
+          "vein_light": "edge_glow"
+        },
+        "set": "state"
+      },
+      {
+        "code": "STATE-Z3-PRESSURED",
+        "region_id": "Z3-cant-plates",
+        "state": "pressured",
+        "properties": {
+          "load_bearing": true,
+          "instability": 0.7,
+          "heave": true,
+          "vein_light": "stressed"
+        },
+        "set": "state"
+      },
+      {
+        "code": "STATE-Z4-RESOLVING",
+        "region_id": "Z4-crest-reveal",
+        "state": "resolving",
+        "properties": {
+          "load_bearing": true,
+          "visibility": "full_catch",
+          "vein_light": "focused"
+        },
+        "set": "state"
+      },
+      {
+        "code": "STATE-Z5-ALTERED_LEGIBLE",
+        "region_id": "Z5-settled-path",
+        "state": "altered_legible",
+        "properties": {
+          "load_bearing": true,
+          "resonance": "aftertone",
+          "vein_light": "held_glow"
+        },
+        "set": "state"
+      }
+    ],
+    "material": [
+      {
+        "code": "MAT-Z0-BODIUM_MINERAL",
+        "region_id": "Z0-core-plate",
+        "material": "bodium_mineral",
+        "set": "material"
+      },
+      {
+        "code": "MAT-Z1-BODIUM_MINERAL_FRACTURED",
+        "region_id": "Z1-fault-belt",
+        "material": "bodium_mineral_fractured",
+        "set": "material"
+      },
+      {
+        "code": "MAT-Z2-BODIUM_MINERAL_RIDGED",
+        "region_id": "Z2-traction-run",
+        "material": "bodium_mineral_ridged",
+        "set": "material"
+      },
+      {
+        "code": "MAT-Z3-BODIUM_MINERAL_SHIFTING",
+        "region_id": "Z3-cant-plates",
+        "material": "bodium_mineral_shifting",
+        "set": "material"
+      },
+      {
+        "code": "MAT-Z4-BODIUM_MINERAL",
+        "region_id": "Z4-crest-reveal",
+        "material": "bodium_mineral",
+        "set": "material"
+      },
+      {
+        "code": "MAT-Z5-BODIUM_MINERAL",
+        "region_id": "Z5-settled-path",
+        "material": "bodium_mineral",
+        "set": "material"
+      }
+    ],
+    "narrative": [
+      {
+        "code": "BEAT-Z0-BEAT_0",
+        "region_id": "Z0-core-plate",
+        "narrative_anchor": "BEAT_0",
+        "set": "narrative"
+      },
+      {
+        "code": "BEAT-Z1-BEAT_1",
+        "region_id": "Z1-fault-belt",
+        "narrative_anchor": "BEAT_1",
+        "set": "narrative"
+      },
+      {
+        "code": "BEAT-Z2-BEAT_2",
+        "region_id": "Z2-traction-run",
+        "narrative_anchor": "BEAT_2",
+        "set": "narrative"
+      },
+      {
+        "code": "BEAT-Z3-BEAT_3",
+        "region_id": "Z3-cant-plates",
+        "narrative_anchor": "BEAT_3",
+        "set": "narrative"
+      },
+      {
+        "code": "BEAT-Z4-BEAT_4",
+        "region_id": "Z4-crest-reveal",
+        "narrative_anchor": "BEAT_4",
+        "set": "narrative"
+      },
+      {
+        "code": "BEAT-Z5-BEAT_5",
+        "region_id": "Z5-settled-path",
+        "narrative_anchor": "BEAT_5",
+        "set": "narrative"
+      }
+    ],
+    "lace": [
+      {
+        "code": "LACE-Z0-Q0-C000-T0",
+        "lace_key": "Z0-Q0-C000-T0",
+        "region_id": "Z0-core-plate",
+        "pocket": "Q0",
+        "cell": "C000",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z0-Q0-C001-T0",
+        "lace_key": "Z0-Q0-C001-T0",
+        "region_id": "Z0-core-plate",
+        "pocket": "Q0",
+        "cell": "C001",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z0-Q1-C000-T0",
+        "lace_key": "Z0-Q1-C000-T0",
+        "region_id": "Z0-core-plate",
+        "pocket": "Q1",
+        "cell": "C000",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z0-Q1-C001-T0",
+        "lace_key": "Z0-Q1-C001-T0",
+        "region_id": "Z0-core-plate",
+        "pocket": "Q1",
+        "cell": "C001",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z1-Q0-C000-T0",
+        "lace_key": "Z1-Q0-C000-T0",
+        "region_id": "Z1-fault-belt",
+        "pocket": "Q0",
+        "cell": "C000",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z1-Q0-C001-T0",
+        "lace_key": "Z1-Q0-C001-T0",
+        "region_id": "Z1-fault-belt",
+        "pocket": "Q0",
+        "cell": "C001",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z1-Q1-C000-T0",
+        "lace_key": "Z1-Q1-C000-T0",
+        "region_id": "Z1-fault-belt",
+        "pocket": "Q1",
+        "cell": "C000",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z1-Q1-C001-T0",
+        "lace_key": "Z1-Q1-C001-T0",
+        "region_id": "Z1-fault-belt",
+        "pocket": "Q1",
+        "cell": "C001",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z2-Q0-C000-T0",
+        "lace_key": "Z2-Q0-C000-T0",
+        "region_id": "Z2-traction-run",
+        "pocket": "Q0",
+        "cell": "C000",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z2-Q0-C001-T0",
+        "lace_key": "Z2-Q0-C001-T0",
+        "region_id": "Z2-traction-run",
+        "pocket": "Q0",
+        "cell": "C001",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z2-Q1-C000-T0",
+        "lace_key": "Z2-Q1-C000-T0",
+        "region_id": "Z2-traction-run",
+        "pocket": "Q1",
+        "cell": "C000",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z2-Q1-C001-T0",
+        "lace_key": "Z2-Q1-C001-T0",
+        "region_id": "Z2-traction-run",
+        "pocket": "Q1",
+        "cell": "C001",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z3-Q0-C000-T0",
+        "lace_key": "Z3-Q0-C000-T0",
+        "region_id": "Z3-cant-plates",
+        "pocket": "Q0",
+        "cell": "C000",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z3-Q0-C001-T0",
+        "lace_key": "Z3-Q0-C001-T0",
+        "region_id": "Z3-cant-plates",
+        "pocket": "Q0",
+        "cell": "C001",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z3-Q1-C000-T0",
+        "lace_key": "Z3-Q1-C000-T0",
+        "region_id": "Z3-cant-plates",
+        "pocket": "Q1",
+        "cell": "C000",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z3-Q1-C001-T0",
+        "lace_key": "Z3-Q1-C001-T0",
+        "region_id": "Z3-cant-plates",
+        "pocket": "Q1",
+        "cell": "C001",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z4-Q0-C000-T0",
+        "lace_key": "Z4-Q0-C000-T0",
+        "region_id": "Z4-crest-reveal",
+        "pocket": "Q0",
+        "cell": "C000",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z4-Q0-C001-T0",
+        "lace_key": "Z4-Q0-C001-T0",
+        "region_id": "Z4-crest-reveal",
+        "pocket": "Q0",
+        "cell": "C001",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z4-Q1-C000-T0",
+        "lace_key": "Z4-Q1-C000-T0",
+        "region_id": "Z4-crest-reveal",
+        "pocket": "Q1",
+        "cell": "C000",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z4-Q1-C001-T0",
+        "lace_key": "Z4-Q1-C001-T0",
+        "region_id": "Z4-crest-reveal",
+        "pocket": "Q1",
+        "cell": "C001",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z5-Q0-C000-T0",
+        "lace_key": "Z5-Q0-C000-T0",
+        "region_id": "Z5-settled-path",
+        "pocket": "Q0",
+        "cell": "C000",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z5-Q0-C001-T0",
+        "lace_key": "Z5-Q0-C001-T0",
+        "region_id": "Z5-settled-path",
+        "pocket": "Q0",
+        "cell": "C001",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z5-Q1-C000-T0",
+        "lace_key": "Z5-Q1-C000-T0",
+        "region_id": "Z5-settled-path",
+        "pocket": "Q1",
+        "cell": "C000",
+        "tick": 0,
+        "set": "lace"
+      },
+      {
+        "code": "LACE-Z5-Q1-C001-T0",
+        "lace_key": "Z5-Q1-C001-T0",
+        "region_id": "Z5-settled-path",
+        "pocket": "Q1",
+        "cell": "C001",
+        "tick": 0,
+        "set": "lace"
+      }
+    ],
+    "composite_onset": [
+      {
+        "code": "ONSET-Z0|BEAT_0|STABLE|E000",
+        "region_id": "Z0-core-plate",
+        "narrative_anchor": "BEAT_0",
+        "state": "stable",
+        "elevation_code": 0,
+        "set": "composite_onset"
+      },
+      {
+        "code": "ONSET-Z1|BEAT_1|ACTIVE|E002",
+        "region_id": "Z1-fault-belt",
+        "narrative_anchor": "BEAT_1",
+        "state": "active",
+        "elevation_code": 2,
+        "set": "composite_onset"
+      },
+      {
+        "code": "ONSET-Z2|BEAT_2|NEGOTIABLE|E004",
+        "region_id": "Z2-traction-run",
+        "narrative_anchor": "BEAT_2",
+        "state": "negotiable",
+        "elevation_code": 4,
+        "set": "composite_onset"
+      },
+      {
+        "code": "ONSET-Z3|BEAT_3|PRESSURED|E012",
+        "region_id": "Z3-cant-plates",
+        "narrative_anchor": "BEAT_3",
+        "state": "pressured",
+        "elevation_code": 12,
+        "set": "composite_onset"
+      },
+      {
+        "code": "ONSET-Z4|BEAT_4|RESOLVING|E020",
+        "region_id": "Z4-crest-reveal",
+        "narrative_anchor": "BEAT_4",
+        "state": "resolving",
+        "elevation_code": 20,
+        "set": "composite_onset"
+      },
+      {
+        "code": "ONSET-Z5|BEAT_5|ALTERED_LEGIBLE|E010",
+        "region_id": "Z5-settled-path",
+        "narrative_anchor": "BEAT_5",
+        "state": "altered_legible",
+        "elevation_code": 10,
+        "set": "composite_onset"
+      }
+    ]
+  },
+  "counts": {
+    "base": 6,
+    "elevation": 6,
+    "state": 6,
+    "material": 6,
+    "narrative": 6,
+    "lace": 24,
+    "composite_onset": 6,
+    "total": 60
+  }
+}

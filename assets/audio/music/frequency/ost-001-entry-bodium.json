@@ -1,0 +1,29 @@
+{
+  "track_id": "ost-001-entry-bodium",
+  "title": "Entry Bodium",
+  "artist": "Spatial Avy OST",
+  "source": "soundtrack",
+  "zone": "Z0",
+  "beat": "BEAT_0",
+  "mood": [
+    "ambient",
+    "threshold"
+  ],
+  "file": "assets/audio/soundtrack/ost-001-entry-bodium.ogg",
+  "frequency": {
+    "bands": {
+      "sub_bass": 0.7187,
+      "bass": 0.775,
+      "low_mid": 0.6538,
+      "mid": 0.5648,
+      "high_mid": 0.5516,
+      "presence": 0.3887,
+      "brilliance": 0.3647
+    },
+    "peak_dbfs": -12.21,
+    "rms_dbfs": -21.84,
+    "source": "derived_profile"
+  },
+  "captured_at": "2026-11-13T06:03:55Z",
+  "output": "speaker"
+}

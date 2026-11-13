@@ -1,0 +1,31 @@
+{
+  "id": "character_hub_deck",
+  "type": "deck",
+  "version": "1.0.0",
+  "status": "ready",
+  "stage": "before_launch",
+  "character": {
+    "id": "protagonist",
+    "name": "Protagonist",
+    "loadout_ref": "narrative/characters/default_loadout.json",
+    "default_outfit": "assets/outfits/dlc_standard/presets.json",
+    "attachment_spec": "assets/outfits/direct_12_stud/spec.json"
+  },
+  "cards": [
+    {"card_id": "char-profile", "title": "Character Profile", "type": "profile", "enabled": true, "data": {"loadout": "narrative/characters/default_loadout.json"}},
+    {"card_id": "char-outfit", "title": "Outfit & DLC Standard", "type": "outfit", "enabled": true, "data": {"manifest": "assets/outfits/dlc_standard/manifest.json", "presets": "assets/outfits/dlc_standard/presets.json"}},
+    {"card_id": "char-audio-voice", "title": "Voice & Vocal Tracks", "type": "audio", "enabled": true, "data": {"voice_pipeline": "systems/audio/voice/voice_pipeline.json", "vocals": "assets/audio/voice/vocals/vocals_index.json"}},
+    {"card_id": "char-world", "title": "World & Timeline Entry", "type": "world", "enabled": true, "data": {"world_index": "home_world/home_world_index.json", "runtime": "systems/runtime/game_world_runtime.json", "timeline": "systems/grid_store/timeline_pockets.json"}},
+    {"card_id": "char-dlc", "title": "Installed DLC & Features", "type": "dlc", "enabled": true, "data": {"catalog": "systems/launchers/rockstar/dlc/dlc_catalog.json", "manifest": "assets/game_assets/dlc/dlc_install_manifest.json"}},
+    {"card_id": "char-launch", "title": "Launch Build", "type": "launch", "enabled": true, "data": {"build": "systems/build/build_manifest.json", "launcher": "systems/launchers/launcher_hub.json"}}
+  ],
+  "pre_launch_checks": [
+    "load_character",
+    "load_outfit_mounts",
+    "install_in_game_images",
+    "install_component_icons",
+    "verify_audio_voice",
+    "verify_dlc_data",
+    "ready_build"
+  ]
+}

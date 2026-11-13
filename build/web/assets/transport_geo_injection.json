@@ -1,0 +1,21 @@
+{
+  "id": "transport_geo_injection",
+  "type": "injection_payload",
+  "status": "injected",
+  "injected_at": "2026-11-13T05:38:18Z",
+  "target": "build/web (executable web client & player)",
+  "refs": {
+    "vehicles": "systems/world/transportation/vehicles.json",
+    "transportation": "systems/world/transportation/transportation.json",
+    "geo": "systems/world/geo/geo_injection.json",
+    "game_data": "assets/game_assets/transportation/transport_geo_game_data.json"
+  },
+  "summary": {
+    "vehicles": 21,
+    "modes": 6,
+    "regions": 10,
+    "hubs": 12,
+    "routes": 5
+  },
+  "hash": "a3982ea28f029202"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "related_game_installments",
+  "type": "installment_registry",
+  "version": "1.0.0",
+  "status": "active",
+  "providers": [
+    {
+      "provider": "rockstar_games_launcher",
+      "mode": "direct",
+      "ref": "systems/launchers/rockstar/launcher.json",
+      "supports": ["purchase", "redeem", "download", "install", "update", "verify", "launch", "cloud_save_model"]
+    },
+    {
+      "provider": "steam",
+      "mode": "store_install_handoff",
+      "ref": "systems/launchers/steam/steam_integration.json",
+      "detected": true,
+      "supports": ["purchase", "download", "install", "update", "launch_handoff_to_rgl"]
+    },
+    {
+      "provider": "epic_games_store",
+      "mode": "store_install_handoff",
+      "ref": "systems/launchers/epic/epic_integration.json",
+      "detected": false,
+      "supports": ["purchase", "download", "install", "update", "launch_handoff_to_rgl"]
+    },
+    {
+      "provider": "xbox_app_pc",
+      "mode": "store_install_handoff",
+      "detected": false,
+      "supports": ["purchase", "install", "launch_handoff_to_rgl", "account_linking"],
+      "notes": "Windows context; modeled for completeness."
+    },
+    {
+      "provider": "rockstar_store_retail",
+      "mode": "redeem_code",
+      "supports": ["redeem_activation_code", "install_via_rgl"],
+      "notes": "Physical/retail codes redeem in Rockstar Games Launcher."
+    }
+  ],
+  "unified_flow": {
+    "steps": ["authenticate", "acquire_or_redeem", "install_or_link", "verify_ready", "start_game"],
+    "game_start_states": ["ready", "launching", "running", "stopped", "error"]
+  }
+}

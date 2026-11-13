@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Spatial Avy - Character Hub</title>
+  <style>
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0b0f14;color:#e6edf3}
+    header{padding:20px 28px;border-bottom:1px solid #1f2a37;background:#0f1620}
+    h1{margin:0;font-size:22px} .sub{color:#9fb0c3;margin-top:4px}
+    .wrap{padding:20px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .card{background:#121a24;border:1px solid #223043;border-radius:12px;padding:14px}
+    .card h3{margin:0 0 8px 0;font-size:16px}
+    .meta{font-size:12px;color:#9fb0c3;line-height:1.5}
+    .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:#1b2a3a;color:#b9d7ff;font-size:11px;margin-right:6px}
+    .actions{padding:0 28px 24px}
+    button{background:#2ea043;border:0;color:#fff;padding:10px 16px;border-radius:8px;font-weight:600;cursor:pointer}
+    button.secondary{background:#30363d;margin-left:8px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Character Hub Deck</h1>
+    <div class="sub">Pre-launch: character, loadout, DLC, audio/voice, and world build status</div>
+  </header>
+  <div class="wrap">
+    <div class="card"><h3>Character Profile</h3><div class="meta"><span class="pill">protagonist</span> Loadout: narrative/characters/default_loadout.json<br/>Preset: preset_bodium_initiate (dlc_standard)</div></div>
+    <div class="card"><h3>Outfit & Direct 12-Stud</h3><div class="meta">Spec: assets/outfits/direct_12_stud/spec.json<br/>DLC: assets/outfits/dlc_standard/manifest.json</div></div>
+    <div class="card"><h3>Voice Pipeline</h3><div class="meta">Transcription → VLM voice digestion → vocal tracks<br/>Vocals: assets/audio/voice/vocals/vocals_index.json</div></div>
+    <div class="card"><h3>World & Timeline</h3><div class="meta">Runtime: systems/runtime/game_world_runtime.json<br/>Timeline: systems/grid_store/timeline_pockets.json</div></div>
+    <div class="card"><h3>Installed DLC</h3><div class="meta">8 packs installed (GTA5/RDR2 + inspired)<br/>Manifest: assets/game_assets/dlc/dlc_install_manifest.json</div></div>
+    <div class="card"><h3>Launch Build</h3><div class="meta">Build: build/game/build.json<br/>Launcher: systems/launchers/launcher_hub.json</div></div>
+  </div>
+  <div class="actions"><button>Launch Build</button><button class="secondary">Open Deck</button></div>
+</body>
+</html>

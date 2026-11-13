@@ -1,0 +1,79 @@
+{
+  "id": "developer_bot_team",
+  "type": "game_world_team",
+  "version": "1.0.0",
+  "location": {
+    "world": "spatial_avy_home",
+    "zone": "Z0-core-plate",
+    "anchor_node": "N-ALIEN",
+    "sector": "autonomy_ops"
+  },
+  "mission": "Fix portal/device/download issues and maintain traces until required sites return necessary resources; sustain civilization autonomy.",
+  "status": "active",
+  "autonomy": {
+    "mode": "civilization_autonomy",
+    "loop": "trace -> diagnose -> fix -> verify -> distribute -> persist",
+    "run_until": "all_targets_ready_and_necessary",
+    "human_override": true,
+    "current_cycle": "cycle-d3bd69e8",
+    "last_run_at": "2026-11-13T04:44:08Z",
+    "all_targets_ready": true,
+    "next_state": "distribute_and_monitor"
+  },
+  "bots": [
+    {
+      "bot_id": "bot-trace-sentinel",
+      "name": "Trace Sentinel",
+      "role": "trace_monitor",
+      "capabilities": [
+        "probe_portals",
+        "record_trace",
+        "detect_regressions",
+        "emit_status"
+      ],
+      "state": "active"
+    },
+    {
+      "bot_id": "bot-portal-fixer",
+      "name": "Portal Fixer",
+      "role": "portal_repair",
+      "capabilities": [
+        "retry_fetch",
+        "refresh_endpoints",
+        "validate_auth_state",
+        "stage_artifacts",
+        "mark_ready_on_success"
+      ],
+      "state": "active"
+    },
+    {
+      "bot_id": "bot-device-loader",
+      "name": "Device Loader",
+      "role": "device_porting",
+      "capabilities": [
+        "port_downloads",
+        "verify_webpointers",
+        "sync_satcom_devices",
+        "confirm_uri_port"
+      ],
+      "state": "active"
+    },
+    {
+      "bot_id": "bot-civ-coordinator",
+      "name": "Civilization Coordinator",
+      "role": "autonomy_coordinator",
+      "capabilities": [
+        "prioritize_tasks",
+        "allocate_cycles",
+        "maintain_civilization_autonomy",
+        "escalate_blockers"
+      ],
+      "state": "active"
+    }
+  ],
+  "targets": {
+    "portal_registry": "systems/network/portals/vercel_portals.json",
+    "trace_status": "systems/autonomy/traces/trace_status.json",
+    "device_webpointers": "systems/devices/device_webpointers.json"
+  }
+}
